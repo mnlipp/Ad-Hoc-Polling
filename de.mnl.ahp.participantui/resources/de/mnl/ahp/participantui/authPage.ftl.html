@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<#include "header.ftl.html">
+
+<body>
+    <div id="language_selection">
+        <form method="post">
+            <div style="display: inline;">
+                <button class="image" type="submit" name="setLocale" value="de">
+                    <img alt="Deutsch" src="${resourceUrl('static/Flag_of_Germany.svg')}">
+                </button>
+                <button class="image" type="submit" name="setLocale" value="en">
+                    <img alt="English" src="${resourceUrl('static/Flag_of_the_United_Kingdom.svg')}">
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div id="code_submission">
+        <div>
+            <span>${_("enter code")}</span>
+        </div>
+
+        <div>
+            <form class="simple_form"  method="post">
+                <fieldset>
+                    <label><b>${_("code")}</b><input type="number"
+                        name="code" maxlength="4" min="1000" max="9999"></label>
+                </fieldset>
+
+                <button type="submit" name="submit_code" value="">${
+                    _("submit")}</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

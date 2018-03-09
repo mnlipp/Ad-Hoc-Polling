@@ -1,0 +1,31 @@
+Bundle-Name: Ad Hoc Polling Participant UI
+Bundle-Version: 0.0.0.-${tstamp}-SNAPSHOT
+Bundle-Copyright: Michael N. Lipp (c) 2018
+Bundle-License: http://www.gnu.org/licenses/gpl-3.0.txt
+Export-Package: de.mnl.ahp.participantui
+
+-sources: true
+-runee: JavaSE-1.8
+
+-buildpath: \
+	osgi.core;version=6.0.0,\
+	osgi.annotation;version=6.0.1,\
+	osgi.cmpn;version=6.0,\
+	org.jgrapes.core;version=latest,\
+	org.jgrapes.io;version=latest,\
+	org.jgrapes.http;version=latest,\
+    org.jgrapes.http.freemarker;version=latest,\
+	org.jgrapes.util;version=latest,\
+	org.jgrapes.portal;version=latest,\
+	org.jgrapes.osgi.core;version='latest',\
+    org.jdrupes.httpcodec;version='latest',\
+	org.freemarker.freemarker;version='[2.3.27,2.4)'
+
+-includeresource: \
+	resources
+
+-fixupmessages: \
+    "The .classpath contains an unknown container: GROOVY_DSL_SUPPORT. This could make your build less portable.", \
+    "The .classpath contains an unknown container: org.eclipse.buildship.core.gradleclasspathcontainer. This could make your build less portable.", \
+    "The build path does not refer to the bnd container 'aQute.bnd.classpath.container'"
+

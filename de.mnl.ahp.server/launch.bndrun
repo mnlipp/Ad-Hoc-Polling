@@ -1,0 +1,50 @@
+-runfw: org.apache.felix.framework;version='[5,6)'
+-runbundles: \
+	org.apache.aries.spifly.dynamic.bundle;version='[1.0.8,1.0.9)',\
+	org.apache.aries.util;version='[1.0.0,1.0.1)',\
+	org.apache.felix.scr;version='[2.0.2,2.0.3)',\
+	org.osgi.compendium;version='[4.1.0,4.1.1)',\
+	org.apache.felix.metatype;version='[1.1.2,1.1.3)',\
+	org.glassfish.javax.json;version='[1.1.0,1.1.1)',\
+	org.objectweb.asm.all;version='[5.1.0,5.1.1)',\
+	osgi.promise;version='[6.0.0,6.0.1)',\
+	org.freemarker.freemarker;version='[2.3.27,2.3.28)',\
+	org.jdrupes.json;version='[2.0,2.1)',\
+    com.fasterxml.jackson.core.jackson-core;version='[2.9.4,2.10)',\
+	org.jdrupes.httpcodec;version='[1.0.2,1.1)',\
+	org.jgrapes.core;version='[0.15.0,1.1)',\
+	org.jgrapes.io;version='[0.15.0,1.1)',\
+    org.jgrapes.util;version='[0.15.0,1.1)',\
+    org.jgrapes.http;version='[0.15.0,1.1)',\
+    org.jgrapes.http.freemarker;version='[0.15.0,1.1)',\
+    org.jgrapes.portal;version=latest,\
+    org.jgrapes.portal.providers.chartjs;version=latest,\
+    org.jgrapes.portal.providers.datatables;version=latest,\
+    org.jgrapes.portal.providers.markdownit;version=latest,\
+    org.jgrapes.portlets.markdowndisplay;version=latest,\
+    org.jgrapes.portlets.sysinfo;version=latest,\
+    org.jgrapes.osgi.core;version=latest,\
+    org.jgrapes.osgi.portlets.services;version=latest,\
+	org.jgrapes.osgi.portlets.bundles;version=latest,\
+    de.mnl.ahp.participantui;version=snapshot,\
+    de.mnl.ahp.portlets.management;version=snapshot,\
+    de.mnl.ahp.server;version=snapshot
+    
+	
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=de.mnl.ahp.server)',\
+    osgi.identity;filter:='(osgi.identity=de.mnl.ahp.participantui)',\
+    osgi.identity;filter:='(osgi.identity=de.mnl.ahp.portlets.management)',\
+    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.osgi.portal)(version>=0.12.0))',\
+	osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portlets.sysinfo)',\
+	osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portlets.markdowndisplay)',\
+	osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portlets.bundles)',\
+	osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portlets.services)'
+-runprogramargs: -console
+-runproperties: \
+	org.apache.felix.log=10000,\
+	java.util.logging.config.file=jul-debug.properties,\
+	org.apache.felix.log.storeDebug=true
+-runee: JavaSE-1.8
+
+-runvm: -Xmx300m -Xss512k

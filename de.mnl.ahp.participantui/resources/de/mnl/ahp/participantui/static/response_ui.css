@@ -1,0 +1,113 @@
+body {
+	font-family: Helvetica, Arial, Sans-Serif;
+	font-size: 100%;
+}
+
+#language_selection {
+	width: 100%;
+	margin: 5mm auto 10mm;
+	backgound-color: white;
+}
+
+#language_selection button {
+	background-color: white;
+	width: 49%;
+	margin: 0 auto 0;
+	padding: 0;
+}
+
+#language_selection button img {
+	height: 2em;
+}
+
+#language_selection button img {
+	margin: 0;
+	padding: 0;
+}
+
+#code_submission {
+	width: 15em;	
+	margin: 0 auto 0;
+}
+
+
+#single_vote {
+	width: 15em;	
+	height: 40em;	
+	margin: 15mm auto 5mm;
+}
+
+#single_vote form button {
+	width: 40%;
+	height: 4em;
+	float: left;
+	margin: 5%;
+	font-weight: bold;
+}
+
+#bye_form {
+	width: 15em;	
+	margin: 0mm auto 0mm;
+}
+
+#bye_form p {
+	font-size: 1.5em;
+	text-align: center;
+	margin-bottom: 20mm;
+}
+
+form.simple_form {
+	font-size: 1.5em;
+}
+
+form.simple_form fieldset {
+	border: none;
+	padding: 5mm;
+	margin: 3mm 0;
+	background: #EAEAEA;
+}
+
+form.simple_form label {
+	display: block;
+	float: left;
+	clear: left;
+	margin: 3mm 0;
+}
+
+form.simple_form label b {
+	display: block;
+	float: left;
+	width: 4cm;
+	margin-right: 5mm;
+}
+
+form.simple_form label input, 
+form.simple_form label textarea, 
+form.simple_form label select {
+	float: left;
+	width: 5cm;
+}
+
+form.simple_form label input[type="radio"], 
+form.simple_form label input[type="checkbox"] {
+	width: 20px;
+}
+
+form.simple_form p {
+	clear: left;
+	margin: 10px 0 0;
+}
+
+form.simple_form button {
+}
+
+form.simple_form button[type="submit"] {
+	float: right;
+	font-size: 80%;
+}
+
+form button.image {
+	border: none;
+	padding: 0;
+}
+
