@@ -1,0 +1,4 @@
+.gradle/
+.metadata
+*/bin
+*/generated

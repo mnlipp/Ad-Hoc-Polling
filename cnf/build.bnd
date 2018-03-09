@@ -1,0 +1,47 @@
+# Configure Repositories
+-plugin.1.CentralMisc: \
+	aQute.bnd.deployer.repository.wrapper.Plugin; \
+		location = "${build}/cache/wrapper"; \
+		reindex = true, \
+	aQute.bnd.repository.maven.provider.MavenBndRepository; \
+		name="Central (Misc)"; \
+		snapshotUrl=https://oss.sonatype.org/content/repositories/snapshots/; \
+		releaseUrl=https://repo.maven.apache.org/maven2/; \
+		index=${.}/central.mvn
+
+-plugin.5.OSGi = \
+    aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
+        name=OSGi; \
+    	snapshotUrls=https://oss.sonatype.org/content/repositories/snapshots/; \
+        releaseUrls=https://repo1.maven.org/maven2; \
+        query='q=g:%22org.osgi%22&rows=1000'
+
+-plugin.6.Felix = \
+    aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
+        name=Felix; \
+    	snapshotUrls=https://oss.sonatype.org/content/repositories/snapshots/; \
+        releaseUrls=https://repo1.maven.org/maven2; \
+        query='q=g:%22org.apache.felix%22&rows=1000'
+
+-plugin.7.JGrapes: \
+    de.mnl.osgi.bnd.repository.maven.provider.NexusSearchRepositoryProvider; \
+		path:="${workspace}/cnf/plugins/de.mnl.osgi.bnd.repository-0.0.9.jar,\
+            ${workspace}/cnf/plugins/biz.aQute.repository-3.5.0.jar"; \
+        name=JGrapes; \
+        server="https://oss.sonatype.org"; \
+        query="g=org.jgrapes"
+
+-baselinerepo: JGrapes
+
+# JUnit
+junit: org.apache.servicemix.bundles.junit; version=4.12
+
+javac.source: 1.8
+javac.target: 1.8
+
+artifact_version: ${versionmask;===S;${Bundle-Version}}
+-outputmask: ${@bsn}-${versionmask;===S;${@version}}.jar
+
+-fixupmessages: \
+    "The .classpath contains an unknown container: GROOVY_DSL_SUPPORT. This could make your build less portable.", \
+    "The .classpath contains an unknown container: org.eclipse.buildship.core.gradleclasspathcontainer. This could make your build less portable."
