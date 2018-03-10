@@ -31,7 +31,10 @@
         server="https://oss.sonatype.org"; \
         query="g=org.jgrapes"
 
--baselinerepo: JGrapes
+# -baselinerepo: JGrapes
+
+bin=bin/main
+testbin=bin/test
 
 # JUnit
 junit: org.apache.servicemix.bundles.junit; version=4.12

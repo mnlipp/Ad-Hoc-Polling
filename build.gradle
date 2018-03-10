@@ -24,10 +24,7 @@ ext.cnf = rootProject.project(bnd_cnf)
 
 /* Configure the subprojects */
 subprojects {
-  def bndProject = bndWorkspace.getProject(name)
-  if (bndProject != null) {
-    plugins.apply 'biz.aQute.bnd'
-  }
+    apply from: "${project.rootDir}/gradle/subprojects.gradle"
 }
 
 task stage {

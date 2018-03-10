@@ -1,0 +1,24 @@
+apply plugin: 'eclipse'
+    
+eclipse {
+    classpath {
+        containers 'aQute.bnd.classpath.container'
+        // Classpath is completely handled by bnd container above
+        minusConfigurations += [ configurations.compileClasspath,
+            configurations.testCompileClasspath, configurations.testRuntimeClasspath ]
+        downloadJavadoc = true
+        downloadSources = true
+    }
+    project {
+        // buildCommand 'org.eclipse.jdt.core.javabuilder'
+        buildCommand 'bndtools.core.bndbuilder'
+        // buildCommand 'org.eclipse.buildship.core.gradleprojectbuilder'
+        buildCommand 'net.sf.eclipsecs.core.CheckstyleBuilder'
+        // 'org.eclipse.buildship.core.gradleprojectnature',
+        natures 'org.eclipse.jdt.core.javanature', \
+            'bndtools.core.bndnature', \
+            'net.sf.eclipsecs.core.CheckstyleNature'
+            'org.eclipse.jdt.groovy.core.groovyNature'
+    }
+}
+tasks.eclipse.dependsOn(cleanEclipse)

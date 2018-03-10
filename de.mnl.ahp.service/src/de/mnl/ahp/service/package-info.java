@@ -16,4 +16,4 @@
  * with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.mnl.ahp.server;
+package de.mnl.ahp.service;

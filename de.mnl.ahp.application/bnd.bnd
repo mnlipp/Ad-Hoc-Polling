@@ -2,7 +2,11 @@ Bundle-Name: Ad Hoc Polling Application
 Bundle-Version: 0.0.0.-${tstamp}-SNAPSHOT
 Bundle-Copyright: Michael N. Lipp (c) 2018
 Bundle-License: http://www.gnu.org/licenses/gpl-3.0.txt
-Bundle-Activator: de.mnl.ahp.server.Application
+Export-Package: de.mnl.ahp.application
+Bundle-Activator: de.mnl.ahp.application.Application
+
+-sources: true
+-runee: JavaSE-1.8
 
 -buildpath: \
 	osgi.core;version=6.0.0,\
@@ -13,8 +17,7 @@ Bundle-Activator: de.mnl.ahp.server.Application
 	org.jgrapes.http;version=latest,\
 	org.jgrapes.util;version=latest,\
 	org.jgrapes.portal;version=latest,\
-	org.jgrapes.portlets.markdowndisplay;version='latest',\
-	org.jgrapes.osgi.core;version='latest'
+	org.jgrapes.osgi.core;version=latest
 
 -includeresource: \
 	resources
@@ -23,5 +26,3 @@ Bundle-Activator: de.mnl.ahp.server.Application
     "The .classpath contains an unknown container: GROOVY_DSL_SUPPORT. This could make your build less portable.", \
     "The .classpath contains an unknown container: org.eclipse.buildship.core.gradleclasspathcontainer. This could make your build less portable.", \
     "The build path does not refer to the bnd container 'aQute.bnd.classpath.container'"
-
-Export-Package: de.mnl.ahp.server

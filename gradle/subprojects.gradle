@@ -1,0 +1,28 @@
+def bndProject = bndWorkspace.getProject(name)
+if (bndProject != null) {
+    plugins.apply 'biz.aQute.bnd'
+        
+    // artifact_version is defined in cnf/bnd.bnd
+    if (bnd.artifact_version) {
+        project.version = bnd.artifact_version
+    }
+}
+    
+if (bndProject != null && project.name != "cnf") {
+    apply plugin: 'signing'
+    apply plugin: 'maven'
+    apply plugin: 'maven-publish'
+
+    group = "de.mnl.ahp"
+        
+    apply from: "${project.rootDir}/gradle/eclipse.gradle"
+}
+
+afterEvaluate {
+    if(project.name == "cnf") {
+        tasks.matching { it.group == "upload" ||
+            it.group == "publishing" }.all {
+            enabled = false
+        }
+    }
+}

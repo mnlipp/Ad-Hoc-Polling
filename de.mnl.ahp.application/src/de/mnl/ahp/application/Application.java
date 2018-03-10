@@ -16,7 +16,9 @@
  * with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.mnl.ahp.server;
+package de.mnl.ahp.application;
+
+// import de.mnl.ahp.service.AdHocPollingService;
 
 import java.net.InetSocketAddress;
 import java.net.URI;
@@ -55,43 +57,39 @@ import org.osgi.framework.BundleContext;
  */
 public class Application extends Component implements BundleActivator {
 
-	private static BundleContext context;
 	private Application app;
-	
-	public static BundleContext context() {
-		return context;
-	}
 	
 	/* (non-Javadoc)
 	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
 	 */
 	@Override
 	public void start(BundleContext context) throws Exception {
-		Application.context = context;
-		// The demo component is the application
 		app = new Application();
 		// Attach a general nio dispatcher
 		app.attach(new NioDispatcher());
-
-		// Network level unencrypted channel.
-		Channel httpTransport = new NamedChannel("httpTransport");
+		
+		// The central service
+// 		app.attach(new AdHocPollingService(Channel.SELF));
+		
 		// Create a TCP server listening on port 5001
-		app.attach(new TcpServer(httpTransport)
+		Channel tcpChannel = new NamedChannel("TCP");
+		app.attach(new TcpServer(tcpChannel)
 				.setServerAddress(new InetSocketAddress(
 						Optional.ofNullable(System.getenv("PORT"))
 						.map(Integer::parseInt).orElse(5001))));
 
 		// Create an HTTP server as converter between transport and application
 		// layer.
-		app.attach(new HttpServer(app, 
-		        httpTransport, GetRequest.class, PostRequest.class));
+		Channel httpChannel = new NamedChannel("HTTP");
+		HttpServer httpServer = app.attach(new HttpServer(httpChannel, 
+		        tcpChannel, GetRequest.class, PostRequest.class));
 		
-		// Build application layer
-		app.attach(new InMemorySessionManager(app.channel()));
-		app.attach(new LanguageSelector(app.channel()));
-		app.attach(new FileStorage(app.channel(), 65536));
-		app.attach(new ComponentCollector<>(
-				app.channel(), context, HttpRequestHandlerFactory.class, 
+		// Build HTTP application layer
+		httpServer.attach(new InMemorySessionManager(httpChannel));
+		httpServer.attach(new LanguageSelector(httpChannel));
+		httpServer.attach(new FileStorage(httpChannel, 65536));
+		httpServer.attach(new ComponentCollector<>(
+				httpChannel, context, HttpRequestHandlerFactory.class, 
 				type -> {
 					switch(type) {
 					case "de.mnl.ahp.participantui.ParticipantUi":
@@ -102,7 +100,7 @@ public class Application extends Component implements BundleActivator {
 						return Arrays.asList(Collections.emptyMap());
 					}
 				}));
-		Portal portal = app.attach(new Portal(Channel.SELF, app.channel(), 
+		Portal portal = httpServer.attach(new Portal(Channel.SELF, httpChannel, 
 				new URI("/admin")))
 				.setResourceBundleSupplier(l -> ResourceBundle.getBundle(
 					getClass().getPackage().getName() + ".portal-l10n", l,

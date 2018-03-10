@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<?py include("header.pyhtml") ?>
+
+<body>
+
+	<div id="single_vote">
+		<div>
+			<span>{= _("choose response") =}</span>
+		</div>
+
+		<div>
+			<form class="simple_form"  method="post">
+				<fieldset>
+					<button type="submit" name="chosen" value="1">1</button>
+					<button type="submit" name="chosen" value="2">2</button>
+					<button type="submit" name="chosen" value="3">3</button>
+					<button type="submit" name="chosen" value="4">4</button>
+					<button type="submit" name="chosen" value="5">5</button>
+					<button type="submit" name="chosen" value="6">6</button>
+				</fieldset>
+
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>
