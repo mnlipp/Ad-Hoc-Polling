@@ -17,7 +17,8 @@ Bundle-Activator: de.mnl.ahp.application.Application
 	org.jgrapes.http;version=latest,\
 	org.jgrapes.util;version=latest,\
 	org.jgrapes.portal;version=latest,\
-	org.jgrapes.osgi.core;version=latest
+	org.jgrapes.osgi.core;version=latest,\
+	de.mnl.ahp.service;version=latest
 
 -includeresource: \
 	resources

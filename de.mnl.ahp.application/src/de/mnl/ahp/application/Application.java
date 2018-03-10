@@ -18,7 +18,7 @@
 
 package de.mnl.ahp.application;
 
-// import de.mnl.ahp.service.AdHocPollingService;
+import de.mnl.ahp.service.AdHocPollingService;
 
 import java.net.InetSocketAddress;
 import java.net.URI;
@@ -69,7 +69,7 @@ public class Application extends Component implements BundleActivator {
 		app.attach(new NioDispatcher());
 		
 		// The central service
-// 		app.attach(new AdHocPollingService(Channel.SELF));
+ 		app.attach(new AdHocPollingService(Channel.SELF));
 		
 		// Create a TCP server listening on port 5001
 		Channel tcpChannel = new NamedChannel("TCP");
