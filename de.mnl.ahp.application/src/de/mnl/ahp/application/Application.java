@@ -69,7 +69,7 @@ public class Application extends Component implements BundleActivator {
 		app.attach(new NioDispatcher());
 		
 		// The central service
- 		app.attach(new AdHocPollingService(Channel.SELF));
+ 		app.attach(new AdHocPollingService(app.channel(), context));
 		
 		// Create a TCP server listening on port 5001
 		Channel tcpChannel = new NamedChannel("TCP");
@@ -117,7 +117,16 @@ public class Application extends Component implements BundleActivator {
 		portal.attach(new ComponentCollector<>(
 				portal, context, PageResourceProviderFactory.class));
 		portal.attach(new ComponentCollector<>(
-				portal, context, PortletComponentFactory.class));
+				portal, context, PortletComponentFactory.class,
+				type -> {
+					switch(type) {
+					case "de.mnl.ahp.portlets.management.AdminPortlet":
+						return Arrays.asList(Components.mapOf(
+								"AdHocPollingServiceChannel", app.channel()));
+					default:
+						return Arrays.asList(Collections.emptyMap());
+					}
+				}));
 		Components.start(app);
 	}
 

@@ -18,16 +18,58 @@
 
 package de.mnl.ahp.service;
 
+import de.mnl.ahp.service.events.CreatePoll;
+
+import java.time.Instant;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.Component;
+import org.jgrapes.core.annotation.Handler;
+import org.osgi.framework.BundleContext;
 
 /**
  *
  */
 public class AdHocPollingService extends Component {
 
-	public AdHocPollingService(Channel componentChannel) {
+	private Map<Integer, PollData> data = new HashMap<>();
+	
+	public AdHocPollingService(Channel componentChannel, BundleContext context) {
 		super(componentChannel);
 	}
 
+	@Handler
+	public void onCreatePoll(CreatePoll event) {
+		while (true) {
+			int digit1 = (int)(Math.random() * 9 + 1);
+			int digit2 = (int)(Math.random() * 9 + 1);
+			int number = digit1 * 1000 + digit2 * 100 + digit1 * 10 + digit2;
+			synchronized(data) {
+				if (!data.containsKey(number)) {
+					data.put(number, new PollData());
+					break;
+				}
+			}
+		}
+	}
+	
+	public class PollData {
+		private Instant startedAt;
+		private int[] counter = new int[6];
+		
+		public PollData() {
+			startedAt = Instant.now();
+			for (int i = 0; i < 6; i++) {
+				counter[i] = 0;
+			}
+		}
+
+		public PollData incrementCounter(int index) {
+			counter[index] += 1;
+			return this;
+		}
+		
+	}
 }

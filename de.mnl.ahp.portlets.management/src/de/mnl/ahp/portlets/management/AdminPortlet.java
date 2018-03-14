@@ -30,9 +30,11 @@ import java.util.ResourceBundle;
 import java.util.Set;
 
 import org.jgrapes.core.Channel;
+import org.jgrapes.core.ClassChannel;
 import org.jgrapes.core.Event;
 import org.jgrapes.core.Manager;
 import org.jgrapes.core.annotation.Handler;
+import org.jgrapes.core.annotation.HandlerDefinition.ChannelReplacements;
 import org.jgrapes.http.Session;
 import org.jgrapes.portal.PortalSession;
 import org.jgrapes.portal.PortalWeblet;
@@ -55,6 +57,8 @@ import org.jgrapes.portal.freemarker.FreeMarkerPortlet;
  */
 public class AdminPortlet extends FreeMarkerPortlet {
 
+	private class ServiceChannel extends ClassChannel {} 
+	
 	private static final Set<RenderMode> MODES = RenderMode.asSet(
 			DeleteablePreview, View);
 	
@@ -66,8 +70,9 @@ public class AdminPortlet extends FreeMarkerPortlet {
 	 * handlers listen on by default and that 
 	 * {@link Manager#fire(Event, Channel...)} sends the event to 
 	 */
-	public AdminPortlet(Channel componentChannel) {
-		super(componentChannel, true);
+	public AdminPortlet(Channel componentChannel, Channel applicationChannel) {
+		super(componentChannel, ChannelReplacements.create().add(
+				ServiceChannel.class,  applicationChannel), true);
 	}
 	
 	@Handler

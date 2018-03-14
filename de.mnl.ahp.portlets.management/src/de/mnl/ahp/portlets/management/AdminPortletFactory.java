@@ -44,8 +44,11 @@ public class AdminPortletFactory implements PortletComponentFactory {
 	 * @see org.jgrapes.core.ComponentFactory#create(org.jgrapes.core.Channel, java.util.Map)
 	 */
 	@Override
-	public Optional<ComponentType> create(Channel componentChannel, Map<Object,Object> properties) {
-		return Optional.of(new AdminPortlet(componentChannel));
+	public Optional<ComponentType> create(
+			Channel componentChannel, Map<Object,Object> properties) {
+		return Optional.of(new AdminPortlet(componentChannel, 
+				(Channel)properties.getOrDefault(
+						"AdHocPollingServiceChannel", componentChannel)));
 	}
 
 }

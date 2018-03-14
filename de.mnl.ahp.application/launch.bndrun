@@ -12,12 +12,12 @@
 	org.jdrupes.json;version='[2.0,2.1)',\
 	com.fasterxml.jackson.core.jackson-core;version='[2.9.4,2.10)',\
 	org.jdrupes.httpcodec;version='[1.0.2,1.1)',\
-	org.jgrapes.core;version='[0.15.0,1.1)',\
-	org.jgrapes.io;version='[0.15.0,1.1)',\
-	org.jgrapes.util;version='[0.15.0,1.1)',\
-	org.jgrapes.http;version='[0.15.0,1.1)',\
-	org.jgrapes.http.freemarker;version='[0.15.0,1.1)',\
-	org.jgrapes.portal;version=latest,\
+	org.jgrapes.core;version='[0.16.0,1.1)',\
+	org.jgrapes.io;version='[0.16.0,1.1)',\
+	org.jgrapes.util;version='[0.16.0,1.1)',\
+	org.jgrapes.http;version='[0.16.0,1.1)',\
+	org.jgrapes.http.freemarker;version='[0.16.0,1.1)',\
+	org.jgrapes.portal;version='[0.13.0,1.1)',\
 	org.jgrapes.portal.providers.chartjs;version=latest,\
 	org.jgrapes.portal.providers.datatables;version=latest,\
 	org.jgrapes.portal.providers.markdownit;version=latest,\
@@ -26,6 +26,7 @@
 	org.jgrapes.osgi.core;version=latest,\
 	org.jgrapes.osgi.portlets.services;version=latest,\
 	org.jgrapes.osgi.portlets.bundles;version=latest,\
+    de.mnl.ahp.service;version=snapshot,\
 	de.mnl.ahp.participantui;version=snapshot,\
 	de.mnl.ahp.portlets.management;version=snapshot,\
 	de.mnl.ahp.application;version=snapshot
@@ -35,7 +36,7 @@
     osgi.identity;filter:='(osgi.identity=de.mnl.ahp.service)',\
     osgi.identity;filter:='(osgi.identity=de.mnl.ahp.participantui)',\
     osgi.identity;filter:='(osgi.identity=de.mnl.ahp.portlets.management)',\
-    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.osgi.portal)(version>=0.12.0))',\
+    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.osgi.portal)(version>=0.13.0))',\
 	osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portlets.sysinfo)',\
 	osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portlets.markdowndisplay)',\
 	osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portlets.bundles)',\
