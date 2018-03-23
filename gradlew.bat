@@ -1,20 +1,3 @@
-@rem ***************************************************************************
-@rem Ad Hoc Polling Application
-@rem Copyright (C) 2018  Michael N. Lipp
-@rem
-@rem This program is free software; you can redistribute it and/or modify it 
-@rem under the terms of the GNU General Public License as published by 
-@rem the Free Software Foundation; either version 3 of the License, or 
-@rem (at your option) any later version.
-@rem
-@rem This program is distributed in the hope that it will be useful, but 
-@rem WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-@rem or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License 
-@rem for more details.
-@rem
-@rem You should have received a copy of the GNU General Public License along 
-@rem with this program; if not, see <http://www.gnu.org/licenses/>.
-@rem ***************************************************************************
 @if "%DEBUG%" == "" @echo off
 @rem ##########################################################################
 @rem
