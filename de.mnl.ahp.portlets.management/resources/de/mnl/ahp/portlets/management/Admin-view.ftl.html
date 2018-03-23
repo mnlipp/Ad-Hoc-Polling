@@ -1,4 +1,10 @@
-<div data-portlet-title="${_("portletName")}" class="adHocPolling-admin-view">
-View
+<div data-portlet-title="${_("portletName")}" class="AdHocPolling-admin-view">
+
+  <div class="pollGroups">
+  </div>
+
 </div>
 
+<script>
+deMnlAhpAdmin.initView($( '[data-portlet-id="${portlet.portletId}"] .pollGroups' ));
+</script>

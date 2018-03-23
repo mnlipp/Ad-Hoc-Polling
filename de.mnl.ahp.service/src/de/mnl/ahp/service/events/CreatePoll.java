@@ -25,4 +25,14 @@ import org.jgrapes.core.Event;
  */
 public class CreatePoll extends Event<Void> {
 
+    private String adminId;
+
+    public CreatePoll(String adminId) {
+        this.adminId = adminId;
+    }
+
+    public String adminId() {
+        return adminId;
+    }
+
 }

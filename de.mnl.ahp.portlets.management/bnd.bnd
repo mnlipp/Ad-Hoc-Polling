@@ -19,7 +19,8 @@ Private-Package: de.mnl.ahp.portlets.management
 	org.jgrapes.http;version=latest,\
 	org.jgrapes.portal;version='[0.13.0,1.1)',\
     org.jdrupes.json;version=latest,\
-	org.freemarker.freemarker;version='[2.3.27,2.4)'
+	org.freemarker.freemarker;version='[2.3.27,2.4)',\
+    de.mnl.ahp.service;version=latest
 
 -includeresource: \
 	resources

@@ -24,8 +24,6 @@ import java.net.InetSocketAddress;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -93,9 +91,9 @@ public class Application extends Component implements BundleActivator {
 				type -> {
 					switch(type) {
 					case "de.mnl.ahp.participantui.ParticipantUi":
-						Map<Object,Object> map = new HashMap<>();
-						map.put(HttpRequestHandlerFactory.PREFIX, URI.create("/test/"));
-						return Arrays.asList(map);
+                    return Arrays.asList(Components.mapOf(
+                        HttpRequestHandlerFactory.PREFIX, URI.create("/test/"),
+                        "AdHocPollingServiceChannel", app.channel()));
 					default:
 						return Arrays.asList(Collections.emptyMap());
 					}

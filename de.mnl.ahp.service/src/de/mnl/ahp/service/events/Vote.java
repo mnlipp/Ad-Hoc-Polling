@@ -16,31 +16,28 @@
  * with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-/*
- * Portlet specific styles.
+package de.mnl.ahp.service.events;
+
+import org.jgrapes.core.Event;
+
+/**
+ *
  */
-.AdHocPolling-admin-view {
-    height: 100%;
-}
+public class Vote extends Event<Void> {
 
-.AdHocPolling-admin-view .pollGroups {
-    height: 100%;
-}
+    private int pollId;
+    private int index;
 
-.AdHocPolling-admin-view .pollGroup {
-    height: 100%;
-}
+    public Vote(int pollId, int index) {
+        this.pollId = pollId;
+        this.index = index;
+    }
 
-.AdHocPolling-admin-view .pollGroup table {
-    height: 100%;
-    border: 1px solid;
-    border-collapse: collapse;
-}
+    public int pollId() {
+        return pollId;
+    }
 
-.AdHocPolling-admin-view .pollGroup th,
-.AdHocPolling-admin-view .pollGroup td {
-	min-width: 5em;
-    border: 1px solid;
-    text-align: center;
+    public int index() {
+        return index;
+    }
 }
-

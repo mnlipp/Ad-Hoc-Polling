@@ -18,11 +18,38 @@
 
 package de.mnl.ahp.service.events;
 
-import org.jgrapes.core.Event;
+import java.time.Instant;
 
 /**
  *
  */
-public class PollCreated extends Event<Void> {
+public class PollData {
+    private String adminId;
+	private int pollId;
+	private Instant startedAt;
+	private int[] counter;
+	
+    public PollData(String adminId, int pollId, Instant startedAt,
+            int[] counter) {
+        this.adminId = adminId;
+		this.pollId = pollId;
+		this.startedAt = startedAt;
+		this.counter = counter;
+	}
 
+    public String adminId() {
+        return adminId;
+    }
+
+	public int pollId() {
+		return pollId;
+	}
+	
+	public Instant startedAt() {
+		return startedAt;
+	}
+	
+	public int[] counter() {
+		return counter;
+	}
 }

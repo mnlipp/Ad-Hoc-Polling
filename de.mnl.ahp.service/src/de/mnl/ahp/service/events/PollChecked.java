@@ -16,31 +16,17 @@
  * with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-/*
- * Portlet specific styles.
+package de.mnl.ahp.service.events;
+
+import org.jgrapes.core.Channel;
+import org.jgrapes.core.CompletionEvent;
+
+/**
+ *
  */
-.AdHocPolling-admin-view {
-    height: 100%;
-}
+public class PollChecked extends CompletionEvent<CheckPoll> {
 
-.AdHocPolling-admin-view .pollGroups {
-    height: 100%;
+    public PollChecked(CheckPoll monitoredEvent, Channel... channels) {
+        super(monitoredEvent, channels);
+    }
 }
-
-.AdHocPolling-admin-view .pollGroup {
-    height: 100%;
-}
-
-.AdHocPolling-admin-view .pollGroup table {
-    height: 100%;
-    border: 1px solid;
-    border-collapse: collapse;
-}
-
-.AdHocPolling-admin-view .pollGroup th,
-.AdHocPolling-admin-view .pollGroup td {
-	min-width: 5em;
-    border: 1px solid;
-    text-align: center;
-}
-

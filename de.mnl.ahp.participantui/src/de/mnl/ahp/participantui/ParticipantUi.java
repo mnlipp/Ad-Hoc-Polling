@@ -18,6 +18,10 @@
 
 package de.mnl.ahp.participantui;
 
+import de.mnl.ahp.participantui.VotingController.State;
+import de.mnl.ahp.service.events.CheckPoll;
+import de.mnl.ahp.service.events.PollChecked;
+import de.mnl.ahp.service.events.Vote;
 import freemarker.template.SimpleScalar;
 import freemarker.template.TemplateMethodModelEx;
 import freemarker.template.TemplateModel;
@@ -34,7 +38,10 @@ import java.util.Optional;
 import org.jdrupes.httpcodec.protocols.http.HttpConstants.HttpStatus;
 import org.jdrupes.httpcodec.protocols.http.HttpField;
 import org.jgrapes.core.Channel;
+import org.jgrapes.core.ClassChannel;
+import org.jgrapes.core.Components;
 import org.jgrapes.core.annotation.Handler;
+import org.jgrapes.core.annotation.HandlerDefinition.ChannelReplacements;
 import org.jgrapes.http.HttpRequestHandlerFactory;
 import org.jgrapes.http.LanguageSelector.Selection;
 import org.jgrapes.http.ResourcePattern;
@@ -43,6 +50,7 @@ import org.jgrapes.http.Session;
 import org.jgrapes.http.annotation.RequestHandler;
 import org.jgrapes.http.events.GetRequest;
 import org.jgrapes.http.events.PostRequest;
+import org.jgrapes.http.events.Request;
 import org.jgrapes.http.freemarker.FreeMarkerRequestHandler;
 import org.jgrapes.io.IOSubchannel;
 import org.jgrapes.io.events.Close;
@@ -53,11 +61,27 @@ import org.jgrapes.io.events.Input;
  */
 public class ParticipantUi extends FreeMarkerRequestHandler {
 
-	public ParticipantUi(Channel componentChannel, Map<Object, Object> properties) {
-		super(componentChannel, ParticipantUi.class.getClassLoader(),
-				ParticipantUi.class.getPackage().getName().replace('.', '/'),
-				(URI)properties.getOrDefault(
-						HttpRequestHandlerFactory.PREFIX, ""));
+    private static Map<VotingController.State, String> stateToPage
+        = Components.mapOf(
+            State.Authorized, "votePage.ftl.html",
+            State.Voted, "byePage.ftl.html");
+
+    private class AhpSvcChannel extends ClassChannel {
+    }
+
+    private Channel ahpSvcChannel;
+
+    public ParticipantUi(Channel componentChannel,
+            Map<Object, Object> properties) {
+        super(componentChannel, ChannelReplacements.create().add(
+            AhpSvcChannel.class, (Channel) properties.getOrDefault(
+                "AdHocPollingServiceChannel", componentChannel)),
+            ParticipantUi.class.getClassLoader(),
+            ParticipantUi.class.getPackage().getName().replace('.', '/'),
+            (URI) properties.getOrDefault(
+                HttpRequestHandlerFactory.PREFIX, ""));
+        this.ahpSvcChannel = (Channel) properties.getOrDefault(
+            "AdHocPollingServiceChannel", componentChannel);
 		// Because this handler provides a "top-level" page, we have to adapt the
 		// resource pattern.
 		String prefix = prefix().getPath();
@@ -110,7 +134,11 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
 				Optional<Session> session = event.associated(Session.class);
 				VotingController vc = (VotingController)session.get().computeIfAbsent(
 						VotingController.class, k -> new VotingController());
-				success = sendProcessedTemplate(event, channel, vc.pageToShow());
+                success = sendProcessedTemplate(event, channel,
+                    stateToPage.getOrDefault(vc.state(), "authPage.ftl.html"));
+                if (vc.state() == State.Voted) {
+                    vc.reset();
+                }
 			} else {
 				success = ResponseCreationSupport.sendStaticContent(
 						event, channel, requestPath -> ParticipantUi.class.getResource(path), 
@@ -138,21 +166,72 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
 		channel.associated(PostedUrlDataDecoder.class).ifPresent(dec -> {
 			event.stop();
 			dec.process(event).ifPresent(fields -> {
-				// Request has been fully decoded, process
-				dec.request().associated(Session.class).ifPresent(session -> {
-					if (fields.containsKey("setLocale")) {
-						Selection selection = (Selection)session.get(Selection.class);
-						if (selection != null) {
-							selection.prefer(Locale.forLanguageTag(fields.get("setLocale")));
-						}
-					}
-				});
-				dec.request().httpRequest().response().get().setField(
-						HttpField.LOCATION, prefix());
-				ResponseCreationSupport.sendResponse(dec.request().httpRequest(), 
-						channel, HttpStatus.SEE_OTHER);
-
+                // Request has been fully decoded, process
+                dec.request().associated(Session.class).map(session -> {
+                    if (fields.containsKey("setLocale")) {
+                        Selection selection
+                            = (Selection) session.get(Selection.class);
+                        if (selection != null) {
+                            selection.prefer(Locale
+                                .forLanguageTag(fields.get("setLocale")));
+                        }
+                        return true;
+                    }
+                    VotingController vc = (VotingController) session
+                        .computeIfAbsent(VotingController.class,
+                            k -> new VotingController());
+                    if (fields.containsKey("submit_code")) {
+                        CheckPoll checkEvent = new CheckPoll(
+                            Integer.parseInt(fields.get("code")));
+                        checkEvent.setAssociated(IOSubchannel.class, channel);
+                        fire(checkEvent, ahpSvcChannel);
+                        return false;
+                    }
+                    if (fields.containsKey("chosen")) {
+                        vc.voted();
+                        fire(new Vote(vc.pollId(), Integer.parseInt(
+                            fields.get("chosen")) - 1), ahpSvcChannel);
+                        return true;
+                    }
+                    return true;
+                }).map(respond -> {
+                    if (respond) {
+                        dec.request().httpRequest().response().get().setField(
+                            HttpField.LOCATION, prefix());
+                        ResponseCreationSupport.sendResponse(
+                            dec.request().httpRequest(), channel,
+                            HttpStatus.SEE_OTHER);
+                    }
+                    return null;
+                });
 			});
 		});
 	}
+
+    @Handler(channels = AhpSvcChannel.class)
+    public void onPollChecked(PollChecked event) {
+        event.event().associated(IOSubchannel.class).ifPresent(channel -> {
+            channel.associated(PostedUrlDataDecoder.class).ifPresent(dec -> {
+                Request request = dec.request();
+                request.associated(Session.class).ifPresent(session -> {
+                    VotingController vc = (VotingController) session
+                        .computeIfAbsent(VotingController.class,
+                            k -> new VotingController());
+                    try {
+                        if (event.event().get() != null
+                            && event.event().get()) {
+                            vc.authorized(event.event().pollId());
+                        }
+                    } catch (InterruptedException e) {
+                        // Is completed, cannot happen
+                    }
+                    ;
+                });
+                request.httpRequest().response().get().setField(
+                    HttpField.LOCATION, prefix());
+                ResponseCreationSupport.sendResponse(
+                    request.httpRequest(), channel, HttpStatus.SEE_OTHER);
+            });
+        });
+    }
 }

@@ -18,6 +18,9 @@
 
 package de.mnl.ahp.portlets.management;
 
+import de.mnl.ahp.service.events.CreatePoll;
+import de.mnl.ahp.service.events.ListPolls;
+import de.mnl.ahp.service.events.PollState;
 import freemarker.core.ParseException;
 import freemarker.template.MalformedTemplateNameException;
 import freemarker.template.Template;
@@ -28,7 +31,9 @@ import java.io.Serializable;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicInteger;
 
+import org.jdrupes.json.JsonObject;
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.ClassChannel;
 import org.jgrapes.core.Event;
@@ -48,6 +53,8 @@ import org.jgrapes.portal.events.AddPortletRequest;
 import org.jgrapes.portal.events.AddPortletType;
 import org.jgrapes.portal.events.DeletePortlet;
 import org.jgrapes.portal.events.DeletePortletRequest;
+import org.jgrapes.portal.events.NotifyPortletModel;
+import org.jgrapes.portal.events.NotifyPortletView;
 import org.jgrapes.portal.events.PortalReady;
 import org.jgrapes.portal.events.RenderPortletRequest;
 import org.jgrapes.portal.freemarker.FreeMarkerPortlet;
@@ -57,129 +64,181 @@ import org.jgrapes.portal.freemarker.FreeMarkerPortlet;
  */
 public class AdminPortlet extends FreeMarkerPortlet {
 
-	private class ServiceChannel extends ClassChannel {} 
-	
-	private static final Set<RenderMode> MODES = RenderMode.asSet(
-			DeleteablePreview, View);
-	
-	/**
-	 * Creates a new component with its channel set to the given 
-	 * channel.
-	 * 
-	 * @param componentChannel the channel that the component's 
-	 * handlers listen on by default and that 
-	 * {@link Manager#fire(Event, Channel...)} sends the event to 
-	 */
-	public AdminPortlet(Channel componentChannel, Channel applicationChannel) {
-		super(componentChannel, ChannelReplacements.create().add(
-				ServiceChannel.class,  applicationChannel), true);
-	}
-	
-	@Handler
-	public void onPortalReady(PortalReady event, PortalSession channel) 
-			throws TemplateNotFoundException, MalformedTemplateNameException, 
-			ParseException, IOException {
-		ResourceBundle resourceBundle = resourceBundle(channel.locale());
-		// Add portlet resources to page
-		channel.respond(new AddPortletType(type())
-				.setDisplayName(resourceBundle.getString("portletName"))
-				.addScript(new ScriptResource()
-						.setRequires(new String[] {"datatables.net"})
-						.setScriptUri(event.renderSupport().portletResource(
-								type(), "Admin-functions.ftl.js")))
-				.addCss(event.renderSupport(), PortalWeblet.uriFromPath("Admin-style.css"))
-				.setInstantiable());
-	}
-	
-	/* (non-Javadoc)
-	 * @see org.jgrapes.portal.AbstractPortlet#generatePortletId()
-	 */
-	@Override
-	protected String generatePortletId() {
-		return type() + "-" + super.generatePortletId();
-	}
+    private class AhpSvcChannel extends ClassChannel {
+    }
 
-	/* (non-Javadoc)
-	 * @see org.jgrapes.portal.AbstractPortlet#modelFromSession
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	protected <T extends Serializable> Optional<T> stateFromSession(
-			Session session, String portletId, Class<T> type) {
-		if (portletId.startsWith(type() + "-")) {
-			return Optional.of((T)new AdminModel(portletId));
-		}
-		return Optional.empty();
-	}
+    private static AtomicInteger instanceCounter = new AtomicInteger(0);
+    private static final Set<RenderMode> MODES = RenderMode.asSet(
+        DeleteablePreview, View);
 
-	/* (non-Javadoc)
-	 * @see org.jgrapes.portal.AbstractPortlet#doAddPortlet
-	 */
-	protected String doAddPortlet(AddPortletRequest event, PortalSession channel)
-			throws Exception {
-		AdminModel portletModel = new AdminModel(generatePortletId());
-		Template tpl = freemarkerConfig().getTemplate("Admin-preview.ftl.html");
-		channel.respond(new RenderPortletFromTemplate(event,
-				AdminPortlet.class, portletModel.getPortletId(),
-				tpl, fmModel(event, channel, portletModel))
-				.setRenderMode(DeleteablePreview).setSupportedModes(MODES)
-				.setForeground(true));
+    private Channel ahpSvcChannel;
+    private AdminModel adminModel;
+
+    /**
+     * Creates a new component with its channel set to the given channel.
+     * 
+     * @param componentChannel the channel that the component's handlers listen
+     *            on by default and that {@link Manager#fire(Event, Channel...)}
+     *            sends the event to
+     */
+    public AdminPortlet(Channel componentChannel, Channel ahpSvcChannel) {
+        super(componentChannel, ChannelReplacements.create().add(
+            AhpSvcChannel.class, ahpSvcChannel), true);
+        this.ahpSvcChannel = ahpSvcChannel;
+        adminModel = new AdminModel();
+    }
+
+    @Handler
+    public void onPortalReady(PortalReady event, PortalSession channel)
+            throws TemplateNotFoundException, MalformedTemplateNameException,
+            ParseException, IOException {
+        ResourceBundle resourceBundle = resourceBundle(channel.locale());
+        // Add portlet resources to page
+        channel.respond(new AddPortletType(type())
+            .setDisplayName(resourceBundle.getString("portletName"))
+            .addScript(new ScriptResource()
+                .setRequires(new String[] { "datatables.net" })
+                .setScriptUri(event.renderSupport().portletResource(
+                    type(), "Admin-functions.ftl.js")))
+            .addCss(event.renderSupport(),
+                PortalWeblet.uriFromPath("Admin-style.css"))
+            .setInstantiable());
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.jgrapes.portal.AbstractPortlet#generatePortletId()
+     */
+    @Override
+    protected String generatePortletId() {
+        return adminModel.getPortletId();
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.jgrapes.portal.AbstractPortlet#modelFromSession
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    protected <T extends Serializable> Optional<T> stateFromSession(
+            Session session, String portletId, Class<T> type) {
+        if (portletId.startsWith(type() + "-")) {
+            return Optional.of((T) adminModel);
+        }
+        return Optional.empty();
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.jgrapes.portal.AbstractPortlet#doAddPortlet
+     */
+    protected String doAddPortlet(AddPortletRequest event,
+            PortalSession channel) throws Exception {
+        Template tpl = freemarkerConfig().getTemplate("Admin-preview.ftl.html");
+        channel.respond(new RenderPortletFromTemplate(event,
+            AdminPortlet.class, adminModel.getPortletId(),
+            tpl, fmModel(event, channel, adminModel))
+                .setRenderMode(DeleteablePreview).setSupportedModes(MODES)
+                .setForeground(true));
+
 //		channel.respond(new NotifyPortletView(type(),
 //				portletModel.getPortletId(), "serviceUpdates", serviceInfos, "preview", true));
-		return portletModel.getPortletId();
-	}
+        return adminModel.getPortletId();
+    }
 
-	/* (non-Javadoc)
-	 * @see org.jgrapes.portal.AbstractPortlet#doRenderPortlet
-	 */
-	@Override
-	protected void doRenderPortlet(RenderPortletRequest event,
-	        PortalSession channel, String portletId, Serializable retrievedState)
-	        throws Exception {
-		AdminModel portletModel = (AdminModel)retrievedState;
-		switch (event.renderMode()) {
-		case Preview:
-		case DeleteablePreview: {
-			Template tpl = freemarkerConfig().getTemplate("Admin-preview.ftl.html");
-			channel.respond(new RenderPortletFromTemplate(event,
-					AdminPortlet.class, portletId, 
-					tpl, fmModel(event, channel, portletModel))
-					.setRenderMode(DeleteablePreview).setSupportedModes(MODES)
-					.setForeground(event.isForeground()));
-//			channel.respond(new NotifyPortletView(type(),
-//					portletModel.getPortletId(), "serviceUpdates", serviceInfos, "preview", true));
-			break;
-		}
-		case View: {
-			Template tpl = freemarkerConfig().getTemplate("Admin-view.ftl.html");
-			channel.respond(new RenderPortletFromTemplate(event,
-					AdminPortlet.class, portletModel.getPortletId(), 
-					tpl, fmModel(event, channel, portletModel))
-					.setSupportedModes(MODES).setForeground(event.isForeground()));
-//			channel.respond(new NotifyPortletView(type(),
-//					portletModel.getPortletId(), "serviceUpdates", serviceInfos, "view", true));
-			break;
-		}
-		default:
-			break;
-		}	
-	}
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.jgrapes.portal.AbstractPortlet#doRenderPortlet
+     */
+    @Override
+    protected void doRenderPortlet(RenderPortletRequest event,
+            PortalSession channel, String portletId,
+            Serializable retrievedState)
+            throws Exception {
+        AdminModel portletModel = (AdminModel) retrievedState;
+        switch (event.renderMode()) {
+        case Preview:
+        case DeleteablePreview: {
+            Template tpl
+                = freemarkerConfig().getTemplate("Admin-preview.ftl.html");
+            channel.respond(new RenderPortletFromTemplate(event,
+                AdminPortlet.class, portletId,
+                tpl, fmModel(event, channel, portletModel))
+                    .setRenderMode(DeleteablePreview).setSupportedModes(MODES)
+                    .setForeground(event.isForeground()));
+            fire(new ListPolls(channel.browserSession().id()), ahpSvcChannel);
+            break;
+        }
+        case View: {
+            Template tpl
+                = freemarkerConfig().getTemplate("Admin-view.ftl.html");
+            channel.respond(new RenderPortletFromTemplate(event,
+                AdminPortlet.class, portletModel.getPortletId(),
+                tpl, fmModel(event, channel, portletModel))
+                    .setSupportedModes(MODES)
+                    .setForeground(event.isForeground()));
+            fire(new ListPolls(channel.browserSession().id()), ahpSvcChannel);
+            break;
+        }
+        default:
+            break;
+        }
+    }
 
-	/* (non-Javadoc)
-	 * @see org.jgrapes.portal.AbstractPortlet#doDeletePortlet
-	 */
-	@Override
-	protected void doDeletePortlet(DeletePortletRequest event, PortalSession channel, 
-			String portletId, Serializable portletState) throws Exception {
-		channel.respond(new DeletePortlet(portletId));
-	}
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.jgrapes.portal.AbstractPortlet#doDeletePortlet
+     */
+    @Override
+    protected void doDeletePortlet(DeletePortletRequest event,
+            PortalSession channel,
+            String portletId, Serializable portletState) throws Exception {
+        channel.respond(new DeletePortlet(portletId));
+    }
 
-	@SuppressWarnings("serial")
-	public class AdminModel extends PortletBaseModel {
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.jgrapes.portal.AbstractPortlet#doNotifyPortletModel
+     */
+    @Override
+    protected void doNotifyPortletModel(NotifyPortletModel event,
+            PortalSession channel, Serializable portletState)
+            throws Exception {
+        event.stop();
 
-		public AdminModel(String portletId) {
-			super(portletId);
-		}
+        if (event.method().equals("createPoll")) {
+            fire(new CreatePoll(channel.browserSession().id()), ahpSvcChannel);
+            return;
+        }
+    }
 
-	}
+    @Handler(channels = AhpSvcChannel.class)
+    public void onPollState(PollState event) throws IOException {
+        JsonObject json = JsonObject.create();
+        json.setField("pollId", event.pollData().pollId())
+            .setField("startedAt", event.pollData().startedAt().toEpochMilli())
+            .setField("counters", event.pollData().counter());
+        for (PortalSession ps : trackedSessions()) {
+            if (!ps.browserSession().id().equals(event.pollData().adminId())) {
+                continue;
+            }
+            ps.respond(new NotifyPortletView(type(), adminModel.getPortletId(),
+                "updatePoll", json));
+        }
+    }
+
+    public class AdminModel extends PortletBaseModel {
+        private static final long serialVersionUID = -7400194644538987104L;
+
+        public AdminModel() {
+            super(type() + "-" + instanceCounter.getAndIncrement());
+        }
+
+    }
 }

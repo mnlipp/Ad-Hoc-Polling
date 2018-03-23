@@ -26,18 +26,32 @@ import java.io.Serializable;
 public class VotingController implements Serializable {
 	private static final long serialVersionUID = -4844487793046604718L;
 
-	private enum State { Start, Authorized, Voted }
+    public enum State {
+        Start, Authorized, Voted
+    }
 	
 	private State state = State.Start;
-	
-	public String pageToShow() {
-		switch(state) {
-		case Authorized:
-			return "authPage.ftl.html";
-		case Voted:
-			return "authPage.ftl.html";
-		default:
-			return "authPage.ftl.html";
-		}
-	}
+    private int pollId;
+
+    public State state() {
+        return state;
+    }
+
+    public void reset() {
+        state = State.Start;
+    }
+
+    public void authorized(int pollId) {
+        this.pollId = pollId;
+        state = State.Authorized;
+    }
+
+    public int pollId() {
+        return pollId;
+    }
+
+    public void voted() {
+        state = State.Voted;
+    }
+
 }
