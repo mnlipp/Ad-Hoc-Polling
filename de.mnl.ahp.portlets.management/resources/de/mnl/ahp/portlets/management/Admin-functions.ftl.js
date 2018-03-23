@@ -61,6 +61,7 @@ var deMnlAhpAdmin = {
         
         // Update Preview
         let preview = JGPortal.findPortletPreview(portletId);
+        let lang = preview.closest('[lang]').attr('lang') || 'en';
         if (preview) {
             let lastCreated = preview.find("div.lastCreated");
             let currentlyLast = lastCreated.data("startedAt");
@@ -86,10 +87,22 @@ var deMnlAhpAdmin = {
         });
         if (group === null) {
             group = groupTemplate.clone();
-            pollGroups.prepend(group);
+            let inserted = false;
+            pollGroups.find(".pollGroup").each(function() {
+                if (pollData.startedAt > parseInt($(this).attr("data-started-at"))) {
+                    group.insertBefore($(this));
+                    inserted = true;
+                    return false;
+                }
+            });
+            if (!inserted) {
+                pollGroups.append(group);
+            }
             group.attr("data-poll-id", pollData.pollId);
             group.attr("data-started-at", pollData.startedAt);
-            group.find("h3").html(pollData.pollId);
+            group.find("h3").html(pollData.pollId + " (" + "${_("started at")}" 
+                + ": " + moment(pollData.startedAt).locale(lang).format("LTS") 
+                + ")");
             group.find("table");
             pollGroups.accordion("refresh");
             pollGroups.accordion("option", "active", 0);
