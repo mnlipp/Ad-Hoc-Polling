@@ -33,7 +33,7 @@ apply plugin: 'eclipse'
 tasks.eclipse.dependsOn(cleanEclipse)
 
 task stage {
-	dependsOn ':org.jgrapes.osgi.demo.heroku:export'
+	dependsOn ':de.mnl.ahp.application:export'
 }
   
 task wrapper(type: Wrapper) {

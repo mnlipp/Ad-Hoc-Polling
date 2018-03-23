@@ -1,0 +1,6 @@
+{
+  "name": "Heroku Ad Hoc Polling App",
+  "description": "An application for ad hoc polls.",
+  "image": "heroku/gradle",
+  "addons": []
+}
