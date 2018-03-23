@@ -22,9 +22,11 @@ import de.mnl.ahp.service.events.CheckPoll;
 import de.mnl.ahp.service.events.CreatePoll;
 import de.mnl.ahp.service.events.ListPolls;
 import de.mnl.ahp.service.events.PollData;
+import de.mnl.ahp.service.events.PollExpired;
 import de.mnl.ahp.service.events.PollState;
 import de.mnl.ahp.service.events.Vote;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -33,6 +35,7 @@ import java.util.Optional;
 
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.Component;
+import org.jgrapes.core.Components;
 import org.jgrapes.core.annotation.Handler;
 import org.osgi.framework.BundleContext;
 
@@ -56,9 +59,10 @@ public class AdHocPollingService extends Component {
             int number = digit1 * 1000 + digit2 * 100 + digit1 * 10 + digit2;
             synchronized (data) {
                 if (!data.containsKey(number)) {
-                    InternalPollData pd = new InternalPollData(event.adminId());
+                    InternalPollData pd
+                        = new InternalPollData(event.adminId(), number);
                     data.put(number, pd);
-                    fire(new PollState(pd.toPollData(number)));
+                    fire(new PollState(pd.toPollData()));
                     break;
                 }
             }
@@ -73,7 +77,7 @@ public class AdHocPollingService extends Component {
                     continue;
                 }
                 fire(
-                    new PollState(entry.getValue().toPollData(entry.getKey())));
+                    new PollState(entry.getValue().toPollData()));
             }
         }
     }
@@ -89,26 +93,39 @@ public class AdHocPollingService extends Component {
             Optional.ofNullable(data.get(event.pollId())).ifPresent(
                 pollData -> {
                     pollData.incrementCounter(event.index());
-                    fire(new PollState(pollData.toPollData(event.pollId())));
+                    fire(new PollState(pollData.toPollData()));
                 });
         }
     }
 
     private class InternalPollData {
         private String adminId;
+        private int pollId;
         private Instant startedAt;
         private int[] counter = new int[6];
 
-        public InternalPollData(String adminId) {
+        public InternalPollData(String adminId, int pollId) {
             this.adminId = adminId;
+            this.pollId = pollId;
             startedAt = Instant.now();
             for (int i = 0; i < 6; i++) {
                 counter[i] = 0;
             }
+            Components.schedule(timer -> {
+                synchronized (data) {
+                    data.remove(pollId);
+                    newEventPipeline().fire(new PollExpired(adminId, pollId),
+                        channel());
+                }
+            }, Duration.ofMinutes(30));
         }
 
         public String adminId() {
             return adminId;
+        }
+
+        public int pollId() {
+            return pollId;
         }
 
         public Instant startedAt() {
@@ -120,8 +137,8 @@ public class AdHocPollingService extends Component {
             return this;
         }
 
-        PollData toPollData(int pollId) {
-            return new PollData(adminId, pollId, startedAt,
+        PollData toPollData() {
+            return new PollData(adminId, pollId(), startedAt(),
                 Arrays.copyOf(counter, counter.length));
         }
     }

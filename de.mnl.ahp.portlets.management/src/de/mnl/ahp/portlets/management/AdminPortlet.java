@@ -20,6 +20,7 @@ package de.mnl.ahp.portlets.management;
 
 import de.mnl.ahp.service.events.CreatePoll;
 import de.mnl.ahp.service.events.ListPolls;
+import de.mnl.ahp.service.events.PollExpired;
 import de.mnl.ahp.service.events.PollState;
 import freemarker.core.ParseException;
 import freemarker.template.MalformedTemplateNameException;
@@ -97,7 +98,7 @@ public class AdminPortlet extends FreeMarkerPortlet {
         channel.respond(new AddPortletType(type())
             .setDisplayName(resourceBundle.getString("portletName"))
             .addScript(new ScriptResource()
-                .setRequires(new String[] { "datatables.net" })
+                .setRequires(new String[] { "chartjs.org" })
                 .setScriptUri(event.renderSupport().portletResource(
                     type(), "Admin-functions.ftl.js")))
             .addCss(event.renderSupport(),
@@ -143,9 +144,6 @@ public class AdminPortlet extends FreeMarkerPortlet {
             tpl, fmModel(event, channel, adminModel))
                 .setRenderMode(DeleteablePreview).setSupportedModes(MODES)
                 .setForeground(true));
-
-//		channel.respond(new NotifyPortletView(type(),
-//				portletModel.getPortletId(), "serviceUpdates", serviceInfos, "preview", true));
         return adminModel.getPortletId();
     }
 
@@ -230,6 +228,17 @@ public class AdminPortlet extends FreeMarkerPortlet {
             }
             ps.respond(new NotifyPortletView(type(), adminModel.getPortletId(),
                 "updatePoll", json));
+        }
+    }
+
+    @Handler(channels = AhpSvcChannel.class)
+    public void onPollExpired(PollExpired event) throws IOException {
+        for (PortalSession ps : trackedSessions()) {
+            if (!ps.browserSession().id().equals(event.adminId())) {
+                continue;
+            }
+            ps.respond(new NotifyPortletView(type(), adminModel.getPortletId(),
+                "pollExpired", event.pollId()));
         }
     }
 

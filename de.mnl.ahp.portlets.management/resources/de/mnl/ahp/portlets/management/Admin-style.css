@@ -44,3 +44,19 @@
     text-align: center;
 }
 
+.AdHocPolling-admin-view .table-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.AdHocPolling-admin-view .chart-wrapper {
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+    width: 25em;
+    margin-left: 3em;
+}
+
+.AdHocPolling-admin-view .chart-wrapper canvas {
+    display:inline-block !important;
+}

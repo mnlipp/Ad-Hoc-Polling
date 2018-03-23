@@ -46,14 +46,17 @@ var deMnlAhpAdmin = {
 
     let groupTemplate = $('<div class="pollGroup">'
             + '<h3></h3>'
-            + '<div><table class="ui-widget">'
+            + '<div><div class="table-wrapper"><table class="ui-widget">'
             + '<tr><th class="ui-widget-header">#1</th><td>0</td></tr>'
             + '<tr><th class="ui-widget-header">#2</th><td>0</td></tr>'
             + '<tr><th class="ui-widget-header">#3</th><td>0</td></tr>'
             + '<tr><th class="ui-widget-header">#4</th><td>0</td></tr>'
             + '<tr><th class="ui-widget-header">#5</th><td>0</td></tr>'
             + '<tr><th class="ui-widget-header">#6</th><td>0</td></tr>'
+            + '<tr><th class="ui-widget-header">${_("Total")}</th><td>0</td></tr>'
             + '</table></div>'
+            + '<div class="chart-wrapper">'
+            + '<canvas class="chart"></canvas></div>'
             + '</div>');
     
     function updatePoll(portletId, params) {
@@ -68,6 +71,7 @@ var deMnlAhpAdmin = {
             if (pollData.startedAt > currentlyLast) {
                 preview.find("span.lastPollCreated").html(pollData.pollId);
                 lastCreated.data("startedAt", pollData.startedAt);
+                lastCreated.data("pollId", pollData.pollId);
             }
         }
         
@@ -100,18 +104,78 @@ var deMnlAhpAdmin = {
             }
             group.attr("data-poll-id", pollData.pollId);
             group.attr("data-started-at", pollData.startedAt);
-            group.find("h3").html(pollData.pollId + " (" + "${_("started at")}" 
+            group.find("h3").html("<b>" + pollData.pollId + "</b> (" 
+                + "${_("started at")}" 
                 + ": " + moment(pollData.startedAt).locale(lang).format("LTS") 
                 + ")");
-            group.find("table");
+            createChart(group.find("canvas"));
             pollGroups.accordion("refresh");
             pollGroups.accordion("option", "active", 0);
         }
         let cells = group.find("td");
+        let sum = 0;
         for (let i = 0; i < 6; i++) {
             $(cells[i]).html(pollData.counters[i]);
+            sum += pollData.counters[i];
         }
+        $(cells[6]).html(sum);
+        let chart = group.find("canvas").data("chartjs-chart");
+        chart.data.datasets[0].data = pollData.counters;
+        chart.update(0);
     }
     
+    function createChart(chartCanvas) {
+        let ctx = chartCanvas[0].getContext('2d');
+        let chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+            data: {
+                labels: ['#1', '#2', '#3', '#4', '#5', '#6'],
+                datasets: [{
+                    label: '${_("Votes")}',
+                    backgroundColor: 'rgba(0, 255, 0, 0.7)',
+                    data: [0, 1, 2, 3, 4, 5]
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                }
+            }
+        });
+        chartCanvas.data('chartjs-chart', chart);
+    }
+    
+    JGPortal.registerPortletMethod(
+            "de.mnl.ahp.portlets.management.AdminPortlet",
+            "pollExpired", pollExpired);
+
+    function pollExpired(portletId, params) {
+        let pollId = params[0];
+        
+        // Update Preview
+        let preview = JGPortal.findPortletPreview(portletId);
+        if (preview) {
+            let lastCreated = preview.find("div.lastCreated");
+            if (lastCreated.data("pollId") === pollId) {
+                preview.find("span.lastPollCreated").html("");
+            }
+        }
+        
+        // Update View
+        let view = JGPortal.findPortletView(portletId);
+        if (!view) {
+            return;
+        }
+        let pollGroups = view.find("div.pollGroups");
+        pollGroups.find(".pollGroup").each(function() {
+            let poll = $(this);
+            if (poll.attr("data-poll-id") == pollId) {
+                poll.remove();
+                return false;
+            }
+        });
+    }
+
 })();
 
