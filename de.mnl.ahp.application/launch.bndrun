@@ -32,11 +32,12 @@
 	de.mnl.ahp.application;version=latest
     
 -runrequires: \
+    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.core)(version>=0.16.0))',\
+    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.osgi.core)(version>=0.9.7))',\
 	osgi.identity;filter:='(osgi.identity=de.mnl.ahp.application)',\
     osgi.identity;filter:='(osgi.identity=de.mnl.ahp.service)',\
     osgi.identity;filter:='(osgi.identity=de.mnl.ahp.participantui)',\
     osgi.identity;filter:='(osgi.identity=de.mnl.ahp.portlets.management)',\
-    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.core)(version>=0.16.0))',\
 	osgi.identity;filter:='(osgi.identity=org.jgrapes.portlets.sysinfo)',\
 	osgi.identity;filter:='(osgi.identity=org.jgrapes.portlets.markdowndisplay)',\
 	osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portlets.bundles)',\
