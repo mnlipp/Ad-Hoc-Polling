@@ -46,12 +46,14 @@ var deMnlAhpAdmin = {
 
     let groupTemplate = $('<div class="pollGroup">'
             + '<h3></h3>'
-            + '<div><table class="ui-widget"><thead class="ui-widget-header">'
-            + '<tr><th>#1</th><th>#2</th><th>#3</th>'
-            + '<th>#4</th><th>#5</th><th>#6</th></tr>'
-            + '</thead><tbody class="ui-widget-content">'
-            + '<tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>'
-            + '</tbody></table></div>'
+            + '<div><table class="ui-widget">'
+            + '<tr><th class="ui-widget-header">#1</th><td>0</td></tr>'
+            + '<tr><th class="ui-widget-header">#2</th><td>0</td></tr>'
+            + '<tr><th class="ui-widget-header">#3</th><td>0</td></tr>'
+            + '<tr><th class="ui-widget-header">#4</th><td>0</td></tr>'
+            + '<tr><th class="ui-widget-header">#5</th><td>0</td></tr>'
+            + '<tr><th class="ui-widget-header">#6</th><td>0</td></tr>'
+            + '</table></div>'
             + '</div>');
     
     function updatePoll(portletId, params) {
