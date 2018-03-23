@@ -17,11 +17,25 @@
     </div>
 
     <div id="code_submission">
+        <#if controller.isUnknown()>
+            <div class="error">
+                <span>${_("Invalid code")}</span>
+            </div>
+            ${controller.reset()}
+        </#if>
+
+        <#if controller.isDuplicate()>
+            <div class="error">
+                <span>${_("Already voted")}</span>
+            </div>
+            ${controller.reset()}
+        </#if>
+
         <div>
             <span>${_("Enter code")}</span>
         </div>
 
-        <div>
+         <div>
             <form class="simple_form"  method="post">
                 <fieldset>
                     <label><b>${_("Code")}</b><input type="number"

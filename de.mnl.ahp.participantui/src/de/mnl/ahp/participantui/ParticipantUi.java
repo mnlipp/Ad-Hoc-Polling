@@ -19,24 +19,31 @@
 package de.mnl.ahp.participantui;
 
 import de.mnl.ahp.participantui.VotingController.State;
-import de.mnl.ahp.service.events.CheckPoll;
-import de.mnl.ahp.service.events.PollChecked;
+import de.mnl.ahp.service.events.GetPoll;
+import de.mnl.ahp.service.events.GetPollCompleted;
+import de.mnl.ahp.service.events.PollData;
 import de.mnl.ahp.service.events.Vote;
 import freemarker.template.SimpleScalar;
 import freemarker.template.TemplateMethodModelEx;
 import freemarker.template.TemplateModel;
 import freemarker.template.TemplateModelException;
 
+import java.net.HttpCookie;
 import java.net.URI;
 import java.nio.ByteBuffer;
 import java.text.ParseException;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.jdrupes.httpcodec.protocols.http.HttpConstants.HttpStatus;
 import org.jdrupes.httpcodec.protocols.http.HttpField;
+import org.jdrupes.httpcodec.types.Converters;
+import org.jdrupes.httpcodec.types.CookieList;
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.ClassChannel;
 import org.jgrapes.core.Components;
@@ -84,22 +91,23 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
             "AdHocPollingServiceChannel", componentChannel);
 		// Because this handler provides a "top-level" page, we have to adapt the
 		// resource pattern.
-		String prefix = prefix().getPath();
-		prefix = prefix.substring(0, prefix.length() - 1);
+		String stripped = prefix().getPath();
+		stripped = stripped.substring(0, stripped.length() - 1);
 		try {
-			updatePrefixPattern(new ResourcePattern(prefix + "|," + prefix + "|**"));
+			updatePrefixPattern(new ResourcePattern(stripped + "|," + stripped + "|**"));
 		} catch (ParseException e) {
 			throw new IllegalArgumentException(e);
 		}
-		String pattern = prefix + "," + prefix + "/**" + "," + prefix + "/static/**";
+        String pattern = (stripped.isEmpty() ? "/" : stripped)
+            + "," + prefix() + "**" + "," + prefix() + "static/**";
 		RequestHandler.Evaluator.add(this, "onGet", pattern);
 		RequestHandler.Evaluator.add(this, "onPost", pattern);
 	}
 
 	@Override
 	protected Map<String, Object> fmSessionModel(Optional<Session> session) {
-		Map<String, Object> portalModel = super.fmSessionModel(session);
-		portalModel.put("resourceUrl", new TemplateMethodModelEx() {
+		Map<String, Object> formModel = super.fmSessionModel(session);
+		formModel.put("resourceUrl", new TemplateMethodModelEx() {
 			@Override
 			public Object exec(@SuppressWarnings("rawtypes") List arguments)
 					throws TemplateModelException {
@@ -108,11 +116,15 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
 				if (!(args.get(0) instanceof SimpleScalar)) {
 					throw new TemplateModelException("Not a string.");
 				}
-				return ResponseCreationSupport.uriFromPath(prefix() + "/").resolve(
+                return ResponseCreationSupport.uriFromPath(prefix().getPath())
+                    .resolve(
 						((SimpleScalar)args.get(0)).getAsString()).getRawPath();
 			}
 		});
-		return portalModel;
+        formModel.put("controller", session
+		    .flatMap(ses -> Optional.ofNullable(ses.get(VotingController.class)))
+            .orElseGet(VotingController::new));
+		return formModel;
 	}
 
 	/**
@@ -181,16 +193,22 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
                         .computeIfAbsent(VotingController.class,
                             k -> new VotingController());
                     if (fields.containsKey("submit_code")) {
-                        CheckPoll checkEvent = new CheckPoll(
-                            Integer.parseInt(fields.get("code")));
-                        checkEvent.setAssociated(IOSubchannel.class, channel);
-                        fire(checkEvent, ahpSvcChannel);
-                        return false;
+                        try {
+                            GetPoll checkEvent = new GetPoll(
+                                Integer.parseInt(fields.get("code")));
+                            checkEvent.setAssociated(IOSubchannel.class,
+                                channel);
+                            fire(checkEvent, ahpSvcChannel);
+                            return false;
+                        } catch (NumberFormatException e) {
+                            return true;
+                        }
                     }
                     if (fields.containsKey("chosen")) {
                         vc.voted();
                         fire(new Vote(vc.pollId(), Integer.parseInt(
                             fields.get("chosen")) - 1), ahpSvcChannel);
+                        setVotedCookie(dec, vc);
                         return true;
                     }
                     return true;
@@ -208,30 +226,61 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
 		});
 	}
 
+    private void setVotedCookie(
+            PostedUrlDataDecoder dec, VotingController vc) {
+        HttpCookie votedCookie
+            = new HttpCookie("ahp-voted-" + UUID.randomUUID(),
+                vc.pollId() + "-" + vc.pollStartedAt().toEpochMilli());
+        votedCookie.setPath("/");
+        votedCookie.setMaxAge(
+            Duration.between(Instant.now(), vc.pollExpiresAt()).toMillis()
+                / 1000);
+        dec.request().httpRequest().response().get()
+            .computeIfAbsent(HttpField.SET_COOKIE, CookieList::new)
+            .value().add(votedCookie);
+    }
+
     @Handler(channels = AhpSvcChannel.class)
-    public void onPollChecked(PollChecked event) {
+    public void onGetPollCompleted(GetPollCompleted event) {
         event.event().associated(IOSubchannel.class).ifPresent(channel -> {
             channel.associated(PostedUrlDataDecoder.class).ifPresent(dec -> {
                 Request request = dec.request();
-                request.associated(Session.class).ifPresent(session -> {
-                    VotingController vc = (VotingController) session
-                        .computeIfAbsent(VotingController.class,
-                            k -> new VotingController());
-                    try {
-                        if (event.event().get() != null
-                            && event.event().get()) {
-                            vc.authorized(event.event().pollId());
-                        }
-                    } catch (InterruptedException e) {
-                        // Is completed, cannot happen
-                    }
-                    ;
-                });
+                try {
+                    processVote(event.event().get(), request);
+                } catch (InterruptedException e) {
+                    // Won't happen, event is completed
+                }
                 request.httpRequest().response().get().setField(
                     HttpField.LOCATION, prefix());
                 ResponseCreationSupport.sendResponse(
                     request.httpRequest(), channel, HttpStatus.SEE_OTHER);
             });
+        });
+    }
+
+    private void processVote(PollData pollData, Request request) {
+        request.associated(Session.class).ifPresent(session -> {
+            VotingController vc = (VotingController) session
+                .computeIfAbsent(VotingController.class,
+                    k -> new VotingController());
+            if (pollData == null) {
+                vc.unknownPoll();
+                return;
+            }
+            if (request.httpRequest().findValue(
+                HttpField.COOKIE, Converters.COOKIE_LIST)
+                .orElse(new CookieList()).stream().filter(
+                    cookie -> cookie.getName().startsWith("ahp-voted-"))
+                .map(HttpCookie::getValue).map(value -> {
+                    String[] parts = value.split("-");
+                    return Integer.parseInt(parts[0]) == pollData.pollId()
+                        && Long.parseLong(parts[1]) == pollData.startedAt()
+                            .toEpochMilli();
+                }).filter(result -> result).findFirst().isPresent()) {
+                vc.duplicateVote();
+                return;
+            }
+            vc.authorized(pollData);
         });
     }
 }

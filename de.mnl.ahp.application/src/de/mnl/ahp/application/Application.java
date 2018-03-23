@@ -92,7 +92,7 @@ public class Application extends Component implements BundleActivator {
 					switch(type) {
 					case "de.mnl.ahp.participantui.ParticipantUi":
                     return Arrays.asList(Components.mapOf(
-                        HttpRequestHandlerFactory.PREFIX, URI.create("/test/"),
+                        HttpRequestHandlerFactory.PREFIX, URI.create("/"),
                         "AdHocPollingServiceChannel", app.channel()));
 					default:
 						return Arrays.asList(Collections.emptyMap());

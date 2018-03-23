@@ -18,7 +18,10 @@
 
 package de.mnl.ahp.participantui;
 
+import de.mnl.ahp.service.events.PollData;
+
 import java.io.Serializable;
+import java.time.Instant;
 
 /**
  * 
@@ -27,11 +30,13 @@ public class VotingController implements Serializable {
 	private static final long serialVersionUID = -4844487793046604718L;
 
     public enum State {
-        Start, Authorized, Voted
+        Start, Duplicate, Unknown, Authorized, Voted
     }
 	
 	private State state = State.Start;
     private int pollId;
+    private Instant pollStartedAt;
+    private Instant pollExpiresAt;
 
     public State state() {
         return state;
@@ -41,13 +46,39 @@ public class VotingController implements Serializable {
         state = State.Start;
     }
 
-    public void authorized(int pollId) {
-        this.pollId = pollId;
+    public void unknownPoll() {
+        state = State.Unknown;
+    }
+
+    public boolean isUnknown() {
+        return state == State.Unknown;
+    }
+
+    public void duplicateVote() {
+        state = State.Duplicate;
+    }
+
+    public boolean isDuplicate() {
+        return state == State.Duplicate;
+    }
+
+    public void authorized(PollData pollData) {
+        pollId = pollData.pollId();
+        pollStartedAt = pollData.startedAt();
+        pollExpiresAt = pollData.expiresAt();
         state = State.Authorized;
     }
 
     public int pollId() {
         return pollId;
+    }
+
+    public Instant pollStartedAt() {
+        return pollStartedAt;
+    }
+
+    public Instant pollExpiresAt() {
+        return pollExpiresAt;
     }
 
     public void voted() {

@@ -64,7 +64,6 @@ var deMnlAhpAdmin = {
         
         // Update Preview
         let preview = JGPortal.findPortletPreview(portletId);
-        let lang = preview.closest('[lang]').attr('lang') || 'en';
         if (preview) {
             let lastCreated = preview.find("div.lastCreated");
             let currentlyLast = lastCreated.data("startedAt");
@@ -80,6 +79,7 @@ var deMnlAhpAdmin = {
         if (!view) {
             return;
         }
+        let lang = view.closest('[lang]').attr('lang') || 'en';
         let pollGroups = view.find("div.pollGroups");
         let group = null;
         pollGroups.find(".pollGroup").each(function() {

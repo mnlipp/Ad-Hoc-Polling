@@ -18,8 +18,8 @@
 
 package de.mnl.ahp.service;
 
-import de.mnl.ahp.service.events.CheckPoll;
 import de.mnl.ahp.service.events.CreatePoll;
+import de.mnl.ahp.service.events.GetPoll;
 import de.mnl.ahp.service.events.ListPolls;
 import de.mnl.ahp.service.events.PollData;
 import de.mnl.ahp.service.events.PollExpired;
@@ -36,6 +36,7 @@ import java.util.Optional;
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.Component;
 import org.jgrapes.core.Components;
+import org.jgrapes.core.Components.Timer;
 import org.jgrapes.core.annotation.Handler;
 import org.osgi.framework.BundleContext;
 
@@ -83,8 +84,9 @@ public class AdHocPollingService extends Component {
     }
 
     @Handler
-    public void onCheckPoll(CheckPoll event) {
-        event.setResult(data.containsKey(event.pollId()));
+    public void onCheckPoll(GetPoll event) {
+        event.setResult(Optional.ofNullable(data.get(event.pollId()))
+            .map(ipd -> ipd.toPollData()).orElse(null));
     }
 
     @Handler
@@ -103,6 +105,7 @@ public class AdHocPollingService extends Component {
         private int pollId;
         private Instant startedAt;
         private int[] counter = new int[6];
+        Timer expiaryTimer;
 
         public InternalPollData(String adminId, int pollId) {
             this.adminId = adminId;
@@ -111,7 +114,7 @@ public class AdHocPollingService extends Component {
             for (int i = 0; i < 6; i++) {
                 counter[i] = 0;
             }
-            Components.schedule(timer -> {
+            expiaryTimer = Components.schedule(timer -> {
                 synchronized (data) {
                     data.remove(pollId);
                     newEventPipeline().fire(new PollExpired(adminId, pollId),
@@ -139,6 +142,7 @@ public class AdHocPollingService extends Component {
 
         PollData toPollData() {
             return new PollData(adminId, pollId(), startedAt(),
+                expiaryTimer.scheduledFor(),
                 Arrays.copyOf(counter, counter.length));
         }
     }

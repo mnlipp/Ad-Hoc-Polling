@@ -18,21 +18,15 @@
 
 package de.mnl.ahp.service.events;
 
-import org.jgrapes.core.Event;
+import org.jgrapes.core.Channel;
+import org.jgrapes.core.CompletionEvent;
 
 /**
  *
  */
-public class CheckPoll extends Event<Boolean> {
+public class GetPollCompleted extends CompletionEvent<GetPoll> {
 
-    private int pollId;
-
-    public CheckPoll(int pollId) {
-        this.pollId = pollId;
-        new PollChecked(this);
-    }
-
-    public int pollId() {
-        return pollId;
+    public GetPollCompleted(GetPoll monitoredEvent, Channel... channels) {
+        super(monitoredEvent, channels);
     }
 }

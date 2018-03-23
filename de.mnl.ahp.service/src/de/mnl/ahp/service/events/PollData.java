@@ -27,13 +27,15 @@ public class PollData {
     private String adminId;
 	private int pollId;
 	private Instant startedAt;
+    private Instant expiresAt;
 	private int[] counter;
 	
     public PollData(String adminId, int pollId, Instant startedAt,
-            int[] counter) {
+            Instant expiresAt, int[] counter) {
         this.adminId = adminId;
 		this.pollId = pollId;
 		this.startedAt = startedAt;
+        this.expiresAt = expiresAt;
 		this.counter = counter;
 	}
 
@@ -49,6 +51,10 @@ public class PollData {
 		return startedAt;
 	}
 	
+    public Instant expiresAt() {
+        return expiresAt;
+    }
+
 	public int[] counter() {
 		return counter;
 	}
