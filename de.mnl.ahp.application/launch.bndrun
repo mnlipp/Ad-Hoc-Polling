@@ -26,10 +26,10 @@
 	org.jgrapes.osgi.core;version=latest,\
 	org.jgrapes.osgi.portlets.services;version=latest,\
 	org.jgrapes.osgi.portlets.bundles;version=latest,\
-    de.mnl.ahp.service;version=snapshot,\
-	de.mnl.ahp.participantui;version=snapshot,\
-	de.mnl.ahp.portlets.management;version=snapshot,\
-	de.mnl.ahp.application;version=snapshot
+    de.mnl.ahp.service;version=latest,\
+	de.mnl.ahp.participantui;version=latest,\
+	de.mnl.ahp.portlets.management;version=latest,\
+	de.mnl.ahp.application;version=latest
     
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=de.mnl.ahp.application)',\
