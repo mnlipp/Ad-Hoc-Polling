@@ -19,6 +19,12 @@
 /*
  * Portlet specific styles.
  */
+.AdHocPolling-admin-preview .lastPollCreated {
+    font-size: 500%; 
+    font-weight: bold;
+    display: block;
+}
+
 .AdHocPolling-admin-view {
     height: 100%;
 }

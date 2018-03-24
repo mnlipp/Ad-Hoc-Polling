@@ -5,7 +5,6 @@ Bundle-License: http://www.gnu.org/licenses/gpl-3.0.txt
 Require-Capability: \
 	org.jgrapes.portal.page.resource;filter:="(name=chartjs.org)"
 Bundle-Category: portlet
-Private-Package: de.mnl.ahp.portlets.management
 
 -sources: true
 -runee: JavaSE-1.8
@@ -29,3 +28,4 @@ Private-Package: de.mnl.ahp.portlets.management
     "The .classpath contains an unknown container: GROOVY_DSL_SUPPORT. This could make your build less portable.", \
     "The .classpath contains an unknown container: org.eclipse.buildship.core.gradleclasspathcontainer. This could make your build less portable.", \
     "The .classpath contains a library that will not be available during continuous integration:"
+Export-Package: de.mnl.ahp.portlets.management

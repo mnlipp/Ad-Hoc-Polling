@@ -111,7 +111,8 @@ public class Application extends Component implements BundleActivator {
 		portal.attach(new PortalLocalBackedKVStore(
 				portal, portal.prefix().getPath()));
 		portal.attach(new KVStoreBasedPortalPolicy(portal));
-		portal.attach(new NewPortalSessionPolicy(portal));
+        portal.attach(new NewPortalSessionPolicy(portal));
+        portal.attach(new ActionFilter(portal));
 		portal.attach(new ComponentCollector<>(
 				portal, context, PageResourceProviderFactory.class));
 		portal.attach(new ComponentCollector<>(

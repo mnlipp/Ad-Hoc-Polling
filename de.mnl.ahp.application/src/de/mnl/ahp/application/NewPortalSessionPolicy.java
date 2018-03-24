@@ -19,11 +19,15 @@
 package de.mnl.ahp.application;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.Component;
 import org.jgrapes.core.annotation.Handler;
 import org.jgrapes.portal.PortalSession;
+import org.jgrapes.portal.Portlet;
+import org.jgrapes.portal.events.AddPortletRequest;
 import org.jgrapes.portal.events.PortalConfigured;
 import org.jgrapes.portal.events.PortalPrepared;
 import org.jgrapes.portal.events.RenderPortlet;
@@ -33,34 +37,71 @@ import org.jgrapes.portal.events.RenderPortlet;
  */
 public class NewPortalSessionPolicy extends Component {
 
-	/**
-	 * Creates a new component with its channel set to
-	 * itself.
-	 */
-	public NewPortalSessionPolicy() {
-	}
+    /**
+     * Creates a new component with its channel set to itself.
+     */
+    public NewPortalSessionPolicy() {
+    }
 
-	/**
-	 * Creates a new component with its channel set to the given channel.
-	 * 
-	 * @param componentChannel
-	 */
-	public NewPortalSessionPolicy(Channel componentChannel) {
-		super(componentChannel);
-	}
+    /**
+     * Creates a new component with its channel set to the given channel.
+     * 
+     * @param componentChannel
+     */
+    public NewPortalSessionPolicy(Channel componentChannel) {
+        super(componentChannel);
+    }
 
-	@Handler
-	public void onPortalPrepared(PortalPrepared event, PortalSession portalSession) {
-		portalSession.setAssociated(NewPortalSessionPolicy.class, false);
-	}
-	
-	@Handler
-	public void onRenderPortlet(RenderPortlet event, PortalSession portalSession) {
-	}
-	
-	@Handler
-	public void onPortalConfigured(PortalConfigured event, PortalSession portalSession) 
-			throws InterruptedException, IOException {
-	}
+    @Handler
+    public void onPortalPrepared(PortalPrepared event,
+            PortalSession portalSession) {
+        portalSession.setAssociated(NewPortalSessionPolicy.class,
+            new HashMap<Object, Object>());
+    }
+
+    @Handler
+    public void onRenderPortlet(RenderPortlet event,
+            PortalSession portalSession) {
+        if (event.portletClass().getName()
+            .equals("de.mnl.ahp.portlets.management.AdminPortlet")) {
+            switch (event.renderMode()) {
+            case Preview:
+            case DeleteablePreview:
+                portalSession.associated(NewPortalSessionPolicy.class,
+                    () -> new HashMap<Object, Object>())
+                    .put("AdminPreview", true);
+                break;
+            case View:
+                portalSession.associated(NewPortalSessionPolicy.class,
+                    () -> new HashMap<Object, Object>())
+                    .put("AdminView", true);
+                break;
+            default:
+                break;
+            }
+        }
+    }
+
+    @Handler
+    public void onPortalConfigured(PortalConfigured event,
+            PortalSession portalSession)
+            throws InterruptedException, IOException {
+        final Map<Object, Object> found
+            = portalSession.associated(NewPortalSessionPolicy.class,
+                () -> new HashMap<Object, Object>());
+        portalSession.setAssociated(NewPortalSessionPolicy.class, null);
+        if (!(Boolean) found.getOrDefault("AdminPreview", false)) {
+            fire(new AddPortletRequest(event.event().event().renderSupport(),
+                "de.mnl.ahp.portlets.management.AdminPortlet",
+                Portlet.RenderMode.Preview).addProperty("Deletable", false),
+                portalSession);
+        }
+        if (!(Boolean) found.getOrDefault("AdminView", false)) {
+            fire(new AddPortletRequest(event.event().event().renderSupport(),
+                "de.mnl.ahp.portlets.management.AdminPortlet",
+                Portlet.RenderMode.View).setForeground(false),
+                portalSession);
+        }
+    }
 
 }

@@ -18,13 +18,15 @@ Bundle-Activator: de.mnl.ahp.application.Application
 	org.jgrapes.util;version=latest,\
 	org.jgrapes.portal;version=latest,\
 	org.jgrapes.osgi.core;version=latest,\
-	de.mnl.ahp.service;version=latest,\
-	de.mnl.ahp.participantui;version=latest,\
-    de.mnl.ahp.portlets.management;version=latest
+	de.mnl.ahp.service;version=latest
 
 -includeresource: \
 	resources
 
+-dependson: \
+    de.mnl.ahp.participantui,\
+    de.mnl.ahp.portlets.management
+    
 -fixupmessages: \
     "The .classpath contains an unknown container: GROOVY_DSL_SUPPORT. This could make your build less portable.", \
     "The .classpath contains an unknown container: org.eclipse.buildship.core.gradleclasspathcontainer. This could make your build less portable.", \

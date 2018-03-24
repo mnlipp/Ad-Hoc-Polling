@@ -29,10 +29,8 @@ import freemarker.template.TemplateNotFoundException;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.Set;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import org.jdrupes.json.JsonObject;
 import org.jgrapes.core.Channel;
@@ -41,12 +39,10 @@ import org.jgrapes.core.Event;
 import org.jgrapes.core.Manager;
 import org.jgrapes.core.annotation.Handler;
 import org.jgrapes.core.annotation.HandlerDefinition.ChannelReplacements;
-import org.jgrapes.http.Session;
 import org.jgrapes.portal.PortalSession;
 import org.jgrapes.portal.PortalWeblet;
 import org.jgrapes.portal.Portlet.RenderMode;
 
-import static org.jgrapes.portal.Portlet.RenderMode.DeleteablePreview;
 import static org.jgrapes.portal.Portlet.RenderMode.View;
 
 import org.jgrapes.portal.events.AddPageResources.ScriptResource;
@@ -58,6 +54,7 @@ import org.jgrapes.portal.events.NotifyPortletModel;
 import org.jgrapes.portal.events.NotifyPortletView;
 import org.jgrapes.portal.events.PortalReady;
 import org.jgrapes.portal.events.RenderPortletRequest;
+import org.jgrapes.portal.events.RenderPortletRequestBase;
 import org.jgrapes.portal.freemarker.FreeMarkerPortlet;
 
 /**
@@ -68,12 +65,10 @@ public class AdminPortlet extends FreeMarkerPortlet {
     private class AhpSvcChannel extends ClassChannel {
     }
 
-    private static AtomicInteger instanceCounter = new AtomicInteger(0);
-    private static final Set<RenderMode> MODES = RenderMode.asSet(
-        DeleteablePreview, View);
-
+    /** Boolean property that controls if the preview is deletable. */
+    public static final String DELETABLE = "Deletable";
+    
     private Channel ahpSvcChannel;
-    private AdminModel adminModel;
 
     /**
      * Creates a new component with its channel set to the given channel.
@@ -86,7 +81,6 @@ public class AdminPortlet extends FreeMarkerPortlet {
         super(componentChannel, ChannelReplacements.create().add(
             AhpSvcChannel.class, ahpSvcChannel), true);
         this.ahpSvcChannel = ahpSvcChannel;
-        adminModel = new AdminModel();
     }
 
     @Handler
@@ -109,42 +103,19 @@ public class AdminPortlet extends FreeMarkerPortlet {
     /*
      * (non-Javadoc)
      * 
-     * @see org.jgrapes.portal.AbstractPortlet#generatePortletId()
-     */
-    @Override
-    protected String generatePortletId() {
-        return adminModel.getPortletId();
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see org.jgrapes.portal.AbstractPortlet#modelFromSession
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    protected <T extends Serializable> Optional<T> stateFromSession(
-            Session session, String portletId, Class<T> type) {
-        if (portletId.startsWith(type() + "-")) {
-            return Optional.of((T) adminModel);
-        }
-        return Optional.empty();
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
      * @see org.jgrapes.portal.AbstractPortlet#doAddPortlet
      */
     protected String doAddPortlet(AddPortletRequest event,
             PortalSession channel) throws Exception {
-        Template tpl = freemarkerConfig().getTemplate("Admin-preview.ftl.html");
-        channel.respond(new RenderPortletFromTemplate(event,
-            AdminPortlet.class, adminModel.getPortletId(),
-            tpl, fmModel(event, channel, adminModel))
-                .setRenderMode(DeleteablePreview).setSupportedModes(MODES)
-                .setForeground(true));
-        return adminModel.getPortletId();
+        Set<RenderMode> modes = RenderMode.asSet(View);
+        boolean deletable = (Boolean)event.properties().getOrDefault(
+            DELETABLE, true);
+        modes.add(deletable ? RenderMode.DeleteablePreview
+            : RenderMode.Preview);
+        AdminModel portletModel = putInSession(channel.browserSession(),
+            new AdminModel(generatePortletId(), modes));
+        renderPortlet(event, channel, portletModel);
+        return portletModel.getPortletId();
     }
 
     /*
@@ -158,15 +129,23 @@ public class AdminPortlet extends FreeMarkerPortlet {
             Serializable retrievedState)
             throws Exception {
         AdminModel portletModel = (AdminModel) retrievedState;
+        renderPortlet(event, channel, portletModel);
+    }
+
+    private void renderPortlet(RenderPortletRequestBase<?> event,
+            PortalSession channel, AdminModel portletModel)
+            throws TemplateNotFoundException, MalformedTemplateNameException,
+            ParseException, IOException {
         switch (event.renderMode()) {
         case Preview:
         case DeleteablePreview: {
             Template tpl
                 = freemarkerConfig().getTemplate("Admin-preview.ftl.html");
             channel.respond(new RenderPortletFromTemplate(event,
-                AdminPortlet.class, portletId,
+                AdminPortlet.class, portletModel.getPortletId(),
                 tpl, fmModel(event, channel, portletModel))
-                    .setRenderMode(DeleteablePreview).setSupportedModes(MODES)
+                    .setRenderMode(event.renderMode())
+                    .setSupportedModes(portletModel.renderModes)
                     .setForeground(event.isForeground()));
             fire(new ListPolls(channel.browserSession().id()), ahpSvcChannel);
             break;
@@ -177,7 +156,7 @@ public class AdminPortlet extends FreeMarkerPortlet {
             channel.respond(new RenderPortletFromTemplate(event,
                 AdminPortlet.class, portletModel.getPortletId(),
                 tpl, fmModel(event, channel, portletModel))
-                    .setSupportedModes(MODES)
+                    .setSupportedModes(portletModel.renderModes())
                     .setForeground(event.isForeground()));
             fire(new ListPolls(channel.browserSession().id()), ahpSvcChannel);
             break;
@@ -226,8 +205,10 @@ public class AdminPortlet extends FreeMarkerPortlet {
             if (!ps.browserSession().id().equals(event.pollData().adminId())) {
                 continue;
             }
-            ps.respond(new NotifyPortletView(type(), adminModel.getPortletId(),
-                "updatePoll", json));
+            for (String portletId : portletIds(ps)) {
+                ps.respond(new NotifyPortletView(type(), portletId,
+                    "updatePoll", json));
+            }
         }
     }
 
@@ -237,17 +218,25 @@ public class AdminPortlet extends FreeMarkerPortlet {
             if (!ps.browserSession().id().equals(event.adminId())) {
                 continue;
             }
-            ps.respond(new NotifyPortletView(type(), adminModel.getPortletId(),
+            for (String portletId : portletIds(ps)) {
+                ps.respond(new NotifyPortletView(type(), portletId,
                 "pollExpired", event.pollId()));
+            }
         }
     }
 
     public class AdminModel extends PortletBaseModel {
         private static final long serialVersionUID = -7400194644538987104L;
 
-        public AdminModel() {
-            super(type() + "-" + instanceCounter.getAndIncrement());
+        private Set<RenderMode> renderModes;
+
+        public AdminModel(String portletId, Set<RenderMode> renderModes) {
+            super(portletId);
+            this.renderModes = renderModes;
         }
 
+        public Set<RenderMode> renderModes() {
+            return renderModes;
+        }
     }
 }
