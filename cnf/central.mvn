@@ -8,3 +8,5 @@ org.ow2.asm:asm-all:5.0.4
 org.apache.servicemix.bundles:org.apache.servicemix.bundles.junit:4.12_1
 
 org.freemarker:freemarker:2.3.27-incubating
+
+org.apache.servicemix.bundles:org.apache.servicemix.bundles.junit:4.12_1
