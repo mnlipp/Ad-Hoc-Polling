@@ -50,11 +50,13 @@ import org.jgrapes.core.Components;
 import org.jgrapes.core.annotation.Handler;
 import org.jgrapes.core.annotation.HandlerDefinition.ChannelReplacements;
 import org.jgrapes.http.HttpRequestHandlerFactory;
+import org.jgrapes.http.InMemorySessionManager;
 import org.jgrapes.http.LanguageSelector.Selection;
 import org.jgrapes.http.ResourcePattern;
 import org.jgrapes.http.ResponseCreationSupport;
 import org.jgrapes.http.Session;
 import org.jgrapes.http.annotation.RequestHandler;
+import org.jgrapes.http.events.DiscardSession;
 import org.jgrapes.http.events.GetRequest;
 import org.jgrapes.http.events.PostRequest;
 import org.jgrapes.http.events.Request;
@@ -98,10 +100,13 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
 		} catch (ParseException e) {
 			throw new IllegalArgumentException(e);
 		}
-        String pattern = (stripped.isEmpty() ? "/" : stripped)
-            + "," + prefix() + "**" + "," + prefix() + "static/**";
+        String pattern
+            = (stripped.isEmpty() ? "/" : (stripped + "," + prefix()))
+                + "," + prefix() + "static/**";
 		RequestHandler.Evaluator.add(this, "onGet", pattern);
 		RequestHandler.Evaluator.add(this, "onPost", pattern);
+		attach(new InMemorySessionManager(componentChannel, pattern, 1100,
+            stripped.isEmpty() ? "/" : stripped)).setIdName("voter");
 	}
 
 	@Override
@@ -141,24 +146,33 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
 	@RequestHandler(dynamic=true, priority=-100)
 	public void onGet(GetRequest event, IOSubchannel channel) {
 		prefixPattern().pathRemainder(event.requestUri()).ifPresent(path -> {
-			boolean success;
+            boolean success;
 			if (path.isEmpty()) {
-				Optional<Session> session = event.associated(Session.class);
-				VotingController vc = (VotingController)session.get().computeIfAbsent(
-						VotingController.class, k -> new VotingController());
-                success = sendProcessedTemplate(event, channel,
-                    stateToPage.getOrDefault(vc.state(), "authPage.ftl.html"));
-                if (vc.state() == State.Voted) {
-                    vc.reset();
-                }
+                success = event.associated(Session.class).map(session -> {
+                    VotingController vc
+                        = (VotingController) session.computeIfAbsent(
+                            VotingController.class,
+                            k -> new VotingController());
+                    if (!sendProcessedTemplate(event, channel,
+                        stateToPage.getOrDefault(vc.state(),
+                            "authPage.ftl.html"))) {
+                        return false;
+                    }
+                    if (vc.state() == State.Voted) {
+                        vc.reset();
+                        fire(new DiscardSession(session, channel));
+                    }
+                    return true;
+                }).orElse(false);
 			} else {
-				success = ResponseCreationSupport.sendStaticContent(
-						event, channel, requestPath -> ParticipantUi.class.getResource(path), 
-						ResponseCreationSupport.DEFAULT_MAX_AGE_CALCULATOR);
+                success = ResponseCreationSupport.sendStaticContent(
+                    event, channel,
+                    requestPath -> ParticipantUi.class.getResource(path),
+                    ResponseCreationSupport.DEFAULT_MAX_AGE_CALCULATOR);
 			}
 			event.setResult(true);
 			event.stop();
-			if (!success) {
+            if (!success) {
 				channel.respond(new Close());
 			}
 		});

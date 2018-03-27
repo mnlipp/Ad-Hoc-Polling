@@ -40,6 +40,7 @@ import org.jgrapes.http.events.GetRequest;
 import org.jgrapes.http.events.PostRequest;
 import org.jgrapes.io.FileStorage;
 import org.jgrapes.io.NioDispatcher;
+import org.jgrapes.io.util.PermitsPool;
 import org.jgrapes.net.TcpServer;
 import org.jgrapes.osgi.core.ComponentCollector;
 import org.jgrapes.portal.KVStoreBasedPortalPolicy;
@@ -72,9 +73,11 @@ public class Application extends Component implements BundleActivator {
 		// Create a TCP server listening on port 5001
 		Channel tcpChannel = new NamedChannel("TCP");
 		app.attach(new TcpServer(tcpChannel)
-				.setServerAddress(new InetSocketAddress(
-						Optional.ofNullable(System.getenv("PORT"))
-						.map(Integer::parseInt).orElse(5001))));
+            .setServerAddress(new InetSocketAddress(
+                Optional.ofNullable(System.getenv("PORT"))
+                    .map(Integer::parseInt).orElse(5001)))
+            .setBacklog(3000).setConnectionLimiter(new PermitsPool(100))
+        );
 
 		// Create an HTTP server as converter between transport and application
 		// layer.
