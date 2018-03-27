@@ -20,6 +20,9 @@ Bundle-Activator: de.mnl.ahp.application.Application
 	org.jgrapes.osgi.core;version=latest,\
 	de.mnl.ahp.service;version=latest
 
+-testpath: \
+    org.apache.servicemix.bundles.junit; version=4.12.0.1
+
 -includeresource: \
 	resources
 
