@@ -167,7 +167,6 @@ public class AutoVote {
     public static void main(String[] args) {
 //      final URL url = new URL("https://ad-hoc-poll.herokuapp.com/");
 //      final URL url = new URL("http://localhost:5001/");
-//      final int code = 2323;
         try {
             URL url = new URL(args[0]);
             new AutoVote().run(url, Integer.parseInt(args[1]));

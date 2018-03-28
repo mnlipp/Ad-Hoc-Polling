@@ -64,6 +64,7 @@ import org.jgrapes.http.freemarker.FreeMarkerRequestHandler;
 import org.jgrapes.io.IOSubchannel;
 import org.jgrapes.io.events.Close;
 import org.jgrapes.io.events.Input;
+import org.jgrapes.io.events.Purge;
 
 /**
  *
@@ -175,6 +176,7 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
             if (!success) {
 				channel.respond(new Close());
 			}
+            channel.setAssociated(this, true);
 		});
 	}
 
@@ -185,6 +187,7 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
 				PostedUrlDataDecoder.class, new PostedUrlDataDecoder(event));
 		event.setResult(true);
 		event.stop();
+        channel.setAssociated(this, false);
 	}
 	
 	@Handler
@@ -252,6 +255,15 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
         dec.request().httpRequest().response().get()
             .computeIfAbsent(HttpField.SET_COOKIE, CookieList::new)
             .value().add(votedCookie);
+    }
+
+    @Handler
+    public void onPurge(Purge event, IOSubchannel channel) {
+        channel.associated(this, Boolean.class).filter(value -> value)
+            .ifPresent(alwaysTrue -> {
+                event.stop();
+                channel.respond(new Close());
+            });
     }
 
     @Handler(channels = AhpSvcChannel.class)

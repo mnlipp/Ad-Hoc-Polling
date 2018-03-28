@@ -76,7 +76,8 @@ public class Application extends Component implements BundleActivator {
             .setServerAddress(new InetSocketAddress(
                 Optional.ofNullable(System.getenv("PORT"))
                     .map(Integer::parseInt).orElse(5001)))
-            .setBacklog(3000).setConnectionLimiter(new PermitsPool(100))
+            .setConnectionLimiter(new PermitsPool(300))
+            .setMinimalPurgeableTime(1000)
         );
 
 		// Create an HTTP server as converter between transport and application

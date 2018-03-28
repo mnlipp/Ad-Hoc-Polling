@@ -11,7 +11,7 @@
 	org.freemarker.freemarker;version='[2.3.27,2.3.28)',\
 	org.jdrupes.json;version='[2.0,2.1)',\
 	com.fasterxml.jackson.core.jackson-core;version='[2.9.4,2.10)',\
-	org.jdrupes.httpcodec;version='[1.0.2,1.1)',\
+	org.jdrupes.httpcodec;version='[1.0.6,1.1)',\
 	org.jgrapes.core;version='[0.16.0,1.1)',\
 	org.jgrapes.io;version='[0.16.0,1.1)',\
 	org.jgrapes.util;version='[0.16.0,1.1)',\
@@ -45,8 +45,9 @@
 -runprogramargs: -console
 -runproperties: \
 	org.apache.felix.log=10000,\
-	java.util.logging.config.file=jul-debug.properties,\
-	org.apache.felix.log.storeDebug=true
+	org.apache.felix.log.storeDebug=true,\
+    java.util.logging.config.file=jul-debug.properties
+	
 -runee: JavaSE-1.8
 
 -runvm: -Xmx300m -Xss512k
