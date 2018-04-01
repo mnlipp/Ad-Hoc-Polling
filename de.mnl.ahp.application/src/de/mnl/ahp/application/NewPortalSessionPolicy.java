@@ -101,6 +101,9 @@ public class NewPortalSessionPolicy extends Component {
         portalSession.setAssociated(NewPortalSessionPolicy.class, null);
         String previewId = found.get("AdminPreview");
         String viewId = found.get("AdminView");
+        if (previewId != null && viewId != null) {
+            return;
+        }
         if (previewId != null && viewId == null) {
             fire(new RenderPortletRequest(event.event().event().renderSupport(),
                 previewId, Portlet.RenderMode.View, false),
