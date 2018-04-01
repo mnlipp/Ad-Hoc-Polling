@@ -23,6 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.jgrapes.core.Channel;
+import org.jgrapes.core.CompletionEvent;
 import org.jgrapes.core.Component;
 import org.jgrapes.core.annotation.Handler;
 import org.jgrapes.portal.PortalSession;
@@ -31,11 +32,19 @@ import org.jgrapes.portal.events.AddPortletRequest;
 import org.jgrapes.portal.events.PortalConfigured;
 import org.jgrapes.portal.events.PortalPrepared;
 import org.jgrapes.portal.events.RenderPortlet;
+import org.jgrapes.portal.events.RenderPortletRequest;
 
 /**
  * 
  */
 public class NewPortalSessionPolicy extends Component {
+
+    class AddedPreview extends CompletionEvent<AddPortletRequest> {
+
+        public AddedPreview(AddPortletRequest monitoredEvent) {
+            super(monitoredEvent);
+        }
+    }
 
     /**
      * Creates a new component with its channel set to itself.
@@ -56,7 +65,7 @@ public class NewPortalSessionPolicy extends Component {
     public void onPortalPrepared(PortalPrepared event,
             PortalSession portalSession) {
         portalSession.setAssociated(NewPortalSessionPolicy.class,
-            new HashMap<Object, Object>());
+            new HashMap<String, String>());
     }
 
     @Handler
@@ -68,13 +77,13 @@ public class NewPortalSessionPolicy extends Component {
             case Preview:
             case DeleteablePreview:
                 portalSession.associated(NewPortalSessionPolicy.class,
-                    () -> new HashMap<Object, Object>())
-                    .put("AdminPreview", true);
+                    () -> new HashMap<String, String>())
+                    .put("AdminPreview", event.portletId());
                 break;
             case View:
                 portalSession.associated(NewPortalSessionPolicy.class,
-                    () -> new HashMap<Object, Object>())
-                    .put("AdminView", true);
+                    () -> new HashMap<String, String>())
+                    .put("AdminView", event.portletId());
                 break;
             default:
                 break;
@@ -86,22 +95,32 @@ public class NewPortalSessionPolicy extends Component {
     public void onPortalConfigured(PortalConfigured event,
             PortalSession portalSession)
             throws InterruptedException, IOException {
-        final Map<Object, Object> found
+        final Map<String, String> found
             = portalSession.associated(NewPortalSessionPolicy.class,
-                () -> new HashMap<Object, Object>());
+                () -> new HashMap<String, String>());
         portalSession.setAssociated(NewPortalSessionPolicy.class, null);
-        if (!(Boolean) found.getOrDefault("AdminPreview", false)) {
-            fire(new AddPortletRequest(event.event().event().renderSupport(),
-                "de.mnl.ahp.portlets.management.AdminPortlet",
-                Portlet.RenderMode.Preview).addProperty("Deletable", false),
+        String previewId = found.get("AdminPreview");
+        String viewId = found.get("AdminView");
+        if (previewId != null && viewId == null) {
+            fire(new RenderPortletRequest(event.event().event().renderSupport(),
+                previewId, Portlet.RenderMode.View, false),
                 portalSession);
+            return;
         }
-        if (!(Boolean) found.getOrDefault("AdminView", false)) {
-            fire(new AddPortletRequest(event.event().event().renderSupport(),
-                "de.mnl.ahp.portlets.management.AdminPortlet",
-                Portlet.RenderMode.View).setForeground(false),
-                portalSession);
-        }
+        AddPortletRequest addReq = new AddPortletRequest(
+            event.event().event().renderSupport(),
+            "de.mnl.ahp.portlets.management.AdminPortlet",
+            Portlet.RenderMode.Preview).addProperty("Deletable", false);
+        addReq.addCompletionEvent(new AddedPreview(addReq));
+        fire(addReq, portalSession);
     }
 
+    @Handler
+    public void onAddedPreview(AddedPreview event, PortalSession portalSession)
+            throws InterruptedException {
+        AddPortletRequest completed = event.event();
+        fire(new RenderPortletRequest(completed.renderSupport(),
+            completed.get(), Portlet.RenderMode.View, false),
+            portalSession);
+    }
 }
