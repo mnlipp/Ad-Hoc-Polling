@@ -23,13 +23,21 @@
         releaseUrls=https://repo1.maven.org/maven2; \
         query='q=g:%22org.apache.felix%22&rows=1000'
 
--plugin.7.JGrapes: \
-    de.mnl.osgi.bnd.repository.maven.provider.NexusSearchRepositoryProvider; \
-		path:="${workspace}/cnf/plugins/de.mnl.osgi.bnd.repository-0.0.12.jar,\
-            ${workspace}/cnf/plugins/biz.aQute.repository-3.5.0.jar"; \
-        name=JGrapes; \
-        server="https://oss.sonatype.org"; \
-        query="g=org.jgrapes"
+#-plugin.7.JGrapes: \
+#    de.mnl.osgi.bnd.repository.maven.provider.NexusSearchRepositoryProvider; \
+#		path:="${workspace}/cnf/plugins/de.mnl.osgi.bnd.repository-0.0.12.jar,\
+#            ${workspace}/cnf/plugins/biz.aQute.repository-3.5.0.jar"; \
+#        name=JGrapes; \
+#        server="https://oss.sonatype.org"; \
+#        query="g=org.jgrapes"
+
+-plugin.8.JGrapes-Release: \
+    aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
+        name=JGrapes-Release; \
+        snapshotUrls=https://oss.sonatype.org/content/repositories/snapshots/; \
+        releaseUrls="https://oss.sonatype.org/content/repositories/releases/,https://repo1.maven.org/maven2/"; \
+        location="${build}/cache/jgrapes-release-pom.xml"; \
+        pom=${.}/jgrapes.pom
 
 # -baselinerepo: JGrapes
 
