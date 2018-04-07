@@ -29,36 +29,35 @@
         </dependency>
 
         <!-- Non-OSGi (transient) world starts here -->
-
+ 
         <dependency>
             <groupId>org.jgrapes</groupId>
             <artifactId>org.jgrapes.portlets.sysinfo</artifactId>
-            <version>[0.15.1,1.1.0)</version>
+            <version>0.17.0</version>
         </dependency>
-
 
         <dependency>
             <groupId>org.jgrapes</groupId>
             <artifactId>org.jgrapes.portlets.markdowndisplay</artifactId>
-            <version>[0.16.0,1.1.0)</version>
+            <version>0.17.0</version>
         </dependency>
         
         <dependency>
             <groupId>org.jgrapes</groupId>
             <artifactId>org.jgrapes.portal.providers.datatables</artifactId>
-            <version>[0.16.0,1.1.0)</version>
+            <version>0.17.0</version>
         </dependency>
         
         <dependency>
             <groupId>org.jgrapes</groupId>
             <artifactId>org.jgrapes.portal.providers.markdownit</artifactId>
-            <version>[0.16.0,1.1.0)</version>
+            <version>0.17.0</version>
         </dependency>
         
         <dependency>
             <groupId>org.jgrapes</groupId>
             <artifactId>org.jgrapes.portal.providers.chartjs</artifactId>
-            <version>[0.16.0,1.1.0)</version>
+            <version>0.17.0</version>
         </dependency>
         
         <dependency>
