@@ -23,9 +23,9 @@ import java.util.ResourceBundle;
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.Component;
 import org.jgrapes.core.annotation.Handler;
-import org.jgrapes.portal.PortalSession;
-import org.jgrapes.portal.events.DisplayNotification;
-import org.jgrapes.portal.events.NotifyPortletModel;
+import org.jgrapes.portal.base.PortalSession;
+import org.jgrapes.portal.base.events.DisplayNotification;
+import org.jgrapes.portal.base.events.NotifyPortletModel;
 
 /**
  *

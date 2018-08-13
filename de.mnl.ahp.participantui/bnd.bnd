@@ -16,7 +16,6 @@ Export-Package: de.mnl.ahp.participantui
 	org.jgrapes.http;version=latest,\
 	org.jgrapes.http.freemarker;version=latest,\
 	org.jgrapes.util;version=latest,\
-	org.jgrapes.portal;version=latest,\
 	org.jgrapes.osgi.core;version=latest,\
 	org.jdrupes.httpcodec;version=latest,\
     org.jdrupes.json;version=latest,\

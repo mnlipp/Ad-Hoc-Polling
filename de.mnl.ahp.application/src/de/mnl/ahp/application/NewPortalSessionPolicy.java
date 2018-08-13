@@ -26,13 +26,13 @@ import org.jgrapes.core.Channel;
 import org.jgrapes.core.CompletionEvent;
 import org.jgrapes.core.Component;
 import org.jgrapes.core.annotation.Handler;
-import org.jgrapes.portal.PortalSession;
-import org.jgrapes.portal.Portlet;
-import org.jgrapes.portal.events.AddPortletRequest;
-import org.jgrapes.portal.events.PortalConfigured;
-import org.jgrapes.portal.events.PortalPrepared;
-import org.jgrapes.portal.events.RenderPortlet;
-import org.jgrapes.portal.events.RenderPortletRequest;
+import org.jgrapes.portal.base.PortalSession;
+import org.jgrapes.portal.base.Portlet;
+import org.jgrapes.portal.base.events.AddPortletRequest;
+import org.jgrapes.portal.base.events.PortalConfigured;
+import org.jgrapes.portal.base.events.PortalPrepared;
+import org.jgrapes.portal.base.events.RenderPortlet;
+import org.jgrapes.portal.base.events.RenderPortletRequest;
 
 /**
  * 

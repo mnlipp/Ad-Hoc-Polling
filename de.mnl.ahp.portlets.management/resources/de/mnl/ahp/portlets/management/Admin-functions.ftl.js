@@ -26,6 +26,7 @@ var deMnlAhpAdmin = {
 (function() {
 
     var l10n = deMnlAhpAdmin.l10n;
+    var pollGroupCounter = 0;
     
     $("body").on("click", ".AdHocPolling-admin-preview .CreatePoll-button",
             function(event) {
@@ -44,9 +45,12 @@ var deMnlAhpAdmin = {
             "de.mnl.ahp.portlets.management.AdminPortlet",
             "updatePoll", updatePoll);
 
-    let groupTemplate = $('<div class="pollGroup">'
-            + '<h3></h3>'
-            + '<div><div class="table-wrapper"><table class="ui-widget">'
+    let groupTemplate = $('<div class="card pollGroup">'
+            + '<div class="card-header">'
+            + '<button class="btn btn-link" data-toggle="collapse">'
+            + '<h3></h3></button></div>'
+            + '<div class="collapse" data-parent=".pollGroups">'
+            + '<div class="card-body"><div class="table-wrapper"><table>'
             + '<tr><th class="ui-widget-header">#1</th><td>0</td></tr>'
             + '<tr><th class="ui-widget-header">#2</th><td>0</td></tr>'
             + '<tr><th class="ui-widget-header">#3</th><td>0</td></tr>'
@@ -55,9 +59,8 @@ var deMnlAhpAdmin = {
             + '<tr><th class="ui-widget-header">#6</th><td>0</td></tr>'
             + '<tr><th class="ui-widget-header">${_("Total")}</th><td>0</td></tr>'
             + '</table></div>'
-            + '<div class="chart-wrapper">'
-            + '<canvas class="chart"></canvas></div>'
-            + '</div>');
+            + '<div class="chart-wrapper"><canvas class="chart"></canvas></div>'
+            + '</div></div></div>');
     
     function updatePoll(portletId, params) {
         let pollData = params[0];
@@ -91,6 +94,9 @@ var deMnlAhpAdmin = {
         });
         if (group === null) {
             group = groupTemplate.clone();
+            group.find("button").attr("data-target", "#pollGroupBody" + pollGroupCounter);
+            group.find(".collapse").attr("id", "pollGroupBody" + pollGroupCounter);
+            pollGroupCounter += 1;
             let inserted = false;
             pollGroups.find(".pollGroup").each(function() {
                 if (pollData.startedAt > parseInt($(this).attr("data-started-at"))) {
@@ -109,8 +115,7 @@ var deMnlAhpAdmin = {
                 + ": " + moment(pollData.startedAt).locale(lang).format("LTS") 
                 + ")");
             createChart(group.find("canvas"));
-            pollGroups.accordion("refresh");
-            pollGroups.accordion("option", "active", 0);
+            pollGroups.find(".pollGroup").first().find(".collapse").collapse("show");
         }
         let cells = group.find("td");
         let sum = 0;

@@ -3,41 +3,46 @@
 	org.apache.aries.spifly.dynamic.bundle;version='[1.0.8,1.0.9)',\
 	org.apache.aries.util;version='[1.0.0,1.0.1)',\
 	org.apache.felix.scr;version='[2.0.2,2.0.3)',\
-	org.osgi.compendium;version='[4.1.0,4.1.1)',\
-	org.apache.felix.metatype;version='[1.1.2,1.1.3)',\
 	org.objectweb.asm.all;version='[5.1.0,5.1.1)',\
-	osgi.promise;version='[6.0.0,6.0.1)',\
 	com.fasterxml.jackson.core.jackson-core;version='[2.9.4,2.9.5)',\
 	de.mnl.ahp.application;version=snapshot,\
 	de.mnl.ahp.participantui;version=snapshot,\
 	de.mnl.ahp.portlets.management;version=snapshot,\
 	de.mnl.ahp.service;version=snapshot,\
 	org.freemarker.freemarker;version='[2.3.28,2.3.29)',\
-	org.jdrupes.httpcodec;version='[1.0.6,1.0.7)',\
 	org.jdrupes.json;version='[2.0.1,2.0.2)',\
 	org.jgrapes.osgi.core;version='[0.9.8,0.9.9)',\
-	org.jgrapes.osgi.portlets.bundles;version='[0.9.11,0.9.12)',\
-	org.jgrapes.osgi.portlets.services;version='[0.9.12,0.9.13)',\
-	org.jgrapes.core;version='[0.18.1,0.18.2)',\
-	org.jgrapes.http;version='[0.18.1,0.18.2)',\
-	org.jgrapes.http.freemarker;version='[0.18.1,0.18.2)',\
-	org.jgrapes.io;version='[0.18.1,0.18.2)',\
-	org.jgrapes.portal;version='[0.17.1,0.17.2)',\
-	org.jgrapes.portal.providers.chartjs;version='[0.17.1,0.17.2)',\
-	org.jgrapes.portal.providers.datatables;version='[0.17.1,0.17.2)',\
-	org.jgrapes.portal.providers.markdownit;version='[0.17.1,0.17.2)',\
-	org.jgrapes.portlets.markdowndisplay;version='[0.17.1,0.17.2)',\
-	org.jgrapes.portlets.sysinfo;version='[0.17.1,0.17.2)',\
-	org.jgrapes.util;version='[0.18.1,0.18.2)'
+	com.sun.activation.javax.activation;version='[1.2.0,1.2.1)',\
+	org.apache.felix.metatype;version='[1.2.0,1.2.1)',\
+	org.jdrupes.httpcodec;version='[1.0.8,1.0.9)',\
+	org.jgrapes.core;version='[0.18.6,0.18.7)',\
+	org.jgrapes.http;version='[0.18.6,0.18.7)',\
+	org.jgrapes.http.freemarker;version='[0.18.6,0.18.7)',\
+	org.jgrapes.io;version='[0.18.6,0.18.7)',\
+	org.jgrapes.osgi.portlets.bundles;version='[0.9.15,0.9.16)',\
+	org.jgrapes.osgi.portlets.services;version='[0.9.17,0.9.18)',\
+	org.jgrapes.portal.base;version='[0.19.1,0.19.2)',\
+	org.jgrapes.portal.bootstrap4;version='[0.19.1,0.19.2)',\
+	org.jgrapes.portal.providers.chartjs;version='[0.19.1,0.19.2)',\
+	org.jgrapes.portal.providers.fontawesome;version='[0.19.1,0.19.2)',\
+	org.jgrapes.portal.providers.markdownit;version='[0.19.1,0.19.2)',\
+	org.jgrapes.portal.providers.vuejs;version='[0.19.1,0.19.2)',\
+	org.jgrapes.portlets.markdowndisplay;version='[0.19.1,0.19.2)',\
+	org.jgrapes.portlets.sysinfo;version='[0.19.1,0.19.2)',\
+	org.jgrapes.util;version='[0.18.6,0.18.7)',\
+	org.osgi.service.log;version='[1.4.0,1.4.1)',\
+	org.osgi.util.pushstream;version='[1.0.0,1.0.1)',\
+	osgi.promise;version='[7.0.0,7.0.1)'
     
 -runrequires: \
-    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.core)(version>=0.18.1.ga))',\
+    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.core)(version>=0.18.6.ga))',\
     osgi.identity;filter:='(&(osgi.identity=org.jgrapes.osgi.core)(version>=0.9.8.ga))',\
 	osgi.identity;filter:='(osgi.identity=de.mnl.ahp.application)',\
     osgi.identity;filter:='(osgi.identity=de.mnl.ahp.service)',\
     osgi.identity;filter:='(osgi.identity=de.mnl.ahp.participantui)',\
     osgi.identity;filter:='(osgi.identity=de.mnl.ahp.portlets.management)',\
-	osgi.identity;filter:='(osgi.identity=org.jgrapes.portlets.sysinfo)',\
+	osgi.identity;filter:='(osgi.identity=org.jgrapes.portal.bootstrap4)',\
+    osgi.identity;filter:='(osgi.identity=org.jgrapes.portlets.sysinfo)',\
 	osgi.identity;filter:='(osgi.identity=org.jgrapes.portlets.markdowndisplay)',\
 	osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portlets.bundles)',\
 	osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portlets.services)'

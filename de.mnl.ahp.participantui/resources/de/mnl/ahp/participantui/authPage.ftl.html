@@ -16,7 +16,7 @@
         </form>
     </div>
 
-    <div id="code_submission">
+    <main id="code_submission">
         <#if controller.isUnknown()>
             <div class="error">
                 <span>${_("Invalid code")}</span>
@@ -46,7 +46,9 @@
                     _("Submit")}</button>
             </form>
         </div>
-    </div>
+    </main>
+
+    <#include "footer.ftl.html">
 
 </body>
 

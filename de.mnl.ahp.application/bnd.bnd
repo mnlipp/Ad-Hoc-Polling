@@ -16,7 +16,8 @@ Bundle-Activator: de.mnl.ahp.application.Application
 	org.jgrapes.io;version=latest,\
 	org.jgrapes.http;version=latest,\
 	org.jgrapes.util;version=latest,\
-	org.jgrapes.portal;version='[0.15.0.ga,1.1)',\
+    org.jgrapes.portal.base;version=latest,\
+	org.jgrapes.portal.bootstrap4;version=latest,\
 	org.jgrapes.osgi.core;version=latest,\
 	de.mnl.ahp.service;version=latest
 

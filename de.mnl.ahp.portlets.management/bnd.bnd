@@ -16,7 +16,7 @@ Bundle-Category: portlet
 	org.jgrapes.core;version=latest,\
 	org.jgrapes.io;version=latest,\
 	org.jgrapes.http;version=latest,\
-	org.jgrapes.portal;version='[0.15.0.ga,1.1)',\
+	org.jgrapes.portal.base;version=latest,\
     org.jdrupes.json;version=latest,\
 	org.freemarker.freemarker;version='[2.3.27,2.4)',\
     de.mnl.ahp.service;version=latest

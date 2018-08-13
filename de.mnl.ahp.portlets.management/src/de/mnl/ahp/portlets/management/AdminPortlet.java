@@ -39,23 +39,23 @@ import org.jgrapes.core.Event;
 import org.jgrapes.core.Manager;
 import org.jgrapes.core.annotation.Handler;
 import org.jgrapes.core.annotation.HandlerDefinition.ChannelReplacements;
-import org.jgrapes.portal.PortalSession;
-import org.jgrapes.portal.PortalWeblet;
-import org.jgrapes.portal.Portlet.RenderMode;
+import org.jgrapes.portal.base.PortalSession;
+import org.jgrapes.portal.base.PortalWeblet;
+import org.jgrapes.portal.base.Portlet.RenderMode;
 
-import static org.jgrapes.portal.Portlet.RenderMode.View;
+import static org.jgrapes.portal.base.Portlet.RenderMode.View;
 
-import org.jgrapes.portal.events.AddPageResources.ScriptResource;
-import org.jgrapes.portal.events.AddPortletRequest;
-import org.jgrapes.portal.events.AddPortletType;
-import org.jgrapes.portal.events.DeletePortlet;
-import org.jgrapes.portal.events.DeletePortletRequest;
-import org.jgrapes.portal.events.NotifyPortletModel;
-import org.jgrapes.portal.events.NotifyPortletView;
-import org.jgrapes.portal.events.PortalReady;
-import org.jgrapes.portal.events.RenderPortletRequest;
-import org.jgrapes.portal.events.RenderPortletRequestBase;
-import org.jgrapes.portal.freemarker.FreeMarkerPortlet;
+import org.jgrapes.portal.base.events.AddPageResources.ScriptResource;
+import org.jgrapes.portal.base.events.AddPortletRequest;
+import org.jgrapes.portal.base.events.AddPortletType;
+import org.jgrapes.portal.base.events.DeletePortlet;
+import org.jgrapes.portal.base.events.DeletePortletRequest;
+import org.jgrapes.portal.base.events.NotifyPortletModel;
+import org.jgrapes.portal.base.events.NotifyPortletView;
+import org.jgrapes.portal.base.events.PortalReady;
+import org.jgrapes.portal.base.events.RenderPortletRequest;
+import org.jgrapes.portal.base.events.RenderPortletRequestBase;
+import org.jgrapes.portal.base.freemarker.FreeMarkerPortlet;
 
 /**
  * A portlet for inspecting the services in an OSGi runtime.

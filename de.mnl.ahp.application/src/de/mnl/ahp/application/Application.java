@@ -43,11 +43,13 @@ import org.jgrapes.io.NioDispatcher;
 import org.jgrapes.io.util.PermitsPool;
 import org.jgrapes.net.TcpServer;
 import org.jgrapes.osgi.core.ComponentCollector;
-import org.jgrapes.portal.KVStoreBasedPortalPolicy;
-import org.jgrapes.portal.PageResourceProviderFactory;
-import org.jgrapes.portal.Portal;
-import org.jgrapes.portal.PortalLocalBackedKVStore;
-import org.jgrapes.portal.PortletComponentFactory;
+import org.jgrapes.portal.base.KVStoreBasedPortalPolicy;
+import org.jgrapes.portal.base.PageResourceProviderFactory;
+import org.jgrapes.portal.base.Portal;
+import org.jgrapes.portal.base.PortalLocalBackedKVStore;
+import org.jgrapes.portal.base.PortalWeblet;
+import org.jgrapes.portal.base.PortletComponentFactory;
+import org.jgrapes.portal.bootstrap4.Bootstrap4Weblet;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
@@ -102,18 +104,18 @@ public class Application extends Component implements BundleActivator {
 						return Arrays.asList(Collections.emptyMap());
 					}
 				}));
-		Portal portal = httpServer.attach(new Portal(Channel.SELF, httpChannel, 
-				new URI("/admin")))
-				.setResourceBundleSupplier(l -> ResourceBundle.getBundle(
-					getClass().getPackage().getName() + ".portal-l10n", l,
-					ResourceBundle.Control.getNoFallbackControl(
-							ResourceBundle.Control.FORMAT_DEFAULT)))
-				.setFallbackResourceSupplier((themeProvider, resource) -> {
-					return Application.class.getResource(resource);
-				})
-				.setPortalSessionInactivityTimeout(300000);
-		portal.attach(new PortalLocalBackedKVStore(
-				portal, portal.prefix().getPath()));
+        PortalWeblet portalWeblet
+            = httpServer.attach(new Bootstrap4Weblet(httpChannel, Channel.SELF,
+                new URI("/admin")))
+                .prependClassTemplateLoader(this.getClass())
+                .setResourceBundleSupplier(l -> ResourceBundle.getBundle(
+                    getClass().getPackage().getName() + ".portal-l10n", l,
+                    ResourceBundle.Control.getNoFallbackControl(
+                        ResourceBundle.Control.FORMAT_DEFAULT)))
+                .setPortalSessionInactivityTimeout(300000);
+        Portal portal = portalWeblet.portal();
+        portal.attach(new PortalLocalBackedKVStore(
+            portal, portalWeblet.prefix().getPath()));
 		portal.attach(new KVStoreBasedPortalPolicy(portal));
         portal.attach(new NewPortalSessionPolicy(portal));
         portal.attach(new ActionFilter(portal));

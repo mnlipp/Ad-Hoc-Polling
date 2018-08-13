@@ -13,13 +13,13 @@
         <dependency>
             <groupId>org.jgrapes</groupId>
             <artifactId>org.jgrapes.osgi.portlets.bundles</artifactId>
-            <version>[0.9.11,1.1.0)</version>
+            <version>[0.9.15,1.1.0)</version>
         </dependency>
         
         <dependency>
             <groupId>org.jgrapes</groupId>
             <artifactId>org.jgrapes.osgi.portlets.services</artifactId>
-            <version>[0.9.12,1.1.0)</version>
+            <version>[0.9.17,1.1.0)</version>
         </dependency>
 
         <dependency>
@@ -32,32 +32,38 @@
  
         <dependency>
             <groupId>org.jgrapes</groupId>
+            <artifactId>org.jgrapes.portal.bootstrap4</artifactId>
+            <version>0.19.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jgrapes</groupId>
             <artifactId>org.jgrapes.portlets.sysinfo</artifactId>
-            <version>0.17.1</version>
+            <version>0.19.1</version>
         </dependency>
 
         <dependency>
             <groupId>org.jgrapes</groupId>
             <artifactId>org.jgrapes.portlets.markdowndisplay</artifactId>
-            <version>0.17.1</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.jgrapes</groupId>
-            <artifactId>org.jgrapes.portal.providers.datatables</artifactId>
-            <version>0.17.1</version>
+            <version>0.19.1</version>
         </dependency>
         
         <dependency>
             <groupId>org.jgrapes</groupId>
             <artifactId>org.jgrapes.portal.providers.markdownit</artifactId>
-            <version>0.17.1</version>
+            <version>0.19.1</version>
         </dependency>
         
         <dependency>
             <groupId>org.jgrapes</groupId>
             <artifactId>org.jgrapes.portal.providers.chartjs</artifactId>
-            <version>0.17.1</version>
+            <version>0.19.1</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.jgrapes</groupId>
+            <artifactId>org.jgrapes.portal.providers.vuejs</artifactId>
+            <version>0.19.1</version>
         </dependency>
         
         <dependency>

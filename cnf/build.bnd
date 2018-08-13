@@ -1,8 +1,5 @@
 # Configure Repositories
 -plugin.1.CentralMisc: \
-	aQute.bnd.deployer.repository.wrapper.Plugin; \
-		location = "${build}/cache/wrapper"; \
-		reindex = true, \
 	aQute.bnd.repository.maven.provider.MavenBndRepository; \
 		name="Central (Misc)"; \
 		snapshotUrl=https://oss.sonatype.org/content/repositories/snapshots/; \
@@ -50,7 +47,6 @@ junit: org.apache.servicemix.bundles.junit; version=4.12
 javac.source: 1.8
 javac.target: 1.8
 
-artifact_version: ${versionmask;===S;${Bundle-Version}}
 -outputmask: ${@bsn}-${versionmask;===S;${@version}}.jar
 
 -fixupmessages: \
