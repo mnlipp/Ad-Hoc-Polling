@@ -2,7 +2,6 @@
 -runbundles: \
 	org.apache.aries.spifly.dynamic.bundle;version='[1.0.8,1.0.9)',\
 	org.apache.aries.util;version='[1.0.0,1.0.1)',\
-	org.apache.felix.scr;version='[2.0.2,2.0.3)',\
 	org.objectweb.asm.all;version='[5.1.0,5.1.1)',\
 	com.fasterxml.jackson.core.jackson-core;version='[2.9.4,2.9.5)',\
 	de.mnl.ahp.application;version=snapshot,\
@@ -19,20 +18,21 @@
 	org.jgrapes.http;version='[0.18.6,0.18.7)',\
 	org.jgrapes.http.freemarker;version='[0.18.6,0.18.7)',\
 	org.jgrapes.io;version='[0.18.6,0.18.7)',\
-	org.jgrapes.osgi.portlets.bundles;version='[0.9.15,0.9.16)',\
-	org.jgrapes.osgi.portlets.services;version='[0.9.17,0.9.18)',\
-	org.jgrapes.portal.base;version='[0.19.1,0.19.2)',\
-	org.jgrapes.portal.bootstrap4;version='[0.19.1,0.19.2)',\
-	org.jgrapes.portal.providers.chartjs;version='[0.19.1,0.19.2)',\
-	org.jgrapes.portal.providers.fontawesome;version='[0.19.1,0.19.2)',\
-	org.jgrapes.portal.providers.markdownit;version='[0.19.1,0.19.2)',\
-	org.jgrapes.portal.providers.vuejs;version='[0.19.1,0.19.2)',\
-	org.jgrapes.portlets.markdowndisplay;version='[0.19.1,0.19.2)',\
-	org.jgrapes.portlets.sysinfo;version='[0.19.1,0.19.2)',\
 	org.jgrapes.util;version='[0.18.6,0.18.7)',\
-	org.osgi.service.log;version='[1.4.0,1.4.1)',\
 	org.osgi.util.pushstream;version='[1.0.0,1.0.1)',\
-	osgi.promise;version='[7.0.0,7.0.1)'
+	osgi.promise;version='[7.0.0,7.0.1)',\
+	org.apache.felix.scr;version='[2.1.6,2.1.7)',\
+	org.jgrapes.osgi.portlets.bundles;version='[0.9.16,0.9.17)',\
+	org.jgrapes.osgi.portlets.services;version='[0.9.18,0.9.19)',\
+	org.jgrapes.portal.base;version='[0.19.3,0.19.4)',\
+	org.jgrapes.portal.bootstrap4;version='[0.19.3,0.19.4)',\
+	org.jgrapes.portal.providers.chartjs;version='[0.19.3,0.19.4)',\
+	org.jgrapes.portal.providers.fontawesome;version='[0.19.3,0.19.4)',\
+	org.jgrapes.portal.providers.markdownit;version='[0.19.3,0.19.4)',\
+	org.jgrapes.portal.providers.vuejs;version='[0.19.3,0.19.4)',\
+	org.jgrapes.portlets.markdowndisplay;version='[0.19.3,0.19.4)',\
+	org.jgrapes.portlets.sysinfo;version='[0.19.3,0.19.4)',\
+	org.osgi.service.log;version='[1.4.0,1.4.1)'
     
 -runrequires: \
     osgi.identity;filter:='(&(osgi.identity=org.jgrapes.core)(version>=0.18.6.ga))',\

@@ -43,7 +43,7 @@ public class ActionFilter extends Component {
             && !event.method().equals("sendDetails")) {
             event.stop();
 			ResourceBundle resources = ResourceBundle.getBundle(
-					ActionFilter.class.getPackage().getName() + ".portal-l10n");
+                ActionFilter.class.getPackage().getName() + ".app-l10n");
 			channel.respond(new DisplayNotification("<span>"
 					+ resources.getString("actionDisabled")
 					+ "</span>")

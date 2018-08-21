@@ -25,7 +25,6 @@ import java.net.URI;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Optional;
-import java.util.ResourceBundle;
 
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.Component;
@@ -107,11 +106,8 @@ public class Application extends Component implements BundleActivator {
         PortalWeblet portalWeblet
             = httpServer.attach(new Bootstrap4Weblet(httpChannel, Channel.SELF,
                 new URI("/admin")))
-                .prependClassTemplateLoader(this.getClass())
-                .setResourceBundleSupplier(l -> ResourceBundle.getBundle(
-                    getClass().getPackage().getName() + ".portal-l10n", l,
-                    ResourceBundle.Control.getNoFallbackControl(
-                        ResourceBundle.Control.FORMAT_DEFAULT)))
+                .prependClassTemplateLoader(getClass())
+                .prependResourceBundleProvider(getClass())
                 .setPortalSessionInactivityTimeout(300000);
         Portal portal = portalWeblet.portal();
         portal.attach(new PortalLocalBackedKVStore(
