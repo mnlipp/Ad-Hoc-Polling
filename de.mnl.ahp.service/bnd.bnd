@@ -1,10 +1,13 @@
 Bundle-Name: Ad Hoc Polling Participant UI
-Bundle-Version: 0.0.0.-${tstamp}-SNAPSHOT
-Bundle-Copyright: Michael N. Lipp (c) 2018
+#Bundle-Version: 0.0.0.-${tstamp}-SNAPSHOT
+Bundle-Version: 1.0.0.ga
+Bundle-Copyright: Michael N. Lipp (c) 2018, 2021
 Bundle-License: http://www.gnu.org/licenses/gpl-3.0.txt
 Export-Package: \
 	de.mnl.ahp.service,\
 	de.mnl.ahp.service.events
+
+api_version = 1.0.0
 
 -sources: true
 -runee: JavaSE-1.8
