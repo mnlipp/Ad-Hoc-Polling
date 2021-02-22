@@ -38,6 +38,7 @@ import org.jgrapes.core.annotation.Handler;
 import org.jgrapes.core.annotation.HandlerDefinition.ChannelReplacements;
 import org.jgrapes.webconsole.base.AbstractConlet.ConletBaseModel;
 import org.jgrapes.webconsole.base.Conlet.RenderMode;
+import org.jgrapes.webconsole.base.Conlet;
 import org.jgrapes.webconsole.base.ConsoleSession;
 import org.jgrapes.webconsole.base.WebConsoleUtils;
 import org.jgrapes.webconsole.base.events.AddConletRequest;
@@ -103,7 +104,7 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
             ConsoleSession channel) throws Exception {
         String conletId = generateConletId();
         AdminModel conletModel = putInSession(channel.browserSession(),
-            new AdminModel(generateConletId()));
+            new AdminModel(conletId));
         return new ConletTrackingInfo(conletId)
             .addModes(renderConlet(event, channel, conletModel));
     }
