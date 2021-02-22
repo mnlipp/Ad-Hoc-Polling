@@ -27,7 +27,6 @@ import freemarker.template.SimpleScalar;
 import freemarker.template.TemplateMethodModelEx;
 import freemarker.template.TemplateModel;
 import freemarker.template.TemplateModelException;
-
 import java.net.HttpCookie;
 import java.net.URI;
 import java.nio.ByteBuffer;
@@ -39,7 +38,6 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
-
 import org.jdrupes.httpcodec.protocols.http.HttpConstants.HttpStatus;
 import org.jdrupes.httpcodec.protocols.http.HttpField;
 import org.jdrupes.httpcodec.types.Converters;
@@ -57,8 +55,6 @@ import org.jgrapes.http.ResponseCreationSupport;
 import org.jgrapes.http.Session;
 import org.jgrapes.http.annotation.RequestHandler;
 import org.jgrapes.http.events.DiscardSession;
-import org.jgrapes.http.events.GetRequest;
-import org.jgrapes.http.events.PostRequest;
 import org.jgrapes.http.events.Request;
 import org.jgrapes.http.freemarker.FreeMarkerRequestHandler;
 import org.jgrapes.io.IOSubchannel;
@@ -92,63 +88,66 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
                 HttpRequestHandlerFactory.PREFIX, ""));
         this.ahpSvcChannel = (Channel) properties.getOrDefault(
             "AdHocPollingServiceChannel", componentChannel);
-		// Because this handler provides a "top-level" page, we have to adapt the
-		// resource pattern.
-		String stripped = prefix().getPath();
-		stripped = stripped.substring(0, stripped.length() - 1);
-		try {
-			updatePrefixPattern(new ResourcePattern(stripped + "|," + stripped + "|**"));
-		} catch (ParseException e) {
-			throw new IllegalArgumentException(e);
-		}
+        // Because this handler provides a "top-level" page, we have to adapt
+        // the
+        // resource pattern.
+        String stripped = prefix().getPath();
+        stripped = stripped.substring(0, stripped.length() - 1);
+        try {
+            updatePrefixPattern(
+                new ResourcePattern(stripped + "|," + stripped + "|**"));
+        } catch (ParseException e) {
+            throw new IllegalArgumentException(e);
+        }
         String pattern
             = (stripped.isEmpty() ? "/" : (stripped + "," + prefix()))
                 + "," + prefix() + "static/**";
-		RequestHandler.Evaluator.add(this, "onGet", pattern);
-		RequestHandler.Evaluator.add(this, "onPost", pattern);
-		attach(new InMemorySessionManager(componentChannel, pattern, 1100,
+        RequestHandler.Evaluator.add(this, "onGet", pattern);
+        RequestHandler.Evaluator.add(this, "onPost", pattern);
+        attach(new InMemorySessionManager(componentChannel, pattern, 1100,
             stripped.isEmpty() ? "/" : stripped)).setIdName("voter");
-	}
+    }
 
-	@Override
-	protected Map<String, Object> fmSessionModel(Optional<Session> session) {
-		Map<String, Object> formModel = super.fmSessionModel(session);
-		formModel.put("resourceUrl", new TemplateMethodModelEx() {
-			@Override
-			public Object exec(@SuppressWarnings("rawtypes") List arguments)
-					throws TemplateModelException {
-				@SuppressWarnings("unchecked")
-				List<TemplateModel> args = (List<TemplateModel>)arguments;
-				if (!(args.get(0) instanceof SimpleScalar)) {
-					throw new TemplateModelException("Not a string.");
-				}
+    @Override
+    protected Map<String, Object> fmSessionModel(Optional<Session> session) {
+        Map<String, Object> formModel = super.fmSessionModel(session);
+        formModel.put("resourceUrl", new TemplateMethodModelEx() {
+            @Override
+            public Object exec(@SuppressWarnings("rawtypes") List arguments)
+                    throws TemplateModelException {
+                @SuppressWarnings("unchecked")
+                List<TemplateModel> args = (List<TemplateModel>) arguments;
+                if (!(args.get(0) instanceof SimpleScalar)) {
+                    throw new TemplateModelException("Not a string.");
+                }
                 return ResponseCreationSupport.uriFromPath(prefix().getPath())
-                    .resolve(
-						((SimpleScalar)args.get(0)).getAsString()).getRawPath();
-			}
-		});
+                    .resolve(((SimpleScalar) args.get(0)).getAsString())
+                    .getRawPath();
+            }
+        });
         formModel.put("controller", session
-		    .flatMap(ses -> Optional.ofNullable(ses.get(VotingController.class)))
+            .flatMap(
+                ses -> Optional.ofNullable(ses.get(VotingController.class)))
             .orElseGet(VotingController::new));
-		return formModel;
-	}
+        return formModel;
+    }
 
-	/**
-	 * Provides the current page (according to the controller state) as
-	 * "top-level" resource and any additional static resources required
-	 * by this page.
-	 * 
-	 * @param event
-	 *            the event. The result will be set to `true` on success
-	 * @param channel
-	 *            the channel
-	 * @throws ParseException 
-	 */
-	@RequestHandler(dynamic=true, priority=-100)
-	public void onGet(GetRequest event, IOSubchannel channel) {
-		prefixPattern().pathRemainder(event.requestUri()).ifPresent(path -> {
+    /**
+     * Provides the current page (according to the controller state) as
+     * "top-level" resource and any additional static resources required
+     * by this page.
+     * 
+     * @param event
+     *            the event. The result will be set to `true` on success
+     * @param channel
+     *            the channel
+     * @throws ParseException 
+     */
+    @RequestHandler(dynamic = true, priority = -100)
+    public void onGet(Request.In.Get event, IOSubchannel channel) {
+        prefixPattern().pathRemainder(event.requestUri()).ifPresent(path -> {
             boolean success;
-			if (path.isEmpty()) {
+            if (path.isEmpty()) {
                 success = event.associated(Session.class).map(session -> {
                     VotingController vc
                         = (VotingController) session.computeIfAbsent(
@@ -165,36 +164,36 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
                     }
                     return true;
                 }).orElse(false);
-			} else {
+            } else {
                 success = ResponseCreationSupport.sendStaticContent(
                     event, channel,
                     requestPath -> ParticipantUi.class.getResource(path),
                     ResponseCreationSupport.DEFAULT_MAX_AGE_CALCULATOR);
-			}
-			event.setResult(true);
-			event.stop();
+            }
+            event.setResult(true);
+            event.stop();
             if (!success) {
-				channel.respond(new Close());
-			}
+                channel.respond(new Close());
+            }
             channel.setAssociated(this, true);
-		});
-	}
+        });
+    }
 
-	@RequestHandler(dynamic=true, priority=-100)
-	public void onPost(PostRequest event, IOSubchannel channel) {
-		// Associate the (pending) request and a form context with the channel
-		channel.setAssociated(
-				PostedUrlDataDecoder.class, new PostedUrlDataDecoder(event));
-		event.setResult(true);
-		event.stop();
+    @RequestHandler(dynamic = true, priority = -100)
+    public void onPost(Request.In.Post event, IOSubchannel channel) {
+        // Associate the (pending) request and a form context with the channel
+        channel.setAssociated(
+            PostedUrlDataDecoder.class, new PostedUrlDataDecoder(event));
+        event.setResult(true);
+        event.stop();
         channel.setAssociated(this, false);
-	}
-	
-	@Handler
-	public void onInput(Input<ByteBuffer> event, IOSubchannel channel) {
-		channel.associated(PostedUrlDataDecoder.class).ifPresent(dec -> {
-			event.stop();
-			dec.process(event).ifPresent(fields -> {
+    }
+
+    @Handler
+    public void onInput(Input<ByteBuffer> event, IOSubchannel channel) {
+        channel.associated(PostedUrlDataDecoder.class).ifPresent(dec -> {
+            event.stop();
+            dec.process(event).ifPresent(fields -> {
                 // Request has been fully decoded, process
                 dec.request().associated(Session.class).map(session -> {
                     if (fields.containsKey("setLocale")) {
@@ -239,9 +238,9 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
                     }
                     return null;
                 });
-			});
-		});
-	}
+            });
+        });
+    }
 
     private void setVotedCookie(
             PostedUrlDataDecoder dec, VotingController vc) {
@@ -270,7 +269,7 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
     public void onGetPollCompleted(GetPollCompleted event) {
         event.event().associated(IOSubchannel.class).ifPresent(channel -> {
             channel.associated(PostedUrlDataDecoder.class).ifPresent(dec -> {
-                Request request = dec.request();
+                Request.In.Post request = dec.request();
                 try {
                     processVote(event.event().get(), request);
                 } catch (InterruptedException e) {
@@ -284,7 +283,7 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
         });
     }
 
-    private void processVote(PollData pollData, Request request) {
+    private void processVote(PollData pollData, Request.In request) {
         request.associated(Session.class).ifPresent(session -> {
             VotingController vc = (VotingController) session
                 .computeIfAbsent(VotingController.class,

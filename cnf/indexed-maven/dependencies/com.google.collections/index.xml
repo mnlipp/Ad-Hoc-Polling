@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941434011">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.google.collections:google-collections:1.0"/>
+      <attribute name="from" value="com.google.collections:google-collections:1.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="639592" type="Long"/>
+      <attribute name="url" value="https://dl.bintray.com/bintray/jcenter/com/google/collections/google-collections/1.0/google-collections-1.0.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="81B8D638AF0083C4B877099D56AA0FEE714485CD2ACE1B6A09CAB867CADB375D"/>
+    </capability>
+  </resource>
+</repository>

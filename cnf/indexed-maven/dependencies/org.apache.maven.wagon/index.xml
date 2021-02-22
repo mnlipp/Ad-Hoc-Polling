@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941434029">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven.wagon:wagon-provider-api:1.0-beta-2"/>
+      <attribute name="from" value="org.apache.maven.wagon:wagon-provider-api:1.0-beta-2"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:1.0.4"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="46326" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-provider-api/1.0-beta-2/wagon-provider-api-1.0-beta-2.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="0BA6040074D1E193580BAE9314392940F5ECD81E3B6D3B3381050360DCE033AD"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven.wagon:wagon-provider-api:2.12"/>
+      <attribute name="from" value="org.apache.maven.wagon:wagon-provider-api:2.12"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:3.0.24"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="55170" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-provider-api/2.12/wagon-provider-api-2.12.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="431EA1B58A3E2EB9C43BBEC45DFF7529DEF90C3C6B9BFF4C735254358274FDCB"/>
+    </capability>
+  </resource>
+</repository>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433982">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="javax.enterprise:cdi-api:1.0"/>
+      <attribute name="from" value="javax.enterprise:cdi-api:1.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="javax.inject:javax.inject:1;javax.annotation:jsr250-api:1.0;org.jboss.interceptor:jboss-interceptor-api:1.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="44908" type="Long"/>
+      <attribute name="url" value="https://dl.bintray.com/bintray/jcenter/javax/enterprise/cdi-api/1.0/cdi-api-1.0.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="1F10B2204CC77C919301F20FF90461C3DF1B6E6CB148BE1C2D22107F4851D423"/>
+    </capability>
+  </resource>
+</repository>

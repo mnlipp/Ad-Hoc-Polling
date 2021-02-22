@@ -1,6 +1,15 @@
-enableFeaturePreview('STABLE_PUBLISHING')
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "biz.aQute.bnd:biz.aQute.bnd.gradle:4.0.0"
+    }
+}
 
 rootProject.name = 'ad-hoc-polling'
+
+include 'cnf'
 
 for (File file: rootDir.listFiles()) {
     if (file.isDirectory() &&
@@ -8,5 +17,3 @@ for (File file: rootDir.listFiles()) {
             include file.name
     }
 }
-
-include 'cnf'

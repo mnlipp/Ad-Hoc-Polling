@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Ad Hoc Polling Application
-    Copyright (C) 2018  Michael N. Lipp
+    JGrapes Event Driven Framework
+    Copyright (C) 2016, 2018  Michael N. Lipp
    
     This program is free software; you can redistribute it and/or modify it 
-    under the terms of the GNU General Public License as published by 
+    under the terms of the GNU Affero General Public License as published by 
     the Free Software Foundation; either version 3 of the License, or 
     (at your option) any later version.
    
     This program is distributed in the hope that it will be useful, but 
     WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-    or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License 
+    or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License 
     for more details.
    
-    You should have received a copy of the GNU General Public License along 
+    You should have received a copy of the GNU Affero General Public License along 
     with this program; if not, see <http://www.gnu.org/licenses/>.
  -->
 
@@ -42,10 +42,6 @@
       <property name="allowEscapesForControlCharacters" value="true"/>
       <property name="allowByTailComment" value="true"/>
       <property name="allowNonPrintableEscapes" value="true"/>
-    </module>
-    <module name="LineLength">
-      <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
-      <property name="max" value="100"/>
     </module>
     <module name="OneTopLevelClass"/>
     <module name="NoLineWrap"/>
@@ -143,5 +139,9 @@
     </module>
     <module name="DefaultComesLast"/>
     <module name="EqualsHashCode"/>
+  </module>
+  <module name="LineLength">
+    <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
+    <property name="max" value="100"/>
   </module>
 </module>

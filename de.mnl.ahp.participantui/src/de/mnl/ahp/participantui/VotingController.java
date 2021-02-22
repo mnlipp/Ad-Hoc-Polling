@@ -19,7 +19,6 @@
 package de.mnl.ahp.participantui;
 
 import de.mnl.ahp.service.events.PollData;
-
 import java.io.Serializable;
 import java.time.Instant;
 

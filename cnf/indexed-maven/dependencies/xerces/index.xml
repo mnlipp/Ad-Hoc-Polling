@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433772">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="xerces:xercesImpl:2.8.1"/>
+      <attribute name="from" value="xerces:xercesImpl:2.8.1"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="xml-apis:xml-apis:1.3.03"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="1212965" type="Long"/>
+      <attribute name="url" value="https://dl.bintray.com/bintray/jcenter/xerces/xercesImpl/2.8.1/xercesImpl-2.8.1.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="F95F3AD141BDFF5A64962F6C26B4F18ECF0975CD3A68802712284B9E6DB37E1B"/>
+    </capability>
+  </resource>
+</repository>

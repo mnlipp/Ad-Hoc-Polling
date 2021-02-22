@@ -1,0 +1,631 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433904">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy"/>
+      <attribute name="bnd.hashes" value="416346955,-840646322,582912533,-73931138,1661550704,628798265,-2086431535,684536197,-2099809822,167510852,1728628823,1836610607,2063175234,-874309678,-290646955,1350829414,254219856,-1758794693,1165,374758081,1395017609,1166,35829730,-1752920792,-2126899996,-1798060984" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.agent.builder"/>
+      <attribute name="bnd.hashes" value="1165,1526119805,-273791769,-554541905,467062454,-308266304,-1628278147,128981738,225758176,-1146364673,628798265,-2086431535,684536197,-1110566842,-352691337,644459115,1330493707,-2088898989,221034743,583059887,-712794577,-1178547729,1733731342,-1637190930,35829730,-1382342443,127694832,1450912107,66941686,59166797,630235962,1166,1167,-314382065,1385936272,-1352313111,-2678132,1476453315,-2044920213,-666911541,-2012688193,919939257,-95799624,560494457,109292511,612784754,515185131,1045853405,35679686,1104488373,1097364340,35607992,1110745430,-904099545,1030953335,-1169192309,304985641,1854823288,-1710266542,130286192,593984907,-1901175968,-713629048,-908092008,1873051806,2065477886,1567481386,-1529150613,550743926,-1656913498,1314628697,766952696,1740504166,-1682661748,1728628823,-161149733,-1435961624,-2087229502,1748697587,-1612058606,1617700638,-187187240,-965061946,-689274623,1502475343,-1078127227,1017146158,-1447493132,-371363031,1955028299,-1596095216,-1405714046,-127798209,-1585847556,-320645479,-320662883,-2137971445,419389749,1756382827,1189992481,1376201650,1107940553,1786668664,744233906,744251310,-1338305760,-1653737539,1294985599,1749776866,1797379965,1797362561,-950756909,-808876945,1540419961,944952509,-62024664,-678234600,226161945,267259896,374758081,-1318951503,667228631,-1752920792,228957310,1108867222,-240125027,-119309971,1645093669,1097764526,-220822691,564021244,20330069,-1170136953,1046149905,1971656950,199501603,-514778108" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.asm"/>
+      <attribute name="bnd.hashes" value="1165,603920490,535295664,-1835999648,-747969830,-121908590,1545446137,-1858649471,593984907,2126077697,1166,934846345,66941686,-1110566842,1747180338,1703546504,-359272060,-220822691,356235820,-1288512247,1156355591,1095024570,-381088496,-1920181467,294362143,-920536004,-1177572282,-554541905,1329365646,-726241846,1432383329,-1190185397,1418943484,-234259110,-308266304,-696849697,1167,1168,1169,48467769,-126375316,150865610,35679686,2112786959,-1836031415,902021595,-1382342443,515185131,1097764116,-1999270949,1526119805,1964996772,-1474616544,610943894,1874721458,1102465882,1659854818,-463114914,778024888,-414015767,-140920331,-1206104251,459166248,-384229548,1435124401,-359025935,-632319078,1131218147,-1721937398,-1074052857,192525707,1203196636,246897032,1468525215,1090691179,616406720,-93062946,49188936,695696571,-1598357002,35829730,-773642937,-1446890842,-1896438747,-145257644,1384608341,1999950753,88322773,-1531897097,-1256532877,-693322412,808928034,611326842,-39391126,34831988,519686960,-1674158283,1474944415,35852514,94795660,129058586,-1429728973,1956866328,1728628823,-1178547729,773185898,1097764526,-1076376293,556929272,-1897961014,1901723987,1283048320,690581429,361698258,1166163698,-187187240,-790793938,2028006760,-1509251974,1294870066,-920535990,-982105791,-9336057,-2060116203,748893276,504706272,258843848,-203807525,-1825912544,1695592287,-236812585,-590156623,1898899726,657795012,-601649059,-1825233466,-1274294997" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.build"/>
+      <attribute name="bnd.hashes" value="1165,1166,1167,1526119805,14135390,-1901307053" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description"/>
+      <attribute name="bnd.hashes" value="-634305933,1111638069,1669470237,-751075833,-1773299413,1728628823,954930887,-174576426,1844393528,-1276300910,-1491991413,1011430284,749466156,1079925513,-1098449000,-1886121419,-1443177191,-652324445,35679686,448076714,443171761" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.annotation"/>
+      <attribute name="bnd.hashes" value="1969984866,1728628823,1331318255,-901325209,212260567,-260734663,1266775940,-140652496,1799163181,1097730953,1786668664,507160154,442739853,477242442,1165,-1767595275,-128290487,-41713592,1166,1167,1168,1169,1170,1171,1172,1173,526501038,1902236555,1927870142,-1613241143,-527030302,852215157,-747676774,-1252978787,1110854349,131271567,849023842" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.enumeration"/>
+      <attribute name="bnd.hashes" value="1728628823,-1301793411,-140652496,484928341" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.field"/>
+      <attribute name="bnd.hashes" value="1728628823,-1399722832,-1490883039,-2133167341,-140652496,1018339685,1111638069,-96969867,1118588610,1097730953,1786668664,-441734717,332958719,-1026041704" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.method"/>
+      <attribute name="bnd.hashes" value="1728628823,-119536848,-244581397,-1490883039,-2133167341,95863428,-140652496,1018339685,1111638069,-96969867,-266488037,603845691,1097730953,1786668664,1007911400,332958719,1270249791,628798265,-1889918030,684536197,515185131,1931722719,-1907325345,-309069988,-2063413796,749286495,-1255766212,-1005717325,-127504012,1833572948,419302343" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.modifier"/>
+      <attribute name="bnd.hashes" value="-1842388310,1769194348,1549602149,1359080789,1022488229,278096001,-140920331,123590470,-389097692,-696849697,-920535990,156397924,2022529871,420656413,-1059844732,824939057,-338658196,-195985172,1165,-360169678" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.type"/>
+      <attribute name="bnd.hashes" value="1728628823,-754685316,66941686,1502112758,35829730,-184510065,788671565,1165,-66701358,1591481223,-1608210236,648017092,-1154136389,720117340,-1146364673,628798265,2078145461,-2093472544,-1976101985,-1531082465,297225342,1510728369,1718055204,-920536004,-1889918030,684536197,515185131,637683666,1969063944,1520656060,-730454560,-1492437603,-1895404362,947520565,35679686,1913277718,-58714025,-251705697,-1684410440,1566834833,212260567,60037130,-1663451500,-449948473,-410157430,-1478370003,-1097506177,1214528770,-235326817,-235073221,703867541,-460857774,785600487,478164519,-140652496,1459362685,1381208484,-1042590858,-392653482,-1372269862,-404698547,1166,-1127880595,-7396798,1208777974,-370356169,1386437587,1634802642,115790063,-1336957947,-1218977128,1753279847,-1265154551,-1018143835,101048816,-174740759,1314879713,280870926,1860751995,-949088736,-433443395,1226738898,-655523653,-1344712473,-1214764131,-1599363832,-846891178,-2144415991,787053087,2080766420,2027733898,-707427461,522508682,1252448901,1167,-490142011,-1885334642,448076714,-98832109,398971021,-1096910336,-1855421903,-2044920213,-1663341502,1097730953,1786668664,-1386306513,1818501598,1327239682,340337186,-1729580435,1967868713,2076807136,1193777766,-611914984,15209379" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.dynamic"/>
+      <attribute name="bnd.hashes" value="1526119805,1786668664,628798265,260898955,-920536004,-1382342443,515185131,-1505053628,398971021,-1975928528,517847794,-1178547729,574386082,1740504166,-67820845,1051411570,132361425,-506444307,35679686,967119467,1874721458,127694832,66941686,154321666,-2012570138,890184736,1246116188,-1767221317,-2040723443,-866354650,-824373545,-983293809,888966159,1554399106,-1169192309,-1146364673,1728628823,-1989486318,-658224220,-1429328599,1563424830,1500790505,1057919055,1929657984,-1161432296,895271232,70837005,-1681557160,212260567,-128290487,-790222814,1409209337,75162591,-1509453051,1354416524,416346955,1148121926,-1814880117,-819130708,-210809101,-140920331,-1423505571,199131655,632667426,-1399684896,-2042961400,123590470,-331680519,-453722038,-308266304,35607992,-810723741,-1861914311" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.dynamic.loading"/>
+      <attribute name="bnd.hashes" value="1165,-182316465,-1235501512,-1299275459,-1404877058,628798265,-2086431535,684536197,312029999,1166,-124281792,1462140680,-1191162316,-687618321,-1847062656,-1693404525,260898955,-1985967825,-573437734,88322773,22277262,1009870696,515185131,-2057459622,-362357459,-463177326,1354416524,880245515,-308266304,-1628278147,-1800611706,-2107450196,-637545091,2128100378,1998377927,1526119805,1411218670,1115510028,-1946218409,-563715763,862935839,-393585168,1208591287,670413764,504124020,212260567,372616408,-194308015,873601063,66941686,-1078127227,-1813681780,713307287,2063175234,1706095138,595544188,-1769904764,-47013735,35679686,384779436" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.dynamic.scaffold"/>
+      <attribute name="bnd.hashes" value="1728628823,-1110566842,-1060372222,1603525204,2052403630,35679686,1874721458,66941686,127694832,630389340,-1178735403,1097764526,1526119805,-229061833,1165,1166,-296856604,707571741,2127047968,-1042446528,1111638069,817216605,-532868728,1588973877,465341366,1588973863,35680326,868617800,1929657984,-920536004,1099712394,1110867741,1147803,388045094,-108387202,1901723987,-1178735389,1097730953,-1177572244,-133437603,35829730,-1382342443,543621636,718671053,-1858759551,-1123656440,1259386557,-1383629545,1332406624,674119302,-1273446306,1096941620,35680636,1295224616,1759526771,-1196992482,774991876,1866896968,-453722038,-758119612,1992924540,1969128225,-406236901,112160014,678364244,1233666756,1241214717,1222578374,-27042855,750372648,-1931343021,-277463296,-700481989,172958080,921481647,-1178547729,-1190906092,-143605133,3853129,-1840934732,-687680165,1537348897,347205451,-532831754,255196429,551483681,-2042038256,34319765,489531506,1488991732,809350334,-1561237758,-1324394113,299179126,-2071177175,-1520464948,21820358,1579654725,-101946661,1004635105,683157613" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.dynamic.scaffold.inline"/>
+      <attribute name="bnd.hashes" value="-1647517990,71284106,-2065691572,-1372120275,-923517363,1526119805,-308266304,-1306316354,668618079,-1957860195,1489621084,-1697373228,127694832,-1982049525,-1354407760,1516406790,-1110566842,959209741,-43932249,-1328103480" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.dynamic.scaffold.subclass"/>
+      <attribute name="bnd.hashes" value="1165,1166,1167,1168,1169,-11840718,1526119805,-1299022370,746458477,-411814291,170658490,-1110566842,-2113549590,-522892453" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation"/>
+      <attribute name="bnd.hashes" value="593984907,-767018016,-1299022370,1878365092,1506716602,1375571440,1165,1555876217,1148915131,-1858759551,-1133642992,1341953291,938511434,2063175234,-1472524221,-508942593,1166,562001642,-170268477,-1543337852,-1446417422,-1685285567,1659854818,-1309189211,-1520043163,166452784,1382148334,-433336316,-126375316,-602464643,1284765777,-1178547729,260744003,1792238412,-1379975788,-599664025,1965753309,-1110566842,-410009114,2021604321,-2120671255,-1929813163,342853213,1526119805,-308266304,1728628823,-1113539108,932846827,66941686,1874721458,-1433722266,1657382894,88322773,681342930,-140920331,-490302022,-1782437515,-146467075,1167,1168,1169,1170,1171,1172,2114002158,917319631,-1049925849,-567015567,1286029928,-531699913,-497077254,-2003830897,778024888,930364443,323094077,651231983,-126989465,-1110337909,-922371867,1464453891,1848999483,-751511494,1694937080,-920536004,2016229394,-2060189308,-1090564707,-1736939552,-2059987405,480764895,-174576426,1122029029,1952571143,1540706688,187762936,-1596942177,-1962393904,-414015767,-1253872505,-734468121,35679686,542311523,585721346,218249602,-1206104251,-437944382,356235820,1057300758,2014751122,1220694222,-1248243450,1384676592,616406720,49188936,-53053836,-1966370714,218605805,-527539993,1725225590,-187233003,825245691,113278362,-1809015119,1664903168,-1477375374,-1519496523,-1693655363,1269973759,47773558,253305297,-1178735403,1268695487,-591324892,-1096521836,-536718181,1325170350,-751978231,-1509365937,-56164780,1483967642" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.attribute"/>
+      <attribute name="bnd.hashes" value="1165,1526119805,-490142011,-1367908969,741648356,-1267676123,-43693315,88322773,-1504646730,1498087567,1166,-1110566842,1716599162,-1178547729,1786668664,1252057679,35679686,750931529,356235820,1288717422,1918252290,-1384349509,-1206104251,1871006665" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.auxiliary"/>
+      <attribute name="bnd.hashes" value="254219856,973462879,-1738214479,228110592,1165,365793833,593984907,151528628,1004234275,-206087839,-1960337745,-1280733949,-1546561019,-280556419,-1162949780,1321532497,1166,1526119805,-885286250,-1030944516,226991370,-1785536716" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bind"/>
+      <attribute name="bnd.hashes" value="589828620,-1235381017,782862557,1229252231,1165,-1178547729,388045094,35679686,127694832,1989041871,1526119805,1854823288,128699669,-1524341529,1095191722,212260567,1874721458,2039312544,66941686,447481415,-187233003,1423604905,-1439346976,-1870310194,34319765,1166,562001642,-1326313453,1712433772,1902661877" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bind.annotation"/>
+      <attribute name="bnd.hashes" value="-1540979183,-419735826,-776947499,1165,1166,-2113324955,-1525038371,-920535990,-1149112535,-1448171394,-696849697,-1209525960,-1085510111,1786668664,-1004630487,2095847928,1230398495,1823107181,-2059987405,1042939236,-1809015119,1587170914,67081517,1030799011,593984907,2021604321,-351327996,2075192386,-1110566842,-48173200,738250633,295376612,-1382342443,-900419236,-1929813163,-1112578663,-746910094,-1738563148,240115145,-1733531465,1721376538,-769723122,1004234275,953016166,74531048,-1924752570,151528628,-304731160,2487758,-1872244974,-40503997,-1206104251,715265929,80248667,1670596697,-584119268,1095024570,-1787972774,-311801407,674119302,2084501894,2063163088,1209634271,2063175234,2031779311,34319765,332594255,2605758" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode"/>
+      <attribute name="bnd.hashes" value="-1161945316,-1178547729,66941686,35824197,-626983012,1165,1166,1167,1168,-1520348521,1143667470,-1538478132,1874721458,-1078127227,1394828837,-563105143,80787142,-1243620263" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.assign"/>
+      <attribute name="bnd.hashes" value="1165,1166,1622956085,-1286977515,110429883,-305237508,-1344611447" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.assign.primitive"/>
+      <attribute name="bnd.hashes" value="-1759713270,-134222461,-402671815,1054824737,-887532142,728545282,177237660,-840581318,840430483,-1074529018" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.assign.reference"/>
+      <attribute name="bnd.hashes" value="804133205" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.collection"/>
+      <attribute name="bnd.hashes" value="-128290473,-7651338,1861211389,-9948484,532189984,2096578007,-2101147088,1948714129,-393458580" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.constant"/>
+      <attribute name="bnd.hashes" value="532189984,1336027420,-494805040,-1897677788,1567895221,-398818714,-106660194,-1496875520,173841902,1549583338,-87268638,1413296395,1493182048,-620453452,-608740633,-732061226,1082813632,1109919925,123590470,-1151044667,-494736789,1529197928,-671718383" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.member"/>
+      <attribute name="bnd.hashes" value="1165,2114067386,898125870,243584725,1448262511,1526351173,1463699998,1495451358,-1857719048,158449259,-383210212,-579724090,1669732578,-828540972,-1672786883,-1801390390,-402946959,1107452305,366370079,35679686,1480816293,-1810783401,92311946,-2032802971,-766444795,-965813663" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.matcher"/>
+      <attribute name="bnd.hashes" value="-589225948,796747209,-1820326902,1290848898,1002706067,-1689855256,1858534237,1529618676,-800387097,88880385,-832760913,1101465683,-1898601924,1472488447,1653069002,752978577,-1245913382,1993712291,1728628823,-1612058606,1617700638,-816961640,-1404749130,-597549955,-1214400840,560212393,-1272724793,116172638,1097730953,249306288,-607628105,188052329,-1363314525,-76274141,718301526,930676996,1761054291,-1896149236,-920536004,-292069242,2099782506,-1449942907,-766409776,-1580188095,606357735,887434823,1165,1166,1167,1168,1169,35829730,120958451,35650535,621823547,-1613534201,511342803,-126612085,-1163536975,1170,1171,1172,1173,1732832193,-273995176,1279749693,-2146228742,-170605152" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.pool"/>
+      <attribute name="bnd.hashes" value="1165,1018511227,-950616627,-2139717250,932929656,-128290487,1474934081,-112253171,-1866514,-1879123629,1728628823,35679686,66941686,873464271,-1435961624,1684681244,116661224,1860751995,-340713118,726489982,1095024570,-2032261879,526501038,1874721458,-1326684925,-1596942177,1227376880,-1557051702,-1875368205,-2063413796,-1587805094,-1338665588,-51081483,-1269973965,1030481872,1564222178,-1326624287,1161641127,2052403630,1875547767,-345590345,-821678379,-449522824,127694832,-351768762,-2000702365,-10686559,-1284514662,1753279847,1978742735,441694940,-1747756869,-79715781,280870926,307702249,-9948484,-433443395,1122099914,-522473935,-1177042514,-299550413,-271398581,1603855015,1284178618,-2067859506,690059995,-200894017,1744237407,-730454560,-633426107,-140920331,123590470,-696849697,1421624311,-1558878656,-1674009362,1154404,251683596,1266775940,1502804597,-2020002694,-679501557,1478574699,-1130774257,-370788967,-2143349174,2091763075,382911406,-1733228336,-1441680108,1082607316,-1958485614,-634305933,-1296191016,451114284,-1519149885,102851440,237205897,-930296876,-933302390,950436323,1739910218,1751162317,-1755379089,800724209,-404782194,1942386047,-1769117114,848094340,371412202,1526119805,1097730953,1786668664,-1560360846,-611790186" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.utility"/>
+      <attribute name="bnd.hashes" value="1829991689,1728628823,628798265,-1693404525,-1889918030,684536197,260898955,515185131,-579724090,-1155302227,1004763903,1305216006,-308266304,-1628278147,1105229646,-517066596,-390289708,-1110314779" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.utility.privilege"/>
+      <attribute name="bnd.hashes" value="-85153584,-1285379602" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.utility.visitor"/>
+      <attribute name="bnd.hashes" value="-767394538,-138268196,1165,730672919" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.jar.asm"/>
+      <attribute name="bnd.hashes" value="103284255,594174114,1155486,2017053308,-1734073205,872586299,666722294,1027991531,1581691183,-1678783089,1610077076,2154973,758731316,2139338221,68139341,-2140710328,-1937510614,73174740,-660431827,1262274772,-367623102,1548814879,399646405,-1803656776,1097764526,1327447286,2622298,-611803489,-1421180655" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="net.bytebuddy.byte-buddy"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="net.bytebuddy.byte-buddy"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="net.bytebuddy:byte-buddy:1.8.0"/>
+      <attribute name="from" value="net.bytebuddy:byte-buddy:1.8.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info"/>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="2991785" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.8.0/byte-buddy-1.8.0.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="64A7E9B84BF7AD7B5E2BA7A3D711BBB30679F4A8A9A47E80408D18641681BCEA"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="net.bytebuddy.byte-buddy-agent"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy-agent"/>
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.agent"/>
+      <attribute name="bnd.hashes" value="603382226,-2061905812,2095106613,414736978,775295634,368433144,-1758936462,66941686,1354416524,1569323659,-1178547729,-697209909,765492125,887688444,-286094503,-694064264,-308266304,-2086431535,1206267988,1916334318,684536197,-1685950069,-1521511236,3066663,2033014632,-43674293,-320546518,-740059428" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="net.bytebuddy.byte-buddy-agent"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.8.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="net.bytebuddy.byte-buddy-agent"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="net.bytebuddy:byte-buddy-agent:1.8.0"/>
+      <attribute name="from" value="net.bytebuddy:byte-buddy-agent:1.8.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info"/>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="42924" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.8.0/byte-buddy-agent-1.8.0.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="CE02F5FCE024D51D4A117B3E413FC4A0A6977EB7723A1C87834A4093401C8893"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.sun.tools.attach)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="com.sun.tools.attach"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.ibm.tools.attach)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="com.ibm.tools.attach"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy"/>
+      <attribute name="bnd.hashes" value="416346955,-840646322,582912533,-73931138,1661550704,-2086431535,684536197,-2099809822,167510852,1728628823,1836610607,2063175234,-874309678,-290646955,1350829414,254219856,-1758794693" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.agent.builder"/>
+      <attribute name="bnd.hashes" value="1165,1526119805,-554541905,467062454,-308266304,-1628278147,225758176,-1146364673,-2086431535,684536197,-1110566842,1014886938,2011647666,-352691337,644459115,1330493707,-2088898989,221034743,583059887,-712794577,-1178547729,1733731342,-1637190930,35829730,-1382342443,127694832,1450912107,66941686,59166797,630235962,1166,1167,-666911541,-2012688193,919939257,-95799624,560494457,109292511,612784754,515185131,1045853405,35679686,1104488373,1097364340,35607992,1110745430,-904099545,1030953335,-1268627951,130286192,99177823,593984907,-1901175968,-713629048,-908092008,1873051806,2065477886,1567481386,-1529150613,550743926,-1169192309,-1656913498,1314628697,1854823288,766952696,1740504166,-1682661748,1728628823,-161149733,-1435961624,-2087229502,1748697587,-1612058606,1617700638,-187187240,1017146158,-371363031,1955028299,-1596095216,-1405714046,-127798209,-320645479,-320662883,-2137971445,419389749,1756382827,1189992481,1107940553,-950756909,-808876945,1540419961,-240125027,564021244,20330069,-1170136953,1046149905,1971656950,199501603,-788865259,1109500811,-514778108" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.asm"/>
+      <attribute name="bnd.hashes" value="1165,603920490,535295664,-1835999648,-747969830,-121908590,1545446137,-1858649471,593984907,2126077697,1747180338,-359272060,1156355591,1095024570,-381088496,-1920181467,294362143,-920536004,-1177572282,-554541905,1329365646,-726241846,1432383329,-1190185397,1418943484,-234259110,1747180748,932846827,-1110566842,1102465882,1659854818,-463114914,778024888,-414015767,-140920331,1166,1167,356235820,-1206104251,459166248,-384229548,1435124401,-359025935,-632319078,1131218147,-1721937398,-1074052857,192525707,1203196636,-93062946,49188936,695696571,-1598357002,-2012905503,1874721458,-1446890842,-1896438747,-145257644,1384608341,616406720,1999950753,88322773,-1531897097,-308266304,-696849697,1168,1169,48467769,-126375316,150865610,35679686,2112786959,-1836031415,902021595,-1382342443,515185131,932108412,1468525215,1209634271,2063175234,-1942511443,246897032,-1235628362,1097764116,-1999270949,-220822691,1526119805,1964996772,-1474616544,-1256532877,-693322412,808928034,611326842,-39391126,34831988,519686960,-1674158283,1474944415,35852514,94795660,129058586,-1429728973,1956866328,1728628823,-1178547729,773185898,1097764526,-1076376293,556929272,-1897961014,1901723987,1283048320,-601649059,-1825233466,-1274294997" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.build"/>
+      <attribute name="bnd.hashes" value="1165,1166,1167,1526119805,14135390,-1901307053" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description"/>
+      <attribute name="bnd.hashes" value="-634305933,1111638069,1669470237,-751075833,-1773299413,1728628823,954930887,-174576426,1844393528,-1276300910,-1491991413,1011430284,749466156,1079925513,-1098449000,-1886121419,-1443177191,-652324445,35679686,448076714,443171761" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.annotation"/>
+      <attribute name="bnd.hashes" value="534104247,1969984866,1728628823,1331318255,-901325209,212260567,-260734663,1266775940,-140652496,1799163181,1097730953,1786668664,507160154,442739853,1165,-1767595275,-128290487,-41713592,1166,1167,1168,1169,1170,1171,1172,1173,526501038,1902236555,1927870142,-1613241143,-527030302,852215157,-747676774,-1252978787,1110854349,131271567,849023842" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.enumeration"/>
+      <attribute name="bnd.hashes" value="1728628823,-1301793411,-140652496,484928341" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.field"/>
+      <attribute name="bnd.hashes" value="1728628823,-1399722832,-1490883039,-2133167341,-140652496,1018339685,1111638069,-96969867,1118588610,1097730953,1786668664,-441734717,332958719,-1026041704" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.method"/>
+      <attribute name="bnd.hashes" value="1728628823,-119536848,-244581397,-1490883039,-2133167341,95863428,-140652496,1018339685,1111638069,-96969867,-266488037,603845691,1097730953,1786668664,1007911400,332958719,1270249791,-1889918030,684536197,515185131,1931722719,-1907325345,-309069988,-2063413796,749286495,-1255766212,-1005717325,-127504012,1833572948,419302343" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.modifier"/>
+      <attribute name="bnd.hashes" value="-1842388310,1769194348,1359080789,1022488229,278096001,-140920331,123590470,-389097692,-696849697,-920535990,156397924,2022529871,420656413,-1059844732,824939057,-338658196,-195985172,1165,-360169678" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.description.type"/>
+      <attribute name="bnd.hashes" value="1728628823,-754685316,66941686,1502112758,35829730,-184510065,788671565,1165,-66701358,1591481223,-1608210236,648017092,-1154136389,720117340,-1146364673,2078145461,-2093472544,-1976101985,-1531082465,297225342,1510728369,1718055204,-920536004,-1889918030,684536197,515185131,637683666,1969063944,1520656060,-730454560,-1492437603,-1895404362,947520565,35679686,1913277718,-58714025,-251705697,-1684410440,1566834833,212260567,60037130,-1663451500,-449948473,-410157430,-1478370003,-1097506177,1214528770,-235326817,-235073221,703867541,-460857774,478164519,-140652496,1459362685,-1991414322,-129483197,-392653482,-1372269862,1166,-1127880595,-7396798,1208777974,-370356169,1386437587,1634802642,115790063,-1336957947,-1218977128,1753279847,-1265154551,-1018143835,101048816,-174740759,1314879713,280870926,1860751995,-949088736,1226738898,-655523653,-1344712473,-1599363832,-846891178,-2144415991,787053087,2080766420,2027733898,-707427461,522508682,1252448901,-297867026,632771742,2142495488,-452044183,1167,-490142011,-1885334642,448076714,-98832109,-1663341502,1097730953,1786668664,-1386306513,1818501598,1327239682,340337186,-1729580435,1967868713,2076807136,1193777766,-611914984,15209379" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.dynamic"/>
+      <attribute name="bnd.hashes" value="1526119805,1786668664,260898955,-920536004,-1382342443,515185131,-1505053628,398971021,-1975928528,517847794,-1178547729,574386082,1740504166,-67820845,1051411570,132361425,-506444307,35679686,967119467,1874721458,127694832,66941686,154321666,-2012570138,890184736,1246116188,-1767221317,-2040723443,-866354650,-824373545,-983293809,888966159,1554399106,-1169192309,-1146364673,1728628823,-1989486318,-658224220,-1429328599,1563424830,1500790505,1057919055,1929657984,-1161432296,895271232,70837005,-1681557160,212260567,-128290487,-790222814,1409209337,75162591,-1509453051,1009870696,1354416524,416346955,1148121926,-1814880117,-819130708,-210809101,-140920331,-1423505571,199131655,632667426,-1399684896,-2042961400,123590470,-331680519,-453722038,-308266304,35607992,-810723741,-1861914311" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.dynamic.loading"/>
+      <attribute name="bnd.hashes" value="1165,-182316465,-1693404525,684536197,-1985967825,-1235501512,-1299275459,-1404877058,-2086431535,312029999,1166,-124281792,1462140680,-1191162316,-687618321,-1847062656,-573437734,88322773,22277262,-312390693,260898955,-920536004,515185131,880245515,-2107450196,-637545091,2128100378,1998377927,1526119805,1411218670,-1946218409,-308266304,-1628278147,-563715763,862935839,-393585168,1208591287,670413764,212260567,372616408,-453722038,-449195768,-194308015,66941686,-1078127227,-1813681780,713307287,2063175234,1706095138,595544188,-1769904764,-47013735,35679686,384779436" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.dynamic.scaffold"/>
+      <attribute name="bnd.hashes" value="1728628823,-1110566842,-1060372222,1603525204,2052403630,35679686,1874721458,66941686,127694832,630389340,-1178735403,1097764526,1526119805,-229061833,707571741,2127047968,-1042446528,1111638069,817216605,-532868728,1588973877,465341366,1588973863,35680326,868617800,1929657984,-920536004,1099712394,1110867741,1147803,388045094,-108387202,-1178735389,1097730953,-1177572244,-133437603,35829730,-1382342443,543621636,718671053,-1858759551,-1123656440,1259386557,-1383629545,1332406624,674119302,-1273446306,35680636,1295224616,1759526771,-1196992482,774991876,1866896968,-27042855,750372648,-1931343021,675162803,-277463296,1942896681,-700481989,172958080,921481647,-1178547729,-1190906092,-143605133,3853129,-1840934732,-687680165,1537348897,347205451,-532831754,255196429,551483681,-2042038256,34319765,489531506,1488991732,809350334,-1561237758,-1324394113,299179126,-2071177175,-1520464948,21820358,1579654725,-2120550750,1004635105,683157613" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.dynamic.scaffold.inline"/>
+      <attribute name="bnd.hashes" value="-1647517990,71284106,-2065691572,-1372120275,-923517363,1526119805,-308266304,-1306316354,668618079,-1957860195,1489621084,-1697373228,127694832,-1982049525,-1354407760,1516406790,-1110566842,959209741,-43932249,-1328103480" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.dynamic.scaffold.subclass"/>
+      <attribute name="bnd.hashes" value="1165,1166,1167,1168,1169,-11840718,1526119805,746458477,-411814291,170658490,-1110566842,-2113549590,-522892453" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation"/>
+      <attribute name="bnd.hashes" value="593984907,-767018016,-1299022370,1878365092,1506716602,1375571440,1165,1555876217,938511434,2063175234,-1472524221,-508942593,1166,562001642,-170268477,-1543337852,-1446417422,-1685285567,1659854818,-1309189211,-1520043163,166452784,-433336316,-734468121,1382148334,-602464643,-140920331,-490302022,1814035447,-1693962467,1284765777,-1178547729,-539348961,260744003,1792238412,-1379975788,-599664025,-1110566842,-410009114,2021604321,-2120671255,-1929813163,342853213,1526119805,-308266304,1728628823,35680636,841252417,-1113539108,932846827,66941686,1874721458,-1433722266,1657382894,88322773,681342930,-1782437515,-146467075,1167,1168,1169,1170,1171,1172,2114002158,917319631,-1049925849,-567015567,1286029928,-531699913,-497077254,-2003830897,778024888,930364443,323094077,651231983,-126989465,-1110337909,-922371867,1464453891,1848999483,-751511494,1694937080,-920536004,2016229394,-2060189308,-1090564707,-1736939552,-2059987405,480764895,-174576426,1122029029,1952571143,1540706688,187762936,-1596942177,-1962393904,-414015767,-1253872505,35679686,542311523,-1206104251,-437944382,1384676592,1207694998,49188936,-53053836,-1966370714,218605805,-527539993,1725225590,-187233003,825245691,113278362,356235820,-1809015119,1664903168,1820303200,-1477375374,-1519496523,-1693655363,1269973759,47773558,-1096521836,127694832,-536718181,-751978231,-1509365937,-56164780,1483967642" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.attribute"/>
+      <attribute name="bnd.hashes" value="1165,1526119805,-490142011,-1367908969,741648356,-1267676123,-43693315,88322773,-1504646730,1498087567,1166,-1110566842,1716599162,-1178547729,1786668664,1252057679,35679686,750931529,356235820,1288717422,1918252290,-1384349509,-1206104251,1871006665" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.auxiliary"/>
+      <attribute name="bnd.hashes" value="1874721458,-137332770,254219856,973462879,-1738214479,228110592,1165,365793833,593984907,151528628,1004234275,-206087839,-1960337745,-1280733949,-1546561019,-280556419,-1162949780,1321532497,1166,1526119805,-885286250,-1030944516,226991370,-1785536716" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bind"/>
+      <attribute name="bnd.hashes" value="589828620,-1235381017,782862557,1229252231,1165,1095720189,388045094,35679686,127694832,1989041871,1095191722,212260567,1874721458,2039312544,66941686,447481415,-187233003,1423604905,128699669,-1439346976,-1870310194,-1326313453,1712433772,1902661877" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bind.annotation"/>
+      <attribute name="bnd.hashes" value="-1540979183,-419735826,-776947499,1165,1166,-2113324955,-1787972774,-2124326983,949718179,-1525038371,-920535990,-1149112535,-1448171394,-696849697,-1209525960,-1085510111,1786668664,-1004630487,2095847928,1230398495,67081517,1030799011,593984907,2021604321,-351327996,2075192386,-1110566842,-48173200,738250633,295376612,-1382342443,-900419236,-1929813163,-1112578663,-746910094,-1738563148,240115145,-1733531465,1721376538,-769723122,1004234275,953016166,74531048,-1924752570,151528628,-304731160,2487758,-1872244974,-40503997,-1206104251,715265929,80248667,1670596697,-2027364585,1097730953,2112251559,1095024570,-311801407,674119302,2084501894,2063163088,1209634271,2063175234,2031779311,562001642,332594255,2605758" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode"/>
+      <attribute name="bnd.hashes" value="-1161945316,-1178547729,66941686,35824197,-626983012,1165,1166,1167,1168,-1520348521,1143667470,-1538478132,1874721458,-1078127227,1394828837,-563105143,80787142,-1243620263" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.assign"/>
+      <attribute name="bnd.hashes" value="1165,1166,1622956085,-1286977515,110429883,-305237508,-1344611447" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.assign.primitive"/>
+      <attribute name="bnd.hashes" value="-1759713270,-134222461,-402671815,1054824737,-887532142,728545282,177237660,-840581318,840430483,-1074529018" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.assign.reference"/>
+      <attribute name="bnd.hashes" value="804133205" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.collection"/>
+      <attribute name="bnd.hashes" value="-128290473,-7651338,1861211389,-9948484,532189984,2096578007,-2101147088,1948714129,-393458580" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.constant"/>
+      <attribute name="bnd.hashes" value="532189984,1336027420,-494805040,-1897677788,1567895221,-398818714,-106660194,-1496875520,173841902,1549583338,-87268638,1413296395,1493182048,-620453452,-608740633,-732061226,1082813632,1109919925,123590470,-1151044667,-494736789,-671718383" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.implementation.bytecode.member"/>
+      <attribute name="bnd.hashes" value="1165,2114067386,898125870,243584725,1448262511,1526351173,1463699998,1495451358,-1857719048,158449259,1669732578,-828540972,-1672786883,-1801390390,-402946959,1107452305,366370079,35679686,1480816293,-1810783401,92311946,-2032802971,-766444795,-965813663" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.matcher"/>
+      <attribute name="bnd.hashes" value="796747209,-1820326902,1290848898,1002706067,-1689855256,1858534237,1529618676,88880385,-832760913,-1140173394,1101465683,-1898601924,1472488447,1653069002,752978577,-1245913382,1993712291,1728628823,-1612058606,1617700638,-816961640,-1404749130,-597549955,-1214400840,-1272724793,116172638,1097730953,249306288,-607628105,188052329,-1363314525,-76274141,718301526,930676996,1761054291,-1896149236,-920536004,-292069242,2099782506,-1449942907,-766409776,-1580188095,606357735,887434823,1165,1166,1167,1168,1169,35829730,120958451,35650535,621823547,-1613534201,511342803,-126612085,220426096,1170,1171,1172,1173,1732832193,-273995176,1279749693,-2146228742,-170605152" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.pool"/>
+      <attribute name="bnd.hashes" value="1165,1018511227,-950616627,-2139717250,932929656,-128290487,1474934081,-112253171,-1866514,-1879123629,1728628823,35679686,66941686,873464271,-1435961624,1684681244,116661224,1860751995,-340713118,726489982,1095024570,-2032261879,526501038,1874721458,-1326684925,-1596942177,1227376880,-1557051702,-1875368205,-2063413796,-1587805094,-1338665588,-51081483,-1269973965,1030481872,1564222178,-1326624287,1161641127,2052403630,1875547767,-345590345,-821678379,-449522824,127694832,-351768762,-2000702365,-10686559,-1284514662,1753279847,1978742735,441694940,-1747756869,-79715781,280870926,307702249,-9948484,-433443395,1122099914,-522473935,-1177042514,-299550413,1603855015,1284178618,-2067859506,690059995,-200894017,1744237407,-730454560,-633426107,-140920331,123590470,-696849697,1421624311,-1558878656,-1674009362,1154404,251683596,1266775940,1502804597,-2020002694,-679501557,1478574699,-1130774257,-370788967,-2143349174,2091763075,382911406,-1733228336,-1441680108,1082607316,-1958485614,-634305933,-1296191016,451114284,-1519149885,102851440,237205897,-930296876,-933302390,950436323,1739910218,1751162317,-1755379089,800724209,-404782194,1942386047,-1769117114,848094340,371412202,1526119805,1097730953,1786668664,-1560360846,-611790186" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.utility"/>
+      <attribute name="bnd.hashes" value="1829991689,1728628823,-1693404525,-1889918030,684536197,260898955,515185131,-579724090,-1155302227,1004763903,1305216006,-308266304,-1628278147,1105229646,-517066596,-390289708,-1110314779" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.utility.privilege"/>
+      <attribute name="bnd.hashes" value="-85153584,-1285379602" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.utility.visitor"/>
+      <attribute name="bnd.hashes" value="-767394538,-138268196,1165,730672919" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.jar.asm"/>
+      <attribute name="bnd.hashes" value="103284255,594174114,2017053308,-1734073205,872586299,666722294,1027991531,-1678783089,2154973,758731316,2139338221,68139341,-2140710328,-1937510614,2289459,73174740,-660431827,1262274772,399646405,2622298,-611803489,-1421180655" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="net.bytebuddy.byte-buddy"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.host" value="net.bytebuddy.byte-buddy"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="net.bytebuddy:byte-buddy:1.5.5"/>
+      <attribute name="from" value="net.bytebuddy:byte-buddy:1.5.5"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info"/>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="2652987" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.5.5/byte-buddy-1.5.5.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="D1CC5FD27D63B0DFD13840E3B6D43208396A592F52ADE90D0206B355250EC625"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="net.bytebuddy.byte-buddy-agent"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="net.bytebuddy.byte-buddy-agent"/>
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.package" value="net.bytebuddy.agent"/>
+      <attribute name="bnd.hashes" value="-2061905812,2095106613,414736978,66941686,1354416524,1569323659,-1178547729,-697209909,765492125,887688444,-694064264,-2086431535,684536197,-1685950069,-1521511236,3066663,2033014632" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="net.bytebuddy.byte-buddy-agent"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.5.5" type="Version"/>
+      <attribute name="osgi.wiring.host" value="net.bytebuddy.byte-buddy-agent"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="net.bytebuddy:byte-buddy-agent:1.5.5"/>
+      <attribute name="from" value="net.bytebuddy:byte-buddy-agent:1.5.5"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info"/>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="24624" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.5.5/byte-buddy-agent-1.5.5.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="8B0AD491A99543237F03C00F329ABB862567A18C6907B3D035D20CF0FD0B6065"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.sun.tools.attach)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="com.sun.tools.attach"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.ibm.tools.attach)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="com.ibm.tools.attach"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
+    </requirement>
+  </resource>
+</repository>

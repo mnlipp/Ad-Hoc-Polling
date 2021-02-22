@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941434002">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.8.0.RELEASE" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb"/>
+      <attribute name="bnd.hashes" value="364634058,-1694845077,-889998928,-698247995,64671819,-765465341,927457064,2174,1225474454,-773382114,1241231278,34802017,1503050229,381497059,-8280921,2100137404,-593839761,1815313140,-1272565388,-379366938,115451972,765799102,1264233580,-946814627,1972560863,2010228255,-1083466102,-242479376,-689315720,-545168293,1281985243,64847669,-837789786,1165,-90921583,-1498041078,-1652468531,-1655494716,-1414907675,-269741635,765286380,-1896100489,1271827964,239898834,1385064874,-95554319,-1609084632,-859221247,-685199134,453882655,-500422871,-221029021,-1605433890,74526932,1684162345,-878774376,1824801130,1282960859,-33439842,-1575938262,-266176520,-736325383,-766127382,1708833304,1838731731,557850759,-1681521096,-1601496720,-193627803,803417071,701235425,-39290399,-1506788559,489321732,622465357,-491319640,35680326,723589070,1344487194,1156310,-1794485292,-253114363,189204796,1958556890,-275679135,626594577,885222501,-557196135,-468236831,-1257303876" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.io"/>
+      <attribute name="bnd.hashes" value="-999447904,-881989534,-1897673900,15359810,1241313161,-1805675832" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.util"/>
+      <attribute name="bnd.hashes" value="-1848506733,2049277,244261863,-148523648,1966011244,2241838,-1245521244,2286824,144310605,1805920740,1780334375,1165,-351105388,-405762889,1054659624,1183874015,1031993507,724157408,1303347776,1418428915,-1526008012,-1890534108,-1135269144,-676142197,726912928,-177625523,-500924854,-1180979567,-1244848029,-784185912,1783072048,906564990,597822663,825886818,-459996975,962682649,-1902019498,-348510591,1711961681,-445582201,561770766,-1578419866,651814948,-1368254694,-121614459,808378726,808532300,-1887738654,-1809826769,2647074,1105447299,-1407178416" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.mongodb.gridfs"/>
+      <attribute name="bnd.hashes" value="66816,2141177523,1958556890,-1828997235,-2008506673,1165,1350880497,490929907" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson"/>
+      <attribute name="bnd.hashes" value="1165,1166,-808587121,2048496,-888351147,-1113066444,32099596,756407359,-1661635040,-970482353,1297159523,509133846,897096550,2042262590,1726760925,-128118782,-1950020509,773726185,1295853600,2129244916,-1397874110,-1196305239,163137592,326780504,-499806427,-627138741,-33208356,1046887395,-1381185840,1015075508,-331680519" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.util"/>
+      <attribute name="bnd.hashes" value="1165,2041289639,1622085332,821436862,-165456185,1394695778,1165788719,145415782,1166,35869054,35912937,958134835,-1313489529,-209934895,930009007,-1433197461,757060836,-1618685528,212260567,35488594,-133437603,-209108623,1445582840,561770766,2134119734" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.util.annotations"/>
+      <attribute name="bnd.hashes" value="1817824603,-694011550,-1446791222,808454359" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.types"/>
+      <attribute name="bnd.hashes" value="-670092026,1297802428,1989867553,2105869,1155895434,-1997290885,-1990200627,155139290,-1803656776" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.mongodb.mongo-java-driver"/>
+      <attribute name="bundle-version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.bson.io"/>
+      <attribute name="bnd.hashes" value="-997233288,1733339087,2070822,1165,1166,-452171583,168597869,-415892739,233658372" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.mongodb.mongo-java-driver"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.8.0.RELEASE" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.mongodb.mongo-java-driver"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.mongodb:mongo-java-driver:2.8.0"/>
+      <attribute name="from" value="org.mongodb:mongo-java-driver:2.8.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="344552" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/mongodb/mongo-java-driver/2.8.0/mongo-java-driver-2.8.0.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="69DD0056ED672B349B7089B440F55346B5699E660B5F68A5B4994CC3AA80DAE6"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.management)"/>
+      <attribute name="osgi.wiring.package" value="javax.management"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.net)"/>
+      <attribute name="osgi.wiring.package" value="javax.net"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.net.ssl)"/>
+      <attribute name="osgi.wiring.package" value="javax.net.ssl"/>
+    </requirement>
+  </resource>
+</repository>

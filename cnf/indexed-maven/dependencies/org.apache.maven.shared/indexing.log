@@ -1,0 +1,6 @@
+org.apache.maven.shared:maven-filtering:3.1.1 is dependency of org.apache.felix:osgicheck-maven-plugin:0.1.0, indexing...
+org.apache.maven.shared:maven-filtering:3.1.1 has dependencies: org.apache.maven:maven-core:3.0, org.apache.maven.shared:maven-shared-utils:3.0.0, org.codehaus.plexus:plexus-utils:3.0.24, org.codehaus.plexus:plexus-interpolation:1.22, org.sonatype.plexus:plexus-build-api:0.0.7, com.google.code.findbugs:jsr305:3.0.0
+org.apache.maven.shared:maven-filtering:3.1.1 not indexable, depends on org.apache.maven:maven-core:3.0.
+org.apache.maven.shared:maven-shared-utils:3.1.0 is dependency of org.apache.maven:maven-core:3.5.0, indexing...
+org.apache.maven.shared:maven-shared-utils:3.1.0 has dependencies: commons-io:commons-io:2.5
+org.apache.maven.shared:maven-shared-utils:3.1.0 indexed.

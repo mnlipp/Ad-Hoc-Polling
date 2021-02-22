@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433805">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="javax.annotation:jsr250-api:1.0"/>
+      <attribute name="from" value="javax.annotation:jsr250-api:1.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="5848" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="A1A922D0D9B6D183ED3800DFAC01D1E1EB159F0E8C6F94736931C1DEF54A941F"/>
+    </capability>
+  </resource>
+</repository>

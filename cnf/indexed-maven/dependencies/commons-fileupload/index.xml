@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433912">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.commons.fileupload"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="documentation" value="http://commons.apache.org/proper/commons-fileupload/"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.apache.commons.fileupload"/>
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.commons.fileupload"/>
+      <attribute name="bnd.hashes" value="265218032,-517139718,1752102970,-671208753,-522868933,1364321719,1700046360,1642092637,-261189002,-2120560849,-446447939,1165,2018129171,347618881,169006338,135375176,592043400,-818208753,1698761610,-761878426,570853224,-69496018,636253714,640607441,-393128269,1645580819,-464308296,-1535451337,1272035116,-670273272,1045803553,-1906608064,-1453302706" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.apache.commons.fileupload"/>
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.commons.fileupload.disk"/>
+      <attribute name="bnd.hashes" value="-1433165940,-1506552866" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.apache.commons.fileupload"/>
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.commons.fileupload.portlet"/>
+      <attribute name="bnd.hashes" value="1693121559,1391491226" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.apache.commons.fileupload"/>
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.commons.fileupload.servlet"/>
+      <attribute name="bnd.hashes" value="-237423158,1257340578,-175325787" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.apache.commons.fileupload"/>
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.commons.fileupload.util"/>
+      <attribute name="bnd.hashes" value="1521866546,-435353481,467107344,-217237293" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.commons.fileupload"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.commons.fileupload"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="commons-fileupload:commons-fileupload:1.3.3"/>
+      <attribute name="from" value="commons-fileupload:commons-fileupload:1.3.3"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="commons-io:commons-io:2.2"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="70604" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="E14AB7DB47DE124F5F9E9C0E03F4F6D2A007D83458A0AD67356B7BDD775C8CD0"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet)"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet.http)"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet.http"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.commons.io)"/>
+      <attribute name="osgi.wiring.package" value="org.apache.commons.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.commons.io.output)"/>
+      <attribute name="osgi.wiring.package" value="org.apache.commons.io.output"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.5))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="commons-fileupload:commons-fileupload:1.1.1"/>
+      <attribute name="from" value="commons-fileupload:commons-fileupload:1.1.1"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="commons-io:commons-io:1.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="31909" type="Long"/>
+      <attribute name="url" value="https://dl.bintray.com/bintray/jcenter/commons-fileupload/commons-fileupload/1.1.1/commons-fileupload-1.1.1.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="77F6308793857E12B22FBE2A80BA7879308F24B51F992B172E3FB593BC8D5B4E"/>
+    </capability>
+  </resource>
+</repository>

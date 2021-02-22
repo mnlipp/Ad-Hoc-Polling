@@ -4,3 +4,6 @@
 */generated
 **/.project
 **/.classpath
+**/org.eclipse.jdt.core.prefs
+/gradle/build/
+/bin/

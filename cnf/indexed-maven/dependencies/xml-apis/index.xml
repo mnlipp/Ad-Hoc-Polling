@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433780">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="xml-apis:xml-apis:1.3.03"/>
+      <attribute name="from" value="xml-apis:xml-apis:1.3.03"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="195119" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="EC225A1C66D4505FECD1AD7644CE4477E626F439FD9230DBF8338CEBDFC3A0E5"/>
+    </capability>
+  </resource>
+</repository>

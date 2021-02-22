@@ -16,8 +16,8 @@ Bundle-Activator: de.mnl.ahp.application.Application
 	org.jgrapes.io;version=latest,\
 	org.jgrapes.http;version=latest,\
 	org.jgrapes.util;version=latest,\
-    org.jgrapes.portal.base;version=latest,\
-	org.jgrapes.portal.bootstrap4;version=latest,\
+    org.jgrapes.webconsole.base;version=latest,\
+	org.jgrapes.webconsole.bootstrap4;version=latest,\
 	org.jgrapes.osgi.core;version=latest,\
 	de.mnl.ahp.service;version=latest
 
@@ -29,7 +29,7 @@ Bundle-Activator: de.mnl.ahp.application.Application
 
 -dependson: \
     de.mnl.ahp.participantui,\
-    de.mnl.ahp.portlets.management
+    de.mnl.ahp.conlets.management
     
 -fixupmessages: \
     "The .classpath contains an unknown container: GROOVY_DSL_SUPPORT. This could make your build less portable.", \

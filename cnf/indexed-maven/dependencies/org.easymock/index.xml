@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613942360722">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.easymock:easymock:2.4"/>
+      <attribute name="from" value="org.easymock:easymock:2.4"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="81133" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/easymock/easymock/2.4/easymock-2.4.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="7C48D8BA6E070409F65A45AFC4904824B7702598AB0BEC273CDD0CE6F4C2C64F"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.easymock"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.4.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="mandatory" value="poweruser"/>
+      <directive name="uses" value="org.easymock,org.easymock.internal.matchers"/>
+      <attribute name="bundle-symbolic-name" value="org.easymock"/>
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.easymock.internal"/>
+      <attribute name="version" value="3.4.0" type="Version"/>
+      <attribute name="poweruser" value="true"/>
+      <attribute name="bnd.hashes" value="397782940,-476935739,1768120960,-247706519,294041965,1844363280,-1647889740,1165,1166,-770650026,1249431604,819928437,676953887,321866243,1367556351,1800950152,1597650988,-2012426809,-162717619,595100626,331305652,1614165413,-2086905673,938026112,-395177688,348322644,-562801488,419898910,208608711,409291044,-416086383,2082672656,-1153825413,-1222023128,-1766815468,-820328277,795175518,78727453,-1320740192,-581251290,-1582756662,1000742413,1999688387,-1466964985,-1850559427,-1532767274,-1846714084,1374953299,1807048198" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="mandatory" value="poweruser"/>
+      <directive name="uses" value="org.easymock"/>
+      <attribute name="bundle-symbolic-name" value="org.easymock"/>
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.easymock.internal.matchers"/>
+      <attribute name="version" value="3.4.0" type="Version"/>
+      <attribute name="poweruser" value="true"/>
+      <attribute name="bnd.hashes" value="65975,65996,1989189464,14910989,-1679829819,252761455,591249952,-502801857,1807802366,2083351519,285885811,2189785,-625145385,-1701951333,-1399477908,-212209896,-2140646662,-1789452013,78515,-501753126,2439591,2563,2569350,437926103" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.easymock"/>
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.easymock"/>
+      <attribute name="bnd.hashes" value="1165,-2077728986,1830838144,1350846423,-705125172,745040360,-1275680996,-1985181,-1965682329,1444618284,1512233505,417017512,-1710398499,1166,1167,1168,1169,1376438189,2403754,-578171900,-592615398" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.easymock"/>
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.easymock.cglib.core"/>
+      <attribute name="bnd.hashes" value="1165,72722783,343653661,64279661,1166,1167,489321732,-1430329610,-823589797,1993942566,208373106,-858049882,1147803,1708658809,1110854349,-867092319,2002668234,54238355,1581691183,1654237568,412407983,665615453,1470224197,1229964443,-1644028497,36163,36164,36165,36166,36167,36168,36169,1168,1169,1170,1171,1172,1173,1185626561,-1441377389,-1365861250,259415878,-488594673,1276505547,73592651,-1592971177,1270164815,1196011594,-1295501103,468315218,273973242,-947629864,655935895,538836911,861770696,1392069652,-1192198495,-1217415016,307981141,-331680519,-1780865673,1589609125" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.easymock"/>
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.easymock.cglib.proxy"/>
+      <attribute name="bnd.hashes" value="1165,-145877955,1844363280,-107576219,65444925,932846827,923031534,119005299,-2006539597,780924615,-30641204,1166,1167,1168,1169,1170,804167031,1906374564,572770538,-602464643,963877078,2103214763,-1860701062,-1406718087,-1109973817,-1516960308,-63474076,-1593166641,-1198351602,-265257082,726996461,-488594673,-1651982750,1109801093,74357857,1284697725,1502099405,809466586,2432930,1563693393,-1251884566,77388366,-119384084,-2066354622" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.easymock"/>
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.easymock.cglib.reflect"/>
+      <attribute name="bnd.hashes" value="-826388151,-488594673,-222017665,1950997084,1165,1166,1167,1168,152302533,-289056398,-853553698,631535158,631749757,923458357,236088742,-191163011" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.easymock"/>
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.easymock.asm"/>
+      <attribute name="bnd.hashes" value="103284255,594174114,2017053308,-1734073205,872586299,666722294,1027991531,-1678783089,2154973,758731316,2139338221,68139341,-2140710328,-1937510614,2289459,73174740,-660431827,1262274772,399646405,2622298,-611803489,-1421180655" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.easymock"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.easymock"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.easymock:easymock:3.4"/>
+      <attribute name="from" value="org.easymock:easymock:3.4"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.objenesis:objenesis:2.2"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="474311" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/easymock/easymock/3.4/easymock-3.4.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="CE2885CABE0D2C44D99D405796F9B1E248B76A6106863AD6A236BD4BCC311E19"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objenesis)(version&gt;=2.2.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.objenesis"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.easymock)"/>
+      <attribute name="osgi.wiring.package" value="org.easymock"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.easymock.internal)(poweruser=true))"/>
+      <attribute name="osgi.wiring.package" value="org.easymock.internal"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.easymock.cglib.core)"/>
+      <attribute name="osgi.wiring.package" value="org.easymock.cglib.core"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.easymock.cglib.proxy)"/>
+      <attribute name="osgi.wiring.package" value="org.easymock.cglib.proxy"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.easymock.cglib.reflect)"/>
+      <attribute name="osgi.wiring.package" value="org.easymock.cglib.reflect"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.easymock.asm)"/>
+      <attribute name="osgi.wiring.package" value="org.easymock.asm"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.5))"/>
+    </requirement>
+  </resource>
+</repository>

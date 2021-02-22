@@ -25,14 +25,12 @@ import de.mnl.ahp.service.events.PollData;
 import de.mnl.ahp.service.events.PollExpired;
 import de.mnl.ahp.service.events.PollState;
 import de.mnl.ahp.service.events.Vote;
-
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.Component;
 import org.jgrapes.core.Components;

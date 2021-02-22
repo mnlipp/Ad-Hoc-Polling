@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433893">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.xbean.xbean-reflect"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.4.0" type="Version"/>
+      <attribute name="documentation" value="http://www.apache.org/"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.management,org.apache.xbean.recipe,org.apache.commons.logging,org.apache.log4j,javax.naming"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.xbean.xbean-reflect"/>
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.xbean.propertyeditor"/>
+      <attribute name="bnd.hashes" value="-581188352,1409482622,1323278598,1086101351,1510275780,1464973086,-1166459061,-2086409323,2073453749,723959254,499737829,-690987040,780835049,1654237568,2109660891,794950846,168449407,-915680727,-549018935,257970539,562259707,-1261560741,380836077,-308764611,945067105,-66050145,-1545208275,-677160917,-29109577,39956162,-283514552,915606212,1942629323,1486357990,-1794658864,911074089,-1793958455,1146238103,-1498610672,-591205216,-1494628691,871183601,1165,-193893077,1787480979,-2117429169,-2085491479,-2078095476,1893401106,-170675970,1684032459,1360561745,301018585,-1331437668,267060400,-1863606333" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.xbean.propertyeditor,org.objectweb.asm.commons,org.objectweb.asm"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.xbean.xbean-reflect"/>
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.xbean.recipe"/>
+      <attribute name="bnd.hashes" value="1083956336,544538690,1165,-1564511919,-1673933652,991670277,1901697163,1431556171,1581467116,1671596638,87746488,1907273803,-89859177,1570200591,1437558628,-1421045270,487567650,1544260330,-1307442456,35680326,432392550,368444719,2048645511,-2101813904,-1552231637,-108540962,-1008494305,-1572348391,464527544,-1160147507,-1926269803,732355303,115073343,-1851047506,-1726226104,1334952700,-1905202464,-453722246,1078812459,393989180,-153004903,1166,1167,-1461690636,-1110566842,-832369416,-1819865363,-350701718,1461672380,1279033654,660699594" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.xbean.xbean-reflect"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.4.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.xbean.xbean-reflect"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.xbean:xbean-reflect:3.4"/>
+      <attribute name="from" value="org.apache.xbean:xbean-reflect:3.4"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="log4j:log4j:1.2.12;commons-logging:commons-logging-api:1.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="133826" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="17E0EFA187127034623197FB88C50C30D3BAA62BAA0F07D6EC693047AC92EC3B"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.management)"/>
+      <attribute name="osgi.wiring.package" value="javax.management"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.naming)"/>
+      <attribute name="osgi.wiring.package" value="javax.naming"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.commons.logging)"/>
+      <attribute name="osgi.wiring.package" value="org.apache.commons.logging"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.log4j)"/>
+      <attribute name="osgi.wiring.package" value="org.apache.log4j"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.xbean.propertyeditor)(version&gt;=3.4.0))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.xbean.propertyeditor"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.xbean.recipe)(version&gt;=3.4.0))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.xbean.recipe"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.objectweb.asm)"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.objectweb.asm.commons)"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
+    </requirement>
+  </resource>
+</repository>

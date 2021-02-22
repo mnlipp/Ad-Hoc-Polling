@@ -21,9 +21,8 @@ package de.mnl.ahp.participantui;
 import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.Optional;
-
 import org.jdrupes.httpcodec.util.FormUrlDecoder;
-import org.jgrapes.http.events.PostRequest;
+import org.jgrapes.http.events.Request;
 import org.jgrapes.io.events.Input;
 
 /**
@@ -31,9 +30,9 @@ import org.jgrapes.io.events.Input;
  */
 public class PostedUrlDataDecoder extends FormUrlDecoder {
 
-	private PostRequest request;
+    private Request.In.Post request;
 
-	public PostedUrlDataDecoder(PostRequest request) {
+    public PostedUrlDataDecoder(Request.In.Post request) {
 		this.request = request;
 	}
 
@@ -42,7 +41,7 @@ public class PostedUrlDataDecoder extends FormUrlDecoder {
 	 *
 	 * @return the request
 	 */
-	public PostRequest request() {
+    public Request.In.Post request() {
 		return request;
 	}
 

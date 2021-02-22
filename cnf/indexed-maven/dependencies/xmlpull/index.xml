@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433962">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="xmlpull:xmlpull:1.1.3.1"/>
+      <attribute name="from" value="xmlpull:xmlpull:1.1.3.1"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="7188" type="Long"/>
+      <attribute name="url" value="https://dl.bintray.com/bintray/jcenter/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="34E08EE62116071CBB69C0ED70D15A7A5B208D62798C59F2120BB8929324CB63"/>
+    </capability>
+  </resource>
+</repository>

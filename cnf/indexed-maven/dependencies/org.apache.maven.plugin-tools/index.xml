@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433962">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven.plugin-tools:maven-plugin-annotations:3.5"/>
+      <attribute name="from" value="org.apache.maven.plugin-tools:maven-plugin-annotations:3.5"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.maven:maven-artifact:3.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="14305" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5/maven-plugin-annotations-3.5.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="D1E25A36F8B481CF55FE7D04A4F7AA354837B0E99EC7B7C1F8DF35772611A1CB"/>
+    </capability>
+  </resource>
+</repository>

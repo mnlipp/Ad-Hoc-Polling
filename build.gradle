@@ -2,21 +2,62 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
-		maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url 'https://jitpack.io' }
     }
-    dependencies {
-        classpath "biz.aQute.bnd:biz.aQute.bnd.gradle:${bnd_version}"
-    }
+}
+
+plugins {
+    id "maven-publish"
+	id "signing"
+	id "org.jdrupes.mdoclet" version "1.0.10"
+	id "com.moowork.node" version "1.3.1"
+    id 'org.ajoberstar.grgit' version '3.1.1'
+    id 'org.ajoberstar.git-publish' version '2.1.1'
+    id "com.jfrog.bintray" version "1.8.4"
+    id 'io.miret.etienne.sass' version '1.1.1'
 }
 
 apply plugin: 'biz.aQute.bnd.workspace'
 
 ext {
-	isTravisBuild = System.getenv().get("TRAVIS") == 'true'
+	isCiBuild = System.getenv().get("CI") == 'true'
+    isJitPackBuild = System.getenv().get("JITPACK") == 'true'
+}
+
+// Prepare github authentication for plugins
+if (System.properties['org.ajoberstar.grgit.auth.username'] == null) {
+	System.setProperty('org.ajoberstar.grgit.auth.username',
+		System.getenv("GH_TOKEN") ?: project.properties['github.token'] ?: "nouser")
+}
+
+allprojects {
+//    repositories {
+//        jcenter()
+//        mavenCentral()
+//        // Snapshots
+//        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+//        // Experimental, not sure if this is the way to go...
+//        maven { url 'https://jitpack.io' }
+//    }
+//	
+//	apply plugin: 'java'
+//	
+//    compileJava {
+//        sourceCompatibility = 1.8
+//        targetCompatibility = 1.8
+//    }
+}
+
+/* Configure the subprojects */
+subprojects {
+    apply from: "${project.rootDir}/gradle/subprojects.gradle"
 }
 
 task stage {
 	dependsOn ':de.mnl.ahp.application:export'
 }
+
+apply plugin: 'eclipse'
+
+tasks.eclipse.dependsOn(cleanEclipse)
 

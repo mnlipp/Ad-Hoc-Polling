@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433972">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven.shared:maven-shared-utils:3.1.0"/>
+      <attribute name="from" value="org.apache.maven.shared:maven-shared-utils:3.1.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="commons-io:commons-io:2.5"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="163692" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.1.0/maven-shared-utils-3.1.0.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="88E5334C4C29A6E81C74A1D814C54A9A3B1E4FC6560A95DA196FE16928095471"/>
+    </capability>
+  </resource>
+</repository>

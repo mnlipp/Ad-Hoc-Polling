@@ -19,13 +19,11 @@
 package de.mnl.ahp.application;
 
 import de.mnl.ahp.service.AdHocPollingService;
-
 import java.net.InetSocketAddress;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Optional;
-
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.Component;
 import org.jgrapes.core.Components;
@@ -35,20 +33,19 @@ import org.jgrapes.http.HttpRequestHandlerFactory;
 import org.jgrapes.http.HttpServer;
 import org.jgrapes.http.InMemorySessionManager;
 import org.jgrapes.http.LanguageSelector;
-import org.jgrapes.http.events.GetRequest;
-import org.jgrapes.http.events.PostRequest;
+import org.jgrapes.http.events.Request;
 import org.jgrapes.io.FileStorage;
 import org.jgrapes.io.NioDispatcher;
 import org.jgrapes.io.util.PermitsPool;
 import org.jgrapes.net.TcpServer;
 import org.jgrapes.osgi.core.ComponentCollector;
-import org.jgrapes.portal.base.KVStoreBasedPortalPolicy;
-import org.jgrapes.portal.base.PageResourceProviderFactory;
-import org.jgrapes.portal.base.Portal;
-import org.jgrapes.portal.base.PortalLocalBackedKVStore;
-import org.jgrapes.portal.base.PortalWeblet;
-import org.jgrapes.portal.base.PortletComponentFactory;
-import org.jgrapes.portal.bootstrap4.Bootstrap4Weblet;
+import org.jgrapes.webconsole.base.BrowserLocalBackedKVStore;
+import org.jgrapes.webconsole.base.ConletComponentFactory;
+import org.jgrapes.webconsole.base.ConsoleWeblet;
+import org.jgrapes.webconsole.base.KVStoreBasedConsolePolicy;
+import org.jgrapes.webconsole.base.PageResourceProviderFactory;
+import org.jgrapes.webconsole.base.WebConsole;
+import org.jgrapes.webconsole.bootstrap4.Bootstrap4Weblet;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
@@ -57,86 +54,101 @@ import org.osgi.framework.BundleContext;
  */
 public class Application extends Component implements BundleActivator {
 
-	private Application app;
-	
-	/* (non-Javadoc)
-	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
-	 */
-	@Override
-	public void start(BundleContext context) throws Exception {
-		app = new Application();
-		// Attach a general nio dispatcher
-		app.attach(new NioDispatcher());
-		
-		// The central service
- 		app.attach(new AdHocPollingService(app.channel(), context));
-		
-		// Create a TCP server listening on port 5001
-		Channel tcpChannel = new NamedChannel("TCP");
-		app.attach(new TcpServer(tcpChannel)
+    private Application app;
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.
+     * BundleContext)
+     */
+    @Override
+    public void start(BundleContext context) throws Exception {
+        app = new Application();
+        // Attach a general nio dispatcher
+        app.attach(new NioDispatcher());
+
+        // The central service
+        app.attach(new AdHocPollingService(app.channel(), context));
+
+        // Create a TCP server listening on port 5001
+        Channel tcpChannel = new NamedChannel("TCP");
+        app.attach(new TcpServer(tcpChannel)
             .setServerAddress(new InetSocketAddress(
                 Optional.ofNullable(System.getenv("PORT"))
                     .map(Integer::parseInt).orElse(5001)))
             .setConnectionLimiter(new PermitsPool(300))
-            .setMinimalPurgeableTime(1000)
-        );
+            .setMinimalPurgeableTime(1000));
 
-		// Create an HTTP server as converter between transport and application
-		// layer.
-		Channel httpChannel = new NamedChannel("HTTP");
-		HttpServer httpServer = app.attach(new HttpServer(httpChannel, 
-		        tcpChannel, GetRequest.class, PostRequest.class));
-		
-		// Build HTTP application layer
-		httpServer.attach(new InMemorySessionManager(httpChannel));
-		httpServer.attach(new LanguageSelector(httpChannel));
-		httpServer.attach(new FileStorage(httpChannel, 65536));
-		httpServer.attach(new ComponentCollector<>(
-				httpChannel, context, HttpRequestHandlerFactory.class, 
-				type -> {
-					switch(type) {
-					case "de.mnl.ahp.participantui.ParticipantUi":
+        // Create an HTTP server as converter between transport and application
+        // layer.
+        Channel httpChannel = new NamedChannel("HTTP");
+        HttpServer httpServer = app.attach(new HttpServer(httpChannel,
+            tcpChannel, Request.In.Get.class, Request.In.Post.class));
+
+        // Build HTTP application layer
+        httpServer.attach(new InMemorySessionManager(httpChannel));
+        httpServer.attach(new LanguageSelector(httpChannel));
+        httpServer.attach(new FileStorage(httpChannel, 65536));
+        httpServer.attach(new ComponentCollector<>(
+            httpChannel, context, HttpRequestHandlerFactory.class,
+            type -> {
+                switch (type) {
+                case "de.mnl.ahp.participantui.ParticipantUi":
                     return Arrays.asList(Components.mapOf(
                         HttpRequestHandlerFactory.PREFIX, URI.create("/"),
                         "AdHocPollingServiceChannel", app.channel()));
-					default:
-						return Arrays.asList(Collections.emptyMap());
-					}
-				}));
-        PortalWeblet portalWeblet
+                default:
+                    return Arrays.asList(Collections.emptyMap());
+                }
+            }));
+        ConsoleWeblet consoleWeblet
             = httpServer.attach(new Bootstrap4Weblet(httpChannel, Channel.SELF,
                 new URI("/admin")))
                 .prependClassTemplateLoader(getClass())
                 .prependResourceBundleProvider(getClass())
-                .setPortalSessionInactivityTimeout(300000);
-        Portal portal = portalWeblet.portal();
-        portal.attach(new PortalLocalBackedKVStore(
-            portal, portalWeblet.prefix().getPath()));
-		portal.attach(new KVStoreBasedPortalPolicy(portal));
-        portal.attach(new NewPortalSessionPolicy(portal));
-        portal.attach(new ActionFilter(portal));
-		portal.attach(new ComponentCollector<>(
-				portal, context, PageResourceProviderFactory.class));
-		portal.attach(new ComponentCollector<>(
-				portal, context, PortletComponentFactory.class,
-				type -> {
-					switch(type) {
-					case "de.mnl.ahp.portlets.management.AdminPortlet":
-						return Arrays.asList(Components.mapOf(
-								"AdHocPollingServiceChannel", app.channel()));
-					default:
-						return Arrays.asList(Collections.emptyMap());
-					}
-				}));
-		Components.start(app);
-	}
+                .setConsoleSessionInactivityTimeout(300000);
+        WebConsole console = consoleWeblet.console();
+        console.attach(new BrowserLocalBackedKVStore(
+            console, consoleWeblet.prefix().getPath()));
+        console.attach(new KVStoreBasedConsolePolicy(console));
+        console.attach(new NewConsoleSessionPolicy(console));
+        console.attach(new ActionFilter(console));
+        console.attach(new ComponentCollector<>(
+            console, context, PageResourceProviderFactory.class,
+            type -> {
+                switch (type) {
+                case "org.jgrapes.webconsole.provider.gridstack.GridstackProvider":
+                    return Arrays.asList(
+                        Components.mapOf("configuration",
+                            "CoreWithJQUiPlugin"));
+                default:
+                    return Arrays.asList(Collections.emptyMap());
+                }
+            }));
+        console.attach(new ComponentCollector<>(
+            console, context, ConletComponentFactory.class,
+            type -> {
+                switch (type) {
+                case "de.mnl.ahp.conlets.management.AdminConlet":
+                    return Arrays.asList(Components.mapOf(
+                        "AdHocPollingServiceChannel", app.channel()));
+                default:
+                    return Arrays.asList(Collections.emptyMap());
+                }
+            }));
+        Components.start(app);
+    }
 
-	/* (non-Javadoc)
-	 * @see org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
-	 */
-	@Override
-	public void stop(BundleContext context) throws Exception {
-		app.fire(new Stop(), Channel.BROADCAST);
-		Components.awaitExhaustion();
-	}
+    /*
+     * (non-Javadoc)
+     * 
+     * @see
+     * org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
+     */
+    @Override
+    public void stop(BundleContext context) throws Exception {
+        app.fire(new Stop(), Channel.BROADCAST);
+        Components.awaitExhaustion();
+    }
 }

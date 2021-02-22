@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613942360770">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="asm:asm-all:3.0"/>
+      <attribute name="from" value="asm:asm-all:3.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="189188" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/asm/asm-all/3.0/asm-all-3.0.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="EA234736827F1CE31926E024052FDC092932CC130E59C3216AA5BC314C796BB6"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.objectweb.asm.all"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.3.1" type="Version"/>
+      <attribute name="documentation" value="http://asm.objectweb.org"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.objectweb.asm.all"/>
+      <attribute name="bundle-version" value="3.3.1" type="Version"/>
+      <attribute name="version" value="3.3.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
+      <attribute name="bnd.hashes" value="103284255,594174114,2017053308,-1734073205,-950546729,872586299,666722294,1027991531,2154973,758731316,2139338221,68139341,-1937510614,2289459,73174740,2017266446,-660431827,1262274772,399646405,2622298" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.objectweb.asm.all"/>
+      <attribute name="bundle-version" value="3.3.1" type="Version"/>
+      <attribute name="version" value="3.3.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.signature"/>
+      <attribute name="bnd.hashes" value="-1658639493,-491865930,-1503234261" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.objectweb.asm.all"/>
+      <attribute name="bundle-version" value="3.3.1" type="Version"/>
+      <attribute name="version" value="3.3.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
+      <attribute name="bnd.hashes" value="-718936297,664616873,-1784929247,534674049,1571135772,129330945,715265929,-32892472,1215373471,-1592971177,-1993687807,-461275564,-1567077563,422009202,514018224,1616827347,-171184974,35536215,497938146,-338384346,-1180801640,309361,1165,-2018499656" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.objectweb.asm.all"/>
+      <attribute name="bundle-version" value="3.3.1" type="Version"/>
+      <attribute name="version" value="3.3.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.tree"/>
+      <attribute name="bnd.hashes" value="-641155388,442804721,1994092410,1010172764,-1025976836,-1746047761,-1240543625,816492036,-896371248,613601054,613665922,-1067733679,1269368528,1396057846,463469389,1301555231,-1469644407,-588538896,652127196,-34211709,1165,1270314659,2074505859,124133124,-632416721,1779946972,-1078647671" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.objectweb.asm.all"/>
+      <attribute name="bundle-version" value="3.3.1" type="Version"/>
+      <attribute name="version" value="3.3.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.tree.analysis"/>
+      <attribute name="bnd.hashes" value="-959795002,2060107305,1670022540,860624387,1617197316,68139341,-340140454,-1806848312,-541908485,-858183873,1574353398,232847012,82420049" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.objectweb.asm.all"/>
+      <attribute name="bundle-version" value="3.3.1" type="Version"/>
+      <attribute name="version" value="3.3.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
+      <attribute name="bnd.hashes" value="-1107162229,-986329362,2083750593,-376046060,-284037038,1373487567,-1372747316,228386072,69773247,161782269,1165,-712552666,-944550785,-257197561,-1595225190,-1861693029,-1769684007,-1731895512,-269561893,-1566344193" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.objectweb.asm.all"/>
+      <attribute name="bundle-version" value="3.3.1" type="Version"/>
+      <attribute name="version" value="3.3.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.xml"/>
+      <attribute name="bnd.hashes" value="-1563844502,-941368686,-1119779825,-387238615,1016412119,917455995,287818458,-785301296,53978663,1702781028,489596754,-230474171,815155231,-746092510,294698513,575161786,-1383335860,-261029315,1290977052,-1868010338,-274794066,825378236,1004700353,-41409390,-1557140211,-1517453123,-763801699,35805504,1529963266,616230139,-1875733550,1996366330,-1499233504,-1490386996,188153794,-561557131,1759373422,-1634729439,1089840160,156733856,-1765656263,289566097,-1346665136,-1069466921,420500501,727848743,909208690,-1388542939,-1985774986,1070968737,1479016056,1162977759" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.3.1" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.objectweb.asm.all"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.3.1" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.objectweb.asm.all"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="asm:asm-all:3.3.1"/>
+      <attribute name="from" value="asm:asm-all:3.3.1"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="207007" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/asm/asm-all/3.3.1/asm-all-3.3.1.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="2A5CDB0223D7A8993962189100253BF3A5ABD474F6B19644341C9AA7D4354ECC"/>
+    </capability>
+  </resource>
+</repository>

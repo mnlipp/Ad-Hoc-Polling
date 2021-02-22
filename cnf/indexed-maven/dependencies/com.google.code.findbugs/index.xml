@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613942360710">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.google.code.findbugs:jsr305:3.0.0"/>
+      <attribute name="from" value="com.google.code.findbugs:jsr305:3.0.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="33031" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="BEC0B24DCB23F9670172724826584802B80AE6CBDABA03BDEBDEF9327B962F6A"/>
+    </capability>
+  </resource>
+</repository>

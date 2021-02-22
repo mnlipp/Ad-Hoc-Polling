@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433838">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.gnu.org/licenses/lgpl-3.0.txt"/>
+      <attribute name="osgi.identity" value="org.jdrupes.json"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.0.1.rel" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core"/>
+      <attribute name="bundle-symbolic-name" value="org.jdrupes.json"/>
+      <attribute name="bundle-version" value="2.0.1.rel" type="Version"/>
+      <attribute name="version" value="2.0.0.201803210828" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.json"/>
+      <attribute name="bnd.hashes" value="1165,1332454740,1768596806,893486641,2096790604,-1053010652,895230958,-1901473831,-1257779292,209824904,-1980888473,-1871220832,354018237,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.0.1.rel" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.jdrupes.json"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.0.1.rel" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.jdrupes.json"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.jdrupes.json:json:2.0.1"/>
+      <attribute name="from" value="org.jdrupes.json:json:2.0.1"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="com.fasterxml.jackson.core:jackson-core:2.9.4"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="42607" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/jdrupes/json/json/2.0.1/json-2.0.1.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="75E33855A35626C596DE0AE302CE4FD9084319DCFEC975AC0562DDB57F83F19D"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core)(version&gt;=2.9.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

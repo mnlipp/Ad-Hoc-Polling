@@ -1,0 +1,31 @@
+Bundle-Name: Ad Hoc Polling Management UI
+Bundle-Version: 0.0.0.-${tstamp}-SNAPSHOT
+Bundle-Copyright: Michael N. Lipp (c) 2018
+Bundle-License: http://www.gnu.org/licenses/gpl-3.0.txt
+Require-Capability: \
+	org.jgrapes.webconsole.page.resource;filter:="(name=chart.js)"
+Bundle-Category: conlet
+
+-sources: true
+-runee: JavaSE-1.8
+
+-buildpath: \
+	osgi.core;version=6.0.0,\
+	osgi.annotation;version=6.0.1,\
+	osgi.cmpn;version=6.0,\
+	org.jgrapes.core;version=latest,\
+	org.jgrapes.io;version=latest,\
+	org.jgrapes.http;version=latest,\
+	org.jgrapes.webconsole.base;version=latest,\
+    org.jdrupes.json;version=latest,\
+	org.freemarker.freemarker;version='[2.3.27,2.4)',\
+    de.mnl.ahp.service;version=latest
+
+-includeresource: \
+	resources
+
+-fixupmessages: \
+    "The .classpath contains an unknown container: GROOVY_DSL_SUPPORT. This could make your build less portable.", \
+    "The .classpath contains an unknown container: org.eclipse.buildship.core.gradleclasspathcontainer. This could make your build less portable.", \
+    "The .classpath contains a library that will not be available during continuous integration:"
+Export-Package: de.mnl.ahp.conlets.management

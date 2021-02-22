@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941434023">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Apache License, Version 2.0; see: http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.freemarker.freemarker"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.template,org.jaxen,freemarker.template.utility,freemarker.log,org.jaxen.dom4j,org.dom4j,org.dom4j.tree,org.jaxen.dom,org.w3c.dom,org.jaxen.jdom,org.jdom.output,org.jdom"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.ext.xml"/>
+      <attribute name="bnd.hashes" value="-2137443688,1165,-2114688424,-1143873209,1470167004,-1194990716,-1182659466,-834696702,1710037361,912785312,-967136006,-1018804653,-1423533366,-159924970,595955823,1735389380,92207410,110425087,1491046796,-1538176457,-157710323,-1178709719,-1191285530,107210236,301443070,359443954,-997241548,-1795768765,-1079575564,-78495104" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.template.utility,freemarker.core,freemarker.template,freemarker.log,javax.servlet"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.cache"/>
+      <attribute name="bnd.hashes" value="-447081605,1058960642,-1024776802,286877881,-1125603752,1518497957,-1772347376,-1603708844,-1274837585,1829122003,1165,1166,1167,1168,-912958999,266692227,531845187,1921488678,244405247,-1363271671,1755350000,580351654,1600917247,-978690080,-1732551249,-624658667,201625552,1700366056,994357763,1351883705,632115690,1412404158,-965054224,-1762530048,-773843780,1102052727,-505464639,592502536,-1062402322,1453511937,1458237773,864876388,180793435,-268608022,1182556590,-1236383759,-312494078,-630227385,-312493117,-977953124,-777732579,221135964,422149220,52992250,-278356809" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.template,freemarker.debug.impl,freemarker.template.utility"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.debug"/>
+      <attribute name="bnd.hashes" value="-982474735,136465590,-1469680672,612456513,-198785946,185353068,-1826574315,-358930862" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.core,freemarker.template,freemarker.ext.beans,freemarker.ext.util,org.w3c.dom,org.python.core,org.python.util,freemarker.log,freemarker.ext.dom"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.template.utility"/>
+      <attribute name="bnd.hashes" value="1165,-1647841337,1586921994,1994305914,54238355,-22263210,-214771614,-429735630,1715143250,-1686370813,1817587423,1581691183,754729081,-1565615235,168823621,-1721825156,-767271570,-1063192523,1514347195,-404610538,1857433840,442781327,345083733,-336813012,-161099722,-2110894228,-957907157,-256593670,1601326859,1300492059,515834027,1527378703,1189542583,-1675726664,1166,1167,702334858,234029014,-357849761,420425683,-1452813490,740159263,-1749647732,1168032298,-2052437182,1874098329,-2066354622,-1365532953,549798677,-1494569110,-3625128" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.template,freemarker.core,freemarker.template.utility,freemarker.ext.util,freemarker.log,org.zeroturnaround.javarebel"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.ext.beans"/>
+      <attribute name="bnd.hashes" value="1763817807,1165,588399432,35686347,-1544014708,749135772,603326642,764216432,14542137,-897583908,1166,1167,1168,1169,-1527243931,2037556069,1807481968,-881191978,-2020561653,-2106040730,-1892545785,2037977933,-890876927,-915543391,-901232131,-1532546436,358075630,2055896247,1681456456,510757171,-1781906712,-452084047,46696203,807270392,1738332155,-260720783,-641988402,69159174,-1848075966,-645090956,-1097963328,1132832504,1560507969,362516707,-41007301,-1545416529,2033190434,-1674338961,1377525672,226935629,-1894592122,294190014,858926992,268944665,1111940789,110724376,766457148,-1530567203,-96660281,-1125453029,-286330639,1145255724,1571408165,-1906016960,1468840729,-1663677816,1640238969,-2074558672,290460411,-944163344,606113677,-1592255210,167911736,1612956791,-2002188135,606401793,2010261890,1624843927,719371805,-2075931001,-879558912,-1493220508,-2036301754,-586959085,-879270796,-1481333372,304578280,-766300784,101055555,1376704547,-1147055967,1287430213,214313683,150143563,-1399338331,-414626177,-2111714297,-1286080203,943398507,121677051,-804228231,1826332749,1056656635,1656822735,-1435416989,-1322158861,846218692,-752402233,1111396405,-1843510804,-1202974023,828796974,-478345043,349826847,-1399147181,-1830702698,974243546,-1758283461,1327787672,140752248,-994693136,-1794964659,1177383927,631214727,1477547478,1471322250,-1936126398" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.log,freemarker.debug,freemarker.template.utility,freemarker.core,freemarker.template,freemarker.cache,javax.swing.tree"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.debug.impl"/>
+      <attribute name="bnd.hashes" value="1165,-2137095835,637239012,-1516373842,-1720423628,482803940,1376527177,523567777,1141617346,-1690923131,-2126454564,1694051968,-1556259598,2064850939,-1623149969,1781182622,-366759357,705852746,-66136445,-792721363,1834377222" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.core,org.w3c.dom,freemarker.template,org.jaxen,freemarker.template.utility,org.jaxen.dom,org.xml.sax,javax.xml.parsers,freemarker.log,freemarker.ext.util,com.sun.org.apache.xml.internal.utils,com.sun.org.apache.xpath.internal.objects,com.sun.org.apache.xpath.internal,javax.xml.transform,org.w3c.dom.traversal,org.apache.xml.utils,org.apache.xpath,org.apache.xpath.objects"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.ext.dom"/>
+      <attribute name="bnd.hashes" value="942738585,-1863176405,2005027124,-1927224658,224955668,792967797,-425640531,1165,1166,1167,1168,1169,-390832652,-1802857508,-1178709719,-1841959385,-2057126018,-1029764018,-71850887,-1238332596,327430258,1075091042,-1041559206" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.core,freemarker.cache,freemarker.template.utility,freemarker.log,freemarker.ext.util,freemarker.ext.beans,org.w3c.dom,freemarker.ext.dom,javax.swing.tree,freemarker.debug.impl"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.template"/>
+      <attribute name="bnd.hashes" value="1317983200,-31047901,1165,-1240279680,256345437,-1563253546,-323955654,-619902942,507393392,1844526187,-340526226,-979944982,-379024511,-1174347882,751087321,2110205326,-1448887433,-50881785,-1381652727,357897756,1169923744,1117670519,2107181040,-1077679276,1099527239,1166,-1520786509,-2097991885,-194583448,623696899,1265757423,-374739170,-1485859913,2111461499,-1467941044,2121241954,-1451102513,-651669450,-1091742668,-875541993,616180476,93343034,-1908471280,561399968,-819032954,561519104,561645968,-1355956293,439794594,-1229781922,-1943288007,1537083315,-1074841019,1740016467,-1256902502,-1803197029,-328413391,-2072653884,1401664673,-2051522537,837469012,-2093666727,301874508,-1307330892,-1146041131,1167,1168,686815413,1960165185,-1771897900,1245037200,-769089762,905739998,-690777650,1882611489,602155695,-2037678688,-685680032,-549947331,-1822687538,1891522122,2116340429,-2011343776,326912806,974047334,1029304739,1844284782,1036962391,-1443470223,-1030378423,2016261304,-889458861,-1479529119" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.commons.logging,org.slf4j,org.slf4j.spi,org.apache.log,org.apache.log4j"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.log"/>
+      <attribute name="bnd.hashes" value="390453515,-1148210141,1165,-2013470288,971415866,-1252666162,-1374458073,540107191,-1976448589,-1077106756,421621860,-264872531,1087129816,1699713126,1764663615,722895955,160921716,1919658070" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.template,org.jdom,org.jdom.output,org.jaxen,org.jaxen.jdom,org.jdom.input"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.ext.jdom"/>
+      <attribute name="bnd.hashes" value="1165,1061488917,712961789,-2114688424,-1143873209,-1394017247,1597965084,-1182659466,-834696702,1710037361,-765369777,912785312,-1474932136,-1079575564,597351719,-83603696,-1242678040,926519189,-207338789,-1423533366,-159924970,1131108106,595955823,-483981095,790108724,92207410,-77499754,-1178709719" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.template,freemarker.template.utility,freemarker.ext.beans,freemarker.ext.dom,freemarker.debug.impl,freemarker.cache,freemarker.log,javax.swing.tree,javax.swing,freemarker.ext.util"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.core"/>
+      <attribute name="bnd.hashes" value="-1875907776,538915393,-1793347884,76355444,983580525,1006828674,-139153829,1861318944,314374063,-1346320361,-1453169133,-1560429652,1886293762,-1275239699,1913260897,-983298592,1802920711,681971729,-935767270,932846827,1564744044,-472774464,1816238983,534456905,1410939439,-348946330,564185179,1895612451,1048363880,196697716,162436007,-109629651,1198350854,-1797413361,197008584,346690459,352497807,-1611000953,494875991,1183005661,24234977,1165,-1748029486,-991334784,1166,-1026256834,28347216,760436953,178947370,294083778,2053897926,-990324062,34802017,706060133,971185150,503191564,24372197,1597772521,13318820,1528426951,74707319,48966625,-2022355890,750706271,-2053996275,-1466441323,-1749331350,-1427261537,1761668835,259953653,463450862,385547270,869589614,307338299,1082052652,-2118104923,546869116,765797199,-337335878,1520165803,1283253969,1302688164,1123670589,-16041561,1169734,-2138628943,546445721,1569154648,-1225257026,-297317450,-1133854902,1606398973,-511494185,-447076763,-1941139872,755061478,1320495642,-1382916094,2060185122,-1199211698,-826230343,939315930,2025507361,1120614489,1411988713,-814991806,1142862910,983449900,1389104582,-1001050376,1038189245,1151157308,-311843120,-541761800,1496300195,1106511274,1896027954,1146697291,-1726495671,1340726074,531311253,-1865278034,960048589,512828472,1123247749,1123263125,511351923,492202528,715616252,1845187327,1845602479,1131009746,200925676,-524297359,788231399,-283329849,1491388775,-297869903,383823135,294742952,-913090031,-234666591,1127448280,336986274,1142260218,114469370,-149770982,718766825,-925920560,2121870348,-1365020189,1762606675,-320112773,730830869,775463553,1134312703,1134320391,1134549109,1961302015,1905857285,-892546082,-501294166,100444335,-430262548,1191496215,-1613364663,1147297,-1158454693,1669517127,988767113,1502992699,-431154780,225146585,966629683,1898276070,2055956055,-199613059,-120482358,-769293296,-824471721,-1964001506,481256143,93610068,188640909,814538742,-1411567530,2016668124,-6611449,1292549585,-136445799,1137071734,2047887821,733395045,-453343785,1724506032,-477142633,-898078796,1019891981,-1958889647,-1296384075,-283679581,-1296374465,-1296364855,-265209161,1871807917,603941848,826958230,-1255212187,68660589,-16041562,678307414,-2030775439,-384962646,-245806101,1139486727,1239743215,1142203474,-250679116,1058177495,530835206,1144825082,1387701948,-137714755,1567590611,-721095989,593909511,-621791729,1764675956,929675989,1167,-1027589861,1296879431,-137471681,1933467469,2129983766,659235569,-1511532919,204527794,-1128144498,1261952261,-1398376969,-1820303970,-1876605025,-10414629,2098823723,2092880,-1807931110,27038373,206376383,-1679915457,-1014633461,1387259451,1771100065,-534876820,-1120756281,1245037200,2031406908,-1098175363,511117189,1335028569,1452577095,1791837707,126397068,-964463545,1513912372,-1562933424,-214948781,26736090,-925692040,68905,-1512418197,2050438606,1168,1169,-44108042,-853647940,1555025593,1771185116,476667287,-1395067274,-1470595638,1581963763,1716724844,225495774,520545332,-114194308,198012600,268965427,36163,36164,36165,36166,1170,1171,1172,1173,-37607628,-638322779,1454431950,1750855633,1665508197,400394739,-555597882,558420009,985370202,-848890836,-816340768,-1959111926,2040297124,-1475130287,-1758354525,-1000922445,-1401490527,1228962508,1826767899,-1750286225,984226468,-553046586,375032009,-947254960,-687739768,829512641,670220729,498528619,-960082046,1777253470,1358293380,1610890773,-1788061459,-1936473609,1677994160,-1378495621,70973344,-785491882,-51244897,-1589930656,1469704456,1780334375,1705857701,1824800577,-1012715583,1528237705,-1196016740,-2093185586,1799045837,-1988768672,718571455,-407897799,-920235483,-1184003016,1097578027,254162691,138652422,1057959969,1480449834,-2132581871,1979875436,-316005404,9207044,-1769652068,759903018,-1520491769,74099628,824779456,-273951803,1269973759,-1157523666,-1819397090,-715837134,-1493171410,75160007,-1478909080,1749406699,1969630676,-1420082540,-588004997,1232742151,-1386283724,1602600729,-1882525607,-311639551,401206977,434463424,-1856484156,1843969633,1096148864,-1221375791,909549459,-1001866598,-2057232981,1224243462,-204350777,1131313913,1424495372,-1183379205,-342832008,-1146547467,889891197,419486623,-1163293046,1971845884,-1411900681,934089412,885608431,450115227,141739196,78727453,161606668,-1550911016,991128769,408279657,1418968631,34831988,-1060144866,1333206356,83006,-1883515025,693096936,1244741398,-708069014,268892749,-1198682356,-268181367,1074430782,-524737127,-949609692,-476109983,219594364,301952383,202702475,256214274,-647291983,2021869215,470555859,-2087947741,-916936218,-1601200536,-69283238,-327254704,1532388473,326226264,-99999273,-970908450,-1548431410,203360289,1449801052,1861299007,-1175942837,939385664,1346799784,-280890475,-585688424,80988633,954437577,1593014433,-1601810708,-1936471758,-1660126049,-700388022,1147741975,309986728,-721909436,-1233159332,1738525835,-5226768,-1091175535,2097383096,1839775555,-63115364,-411438643,1368781819,-1919359505,1608437690,1500034032,-1905449811,168327112,682652828,1024218873,1895727010,798322478,78518021,-131216249,-1334847931,-1219698636,-783867967,-762163691,529886306,-1080809234,183680490,2134815631,-52755096,-130955064,-1503851209,-365400073,2079459548,-2007550412,172756682,-626512310,-1578225888,1814719053,1994554444,1449679411,2091659034,-1698391216,35667151,1714376165,-269294268,1407766300,-65418637,-315791162,-446649499,1602828671,-764298525,903311785,246707281,-736402217,1053166694" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.python.core,freemarker.template,freemarker.ext.util,freemarker.ext.beans,freemarker.template.utility"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.ext.jython"/>
+      <attribute name="bnd.hashes" value="1165,-26598503,-1823966457,765202619,-1340377410,1166,-1819802170,-214895303,1851007045,-931180409,-116554511,-327926674,-390299112,-162610981" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.w3c.dom,freemarker.ext.xml,freemarker.template.utility,freemarker.ext.dom,freemarker.template,javax.xml.parsers,freemarker.core,org.apache.tools.ant.taskdefs,org.xml.sax,org.apache.tools.ant,org.python.util"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.ext.ant"/>
+      <attribute name="bnd.hashes" value="-1566556778,1735383146,-1197723424,-1149528288" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.core,freemarker.ext.beans,freemarker.template,freemarker.template.utility,javax.servlet,javax.servlet.http,freemarker.log,javax.el,javax.servlet.jsp.el,javax.servlet.jsp,javax.servlet.jsp.tagext,freemarker.ext.servlet,freemarker.ext.util,org.xml.sax,org.xml.sax.helpers,javax.xml.parsers"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.ext.jsp"/>
+      <attribute name="bnd.hashes" value="1165,1272438278,-2038769353,499174978,216023226,-1672430523,1324615968,-821141225,598475070,416107680,-1697954487,-1096981495,353312072,866120439,1306060378,-1938152460,348094593,57769191,-2124053899,-1774164758,1463967498,-1421782366,-325613965,1084865769,1993955639,1166,-1207492636,-1755794136,-1218551148,-1878217255,-524111647,-958278396,1363251814,1505785869,-1795125201,-1965282980,996863731,87999983,2046747002,1592197629,1200328705,-1285393082,1408795405,1039222752,52076205,2075876454,-625611329,44492718,-173292489,-1077099814" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.ext.beans,org.mozilla.javascript,freemarker.template,freemarker.ext.util,freemarker.template.utility"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.ext.rhino"/>
+      <attribute name="bnd.hashes" value="1963598013,1165,2023821584,-1471463393" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.servlet,javax.servlet.http,freemarker.template.utility,freemarker.template,freemarker.cache,freemarker.log,freemarker.core,freemarker.ext.jsp"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.ext.servlet"/>
+      <attribute name="bnd.hashes" value="-1625173005,1465796237,1630747791,-124690311,-1457885225,-906284427,616166946,-1502239189,659044759,-1931576929,1110888884,1165,-481029206,469326221,-1849794700,1942896439,266605474,-1958145092,-1905695215" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="freemarker.template"/>
+      <attribute name="bundle-symbolic-name" value="org.freemarker.freemarker"/>
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.package" value="freemarker.ext.util"/>
+      <attribute name="bnd.hashes" value="1165,1166,1167,-1449944635,1097764526,1647082976,-1053337936,206085990,-222875143,-1066733119,-276750052" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.freemarker.freemarker"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.3.31.stable" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.freemarker.freemarker"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.freemarker:freemarker:2.3.31"/>
+      <attribute name="from" value="org.freemarker:freemarker:2.3.31"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.mainclass">
+      <attribute name="bnd.mainclass" value="freemarker.core.CommandLine"/>
+      <attribute name="version" value="2.3.31.stable" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="1715750" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/freemarker/freemarker/2.3.31/freemarker-2.3.31.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="68ECB4C5AA4934B7B50C38B0E495D7589E52DFB9D28B964AC2008B72090BFAAE"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.sun.org.apache.xml.internal.utils)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="com.sun.org.apache.xml.internal.utils"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.sun.org.apache.xpath.internal)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="com.sun.org.apache.xpath.internal"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.sun.org.apache.xpath.internal.objects)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="com.sun.org.apache.xpath.internal.objects"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.el)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="javax.el"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet.http)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet.http"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet.jsp)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet.jsp"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet.jsp.el)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet.jsp.el"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet.jsp.tagext)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet.jsp.tagext"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.swing)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="javax.swing"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.swing.tree)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="javax.swing.tree"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.parsers)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.parsers"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.transform)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.transform"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.commons.logging)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.apache.commons.logging"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.log)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.apache.log"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.log4j)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.apache.log4j"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.tools.ant)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.apache.tools.ant"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.tools.ant.taskdefs)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.apache.tools.ant.taskdefs"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.xml.utils)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.apache.xml.utils"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.xpath)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.apache.xpath"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.xpath.objects)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.apache.xpath.objects"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.dom4j)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.dom4j"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.dom4j.tree)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.dom4j.tree"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.jaxen)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.jaxen"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.jaxen.dom)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.jaxen.dom"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.jaxen.dom4j)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.jaxen.dom4j"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.jaxen.jdom)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.jaxen.jdom"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.jdom)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.jdom"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.jdom.input)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.jdom.input"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.jdom.output)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.jdom.output"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.mozilla.javascript)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.mozilla.javascript"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.python.core)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.python.core"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.python.util)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.python.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.slf4j)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.slf4j"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.slf4j.spi)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.slf4j.spi"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.w3c.dom)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.w3c.dom"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.w3c.dom.traversal)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.w3c.dom.traversal"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.xml.sax"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax.helpers)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.xml.sax.helpers"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.zeroturnaround.javarebel)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.zeroturnaround.javarebel"/>
+    </requirement>
+  </resource>
+</repository>

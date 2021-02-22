@@ -18,7 +18,21 @@ eclipse {
         natures 'org.eclipse.jdt.core.javanature', \
             'bndtools.core.bndnature', \
             'net.sf.eclipsecs.core.CheckstyleNature'
-            'org.eclipse.jdt.groovy.core.groovyNature'
+    }
+    jdt {
+        if (project.name.startsWith("de.mnl.ahp.")) {
+            sourceCompatibility = 1.8
+            targetCompatibility = 1.8
+            javaRuntimeName = "JavaSE-1.8"
+        }
+        file {
+            withProperties { properties ->
+                def formatterPrefs = new Properties()
+                rootProject.file("gradle/org.eclipse.jdt.core.formatter.prefs")
+                    .withInputStream { formatterPrefs.load(it) }
+                properties.putAll(formatterPrefs)
+            }
+        }
     }
 }
 tasks.eclipse.dependsOn(cleanEclipse)
