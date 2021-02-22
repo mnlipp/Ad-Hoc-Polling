@@ -38,7 +38,6 @@ import org.jgrapes.core.annotation.Handler;
 import org.jgrapes.core.annotation.HandlerDefinition.ChannelReplacements;
 import org.jgrapes.webconsole.base.AbstractConlet.ConletBaseModel;
 import org.jgrapes.webconsole.base.Conlet.RenderMode;
-import org.jgrapes.webconsole.base.Conlet;
 import org.jgrapes.webconsole.base.ConsoleSession;
 import org.jgrapes.webconsole.base.WebConsoleUtils;
 import org.jgrapes.webconsole.base.events.AddConletRequest;
