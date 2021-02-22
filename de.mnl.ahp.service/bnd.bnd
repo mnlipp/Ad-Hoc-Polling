@@ -15,9 +15,6 @@ Export-Package: \
 	org.jgrapes.core;version=latest,\
     org.jgrapes.io;version=latest
 
--includeresource: \
-    resources
-
 -fixupmessages: \
     "The .classpath contains an unknown container: GROOVY_DSL_SUPPORT. This could make your build less portable.", \
     "The .classpath contains an unknown container: org.eclipse.buildship.core.gradleclasspathcontainer. This could make your build less portable.", \
