@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1641057461149">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+      <attribute name="documentation" value="http://geronimo.apache.org/maven/specs/geronimo-json_1.1_spec/1.2"/>
+      <attribute name="description" value="Apache Geronimo implementation of the JSR-374"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.json.stream"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+      <attribute name="bundle-version" value="1.2.0" type="Version"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javax.json"/>
+      <attribute name="bnd.hashes" value="-270371932,594201428,2318600,893486641,-1070475222,-24976361,-1121503193,-198114792,-1991884175,-1980888473,380128052,-628296377,906834976,2073194331,-18957291,-1892499477,-757048673,-1849505991,1836356939,1238275115,912368969,-1737094245,-885946129" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.json,javax.json.stream"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+      <attribute name="bundle-version" value="1.2.0" type="Version"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javax.json.spi"/>
+      <attribute name="bnd.hashes" value="-2041298151" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.json"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+      <attribute name="bundle-version" value="1.2.0" type="Version"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javax.json.stream"/>
+      <attribute name="bnd.hashes" value="-833922898,1209236463,1978794667,-1649115169,847240413,67338874,-1952931001,177289155,-1151814489" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+      <attribute name="from" value="org.apache.geronimo.specs:geronimo-json_1.1_spec:1.2"/>
+      <attribute name="version" value="1.2.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="36993" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/geronimo/specs/geronimo-json_1.1_spec/1.2/geronimo-json_1.1_spec-1.2.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="453B8DFC4C0C9D41CBF2366DB3FE0AD2CD9577B6B2DCB3AF02E52ABA6704D728"/>
+    </capability>
+    <capability namespace="osgi.contract">
+      <directive name="uses" value="javax.json,javax.json.spi,javax.json.stream"/>
+      <attribute name="version" value="1.1.0,1.0.0" type="List&lt;Version&gt;"/>
+      <attribute name="osgi.contract" value="JavaJSONP"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.json)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.json"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.json.spi)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.json.spi"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.json.stream)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.json.stream"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(osgi.extender=osgi.serviceloader.processor)"/>
+    </requirement>
+    <requirement namespace="osgi.serviceloader">
+      <directive name="filter" value="(osgi.serviceloader=javax.json.spi.JsonProvider)"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+      <attribute name="documentation" value="http://geronimo.apache.org/maven/specs/geronimo-json_1.1_spec/1.3"/>
+      <attribute name="description" value="Apache Geronimo implementation of the JSR-374"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.3.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.json.stream"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+      <attribute name="bundle-version" value="1.3.0" type="Version"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javax.json"/>
+      <attribute name="bnd.hashes" value="-270371932,594201428,2318600,893486641,-1070475222,-24976361,-1121503193,-198114792,-1991884175,-1980888473,380128052,-628296377,906834976,2073194331,-18957291,-1892499477,-757048673,-1849505991,1836356939,1238275115,912368969,-1737094245,-885946129" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.json,javax.json.stream"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+      <attribute name="bundle-version" value="1.3.0" type="Version"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javax.json.spi"/>
+      <attribute name="bnd.hashes" value="-2041298151" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.json"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+      <attribute name="bundle-version" value="1.3.0" type="Version"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javax.json.stream"/>
+      <attribute name="bnd.hashes" value="-833922898,1209236463,1978794667,-1649115169,847240413,67338874,-1952931001,177289155,-1151814489" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.3.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.3.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.geronimo.specs.geronimo-json_1.1_spec"/>
+      <attribute name="from" value="org.apache.geronimo.specs:geronimo-json_1.1_spec:1.3"/>
+      <attribute name="version" value="1.3.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="37024" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/geronimo/specs/geronimo-json_1.1_spec/1.3/geronimo-json_1.1_spec-1.3.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="4B5A006577846859DB027337A1879513A1CF9E5D8660617D039AE9D475D0FC8F"/>
+    </capability>
+    <capability namespace="osgi.contract">
+      <directive name="uses" value="javax.json,javax.json.spi,javax.json.stream"/>
+      <attribute name="version" value="1.1.0,1.0.0" type="List&lt;Version&gt;"/>
+      <attribute name="osgi.contract" value="JavaJSONP"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.json)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.json"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.json.spi)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.json.spi"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.json.stream)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.json.stream"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(osgi.extender=osgi.serviceloader.processor)"/>
+    </requirement>
+    <requirement namespace="osgi.serviceloader">
+      <directive name="filter" value="(osgi.serviceloader=javax.json.spi.JsonProvider)"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+  </resource>
+</repository>

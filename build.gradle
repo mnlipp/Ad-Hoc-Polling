@@ -7,6 +7,7 @@ buildscript {
 }
 
 plugins {
+    id "biz.aQute.bnd.workspace" version "6.1.0"
     id "maven-publish"
 	id "signing"
 	id "org.jdrupes.mdoclet" version "1.0.10"
@@ -31,21 +32,7 @@ if (System.properties['org.ajoberstar.grgit.auth.username'] == null) {
 }
 
 allprojects {
-//    repositories {
-//        jcenter()
-//        mavenCentral()
-//        // Snapshots
-//        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-//        // Experimental, not sure if this is the way to go...
-//        maven { url 'https://jitpack.io' }
-//    }
-//	
-//	apply plugin: 'java'
-//	
-//    compileJava {
-//        sourceCompatibility = 1.8
-//        targetCompatibility = 1.8
-//    }
+    apply from: "${project.rootDir}/gradle/eclipse.gradle"
 }
 
 /* Configure the subprojects */

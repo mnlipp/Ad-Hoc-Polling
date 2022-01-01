@@ -1,85 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1613941433977">
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-model:3.5.0"/>
-      <attribute name="from" value="org.apache.maven:maven-model:3.5.0"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.apache.commons:commons-lang3:3.5;org.codehaus.plexus:plexus-utils:3.0.24"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="165015" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.5.0/maven-model-3.5.0.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="FBC2072294C126563AEBF2D759881DE3E87929C4806A5A5EA35B2490543A3125"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-settings:3.5.0"/>
-      <attribute name="from" value="org.apache.maven:maven-settings:3.5.0"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:3.0.24"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="44581" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.5.0/maven-settings-3.5.0.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="322250F009AAC4E45466567B4EB17E80A3E86368778E59173B77F09D7FBC4C8F"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-builder-support:3.5.0"/>
-      <attribute name="from" value="org.apache.maven:maven-builder-support:3.5.0"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.apache.commons:commons-lang3:3.5;org.codehaus.plexus:plexus-utils:3.0.24"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="14886" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-builder-support/3.5.0/maven-builder-support-3.5.0.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="519704818D40D5BFFE37341B1C0B55712B55C1C6CB4E4DF9D67A6821031D6E3D"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-settings-builder:3.5.0"/>
-      <attribute name="from" value="org.apache.maven:maven-settings-builder:3.5.0"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.codehaus.plexus:plexus-interpolation:1.24;org.apache.commons:commons-lang3:3.5;org.codehaus.plexus:plexus-utils:3.0.24;org.apache.maven:maven-settings:3.5.0;org.sonatype.plexus:plexus-sec-dispatcher:1.4;org.apache.maven:maven-builder-support:3.5.0;org.codehaus.plexus:plexus-component-annotations:1.7.1"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="43247" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.5.0/maven-settings-builder-3.5.0.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="AEBF955582EE7D63F5B4C06DC56C11199F2C3321BB7CCCACC61126B6C9F130A5"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-repository-metadata:3.5.0"/>
-      <attribute name="from" value="org.apache.maven:maven-repository-metadata:3.5.0"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:3.0.24"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="27482" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.5.0/maven-repository-metadata-3.5.0.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="9CB27A680F75C9D8F4DE7E483B5F6B845B2AD08D51F8C12CB3A7287F3D8FEADD"/>
-    </capability>
-  </resource>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1641057461313">
   <resource>
     <capability namespace="bnd.info">
       <attribute name="name" value="org.apache.maven:maven-artifact:3.5.0"/>
@@ -101,95 +21,34 @@
   </resource>
   <resource>
     <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-plugin-api:2.0"/>
-      <attribute name="from" value="org.apache.maven:maven-plugin-api:2.0"/>
+      <attribute name="name" value="org.apache.maven:maven-builder-support:3.5.0"/>
+      <attribute name="from" value="org.apache.maven:maven-builder-support:3.5.0"/>
       <attribute name="version" value="0.0.0" type="Version"/>
     </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.commons:commons-lang3:3.5;org.codehaus.plexus:plexus-utils:3.0.24"/>
+    </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="10133" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0/maven-plugin-api-2.0.jar"/>
+      <attribute name="size" value="14886" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-builder-support/3.5.0/maven-builder-support-3.5.0.jar"/>
       <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="5B62626069D85BB463314572734988D47BC98AAB9F0ED48D2F1F9554960F5A35"/>
+      <attribute name="osgi.content" value="519704818D40D5BFFE37341B1C0B55712B55C1C6CB4E4DF9D67A6821031D6E3D"/>
     </capability>
   </resource>
   <resource>
     <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-artifact:2.0.7"/>
-      <attribute name="from" value="org.apache.maven:maven-artifact:2.0.7"/>
+      <attribute name="name" value="org.apache.maven:maven-model:3.5.0"/>
+      <attribute name="from" value="org.apache.maven:maven-model:3.5.0"/>
       <attribute name="version" value="0.0.0" type="Version"/>
     </capability>
     <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:1.4.1"/>
+      <attribute name="compile" value="org.apache.commons:commons-lang3:3.5;org.codehaus.plexus:plexus-utils:3.0.24"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="87856" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.7/maven-artifact-2.0.7.jar"/>
+      <attribute name="size" value="165015" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.5.0/maven-model-3.5.0.jar"/>
       <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="D65F124301F3B84A891EF9E250E19CD45D791FEDBE30BFE6B641273645CF3E14"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-model:2.0.7"/>
-      <attribute name="from" value="org.apache.maven:maven-model:2.0.7"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:1.4.1"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="86438" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.7/maven-model-2.0.7.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="B992CDD49F6E27CC5570C88ED302BDA1C9FCF4EC28F1538AE2ACE1AF3909D548"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-settings:2.0.7"/>
-      <attribute name="from" value="org.apache.maven:maven-settings:2.0.7"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1;org.apache.maven:maven-model:2.0.7;org.codehaus.plexus:plexus-utils:1.4.1"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="49114" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.7/maven-settings-2.0.7.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="A537E46421CA8E0616F6A019D77B4AFA77C90CAEFA8C2884A58167B1F81B5F78"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-plugin-api:3.5.0"/>
-      <attribute name="from" value="org.apache.maven:maven-plugin-api:3.5.0"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.eclipse.sisu:org.eclipse.sisu.plexus:0.3.3;org.apache.maven:maven-artifact:3.5.0;org.apache.maven:maven-model:3.5.0"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="47771" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.5.0/maven-plugin-api-3.5.0.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="F9B415B52E813D61E5707EACDEA3CED651DE7CF0A8D881976D7953D9B5FA8E09"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-profile:2.0.7"/>
-      <attribute name="from" value="org.apache.maven:maven-profile:2.0.7"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.apache.maven:maven-model:2.0.7;org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1;org.codehaus.plexus:plexus-utils:1.4.1"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="35241" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.7/maven-profile-2.0.7.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="3BA8F6EDCD5F6F84B4AF0FD908194DA88A7D426DDD8C16AA752E3D7F0CD398DD"/>
+      <attribute name="osgi.content" value="FBC2072294C126563AEBF2D759881DE3E87929C4806A5A5EA35B2490543A3125"/>
     </capability>
   </resource>
   <resource>
@@ -210,66 +69,18 @@
   </resource>
   <resource>
     <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-repository-metadata:2.0.7"/>
-      <attribute name="from" value="org.apache.maven:maven-repository-metadata:2.0.7"/>
+      <attribute name="name" value="org.apache.maven:maven-repository-metadata:3.5.0"/>
+      <attribute name="from" value="org.apache.maven:maven-repository-metadata:3.5.0"/>
       <attribute name="version" value="0.0.0" type="Version"/>
     </capability>
     <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:1.4.1"/>
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:3.0.24"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="24477" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.7/maven-repository-metadata-2.0.7.jar"/>
+      <attribute name="size" value="27482" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.5.0/maven-repository-metadata-3.5.0.jar"/>
       <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="95D7A3F5818A9F28F360A53F183B5853C280B2CEABDE836E89A3DF6D5B785C1E"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-artifact-manager:2.0.7"/>
-      <attribute name="from" value="org.apache.maven:maven-artifact-manager:2.0.7"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.apache.maven:maven-artifact:2.0.7;org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1;org.apache.maven.wagon:wagon-provider-api:1.0-beta-2;org.codehaus.plexus:plexus-utils:1.4.1;org.apache.maven:maven-repository-metadata:2.0.7"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="56509" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.7/maven-artifact-manager-2.0.7.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="4538B1DA1F417BE01523A16D2A46C913BE390AF8A6CABC97BA0DBADD9390DC5F"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-plugin-registry:2.0.7"/>
-      <attribute name="from" value="org.apache.maven:maven-plugin-registry:2.0.7"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:1.4.1;org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="28925" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.7/maven-plugin-registry-2.0.7.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="0AD27B8A9C478BBC2F82FD7E6A9D8071DCC9E67989FBEE703A3B3F2218B72D5C"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.maven:maven-project:2.0.7"/>
-      <attribute name="from" value="org.apache.maven:maven-project:2.0.7"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1;org.apache.maven:maven-profile:2.0.7;org.apache.maven:maven-artifact-manager:2.0.7;org.apache.maven:maven-settings:2.0.7;org.codehaus.plexus:plexus-utils:1.4.1;org.apache.maven:maven-plugin-registry:2.0.7;org.apache.maven:maven-model:2.0.7;org.apache.maven:maven-artifact:2.0.7"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="116546" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.7/maven-project-2.0.7.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="FB977A85AC7976142D2B05EE32A165BF7F7017D8AB38336852BBE3DF96D956A5"/>
+      <attribute name="osgi.content" value="9CB27A680F75C9D8F4DE7E483B5F6B845B2AD08D51F8C12CB3A7287F3D8FEADD"/>
     </capability>
   </resource>
   <resource>
@@ -286,6 +97,54 @@
       <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-resolver-provider/3.5.0/maven-resolver-provider-3.5.0.jar"/>
       <attribute name="mime" value="application/java-archive"/>
       <attribute name="osgi.content" value="2FAC481AC56D75B53DE577DA28A19961DB2BE871A86440C84DA513F61C51FCE4"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-plugin-api:3.5.0"/>
+      <attribute name="from" value="org.apache.maven:maven-plugin-api:3.5.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.eclipse.sisu:org.eclipse.sisu.plexus:0.3.3;org.apache.maven:maven-artifact:3.5.0;org.apache.maven:maven-model:3.5.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="47771" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.5.0/maven-plugin-api-3.5.0.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="F9B415B52E813D61E5707EACDEA3CED651DE7CF0A8D881976D7953D9B5FA8E09"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-settings:3.5.0"/>
+      <attribute name="from" value="org.apache.maven:maven-settings:3.5.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:3.0.24"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="44581" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.5.0/maven-settings-3.5.0.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="322250F009AAC4E45466567B4EB17E80A3E86368778E59173B77F09D7FBC4C8F"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-settings-builder:3.5.0"/>
+      <attribute name="from" value="org.apache.maven:maven-settings-builder:3.5.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-interpolation:1.24;org.apache.commons:commons-lang3:3.5;org.codehaus.plexus:plexus-utils:3.0.24;org.apache.maven:maven-settings:3.5.0;org.sonatype.plexus:plexus-sec-dispatcher:1.4;org.apache.maven:maven-builder-support:3.5.0;org.codehaus.plexus:plexus-component-annotations:1.7.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="43247" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.5.0/maven-settings-builder-3.5.0.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="AEBF955582EE7D63F5B4C06DC56C11199F2C3321BB7CCCACC61126B6C9F130A5"/>
     </capability>
   </resource>
   <resource>
@@ -434,6 +293,291 @@
   </resource>
   <resource>
     <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-plugin-api:2.0"/>
+      <attribute name="from" value="org.apache.maven:maven-plugin-api:2.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="10133" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0/maven-plugin-api-2.0.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="5B62626069D85BB463314572734988D47BC98AAB9F0ED48D2F1F9554960F5A35"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-artifact:2.0.7"/>
+      <attribute name="from" value="org.apache.maven:maven-artifact:2.0.7"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:1.4.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="87856" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.7/maven-artifact-2.0.7.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="D65F124301F3B84A891EF9E250E19CD45D791FEDBE30BFE6B641273645CF3E14"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-model:2.0.7"/>
+      <attribute name="from" value="org.apache.maven:maven-model:2.0.7"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:1.4.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="86438" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.7/maven-model-2.0.7.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="B992CDD49F6E27CC5570C88ED302BDA1C9FCF4EC28F1538AE2ACE1AF3909D548"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-profile:2.0.7"/>
+      <attribute name="from" value="org.apache.maven:maven-profile:2.0.7"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.maven:maven-model:2.0.7;org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1;org.codehaus.plexus:plexus-utils:1.4.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="35241" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.7/maven-profile-2.0.7.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="3BA8F6EDCD5F6F84B4AF0FD908194DA88A7D426DDD8C16AA752E3D7F0CD398DD"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-repository-metadata:2.0.7"/>
+      <attribute name="from" value="org.apache.maven:maven-repository-metadata:2.0.7"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:1.4.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="24477" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.7/maven-repository-metadata-2.0.7.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="95D7A3F5818A9F28F360A53F183B5853C280B2CEABDE836E89A3DF6D5B785C1E"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-artifact-manager:2.0.7"/>
+      <attribute name="from" value="org.apache.maven:maven-artifact-manager:2.0.7"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.maven:maven-artifact:2.0.7;org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1;org.apache.maven.wagon:wagon-provider-api:1.0-beta-2;org.codehaus.plexus:plexus-utils:1.4.1;org.apache.maven:maven-repository-metadata:2.0.7"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="56509" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.7/maven-artifact-manager-2.0.7.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="4538B1DA1F417BE01523A16D2A46C913BE390AF8A6CABC97BA0DBADD9390DC5F"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-settings:2.0.7"/>
+      <attribute name="from" value="org.apache.maven:maven-settings:2.0.7"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1;org.apache.maven:maven-model:2.0.7;org.codehaus.plexus:plexus-utils:1.4.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="49114" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.7/maven-settings-2.0.7.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="A537E46421CA8E0616F6A019D77B4AFA77C90CAEFA8C2884A58167B1F81B5F78"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-plugin-registry:2.0.7"/>
+      <attribute name="from" value="org.apache.maven:maven-plugin-registry:2.0.7"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:1.4.1;org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="28925" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.7/maven-plugin-registry-2.0.7.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="0AD27B8A9C478BBC2F82FD7E6A9D8071DCC9E67989FBEE703A3B3F2218B72D5C"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-project:2.0.7"/>
+      <attribute name="from" value="org.apache.maven:maven-project:2.0.7"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1;org.apache.maven:maven-profile:2.0.7;org.apache.maven:maven-artifact-manager:2.0.7;org.apache.maven:maven-settings:2.0.7;org.codehaus.plexus:plexus-utils:1.4.1;org.apache.maven:maven-plugin-registry:2.0.7;org.apache.maven:maven-model:2.0.7;org.apache.maven:maven-artifact:2.0.7"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="116546" type="Long"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.7/maven-project-2.0.7.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="FB977A85AC7976142D2B05EE32A165BF7F7017D8AB38336852BBE3DF96D956A5"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-model"/>
+      <attribute name="from" value="org.apache.maven:maven-model:3.6.3"/>
+      <attribute name="version" value="3.6.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:3.2.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="215412" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/maven/maven-model/3.6.3/maven-model-3.6.3.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="17CEF1F58E146EF0D7D9E96B3B92D98A1D6FD7D2B3288BA538E8FF1E0D9160CF"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-artifact"/>
+      <attribute name="from" value="org.apache.maven:maven-artifact:3.6.3"/>
+      <attribute name="version" value="3.6.3" type="Version"/>
+    </capability>
+    <capability namespace="bnd.mainclass">
+      <attribute name="bnd.mainclass" value="org.apache.maven.artifact.versioning.ComparableVersion"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:3.2.1;org.apache.commons:commons-lang3:3.8.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="57824" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/maven/maven-artifact/3.6.3/maven-artifact-3.6.3.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="61B20DA4E1E3DB837630D0810A6A7A5AC9FB7EA31B0A55638062AAD6E479C09C"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-plugin-api"/>
+      <attribute name="from" value="org.apache.maven:maven-plugin-api:3.6.3"/>
+      <attribute name="version" value="3.6.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.maven:maven-artifact:3.6.3;org.apache.maven:maven-model:3.6.3;org.codehaus.plexus:plexus-classworlds:2.6.0;org.eclipse.sisu:org.eclipse.sisu.plexus:0.3.4;org.codehaus.plexus:plexus-utils:3.2.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="47035" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/maven/maven-plugin-api/3.6.3/maven-plugin-api-3.6.3.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="61A48EFFA6D0C68B07BA50DF17B270A7F5527212022F250F6D11DBC11EFC0E5B"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-settings"/>
+      <attribute name="from" value="org.apache.maven:maven-settings:3.6.3"/>
+      <attribute name="version" value="3.6.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:3.2.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="44047" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/maven/maven-settings/3.6.3/maven-settings-3.6.3.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="D3904BCAC30F11FB49E44F5CECAAEBB2E9A7A5E4A9A55F20484FBB9FCC1BB66C"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-builder-support"/>
+      <attribute name="from" value="org.apache.maven:maven-builder-support:3.6.3"/>
+      <attribute name="version" value="3.6.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="14262" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/maven/maven-builder-support/3.6.3/maven-builder-support-3.6.3.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="3285308EA243A9967785417AF5E21AE0C094099B20DFB0B7E1C3D211A87A5E59"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-settings-builder"/>
+      <attribute name="from" value="org.apache.maven:maven-settings-builder:3.6.3"/>
+      <attribute name="version" value="3.6.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="javax.inject:javax.inject:1;org.apache.maven:maven-builder-support:3.6.3;org.codehaus.plexus:plexus-interpolation:1.25;org.codehaus.plexus:plexus-utils:3.2.1;org.apache.maven:maven-settings:3.6.3;org.sonatype.plexus:plexus-sec-dispatcher:1.4"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="42090" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/maven/maven-settings-builder/3.6.3/maven-settings-builder-3.6.3.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="BA611BDC73B691A73B704443BCD7606F625F06CB79588968E101271ACBFA0B15"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-repository-metadata"/>
+      <attribute name="from" value="org.apache.maven:maven-repository-metadata:3.6.3"/>
+      <attribute name="version" value="3.6.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.codehaus.plexus:plexus-utils:3.2.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="27158" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.6.3/maven-repository-metadata-3.6.3.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="2E7F850B20664A151E6CA73DD3AF34E639901435C2FE717717E3CBC7DDEAD3D4"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-model-builder"/>
+      <attribute name="from" value="org.apache.maven:maven-model-builder:3.6.3"/>
+      <attribute name="version" value="3.6.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="javax.inject:javax.inject:1;org.apache.maven:maven-artifact:3.6.3;org.apache.maven:maven-builder-support:3.6.3;org.codehaus.plexus:plexus-interpolation:1.25;org.apache.maven:maven-model:3.6.3;org.eclipse.sisu:org.eclipse.sisu.inject:0.3.4;org.codehaus.plexus:plexus-utils:3.2.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="192302" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/maven/maven-model-builder/3.6.3/maven-model-builder-3.6.3.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="7D9A508EDAE881054FDB6AD530A5E053A0689AB1318BF7A099016E758B8323BA"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-resolver-provider"/>
+      <attribute name="from" value="org.apache.maven:maven-resolver-provider:3.6.3"/>
+      <attribute name="version" value="3.6.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.maven.resolver:maven-resolver-api:1.4.1;org.apache.maven:maven-model:3.6.3;org.apache.maven:maven-repository-metadata:3.6.3;org.apache.maven.resolver:maven-resolver-util:1.4.1;org.apache.maven.resolver:maven-resolver-spi:1.4.1;org.slf4j:slf4j-api:1.7.29;javax.inject:javax.inject:1;org.codehaus.plexus:plexus-utils:3.2.1;org.apache.maven.resolver:maven-resolver-impl:1.4.1;org.apache.maven:maven-model-builder:3.6.3"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="66242" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/maven/maven-resolver-provider/3.6.3/maven-resolver-provider-3.6.3.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="2379A5CF0B13AE9E11535C2C34A31B57C3866D9CBB7E116B81F9E288D1823702"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
       <attribute name="name" value="org.apache.maven:maven-plugin-api:2.0.7"/>
       <attribute name="from" value="org.apache.maven:maven-plugin-api:2.0.7"/>
       <attribute name="version" value="0.0.0" type="Version"/>
@@ -443,6 +587,22 @@
       <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.7/maven-plugin-api-2.0.7.jar"/>
       <attribute name="mime" value="application/java-archive"/>
       <attribute name="osgi.content" value="1BF733EE1D2716D8B9F1E987452A55A16C0E8C443649E6E679EE337831D15602"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.maven:maven-core"/>
+      <attribute name="from" value="org.apache.maven:maven-core:3.6.3"/>
+      <attribute name="version" value="3.6.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.maven.resolver:maven-resolver-impl:1.4.1;org.apache.maven.resolver:maven-resolver-api:1.4.1;org.apache.maven.resolver:maven-resolver-util:1.4.1;org.apache.maven:maven-settings:3.6.3;org.apache.maven:maven-model-builder:3.6.3;org.apache.maven:maven-repository-metadata:3.6.3;org.codehaus.plexus:plexus-classworlds:2.6.0;org.apache.maven.resolver:maven-resolver-spi:1.4.1;org.apache.maven:maven-settings-builder:3.6.3;org.eclipse.sisu:org.eclipse.sisu.inject:0.3.4;org.apache.maven:maven-builder-support:3.6.3;org.apache.maven.shared:maven-shared-utils:3.2.1;org.apache.maven:maven-artifact:3.6.3;org.codehaus.plexus:plexus-utils:3.2.1;javax.inject:javax.inject:1;org.apache.commons:commons-lang3:3.8.1;org.eclipse.sisu:org.eclipse.sisu.plexus:0.3.4;com.google.inject:guice:4.2.1;org.apache.maven:maven-model:3.6.3;org.codehaus.plexus:plexus-component-annotations:2.1.0;org.apache.maven:maven-resolver-provider:3.6.3;org.apache.maven:maven-plugin-api:3.6.3"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="633028" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/maven/maven-core/3.6.3/maven-core-3.6.3.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="F572ED9E2A6EA3E30522D13448C5D9B3B80CE62A23DAC652111952D4941E2A3B"/>
     </capability>
   </resource>
 </repository>

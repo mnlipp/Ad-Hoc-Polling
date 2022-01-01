@@ -1,18 +1,21 @@
-apply plugin: 'java'
-
 if (plugins.hasPlugin('biz.aQute.bnd')) {
+
     // artifact_version is defined in cnf/bnd.bnd
     if (bnd.artifact_version) {
         project.version = bnd.artifact_version
     }
-    
-//    if (project.name != "cnf") {
-//        apply plugin: 'signing'
-//        apply plugin: 'maven'
-//        apply plugin: 'maven-publish'
-//
-//        group = "de.mnl.ahp"
-//    }
+
+    // See https://github.com/bndtools/bnd/issues/5002    
+    java {
+        if (bnd.get("javac.source")) {
+            sourceCompatibility = bnd.get("javac.source");
+        }
+        if (bnd.get("javac.target")) {
+            targetCompatibility = bnd.get("javac.target");
+        }
+    }
 }
 
-apply from: "${project.rootDir}/gradle/eclipse.gradle"
+if (project.name.startsWith("de.mnl.")) {
+    apply from: "${project.rootDir}/gradle/eclipse.gradle"
+}

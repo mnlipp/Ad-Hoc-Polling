@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1641057461143">
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="portlet-api:portlet-api"/>
+      <attribute name="from" value="portlet-api:portlet-api:1.0"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="17090" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/portlet-api/portlet-api/1.0/portlet-api-1.0.jar"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="osgi.content" value="250FD7BFAC5F70F799CEF286432DFFEF4DBB612959F8A244940A80BBC0DEFDE6"/>
+    </capability>
+  </resource>
+</repository>

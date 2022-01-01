@@ -1,19 +1,10 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "biz.aQute.bnd:biz.aQute.bnd.gradle:4.0.0"
-    }
-}
-
-rootProject.name = 'ad-hoc-polling'
-
-include 'cnf'
+rootProject.name = 'heroku-console-demo'
 
 for (File file: rootDir.listFiles()) {
     if (file.isDirectory() &&
-            file.name.startsWith("de.mnl.") ) {
+            file.name.startsWith("org.jgrapes.osgi.") ) {
             include file.name
     }
 }
+
+include 'cnf'

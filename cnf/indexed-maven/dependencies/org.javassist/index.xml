@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1641057461207">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.mozilla.org/MPL/MPL-1.1.html, http://www.gnu.org/licenses/lgpl-2.1.html, http://www.apache.org/licenses/"/>
+      <attribute name="description" value="Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation    simple.  It is a class library for editing bytecodes in Java."/>
+      <attribute name="osgi.identity" value="javassist"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist.bytecode,javassist.compiler,javassist.compiler.ast,javassist.convert,javassist.expr"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist"/>
+      <attribute name="bnd.hashes" value="-726021992,-2081631312,-863059284,1460945567,-1120374971,757060836,1994139037,-1156959269,1994152340,-1756030972,-1075270958,-1585822511,-1355119085,-1577243576,2082733571,275007711,-1575591065,536894273,-309976407,-1911136535,1423135381,1167523899,417412657,247045894,-1393078590,234981267,-569664858,-732555487,548860418,735063362,1908183093,-1719377388,1184246257,-1572906263,64864098,-1318515061,1445267366,-89206475,-1089437374,1399433751,-1318300462,1923047273,1143903531,-234694384,-1517117468,-24166729,1269276592,1552794576,729357348,-476967422,559727947,-1818419758,-2013651917,-81587510,-550869257,29979776,134420876,271521338,1004987694" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist,javassist.bytecode.annotation"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.bytecode"/>
+      <attribute name="bnd.hashes" value="851030800,-492832054,2024104690,-1911543745,-1537980204,-1711326122,-1818244104,-650443446,1913978362,-1514260273,-1317249672,-74930671,-1805675832,-1734073205,-1802522859,1993848564,-498815354,-1901294065,1940049746,2139338221,1262274772,1846886535,1993942566,1159886291,767055207,1156966274,-992303345,-1135969844,1997803970,39235431,71350,2274338,-2065001741,-2065001683,2363372,-2013227622,530771446,-20632831,80563118,-928108133,1580975761,1808578624,1581185535,521273144,934602249,1247177870,-25799004,1245097871,-1523064769,-1893062038,1408870765,-867140273,-1057677089,-1412977965,-984982312,-1026126680,-288451129,-107705078,192140140,965120972,-1828506900,2061902663,1430170069,2579,1881143967,151942005,925659355,-2010094230,1398514431,-1310559257,-154468649,1270164815,-2007215855,-1259877591,-1707614272,-1405776670,1122977114,413450836,-1082382788,-466190309,-1926770834,-1718476300,-138116863,579059987,-1656840757,-36961728,1994281138,2029715318,173214903,-1065431685,-1234646215,2622298,-358757321,1458435439,-18661386,-2104214300,533730309,1547018258,-614936882,1349935098,-569050993,561383527,321498811,-1695706989,1367302612,712050812,-1165627814,420062335,-630719241,1155633426,1715169910,509018371,678338130,660409311" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist,javassist.bytecode,javassist.bytecode.stackmap"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.bytecode.analysis"/>
+      <attribute name="bnd.hashes" value="1073944957,-959795002,1955373444,64279661,-2074554232,2433570,-47805429,2107661555,68139341,1705969165,67115090,616665730,-53639142,797029363,232847012,1486788282,2622298,2647074" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist,javassist.bytecode"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.bytecode.annotation"/>
+      <attribute name="bnd.hashes" value="2479866,438421327,442654223,603926568,-445161321,-1769971970,-571476529,-1103351633,-928439903,-707670401,558577222,1129772822,388210459,2091579129,-428500293,-1251914025,72510871,-938486440,-86923013,1325410822,188693629" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist,javassist.bytecode"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.bytecode.stackmap"/>
+      <attribute name="bnd.hashes" value="64880283,1646434878,74106916,2390765,842483999,226525288,-1781849107,-1554074405,1377759875,579059987,304820328,1994079235,-1841688191,811554157,-507313517,-506830457,-1683270140,-612160988,811552224,1011092067" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist,javassist.bytecode,javassist.compiler.ast"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.compiler"/>
+      <attribute name="bnd.hashes" value="2047758877,-964662637,-1688494589,280314805,-1068401409,71346785,-333995882,1912753166,-1436103803,76287,355684588,-1858679610,211681801,-1993687807,-1500758816,1559969974,-1911543745,-1231905060,1327447286,1615877061,80988633,520667348,-1157641477" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist,javassist.compiler"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.compiler.ast"/>
+      <attribute name="bnd.hashes" value="14361120,1940162288,578721513,-1276413020,1555523452,-108417645,99374580,-518397865,-1951295919,24129010,2174485,-1026284380,-1381219967,603566292,850245065,-1993902406,1270007115,-785539179,2479866,80216274,-217105861,-1803656776,-1184942436,2131414094" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist,javassist.bytecode"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.convert"/>
+      <attribute name="bnd.hashes" value="-2127320559,1591917040,2132086251,-918424630,-2054705485,-1569033198,-1692183884,120256292,-642224360,1789273287,-331680519" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist,javassist.bytecode"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.expr"/>
+      <attribute name="bnd.hashes" value="1691563834,2092895,1350889816,2174485,2010951243,75160449,-732260382,1692013969,917838660,1495451358,-1937510614,-1704172313,-1399476916,1269973759,897529278,1414217913,-1607990715,-785539179" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.runtime"/>
+      <attribute name="bnd.hashes" value="65919651,65021937,2126513,1366851023,70802998" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.scopedpool"/>
+      <attribute name="bnd.hashes" value="-449337628,-927901306,-169870138,-551022258,-14315378,1104433100,-2056946649" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.tools"/>
+      <attribute name="bnd.hashes" value="-107576219,2141716,545613025" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist,javassist.bytecode"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.tools.reflect"/>
+      <attribute name="bnd.hashes" value="-611462384,1973115668,443433301,1586047228,943730503,-534884161,-2013651917,946249855,-648266332,627165259,-1825807926" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist,javassist.tools.web"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.tools.rmi"/>
+      <attribute name="bnd.hashes" value="213527645,-990489454,-2122756207,-1686720767,77388366,1895145097,-1010484659,-1825807926,-366361179" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.tools.web"/>
+      <attribute name="bnd.hashes" value="1943997378,-1249618689,-1732764110,1765624695" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.util"/>
+      <attribute name="bnd.hashes" value="-1805472891,127775165,604761496" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javassist,javassist.bytecode"/>
+      <attribute name="bundle-symbolic-name" value="javassist"/>
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javassist.util.proxy"/>
+      <attribute name="bnd.hashes" value="-2137064498,-2083218462,71346741,-2100611681,71346743,1146030574,-2056657301,192637305,1967058232,767356889,-434389239,77388366,-1068096868,1866123382,-87614444,-1809775076,1557748444,-660801747,-2525571,686866350,-863433080,1688670455,1343475031,-438273667,-168497366" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="javassist"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.26.0.GA" type="Version"/>
+      <attribute name="osgi.wiring.host" value="javassist"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="javassist"/>
+      <attribute name="from" value="org.javassist:javassist:3.26.0-GA"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+    </capability>
+    <capability namespace="bnd.mainclass">
+      <attribute name="bnd.mainclass" value="javassist.CtClass"/>
+      <attribute name="version" value="3.26.0.GA" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="782535" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/javassist/javassist/3.26.0-GA/javassist-3.26.0-GA.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="CA5625874FF0A34F2422173A511B33C225218C146A3C961B18940EFFF430462D"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

@@ -1,12 +1,11 @@
 # Configure Repositories
 -plugin.1.IndexedMaven: \
     de.mnl.osgi.bnd.repository.maven.provider.IndexedMavenRepositoryProvider; \
-        path:="${workspace}/cnf/plugins/de.mnl.osgi.bnd.repository-2.0.4.jar,\
-            ${workspace}/cnf/plugins/biz.aQute.repository-5.0.0.jar"; \
+        path:="${workspace}/cnf/plugins/de.mnl.osgi.bnd.repository-4.1.0.jar,\
+            ${workspace}/cnf/plugins/biz.aQute.repository-6.0.0.jar"; \
         name=IndexedMaven; \
         location=cnf/indexed-maven; \
-        releaseUrls="https://repo.maven.apache.org/maven2/,\
-            https://dl.bintray.com/bintray/jcenter/"; \
+        releaseUrls="https://repo1.maven.org/maven2/"; \
         logIndexing=true
 
 #-plugin.2.PublishedSnapshots: \
@@ -20,17 +19,9 @@
 #        index=${.}/snapshots.mvn; \
 #        name="LocalMaven"
 
-#-baselinerepo: IndexedMaven
-#-baseline: *
-
-bin=bin/main
-testbin=bin/test
-
-# JUnit
-junit: org.apache.servicemix.bundles.junit; version=4.12
-
-javac.source: 1.8
-javac.target: 1.8
+javac.source: 11
+javac.target: 11
+-runee: JavaSE-11
 
 -outputmask: ${@bsn}-${versionmask;===S;${@version}}.jar
 
@@ -39,6 +30,12 @@ Git-Descriptor:           ${system-allow-fail;git describe --dirty --always}
 Git-SHA:                  ${system-allow-fail;git rev-list -1 HEAD}
 
 -diffignore: Git-Descriptor, Git-SHA
+
+#-baselinerepo: IndexedMaven
+#-baseline: *
+
+# JUnit
+junit: org.apache.servicemix.bundles.junit; version=4.12
 
 -fixupmessages: \
     "The .classpath contains an unknown container: GROOVY_DSL_SUPPORT. This could make your build less portable.", \

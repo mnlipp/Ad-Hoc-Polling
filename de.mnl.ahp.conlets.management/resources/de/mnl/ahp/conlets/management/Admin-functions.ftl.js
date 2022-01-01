@@ -41,7 +41,7 @@ var deMnlAhpAdmin = {
         });
     }
 
-    JGConsole.registerConletMethod(
+    JGConsole.registerConletFunction(
             "de.mnl.ahp.conlets.management.AdminConlet",
             "updatePoll", updatePoll);
 
@@ -62,11 +62,9 @@ var deMnlAhpAdmin = {
             + '<div class="chart-wrapper"><canvas class="chart"></canvas></div>'
             + '</div></div></div>');
     
-    function updatePoll(conletId, params) {
-        let pollData = params[0];
-        
+    function updatePoll(conletId, pollData) {
         // Update Preview
-        let preview = JGConsole.renderer.findConletPreview(conletId);
+        let preview = JGConsole.findConletPreview(conletId);
         if (preview) {
             preview = $(preview);
             let lastCreated = preview.find("div.lastCreated");
@@ -79,7 +77,7 @@ var deMnlAhpAdmin = {
         }
         
         // Update View
-        let view = JGConsole.renderer.findConletView(conletId);
+        let view = JGConsole.findConletView(conletId);
         if (!view) {
             return;
         }
@@ -160,7 +158,7 @@ var deMnlAhpAdmin = {
         chartCanvas.data('chartjs-chart', chart);
     }
     
-    JGConsole.registerConletMethod(
+    JGConsole.registerConletFunction(
             "de.mnl.ahp.conlets.management.AdminConlet",
             "pollExpired", pollExpired);
 

@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1641057460997">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+      <attribute name="osgi.identity" value="org.ops4j.base.lang"/>
+      <attribute name="documentation" value="http://www.ops4j.org/"/>
+      <attribute name="description" value="OPS4J Base - Utilities/Extensions related to java.lang."/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.ops4j.base.lang"/>
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.lang"/>
+      <attribute name="bnd.hashes" value="-957907157,1726622292,-503542441" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.ops4j.base.lang"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.ops4j.base.lang"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.ops4j.base.lang"/>
+      <attribute name="from" value="org.ops4j.base:ops4j-base-lang:1.2.3"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="5980" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/ops4j/base/ops4j-base-lang/1.2.3/ops4j-base-lang-1.2.3.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="51B5002CC0D539F455097DE5BDEA619ECCCEAD1AE6DED6D8710147973FD82371"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.ops4j.lang)(version&gt;=1.2.3))"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.lang"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+      <attribute name="osgi.identity" value="org.ops4j.base.monitors"/>
+      <attribute name="documentation" value="http://www.ops4j.org/"/>
+      <attribute name="description" value="OPS4J Base - Utilities/Extensions related to monitoring."/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.ops4j.monitors"/>
+      <attribute name="bundle-symbolic-name" value="org.ops4j.base.monitors"/>
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.monitors.stream"/>
+      <attribute name="bnd.hashes" value="-1786591846,2086350211,-1271113765" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.ops4j.monitors.exception"/>
+      <attribute name="bundle-symbolic-name" value="org.ops4j.base.monitors"/>
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.monitors"/>
+      <attribute name="bnd.hashes" value="1412160565,-1676572541" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.ops4j.monitors"/>
+      <attribute name="bundle-symbolic-name" value="org.ops4j.base.monitors"/>
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.monitors.exception"/>
+      <attribute name="bnd.hashes" value="-26172885,-1864656556,1556620586" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.ops4j.base.monitors"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.ops4j.base.monitors"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.ops4j.base.monitors"/>
+      <attribute name="from" value="org.ops4j.base:ops4j-base-monitors:1.2.3"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="8028" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/ops4j/base/ops4j-base-monitors/1.2.3/ops4j-base-monitors-1.2.3.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="D34FD638F584524615FA1FF53FD6CA51BC58A0AB05FFE667A34F43AE759E331D"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.ops4j.monitors)(version&gt;=1.2.3))"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.monitors"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.ops4j.monitors.exception)(version&gt;=1.2.3))"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.monitors.exception"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.ops4j.monitors.stream)(version&gt;=1.2.3))"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.monitors.stream"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+      <attribute name="osgi.identity" value="org.ops4j.base.net"/>
+      <attribute name="documentation" value="http://www.ops4j.org/"/>
+      <attribute name="description" value="OPS4J Base - Utilities/Extensions related to java.net."/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.net.ssl,org.ops4j.monitors,org.ops4j.monitors.exception,org.ops4j.lang"/>
+      <attribute name="bundle-symbolic-name" value="org.ops4j.base.net"/>
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.net"/>
+      <attribute name="bnd.hashes" value="-506620750,258205869,67115090,-291597532,-1473810131,-166244190" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.ops4j.base.net"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.ops4j.base.net"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.ops4j.base.net"/>
+      <attribute name="from" value="org.ops4j.base:ops4j-base-net:1.2.3"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.ops4j.base:ops4j-base-lang:1.2.3;org.ops4j.base:ops4j-base-monitors:1.2.3"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="11878" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/ops4j/base/ops4j-base-net/1.2.3/ops4j-base-net-1.2.3.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="43C303E679032F305246ACB092F13551455460EEC82B24038528FA33C3C92968"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.net.ssl)"/>
+      <attribute name="osgi.wiring.package" value="javax.net.ssl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.ops4j.lang)(version&gt;=1.2.3))"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.ops4j.monitors)(version&gt;=1.2.3))"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.monitors"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.ops4j.monitors.exception)(version&gt;=1.2.3))"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.monitors.exception"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.ops4j.net)(version&gt;=1.2.3))"/>
+      <attribute name="osgi.wiring.package" value="org.ops4j.net"/>
+    </requirement>
+  </resource>
+</repository>
