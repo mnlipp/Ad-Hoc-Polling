@@ -35,8 +35,6 @@ Git-SHA:                  ${system-allow-fail;git rev-list -1 HEAD}
 bin=bin/main
 testbin=bin/test
 
-target-dir: build/libs
-
 #-baselinerepo: IndexedMaven
 #-baseline: *
 
