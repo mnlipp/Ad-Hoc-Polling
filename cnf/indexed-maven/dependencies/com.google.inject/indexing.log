@@ -6,5 +6,5 @@ com.google.inject:guice:4.0 is dependency of org.apache.maven:maven-core:3.5.0, 
 com.google.inject:guice:4.0 has dependencies: javax.inject:javax.inject:1, com.google.guava:guava:16.0.1, aopalliance:aopalliance:1.0
 com.google.inject:guice:4.0 indexed.
 com.google.inject:guice:4.2.1 is dependency of org.apache.maven:maven-core:3.6.3, indexing...
-com.google.inject:guice:4.2.1 has dependencies: javax.inject:javax.inject:1, aopalliance:aopalliance:1.0, com.google.guava:guava:25.1-android
+com.google.inject:guice:4.2.1 has dependencies: aopalliance:aopalliance:1.0, com.google.guava:guava:25.1-android, javax.inject:javax.inject:1
 com.google.inject:guice:4.2.1 indexed.
