@@ -7,9 +7,6 @@ Require-Capability: \
 	org.jgrapes.webconsole.page.resource;filter:="(name=chart.js)"
 Bundle-Category: conlet
 
--sources: true
--runee: JavaSE-1.8
-
 -buildpath: \
 	osgi.core;version=6.0.0,\
 	osgi.annotation;version=6.0.1,\

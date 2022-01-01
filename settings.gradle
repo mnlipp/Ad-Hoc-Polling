@@ -1,8 +1,8 @@
-rootProject.name = 'heroku-console-demo'
+rootProject.name = 'ad-hoc-polling'
 
 for (File file: rootDir.listFiles()) {
     if (file.isDirectory() &&
-            file.name.startsWith("org.jgrapes.osgi.") ) {
+            file.name.startsWith("de.mnl.") ) {
             include file.name
     }
 }

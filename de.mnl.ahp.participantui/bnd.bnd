@@ -5,9 +5,6 @@ Bundle-Copyright: Michael N. Lipp (c) 2018
 Bundle-License: http://www.gnu.org/licenses/gpl-3.0.txt
 Export-Package: de.mnl.ahp.participantui
 
--sources: true
--runee: JavaSE-1.8
-
 -buildpath: \
 	osgi.core;version=6.0.0,\
 	osgi.annotation;version=6.0.1,\
