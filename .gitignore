@@ -5,5 +5,5 @@
 **/.project
 **/.classpath
 **/org.eclipse.jdt.core.prefs
-/gradle/build/
+**/build/
 /bin/
