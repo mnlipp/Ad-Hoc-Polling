@@ -5,9 +5,9 @@ org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.4 not selected
 org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.6 not selected for indexing.
 org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.8 not selected for indexing.
 org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.10 not selected for indexing.
+org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12 not selected for indexing.
 org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12 is dependency of org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.0.12, indexing...
 org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12 has dependencies: org.apache.aries:org.apache.aries.util:1.0.0
-org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12 not selected for indexing.
 org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12 is dependency of org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.12, indexing...
 org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12 has dependencies: org.apache.aries:org.apache.aries.util:1.0.0
 org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12 indexed.

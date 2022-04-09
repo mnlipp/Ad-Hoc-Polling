@@ -48,6 +48,10 @@ org.slf4j:integration:1.7.29 not selected for indexing.
 org.slf4j:integration:1.7.30 not selected for indexing.
 org.slf4j:integration:1.7.31 not selected for indexing.
 org.slf4j:integration:1.7.32 not selected for indexing.
+org.slf4j:integration:1.7.33 not selected for indexing.
+org.slf4j:integration:1.7.34 not selected for indexing.
+org.slf4j:integration:1.7.35 not selected for indexing.
+org.slf4j:integration:1.7.36 not selected for indexing.
 org.slf4j:integration:1.8.0-alpha0 not selected for indexing.
 org.slf4j:integration:1.8.0-alpha1 not selected for indexing.
 org.slf4j:integration:1.8.0-alpha2 not selected for indexing.
@@ -109,6 +113,10 @@ org.slf4j:jcl-over-slf4j:1.7.29 not selected for indexing.
 org.slf4j:jcl-over-slf4j:1.7.30 not selected for indexing.
 org.slf4j:jcl-over-slf4j:1.7.31 not selected for indexing.
 org.slf4j:jcl-over-slf4j:1.7.32 not selected for indexing.
+org.slf4j:jcl-over-slf4j:1.7.33 not selected for indexing.
+org.slf4j:jcl-over-slf4j:1.7.34 not selected for indexing.
+org.slf4j:jcl-over-slf4j:1.7.35 not selected for indexing.
+org.slf4j:jcl-over-slf4j:1.7.36 not selected for indexing.
 org.slf4j:jcl-over-slf4j:1.8.0-alpha0 not selected for indexing.
 org.slf4j:jcl-over-slf4j:1.8.0-alpha1 not selected for indexing.
 org.slf4j:jcl-over-slf4j:1.8.0-alpha2 not selected for indexing.
@@ -122,6 +130,8 @@ org.slf4j:jcl-over-slf4j:2.0.0-alpha2 not selected for indexing.
 org.slf4j:jcl-over-slf4j:2.0.0-alpha3 not selected for indexing.
 org.slf4j:jcl-over-slf4j:2.0.0-alpha4 not selected for indexing.
 org.slf4j:jcl-over-slf4j:2.0.0-alpha5 not selected for indexing.
+org.slf4j:jcl-over-slf4j:2.0.0-alpha6 not selected for indexing.
+org.slf4j:jcl-over-slf4j:2.0.0-alpha7 not selected for indexing.
 org.slf4j:jcl104-over-slf4j:1.0-beta7 not selected for indexing.
 org.slf4j:jcl104-over-slf4j:1.0-beta9 not selected for indexing.
 org.slf4j:jcl104-over-slf4j:1.0-rc1 not selected for indexing.
@@ -210,6 +220,10 @@ org.slf4j:jul-to-slf4j:1.7.32 is dependency of org.apache.felix:org.apache.felix
 org.slf4j:jul-to-slf4j:1.7.32 has dependencies: org.slf4j:slf4j-api:1.7.32
 org.slf4j:jul-to-slf4j:1.7.32 indexed.
 org.slf4j:jul-to-slf4j:1.7.32 is dependency of org.apache.felix:org.apache.felix.logback:1.0.6, indexing...
+org.slf4j:jul-to-slf4j:1.7.33 not selected for indexing.
+org.slf4j:jul-to-slf4j:1.7.34 not selected for indexing.
+org.slf4j:jul-to-slf4j:1.7.35 not selected for indexing.
+org.slf4j:jul-to-slf4j:1.7.36 not selected for indexing.
 org.slf4j:jul-to-slf4j:1.8.0-alpha0 not selected for indexing.
 org.slf4j:jul-to-slf4j:1.8.0-alpha1 not selected for indexing.
 org.slf4j:jul-to-slf4j:1.8.0-alpha2 not selected for indexing.
@@ -223,6 +237,8 @@ org.slf4j:jul-to-slf4j:2.0.0-alpha2 not selected for indexing.
 org.slf4j:jul-to-slf4j:2.0.0-alpha3 not selected for indexing.
 org.slf4j:jul-to-slf4j:2.0.0-alpha4 not selected for indexing.
 org.slf4j:jul-to-slf4j:2.0.0-alpha5 not selected for indexing.
+org.slf4j:jul-to-slf4j:2.0.0-alpha6 not selected for indexing.
+org.slf4j:jul-to-slf4j:2.0.0-alpha7 not selected for indexing.
 org.slf4j:log4j-over-slf4j:1.1.0-beta0 not selected for indexing.
 org.slf4j:log4j-over-slf4j:1.1.0-RC0 not selected for indexing.
 org.slf4j:log4j-over-slf4j:1.1.0-RC1 not selected for indexing.
@@ -282,6 +298,10 @@ org.slf4j:log4j-over-slf4j:1.7.29 not selected for indexing.
 org.slf4j:log4j-over-slf4j:1.7.30 not selected for indexing.
 org.slf4j:log4j-over-slf4j:1.7.31 not selected for indexing.
 org.slf4j:log4j-over-slf4j:1.7.32 not selected for indexing.
+org.slf4j:log4j-over-slf4j:1.7.33 not selected for indexing.
+org.slf4j:log4j-over-slf4j:1.7.34 not selected for indexing.
+org.slf4j:log4j-over-slf4j:1.7.35 not selected for indexing.
+org.slf4j:log4j-over-slf4j:1.7.36 not selected for indexing.
 org.slf4j:log4j-over-slf4j:1.8.0-alpha0 not selected for indexing.
 org.slf4j:log4j-over-slf4j:1.8.0-alpha1 not selected for indexing.
 org.slf4j:log4j-over-slf4j:1.8.0-alpha2 not selected for indexing.
@@ -295,6 +315,8 @@ org.slf4j:log4j-over-slf4j:2.0.0-alpha2 not selected for indexing.
 org.slf4j:log4j-over-slf4j:2.0.0-alpha3 not selected for indexing.
 org.slf4j:log4j-over-slf4j:2.0.0-alpha4 not selected for indexing.
 org.slf4j:log4j-over-slf4j:2.0.0-alpha5 not selected for indexing.
+org.slf4j:log4j-over-slf4j:2.0.0-alpha6 not selected for indexing.
+org.slf4j:log4j-over-slf4j:2.0.0-alpha7 not selected for indexing.
 org.slf4j:nlog4j:1.2.14 not selected for indexing.
 org.slf4j:nlog4j:1.2.17 not selected for indexing.
 org.slf4j:nlog4j:1.2.18 not selected for indexing.
@@ -333,6 +355,10 @@ org.slf4j:osgi-over-slf4j:1.7.29 not selected for indexing.
 org.slf4j:osgi-over-slf4j:1.7.30 not selected for indexing.
 org.slf4j:osgi-over-slf4j:1.7.31 not selected for indexing.
 org.slf4j:osgi-over-slf4j:1.7.32 not selected for indexing.
+org.slf4j:osgi-over-slf4j:1.7.33 not selected for indexing.
+org.slf4j:osgi-over-slf4j:1.7.34 not selected for indexing.
+org.slf4j:osgi-over-slf4j:1.7.35 not selected for indexing.
+org.slf4j:osgi-over-slf4j:1.7.36 not selected for indexing.
 org.slf4j:osgi-over-slf4j:1.8.0-alpha0 not selected for indexing.
 org.slf4j:osgi-over-slf4j:1.8.0-alpha1 not selected for indexing.
 org.slf4j:osgi-over-slf4j:1.8.0-alpha2 not selected for indexing.
@@ -346,6 +372,8 @@ org.slf4j:osgi-over-slf4j:2.0.0-alpha2 not selected for indexing.
 org.slf4j:osgi-over-slf4j:2.0.0-alpha3 not selected for indexing.
 org.slf4j:osgi-over-slf4j:2.0.0-alpha4 not selected for indexing.
 org.slf4j:osgi-over-slf4j:2.0.0-alpha5 not selected for indexing.
+org.slf4j:osgi-over-slf4j:2.0.0-alpha6 not selected for indexing.
+org.slf4j:osgi-over-slf4j:2.0.0-alpha7 not selected for indexing.
 org.slf4j:slf4j-android:1.6.1-RC1 not selected for indexing.
 org.slf4j:slf4j-android:1.7.6 not selected for indexing.
 org.slf4j:slf4j-android:1.7.7 not selected for indexing.
@@ -373,6 +401,10 @@ org.slf4j:slf4j-android:1.7.29 not selected for indexing.
 org.slf4j:slf4j-android:1.7.30 not selected for indexing.
 org.slf4j:slf4j-android:1.7.31 not selected for indexing.
 org.slf4j:slf4j-android:1.7.32 not selected for indexing.
+org.slf4j:slf4j-android:1.7.33 not selected for indexing.
+org.slf4j:slf4j-android:1.7.34 not selected for indexing.
+org.slf4j:slf4j-android:1.7.35 not selected for indexing.
+org.slf4j:slf4j-android:1.7.36 not selected for indexing.
 org.slf4j:slf4j-api:1.1.0-beta0 not selected for indexing.
 org.slf4j:slf4j-api:1.1.0-RC0 not selected for indexing.
 org.slf4j:slf4j-api:1.1.0-RC1 not selected for indexing.
@@ -469,14 +501,22 @@ org.slf4j:slf4j-api:1.7.29 indexed.
 org.slf4j:slf4j-api:1.7.30 not selected for indexing.
 org.slf4j:slf4j-api:1.7.31 not selected for indexing.
 org.slf4j:slf4j-api:1.7.32 not selected for indexing.
-org.slf4j:slf4j-api:1.7.32 is dependency of de.mnl.osgi:de.mnl.osgi.slf4j2osgi:2.1.4, indexing...
-org.slf4j:slf4j-api:1.7.32 indexed.
-org.slf4j:slf4j-api:1.7.32 is dependency of de.mnl.osgi:de.mnl.osgi.slf4j2osgi:2.1.5, indexing...
 org.slf4j:slf4j-api:1.7.32 is dependency of org.apache.felix:org.apache.felix.logback:1.0.4, indexing...
 org.slf4j:slf4j-api:1.7.32 is dependency of ch.qos.logback:logback-classic:1.2.7, indexing...
+org.slf4j:slf4j-api:1.7.32 indexed.
 org.slf4j:slf4j-api:1.7.32 is dependency of org.slf4j:jul-to-slf4j:1.7.32, indexing...
 org.slf4j:slf4j-api:1.7.32 is dependency of ch.qos.logback:logback-classic:1.2.8, indexing...
 org.slf4j:slf4j-api:1.7.32 is dependency of org.apache.felix:org.apache.felix.logback:1.0.6, indexing...
+org.slf4j:slf4j-api:1.7.33 not selected for indexing.
+org.slf4j:slf4j-api:1.7.34 not selected for indexing.
+org.slf4j:slf4j-api:1.7.35 not selected for indexing.
+org.slf4j:slf4j-api:1.7.36 not selected for indexing.
+org.slf4j:slf4j-api:1.7.36 is dependency of de.mnl.osgi:de.mnl.osgi.slf4j2osgi:2.1.4, indexing...
+org.slf4j:slf4j-api:1.7.36 indexed.
+org.slf4j:slf4j-api:1.7.36 is dependency of de.mnl.osgi:de.mnl.osgi.slf4j2osgi:2.1.5, indexing...
+org.slf4j:slf4j-api:1.7.36 is dependency of de.mnl.osgi:de.mnl.osgi.slf4j2osgi:2.1.6, indexing...
+org.slf4j:slf4j-api:1.7.36 is dependency of de.mnl.osgi:de.mnl.osgi.slf4j2osgi:2.1.7, indexing...
+org.slf4j:slf4j-api:1.7.36 is dependency of de.mnl.osgi:de.mnl.osgi.slf4j2osgi:2.2.0, indexing...
 org.slf4j:slf4j-api:1.8.0-alpha0 not selected for indexing.
 org.slf4j:slf4j-api:1.8.0-alpha1 not selected for indexing.
 org.slf4j:slf4j-api:1.8.0-alpha2 not selected for indexing.
@@ -490,6 +530,8 @@ org.slf4j:slf4j-api:2.0.0-alpha2 not selected for indexing.
 org.slf4j:slf4j-api:2.0.0-alpha3 not selected for indexing.
 org.slf4j:slf4j-api:2.0.0-alpha4 not selected for indexing.
 org.slf4j:slf4j-api:2.0.0-alpha5 not selected for indexing.
+org.slf4j:slf4j-api:2.0.0-alpha6 not selected for indexing.
+org.slf4j:slf4j-api:2.0.0-alpha7 not selected for indexing.
 org.slf4j:slf4j-archetype:1.1.0-beta0 not selected for indexing.
 org.slf4j:slf4j-archetype:1.1.0-RC0 not selected for indexing.
 org.slf4j:slf4j-archetype:1.1.0-RC1 not selected for indexing.
@@ -553,6 +595,10 @@ org.slf4j:slf4j-ext:1.7.29 not selected for indexing.
 org.slf4j:slf4j-ext:1.7.30 not selected for indexing.
 org.slf4j:slf4j-ext:1.7.31 not selected for indexing.
 org.slf4j:slf4j-ext:1.7.32 not selected for indexing.
+org.slf4j:slf4j-ext:1.7.33 not selected for indexing.
+org.slf4j:slf4j-ext:1.7.34 not selected for indexing.
+org.slf4j:slf4j-ext:1.7.35 not selected for indexing.
+org.slf4j:slf4j-ext:1.7.36 not selected for indexing.
 org.slf4j:slf4j-ext:1.8.0-alpha0 not selected for indexing.
 org.slf4j:slf4j-ext:1.8.0-alpha1 not selected for indexing.
 org.slf4j:slf4j-ext:1.8.0-alpha2 not selected for indexing.
@@ -566,6 +612,8 @@ org.slf4j:slf4j-ext:2.0.0-alpha2 not selected for indexing.
 org.slf4j:slf4j-ext:2.0.0-alpha3 not selected for indexing.
 org.slf4j:slf4j-ext:2.0.0-alpha4 not selected for indexing.
 org.slf4j:slf4j-ext:2.0.0-alpha5 not selected for indexing.
+org.slf4j:slf4j-ext:2.0.0-alpha6 not selected for indexing.
+org.slf4j:slf4j-ext:2.0.0-alpha7 not selected for indexing.
 org.slf4j:slf4j-jcl:1.0-rc2 not selected for indexing.
 org.slf4j:slf4j-jcl:1.0-rc3 not selected for indexing.
 org.slf4j:slf4j-jcl:1.0-rc5 not selected for indexing.
@@ -636,8 +684,14 @@ org.slf4j:slf4j-jcl:1.7.29 not selected for indexing.
 org.slf4j:slf4j-jcl:1.7.30 not selected for indexing.
 org.slf4j:slf4j-jcl:1.7.31 not selected for indexing.
 org.slf4j:slf4j-jcl:1.7.32 not selected for indexing.
+org.slf4j:slf4j-jcl:1.7.33 not selected for indexing.
+org.slf4j:slf4j-jcl:1.7.34 not selected for indexing.
+org.slf4j:slf4j-jcl:1.7.35 not selected for indexing.
+org.slf4j:slf4j-jcl:1.7.36 not selected for indexing.
 org.slf4j:slf4j-jdk-platform-logging:2.0.0-alpha4 not selected for indexing.
 org.slf4j:slf4j-jdk-platform-logging:2.0.0-alpha5 not selected for indexing.
+org.slf4j:slf4j-jdk-platform-logging:2.0.0-alpha6 not selected for indexing.
+org.slf4j:slf4j-jdk-platform-logging:2.0.0-alpha7 not selected for indexing.
 org.slf4j:slf4j-jdk14:1.0-beta4 not selected for indexing.
 org.slf4j:slf4j-jdk14:1.0-beta7 not selected for indexing.
 org.slf4j:slf4j-jdk14:1.0-beta9 not selected for indexing.
@@ -712,6 +766,10 @@ org.slf4j:slf4j-jdk14:1.7.29 not selected for indexing.
 org.slf4j:slf4j-jdk14:1.7.30 not selected for indexing.
 org.slf4j:slf4j-jdk14:1.7.31 not selected for indexing.
 org.slf4j:slf4j-jdk14:1.7.32 not selected for indexing.
+org.slf4j:slf4j-jdk14:1.7.33 not selected for indexing.
+org.slf4j:slf4j-jdk14:1.7.34 not selected for indexing.
+org.slf4j:slf4j-jdk14:1.7.35 not selected for indexing.
+org.slf4j:slf4j-jdk14:1.7.36 not selected for indexing.
 org.slf4j:slf4j-jdk14:1.8.0-alpha0 not selected for indexing.
 org.slf4j:slf4j-jdk14:1.8.0-alpha1 not selected for indexing.
 org.slf4j:slf4j-jdk14:1.8.0-alpha2 not selected for indexing.
@@ -725,6 +783,8 @@ org.slf4j:slf4j-jdk14:2.0.0-alpha2 not selected for indexing.
 org.slf4j:slf4j-jdk14:2.0.0-alpha3 not selected for indexing.
 org.slf4j:slf4j-jdk14:2.0.0-alpha4 not selected for indexing.
 org.slf4j:slf4j-jdk14:2.0.0-alpha5 not selected for indexing.
+org.slf4j:slf4j-jdk14:2.0.0-alpha6 not selected for indexing.
+org.slf4j:slf4j-jdk14:2.0.0-alpha7 not selected for indexing.
 org.slf4j:slf4j-log4j12:1.0-beta9 not selected for indexing.
 org.slf4j:slf4j-log4j12:1.0-rc1 not selected for indexing.
 org.slf4j:slf4j-log4j12:1.0-rc2 not selected for indexing.
@@ -797,6 +857,10 @@ org.slf4j:slf4j-log4j12:1.7.29 not selected for indexing.
 org.slf4j:slf4j-log4j12:1.7.30 not selected for indexing.
 org.slf4j:slf4j-log4j12:1.7.31 not selected for indexing.
 org.slf4j:slf4j-log4j12:1.7.32 not selected for indexing.
+org.slf4j:slf4j-log4j12:1.7.33 not selected for indexing.
+org.slf4j:slf4j-log4j12:1.7.34 not selected for indexing.
+org.slf4j:slf4j-log4j12:1.7.35 not selected for indexing.
+org.slf4j:slf4j-log4j12:1.7.36 not selected for indexing.
 org.slf4j:slf4j-log4j12:1.8.0-alpha0 not selected for indexing.
 org.slf4j:slf4j-log4j12:1.8.0-alpha1 not selected for indexing.
 org.slf4j:slf4j-log4j12:1.8.0-alpha2 not selected for indexing.
@@ -810,6 +874,8 @@ org.slf4j:slf4j-log4j12:2.0.0-alpha2 not selected for indexing.
 org.slf4j:slf4j-log4j12:2.0.0-alpha3 not selected for indexing.
 org.slf4j:slf4j-log4j12:2.0.0-alpha4 not selected for indexing.
 org.slf4j:slf4j-log4j12:2.0.0-alpha5 not selected for indexing.
+org.slf4j:slf4j-log4j12:2.0.0-alpha6 not selected for indexing.
+org.slf4j:slf4j-log4j12:2.0.0-alpha7 not selected for indexing.
 org.slf4j:slf4j-log4j13:1.0 not selected for indexing.
 org.slf4j:slf4j-log4j13:1.0.1 not selected for indexing.
 org.slf4j:slf4j-migrator:1.5.0 not selected for indexing.
@@ -865,6 +931,10 @@ org.slf4j:slf4j-migrator:1.7.29 not selected for indexing.
 org.slf4j:slf4j-migrator:1.7.30 not selected for indexing.
 org.slf4j:slf4j-migrator:1.7.31 not selected for indexing.
 org.slf4j:slf4j-migrator:1.7.32 not selected for indexing.
+org.slf4j:slf4j-migrator:1.7.33 not selected for indexing.
+org.slf4j:slf4j-migrator:1.7.34 not selected for indexing.
+org.slf4j:slf4j-migrator:1.7.35 not selected for indexing.
+org.slf4j:slf4j-migrator:1.7.36 not selected for indexing.
 org.slf4j:slf4j-migrator:1.8.0-alpha0 not selected for indexing.
 org.slf4j:slf4j-migrator:1.8.0-alpha1 not selected for indexing.
 org.slf4j:slf4j-migrator:1.8.0-alpha2 not selected for indexing.
@@ -874,6 +944,8 @@ org.slf4j:slf4j-migrator:1.8.0-beta2 not selected for indexing.
 org.slf4j:slf4j-migrator:1.8.0-beta4 not selected for indexing.
 org.slf4j:slf4j-migrator:2.0.0-alpha4 not selected for indexing.
 org.slf4j:slf4j-migrator:2.0.0-alpha5 not selected for indexing.
+org.slf4j:slf4j-migrator:2.0.0-alpha6 not selected for indexing.
+org.slf4j:slf4j-migrator:2.0.0-alpha7 not selected for indexing.
 org.slf4j:slf4j-nop:1.0-beta4 not selected for indexing.
 org.slf4j:slf4j-nop:1.0-beta7 not selected for indexing.
 org.slf4j:slf4j-nop:1.0-beta9 not selected for indexing.
@@ -948,6 +1020,10 @@ org.slf4j:slf4j-nop:1.7.29 not selected for indexing.
 org.slf4j:slf4j-nop:1.7.30 not selected for indexing.
 org.slf4j:slf4j-nop:1.7.31 not selected for indexing.
 org.slf4j:slf4j-nop:1.7.32 not selected for indexing.
+org.slf4j:slf4j-nop:1.7.33 not selected for indexing.
+org.slf4j:slf4j-nop:1.7.34 not selected for indexing.
+org.slf4j:slf4j-nop:1.7.35 not selected for indexing.
+org.slf4j:slf4j-nop:1.7.36 not selected for indexing.
 org.slf4j:slf4j-nop:1.8.0-alpha0 not selected for indexing.
 org.slf4j:slf4j-nop:1.8.0-alpha1 not selected for indexing.
 org.slf4j:slf4j-nop:1.8.0-alpha2 not selected for indexing.
@@ -961,6 +1037,8 @@ org.slf4j:slf4j-nop:2.0.0-alpha2 not selected for indexing.
 org.slf4j:slf4j-nop:2.0.0-alpha3 not selected for indexing.
 org.slf4j:slf4j-nop:2.0.0-alpha4 not selected for indexing.
 org.slf4j:slf4j-nop:2.0.0-alpha5 not selected for indexing.
+org.slf4j:slf4j-nop:2.0.0-alpha6 not selected for indexing.
+org.slf4j:slf4j-nop:2.0.0-alpha7 not selected for indexing.
 org.slf4j:slf4j-parent:1.1.0-beta0 not selected for indexing.
 org.slf4j:slf4j-parent:1.1.0-RC1 not selected for indexing.
 org.slf4j:slf4j-parent:1.1.0 not selected for indexing.
@@ -1025,6 +1103,10 @@ org.slf4j:slf4j-parent:1.7.29 not selected for indexing.
 org.slf4j:slf4j-parent:1.7.30 not selected for indexing.
 org.slf4j:slf4j-parent:1.7.31 not selected for indexing.
 org.slf4j:slf4j-parent:1.7.32 not selected for indexing.
+org.slf4j:slf4j-parent:1.7.33 not selected for indexing.
+org.slf4j:slf4j-parent:1.7.34 not selected for indexing.
+org.slf4j:slf4j-parent:1.7.35 not selected for indexing.
+org.slf4j:slf4j-parent:1.7.36 not selected for indexing.
 org.slf4j:slf4j-parent:1.8.0-alpha0 not selected for indexing.
 org.slf4j:slf4j-parent:1.8.0-alpha1 not selected for indexing.
 org.slf4j:slf4j-parent:1.8.0-alpha2 not selected for indexing.
@@ -1038,6 +1120,14 @@ org.slf4j:slf4j-parent:2.0.0-alpha2 not selected for indexing.
 org.slf4j:slf4j-parent:2.0.0-alpha3 not selected for indexing.
 org.slf4j:slf4j-parent:2.0.0-alpha4 not selected for indexing.
 org.slf4j:slf4j-parent:2.0.0-alpha5 not selected for indexing.
+org.slf4j:slf4j-parent:2.0.0-alpha6 not selected for indexing.
+org.slf4j:slf4j-parent:2.0.0-alpha7 not selected for indexing.
+org.slf4j:slf4j-reload4j:1.7.33 not selected for indexing.
+org.slf4j:slf4j-reload4j:1.7.34 not selected for indexing.
+org.slf4j:slf4j-reload4j:1.7.35 not selected for indexing.
+org.slf4j:slf4j-reload4j:1.7.36 not selected for indexing.
+org.slf4j:slf4j-reload4j:2.0.0-alpha6 not selected for indexing.
+org.slf4j:slf4j-reload4j:2.0.0-alpha7 not selected for indexing.
 org.slf4j:slf4j-simple:1.0-beta4 not selected for indexing.
 org.slf4j:slf4j-simple:1.0-beta7 not selected for indexing.
 org.slf4j:slf4j-simple:1.0-beta9 not selected for indexing.
@@ -1112,6 +1202,10 @@ org.slf4j:slf4j-simple:1.7.29 not selected for indexing.
 org.slf4j:slf4j-simple:1.7.30 not selected for indexing.
 org.slf4j:slf4j-simple:1.7.31 not selected for indexing.
 org.slf4j:slf4j-simple:1.7.32 not selected for indexing.
+org.slf4j:slf4j-simple:1.7.33 not selected for indexing.
+org.slf4j:slf4j-simple:1.7.34 not selected for indexing.
+org.slf4j:slf4j-simple:1.7.35 not selected for indexing.
+org.slf4j:slf4j-simple:1.7.36 not selected for indexing.
 org.slf4j:slf4j-simple:1.8.0-alpha0 not selected for indexing.
 org.slf4j:slf4j-simple:1.8.0-alpha1 not selected for indexing.
 org.slf4j:slf4j-simple:1.8.0-alpha2 not selected for indexing.
@@ -1125,6 +1219,8 @@ org.slf4j:slf4j-simple:2.0.0-alpha2 not selected for indexing.
 org.slf4j:slf4j-simple:2.0.0-alpha3 not selected for indexing.
 org.slf4j:slf4j-simple:2.0.0-alpha4 not selected for indexing.
 org.slf4j:slf4j-simple:2.0.0-alpha5 not selected for indexing.
+org.slf4j:slf4j-simple:2.0.0-alpha6 not selected for indexing.
+org.slf4j:slf4j-simple:2.0.0-alpha7 not selected for indexing.
 org.slf4j:slf4j-site:1.1.0-RC0 not selected for indexing.
 org.slf4j:slf4j-site:1.1.0-RC1 not selected for indexing.
 org.slf4j:slf4j-site:1.1.0 not selected for indexing.
