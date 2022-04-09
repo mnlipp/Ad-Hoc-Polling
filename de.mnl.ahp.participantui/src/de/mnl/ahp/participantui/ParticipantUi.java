@@ -44,7 +44,6 @@ import org.jdrupes.httpcodec.types.Converters;
 import org.jdrupes.httpcodec.types.CookieList;
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.ClassChannel;
-import org.jgrapes.core.Components;
 import org.jgrapes.core.annotation.Handler;
 import org.jgrapes.core.annotation.HandlerDefinition.ChannelReplacements;
 import org.jgrapes.http.HttpRequestHandlerFactory;
@@ -68,7 +67,7 @@ import org.jgrapes.io.events.Purge;
 public class ParticipantUi extends FreeMarkerRequestHandler {
 
     private static Map<VotingController.State, String> stateToPage
-        = Components.mapOf(
+        = Map.of(
             State.Authorized, "votePage.ftl.html",
             State.Voted, "byePage.ftl.html");
 
@@ -77,16 +76,16 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
 
     private Channel ahpSvcChannel;
 
-    public ParticipantUi(Channel componentChannel,
-            Map<Object, Object> properties) {
+    @SuppressWarnings("unchecked")
+    public ParticipantUi(Channel componentChannel, Map<?, ?> properties) {
         super(componentChannel, ChannelReplacements.create().add(
-            AhpSvcChannel.class, (Channel) properties.getOrDefault(
-                "AdHocPollingServiceChannel", componentChannel)),
+            AhpSvcChannel.class, ((Map<String,Channel>) properties)
+                .getOrDefault("AdHocPollingServiceChannel", componentChannel)),
             ParticipantUi.class.getClassLoader(),
             ParticipantUi.class.getPackage().getName().replace('.', '/'),
-            (URI) properties.getOrDefault(
-                HttpRequestHandlerFactory.PREFIX, ""));
-        this.ahpSvcChannel = (Channel) properties.getOrDefault(
+            ((Map<String,URI>) properties).getOrDefault(
+                HttpRequestHandlerFactory.PREFIX, URI.create("/")));
+        this.ahpSvcChannel = ((Map<String,Channel>) properties).getOrDefault(
             "AdHocPollingServiceChannel", componentChannel);
         // Because this handler provides a "top-level" page, we have to adapt
         // the

@@ -23,6 +23,7 @@ import java.net.InetSocketAddress;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Map;
 import java.util.Optional;
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.Component;
@@ -95,7 +96,7 @@ public class Application extends Component implements BundleActivator {
             type -> {
                 switch (type) {
                 case "de.mnl.ahp.participantui.ParticipantUi":
-                    return Arrays.asList(Components.mapOf(
+                    return Arrays.asList(Map.of(
                         HttpRequestHandlerFactory.PREFIX, URI.create("/"),
                         "AdHocPollingServiceChannel", app.channel()));
                 default:
@@ -120,8 +121,7 @@ public class Application extends Component implements BundleActivator {
                 switch (type) {
                 case "org.jgrapes.webconsole.provider.gridstack.GridstackProvider":
                     return Arrays.asList(
-                        Components.mapOf("configuration",
-                            "CoreWithJQUiPlugin"));
+                        Map.of("configuration", "CoreWithJQUiPlugin"));
                 default:
                     return Arrays.asList(Collections.emptyMap());
                 }
@@ -131,7 +131,7 @@ public class Application extends Component implements BundleActivator {
             type -> {
                 switch (type) {
                 case "de.mnl.ahp.conlets.management.AdminConlet":
-                    return Arrays.asList(Components.mapOf(
+                    return Arrays.asList(Map.of(
                         "AdHocPollingServiceChannel", app.channel()));
                 default:
                     return Arrays.asList(Collections.emptyMap());

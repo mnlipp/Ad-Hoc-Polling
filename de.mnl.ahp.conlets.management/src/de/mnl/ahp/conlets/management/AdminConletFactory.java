@@ -42,11 +42,12 @@ public class AdminConletFactory implements ConletComponentFactory {
 	/* (non-Javadoc)
 	 * @see org.jgrapes.core.ComponentFactory#create(org.jgrapes.core.Channel, java.util.Map)
 	 */
-	@Override
-	public Optional<ComponentType> create(
-			Channel componentChannel, Map<Object,Object> properties) {
+    @SuppressWarnings("unchecked")
+    @Override
+    public Optional<ComponentType> create(
+            Channel componentChannel, Map<?, ?> properties) {
 		return Optional.of(new AdminConlet(componentChannel, 
-				(Channel)properties.getOrDefault(
+				((Map<String,Channel>)properties).getOrDefault(
 						"AdHocPollingServiceChannel", componentChannel)));
 	}
 

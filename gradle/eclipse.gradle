@@ -39,12 +39,14 @@ eclipse {
                     entries.removeAll {
                         it in org.gradle.plugins.ide.eclipse.model.Library
                     }
-                    // Mark test source folders
-                    entries.each {
-                        if (it in org.gradle.plugins.ide.eclipse.model.AbstractClasspathEntry &&
-                            it.entryAttributes['gradle_used_by_scope'] == 'test') {
-                            it.entryAttributes['test'] = true
+                    entries.each { entry ->
+                        // Mark test source folders
+                        /*
+                        if (entry in org.gradle.plugins.ide.eclipse.model.AbstractClasspathEntry &&
+                            entry.entryAttributes['gradle_used_by_scope'] == 'test') {
+                            entry.entryAttributes['test'] = true
                         }
+                        */
                     }
                 }
             }

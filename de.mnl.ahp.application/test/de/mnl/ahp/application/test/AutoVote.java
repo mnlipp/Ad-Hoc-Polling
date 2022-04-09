@@ -36,7 +36,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
-import org.jgrapes.core.Components;
 
 /**
  *
@@ -79,13 +78,12 @@ public class AutoVote {
         String html = httpClient.get(url);
         assert html.indexOf("body") > 0;
         // Submit code
-        html = httpClient.post(url, Components.mapOf(
+        html = httpClient.post(url, Map.of(
             "code", "" + code,
             "submit_code", ""));
         // Submit chosen
         int chosen = (int) (Math.random() * 6 + 1);
-        html = httpClient.post(url, Components.mapOf(
-            "chosen", "" + chosen));
+        html = httpClient.post(url, Map.of("chosen", "" + chosen));
     }
 
     public class HttpClient {

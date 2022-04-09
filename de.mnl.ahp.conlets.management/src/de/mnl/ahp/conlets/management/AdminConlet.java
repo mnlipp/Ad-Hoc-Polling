@@ -28,6 +28,7 @@ import freemarker.template.Template;
 import freemarker.template.TemplateNotFoundException;
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 import org.jdrupes.json.JsonObject;
 import org.jgrapes.core.Channel;
@@ -36,17 +37,16 @@ import org.jgrapes.core.Event;
 import org.jgrapes.core.Manager;
 import org.jgrapes.core.annotation.Handler;
 import org.jgrapes.core.annotation.HandlerDefinition.ChannelReplacements;
-import org.jgrapes.webconsole.base.AbstractConlet.ConletBaseModel;
 import org.jgrapes.webconsole.base.Conlet.RenderMode;
+import org.jgrapes.webconsole.base.ConletBaseModel;
 import org.jgrapes.webconsole.base.ConsoleSession;
 import org.jgrapes.webconsole.base.WebConsoleUtils;
-import org.jgrapes.webconsole.base.events.AddConletRequest;
 import org.jgrapes.webconsole.base.events.AddConletType;
 import org.jgrapes.webconsole.base.events.AddPageResources.ScriptResource;
 import org.jgrapes.webconsole.base.events.ConsoleReady;
 import org.jgrapes.webconsole.base.events.NotifyConletModel;
 import org.jgrapes.webconsole.base.events.NotifyConletView;
-import org.jgrapes.webconsole.base.events.RenderConletRequest;
+import org.jgrapes.webconsole.base.events.RenderConlet;
 import org.jgrapes.webconsole.base.events.RenderConletRequestBase;
 import org.jgrapes.webconsole.base.freemarker.FreeMarkerConlet;
 
@@ -94,58 +94,41 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
                 WebConsoleUtils.uriFromPath("Admin-style.css")));
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see org.jgrapes.portal.AbstractPortlet#doAddPortlet
-     */
-    protected ConletTrackingInfo doAddConlet(AddConletRequest event,
-            ConsoleSession channel) throws Exception {
-        String conletId = generateConletId();
-        AdminModel conletModel = putInSession(channel.browserSession(),
-            new AdminModel(conletId));
-        return new ConletTrackingInfo(conletId)
-            .addModes(renderConlet(event, channel, conletModel));
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see org.jgrapes.portal.AbstractPortlet#doRenderPortlet
-     */
     @Override
-    protected Set<RenderMode> doRenderConlet(RenderConletRequest event,
-            ConsoleSession channel, String conletId,
-            AdminModel retrievedState)
-            throws Exception {
-        return renderConlet(event, channel, retrievedState);
+    protected Optional<AdminModel> createStateRepresentation(
+            RenderConletRequestBase<?> event,
+            ConsoleSession channel, String conletId) throws IOException {
+        return Optional.of(new AdminModel(conletId));
     }
-
-    private Set<RenderMode> renderConlet(RenderConletRequestBase<?> event,
-            ConsoleSession channel, AdminModel conletModel)
-            throws TemplateNotFoundException, MalformedTemplateNameException,
-            ParseException, IOException {
+    
+    @Override
+    protected Set<RenderMode> doRenderConlet(RenderConletRequestBase<?> event,
+            ConsoleSession consoleSession, String conletId,
+            AdminModel conletState) throws Exception {
         Set<RenderMode> renderedAs = new HashSet<>(event.renderAs());
         if (event.renderAs().contains(RenderMode.Preview)) {
             Template tpl
                 = freemarkerConfig().getTemplate("Admin-preview.ftl.html");
-            channel.respond(new RenderConletFromTemplate(event,
-                type(), conletModel.getConletId(),
-                tpl, fmModel(event, channel, conletModel))
-                    .setRenderAs(
-                        RenderMode.Preview.addModifiers(event.renderAs()))
-                    .setSupportedModes(MODES));
-            fire(new ListPolls(channel.browserSession().id()), ahpSvcChannel);
+            consoleSession.respond(new RenderConlet(type(), conletId,
+                processTemplate(event, tpl,
+                    fmModel(event, consoleSession, conletId, conletState)))
+                        .setRenderAs(
+                            RenderMode.Preview.addModifiers(event.renderAs()))
+                        .setSupportedModes(MODES));
+            fire(new ListPolls(
+                consoleSession.browserSession().id()), ahpSvcChannel);
         }
         if (event.renderAs().contains(RenderMode.View)) {
             Template tpl
                 = freemarkerConfig().getTemplate("Admin-view.ftl.html");
-            channel.respond(new RenderConletFromTemplate(event,
-                type(), conletModel.getConletId(),
-                tpl, fmModel(event, channel, conletModel))
-                    .setRenderAs(
-                        RenderMode.View.addModifiers(event.renderAs())));
-            fire(new ListPolls(channel.browserSession().id()), ahpSvcChannel);
+            consoleSession.respond(new RenderConlet(type(), conletId,
+                processTemplate(event, tpl,
+                    fmModel(event, consoleSession, conletId, conletState)))
+                        .setRenderAs(
+                            RenderMode.View.addModifiers(event.renderAs()))
+                        .setSupportedModes(MODES));
+            fire(new ListPolls(
+                consoleSession.browserSession().id()), ahpSvcChannel);
         }
         return renderedAs;
     }
@@ -156,7 +139,7 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
      * @see org.jgrapes.portal.AbstractPortlet#doNotifyPortletModel
      */
     @Override
-    protected void doNotifyConletModel(NotifyConletModel event,
+    protected void doUpdateConletState(NotifyConletModel event,
             ConsoleSession channel, AdminModel conletModel)
             throws Exception {
         event.stop();
