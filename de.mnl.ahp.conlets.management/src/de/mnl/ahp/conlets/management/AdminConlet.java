@@ -62,7 +62,7 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
     public static final String DELETABLE = "Deletable";
     private static final Set<RenderMode> MODES = RenderMode.asSet(
         RenderMode.Preview, RenderMode.StickyPreview, RenderMode.View);
-    
+
     private Channel ahpSvcChannel;
 
     /**
@@ -84,7 +84,7 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
             ParseException, IOException {
         // Add conlet resources to page
         channel.respond(new AddConletType(type())
-            .setDisplayNames(
+            .addRenderMode(RenderMode.Preview).setDisplayNames(
                 localizations(channel.supportedLocales(), "conletName"))
             .addScript(new ScriptResource()
                 .setRequires("chart.js")
@@ -100,7 +100,7 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
             ConsoleSession channel, String conletId) throws IOException {
         return Optional.of(new AdminModel(conletId));
     }
-    
+
     @Override
     protected Set<RenderMode> doRenderConlet(RenderConletRequestBase<?> event,
             ConsoleSession consoleSession, String conletId,
@@ -115,6 +115,7 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
                         .setRenderAs(
                             RenderMode.Preview.addModifiers(event.renderAs()))
                         .setSupportedModes(MODES));
+            renderedAs.add(RenderMode.Preview);
             fire(new ListPolls(
                 consoleSession.browserSession().id()), ahpSvcChannel);
         }
@@ -127,6 +128,7 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
                         .setRenderAs(
                             RenderMode.View.addModifiers(event.renderAs()))
                         .setSupportedModes(MODES));
+            renderedAs.add(RenderMode.View);
             fire(new ListPolls(
                 consoleSession.browserSession().id()), ahpSvcChannel);
         }
@@ -175,7 +177,7 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
             }
             for (String conletId : conletIds(ps)) {
                 ps.respond(new NotifyConletView(type(), conletId,
-                "pollExpired", event.pollId()));
+                    "pollExpired", event.pollId()));
             }
         }
     }
