@@ -1,10 +1,23 @@
-<div data-portlet-title="${_("conletName")}" class="AdHocPolling-admin-view">
+<div data-portlet-title="${_("conletName")}" class="AdHocPolling-admin-view"
+    data-jgwc-on-load="deMnlAhpAdmin.initView"
+    data-jgwc-on-unload="JGConsole.jgwc.unmountVueApps">
 
-  <div class="pollGroups">
-  </div>
+    <aash-accordion :header-type="'h2'" :panel-class="'pollGroup'"
+        :always-expanded="true">
+        <aash-accordion-section v-for="poll in polls"
+            :title="poll.pollId.toString() + ' (' + localize('started at')
+                + ': ' + formatTime(poll.startedAt) + ')'">
+            <div class="table-wrapper"><table class="table--basic"><tbody>
+                <tr v-for="(count, index) in poll.counters">
+                    <th class="ui-widget-header">{{ "#" + (index + 1).toString() }}</th>
+                    <td>{{ count }}</td> 
+                </tr>
+                <tr>
+                    <th class="ui-widget-header">{{ localize("Total") }}</th>
+                    <td>{{ total(poll.counters) }}</td></tr>
+            </tbody></table></div>
+            <div class="chart-wrapper"><bar-graph :data="poll.counters"/></canvas></div>
+        </aash-accordion-section>
+    </aash-accordion>
 
 </div>
-
-<script>
-deMnlAhpAdmin.initView($( '[data-conlet-id="${conlet.conletId}"] .pollGroups' ));
-</script>

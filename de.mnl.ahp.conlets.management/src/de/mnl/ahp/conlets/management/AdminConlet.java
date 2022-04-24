@@ -48,6 +48,7 @@ import org.jgrapes.webconsole.base.events.NotifyConletModel;
 import org.jgrapes.webconsole.base.events.NotifyConletView;
 import org.jgrapes.webconsole.base.events.RenderConlet;
 import org.jgrapes.webconsole.base.events.RenderConletRequestBase;
+import org.jgrapes.webconsole.base.events.SetLocale;
 import org.jgrapes.webconsole.base.freemarker.FreeMarkerConlet;
 
 /**
@@ -87,9 +88,9 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
             .addRenderMode(RenderMode.Preview).setDisplayNames(
                 localizations(channel.supportedLocales(), "conletName"))
             .addScript(new ScriptResource()
-                .setRequires("chart.js")
                 .setScriptUri(event.renderSupport().conletResource(
-                    type(), "Admin-functions.ftl.js")))
+                    type(), "Admin-functions.js"))
+                .setScriptType("module"))
             .addCss(event.renderSupport(),
                 WebConsoleUtils.uriFromPath("Admin-style.css")));
     }
@@ -180,6 +181,12 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
                     "pollExpired", event.pollId()));
             }
         }
+    }
+
+    @Override
+    protected boolean doSetLocale(SetLocale event, ConsoleSession channel,
+            String conletId) throws Exception {
+        return true;
     }
 
     public class AdminModel extends ConletBaseModel {
