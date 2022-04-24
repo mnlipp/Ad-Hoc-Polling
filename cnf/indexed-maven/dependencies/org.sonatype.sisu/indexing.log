@@ -1,9 +1,0 @@
-org.sonatype.sisu:sisu-guice:2.1.7 is dependency of org.sonatype.sisu:sisu-inject-bean:1.4.2, indexing...
-org.sonatype.sisu:sisu-guice:2.1.7 has dependencies: javax.inject:javax.inject:1, aopalliance:aopalliance:1.0
-org.sonatype.sisu:sisu-guice:2.1.7 indexed.
-org.sonatype.sisu:sisu-inject-bean:1.4.2 is dependency of org.sonatype.sisu:sisu-inject-plexus:1.4.2, indexing...
-org.sonatype.sisu:sisu-inject-bean:1.4.2 has dependencies: org.sonatype.sisu:sisu-guice:2.1.7
-org.sonatype.sisu:sisu-inject-bean:1.4.2 indexed.
-org.sonatype.sisu:sisu-inject-plexus:1.4.2 is dependency of org.apache.maven:maven-plugin-api:3.0, indexing...
-org.sonatype.sisu:sisu-inject-plexus:1.4.2 has dependencies: org.codehaus.plexus:plexus-component-annotations:1.5.4, org.codehaus.plexus:plexus-classworlds:2.2.3, org.sonatype.sisu:sisu-inject-bean:1.4.2, org.codehaus.plexus:plexus-utils:2.0.5
-org.sonatype.sisu:sisu-inject-plexus:1.4.2 indexed.
