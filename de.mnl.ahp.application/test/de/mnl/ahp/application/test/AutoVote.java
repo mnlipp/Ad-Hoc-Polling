@@ -156,7 +156,10 @@ public class AutoVote {
             }
             try (BufferedReader buffer = new BufferedReader(
                 new InputStreamReader(conn.getInputStream()))) {
-                return buffer.lines().collect(Collectors.joining("\n"));
+                String response
+                    = buffer.lines().collect(Collectors.joining("\n"));
+                conn.disconnect();
+                return response;
             }
         }
     }
