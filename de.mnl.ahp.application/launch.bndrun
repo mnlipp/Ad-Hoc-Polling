@@ -8,6 +8,7 @@
     osgi.identity;filter:='(osgi.identity=de.mnl.ahp.participantui)',\
     osgi.identity;filter:='(osgi.identity=de.mnl.ahp.conlets.management)',\
     osgi.identity;filter:='(&(osgi.identity=org.jgrapes.webconsole.base)(version>=0.31.3.ga))',\
+    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.webconsole.vuejs)(version>=0.13.0.ga))',\
     osgi.identity;filter:='(osgi.identity=org.jgrapes.webconlet.sysinfo)',\
 	osgi.identity;filter:='(osgi.identity=org.jgrapes.webconlet.markdowndisplay)',\
 	osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.webconlet.bundles)',\
@@ -44,7 +45,7 @@
 	org.apache.felix.log.storeDebug=true,\
     java.util.logging.config.file=jul-debug.properties
 	
--runvm: -Xmx300m
+-runvm: -Xmx2g
 
 -runbundles: \
 	org.apache.aries.spifly.dynamic.bundle;version='[1.3.4,1.3.5)',\
@@ -71,19 +72,18 @@
 	org.jgrapes.util;version='[1.4.0,1.4.1)',\
 	org.jgrapes.osgi.core;version='[1.1.0,1.1.1)',\
 	org.jgrapes.webconsole.base;version='[0.36.0,0.36.1)',\
-	org.jgrapes.webconsole.bootstrap4;version='[0.38.0,0.38.1)',\
-	org.jgrapes.webconsole.provider.chartjs;version='[0.29.0,0.29.1)',\
+	org.jgrapes.webconsole.vuejs;version='[0.14.0,0.14.1)',\
+	org.jgrapes.webconsole.provider.chartjs;version='[0.31.0,0.31.1)',\
 	org.jgrapes.webconsole.provider.fontawesome;version='[0.28.0,0.28.1)',\
 	org.jgrapes.webconsole.provider.gridstack;version='[0.9.0,0.9.1)',\
-	org.jgrapes.webconsole.provider.jgwcvuecomponents;version='[0.8.0,0.8.1)',\
+	org.jgrapes.webconsole.provider.jgwcvuecomponents;version='[0.10.0,0.10.1)',\
 	org.jgrapes.webconsole.provider.jquery;version='[0.2.0,0.2.1)',\
 	org.jgrapes.webconsole.provider.jqueryui;version='[0.2.0,0.2.1)',\
 	org.jgrapes.webconsole.provider.jquitouchpunch;version='[0.2.0,0.2.1)',\
 	org.jgrapes.webconsole.provider.markdownit;version='[0.27.0,0.27.1)',\
-	org.jgrapes.webconsole.provider.moment;version='[0.5.0,0.5.1)',\
 	org.jgrapes.webconsole.provider.vue;version='[0.5.0,0.5.1)',\
 	org.jgrapes.webconlet.markdowndisplay;version='[0.34.0,0.34.1)',\
-	org.jgrapes.webconlet.sysinfo;version='[0.34.0,0.34.1)',\
+	org.jgrapes.webconlet.sysinfo;version='[0.37.0,0.37.1)',\
 	org.jgrapes.osgi.webconlet.bundles;version='[0.18.0,0.18.1)',\
 	org.jgrapes.osgi.webconlet.services;version='[0.16.0,0.16.1)',\
 	de.mnl.ahp.conlets.management;version=snapshot

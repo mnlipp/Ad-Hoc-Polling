@@ -46,7 +46,7 @@ import org.jgrapes.webconsole.base.ConsoleWeblet;
 import org.jgrapes.webconsole.base.KVStoreBasedConsolePolicy;
 import org.jgrapes.webconsole.base.PageResourceProviderFactory;
 import org.jgrapes.webconsole.base.WebConsole;
-import org.jgrapes.webconsole.bootstrap4.Bootstrap4Weblet;
+import org.jgrapes.webconsole.vuejs.VueJsConsoleWeblet;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
@@ -104,8 +104,8 @@ public class Application extends Component implements BundleActivator {
                 }
             }));
         ConsoleWeblet consoleWeblet
-            = httpServer.attach(new Bootstrap4Weblet(httpChannel, Channel.SELF,
-                new URI("/admin")))
+            = httpServer.attach(new VueJsConsoleWeblet(httpChannel,
+                Channel.SELF, new URI("/admin")))
                 .prependClassTemplateLoader(getClass())
                 .prependResourceBundleProvider(getClass())
                 .setConsoleSessionInactivityTimeout(300000);
