@@ -29,12 +29,9 @@
     height: 100%;
 }
 
-.AdHocPolling-admin-view .pollGroups {
+.AdHocPolling-admin-view [data-aash-role="accordion"] .pollGroup {
     height: 100%;
-}
-
-.AdHocPolling-admin-view .pollGroup {
-    height: 100%;
+    padding: 1em;
 }
 
 .AdHocPolling-admin-view .pollGroup table {
