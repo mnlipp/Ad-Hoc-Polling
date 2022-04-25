@@ -1,7 +1,7 @@
 Bundle-Name: Ad Hoc Polling Management UI
-Bundle-Version: 1.1.0.-${tstamp}-SNAPSHOT
-#Bundle-Version: 1.0.0.ga
-Bundle-Copyright: Michael N. Lipp (c) 2018
+#Bundle-Version: 1.1.0.-${tstamp}-SNAPSHOT
+Bundle-Version: 1.1.0.ga
+Bundle-Copyright: Michael N. Lipp (c) 2018, 2022
 Bundle-License: http://www.gnu.org/licenses/gpl-3.0.txt
 Require-Capability: \
 	org.jgrapes.webconsole.page.resource;filter:="(name=chart.js)"
