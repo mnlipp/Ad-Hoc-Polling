@@ -45,7 +45,7 @@
 	org.apache.felix.log.storeDebug=true,\
     java.util.logging.config.file=jul-debug.properties
 	
--runvm: -Xmx2g
+-runvm: -Xmx300m
 
 -runbundles: \
 	org.apache.aries.spifly.dynamic.bundle;version='[1.3.4,1.3.5)',\
@@ -65,11 +65,11 @@
 	org.osgi.util.function;version='[1.1.0,1.1.1)',\
 	org.osgi.util.promise;version='[1.1.1,1.1.2)',\
 	org.jdrupes.httpcodec;version='[2.3.0,2.3.1)',\
-	org.jgrapes.core;version='[1.4.0,1.4.1)',\
-	org.jgrapes.http;version='[1.4.0,1.4.1)',\
-	org.jgrapes.http.freemarker;version='[1.4.0,1.4.1)',\
-	org.jgrapes.io;version='[1.4.0,1.4.1)',\
-	org.jgrapes.util;version='[1.4.0,1.4.1)',\
+	org.jgrapes.core;version='[1.5.0,1.5.1)',\
+	org.jgrapes.http;version='[1.5.0,1.5.1)',\
+	org.jgrapes.http.freemarker;version='[1.5.0,1.5.1)',\
+	org.jgrapes.io;version='[1.5.0,1.5.1)',\
+	org.jgrapes.util;version='[1.5.0,1.5.1)',\
 	org.jgrapes.osgi.core;version='[1.1.0,1.1.1)',\
 	org.jgrapes.webconsole.base;version='[0.36.0,0.36.1)',\
 	org.jgrapes.webconsole.vuejs;version='[0.14.0,0.14.1)',\

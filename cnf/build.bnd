@@ -5,8 +5,8 @@
         location=cnf/indexed-maven; \
         releaseUrls="https://repo1.maven.org/maven2/"; \
         logIndexing=true
-
-#         snapshotUrls="https://oss.sonatype.org/content/repositories/snapshots/";
+        
+#        snapshotUrls="https://oss.sonatype.org/content/repositories/snapshots/";
 
 -pluginpath.IndexedMaved: \
     ${workspace}/cnf/cache/de.mnl.osgi.bnd.repository-4.1.0.jar;\
