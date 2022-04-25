@@ -1,0 +1,27 @@
+// Additional jars for publishing
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+apply plugin: 'org.ajoberstar.grgit'
+
+task releaseTag {
+    dependsOn "cleanJar"
+    doLast {
+        String name = project.name.startsWith(project.group + ".") ?
+            project.name.substring(project.group.length() + 1) : project.name
+        name = name.replace('.', '-')
+        String tag = name + "-" + project.version
+        grgit.tag.add(name: tag, message: "Released.")
+        grgit.push(refsOrSpecs: [tag])
+    }
+}
+
+build.mustRunAfter "releaseTag"
+
+afterEvaluate {
+    if(project.name == "cnf") {
+        tasks.matching { it.group == "upload" ||
+            it.group == "publishing" }.all {
+            enabled = false
+        }
+    }
+}
