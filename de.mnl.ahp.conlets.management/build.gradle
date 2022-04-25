@@ -1,6 +1,10 @@
 apply plugin: 'java-library'
 apply plugin: 'com.github.node-gradle.node'
 
+node {
+    download = true
+}
+
 task extractDependencies(type: Copy) {
     from configurations.compileClasspath
         .findAll{ it.name.contains('.provider.')
