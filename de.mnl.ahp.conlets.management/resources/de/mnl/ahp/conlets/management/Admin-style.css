@@ -29,7 +29,7 @@
     height: 100%;
 }
 
-.AdHocPolling-admin-view [data-aash-role="accordion"] .pollGroup {
+.AdHocPolling-admin-view [data-aash-role="accordion"] .pollGroup .table-wrapper {
     height: 100%;
     padding: 1em;
 }
