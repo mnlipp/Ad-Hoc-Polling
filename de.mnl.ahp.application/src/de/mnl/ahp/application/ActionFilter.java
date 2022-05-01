@@ -31,23 +31,23 @@ import org.jgrapes.webconsole.base.events.NotifyConletModel;
  */
 public class ActionFilter extends Component {
 
-	public ActionFilter(Channel componentChannel) {
-		super(componentChannel);
-	}
+    public ActionFilter(Channel componentChannel) {
+        super(componentChannel);
+    }
 
-	@Handler(priority=1000)
+    @Handler(priority = 1000)
     public void onNotifyPortletModel(NotifyConletModel event,
             ConsoleSession channel) {
         if (event.conletId()
-            .startsWith("org.jgrapes.osgi.webconlet.bundles.BundleListConlet-")
+            .startsWith("org.jgrapes.osgi.webconlet.bundles.BundleListConlet~")
             && !event.method().equals("sendDetails")) {
             event.stop();
-			ResourceBundle resources = ResourceBundle.getBundle(
+            ResourceBundle resources = ResourceBundle.getBundle(
                 ActionFilter.class.getPackage().getName() + ".app-l10n");
-			channel.respond(new DisplayNotification("<span>"
-					+ resources.getString("actionDisabled")
-					+ "</span>")
-					.addOption("autoClose", 5000));
-		}
-	}
+            channel.respond(new DisplayNotification("<span>"
+                + resources.getString("actionDisabled")
+                + "</span>")
+                    .addOption("autoClose", 5000));
+        }
+    }
 }
