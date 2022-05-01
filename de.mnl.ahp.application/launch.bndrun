@@ -72,11 +72,11 @@
 	org.jgrapes.util;version='[1.5.0,1.5.1)',\
 	org.jgrapes.osgi.core;version='[1.2.0,1.2.1)',\
 	org.jgrapes.webconsole.base;version='[0.36.0,0.36.1)',\
-	org.jgrapes.webconsole.vuejs;version='[0.14.0,0.14.1)',\
+	org.jgrapes.webconsole.vuejs;version='[0.15.0,0.15.1)',\
 	org.jgrapes.webconsole.provider.chartjs;version='[0.31.0,0.31.1)',\
 	org.jgrapes.webconsole.provider.fontawesome;version='[0.28.0,0.28.1)',\
 	org.jgrapes.webconsole.provider.gridstack;version='[0.9.0,0.9.1)',\
-	org.jgrapes.webconsole.provider.jgwcvuecomponents;version='[0.10.0,0.10.1)',\
+	org.jgrapes.webconsole.provider.jgwcvuecomponents;version='[0.12.0,0.12.1)',\
 	org.jgrapes.webconsole.provider.jquery;version='[0.2.0,0.2.1)',\
 	org.jgrapes.webconsole.provider.jqueryui;version='[0.2.0,0.2.1)',\
 	org.jgrapes.webconsole.provider.jquitouchpunch;version='[0.2.0,0.2.1)',\
