@@ -1,4 +1,4 @@
--runfw: org.apache.felix.framework;version='[7.0.3,7.0.3]'
+-runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
 
 -runrequires: \
     osgi.identity;filter:='(&(osgi.identity=org.jgrapes.core)(version>=1.2.0.ga))',\
@@ -30,8 +30,7 @@
     osgi.identity;filter:='(&(osgi.identity=de.mnl.osgi.lf4osgi)(!(version>=2.2.0.ga)))',\
     osgi.identity;filter:='(&(osgi.identity=de.mnl.osgi.jul2osgi)(!(version>=1.6.0.ga)))',\
     osgi.identity;filter:='(&(osgi.identity=org.jgrapes.core)(!(version>=1.4.0.ga)))',\
-    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.webconsole.base)(!(version>=0.36.0.ga)))',\
-    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.webconsole.jqueryui)(!(version>=0.34.0.ga)))',\
+    osgi.identity;filter:='(&(osgi.identity=org.jgrapes.webconsole.base)(!(version>=0.41.0.ga)))',\
     osgi.identity;filter:='(osgi.identity=org.jgrapes.portal.*)',\
     osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portal)',\
     osgi.identity;filter:='(osgi.identity=org.jgrapes.osgi.portal.*)',\
@@ -61,29 +60,30 @@
 	org.freemarker.freemarker;version='[2.3.31,2.3.32)',\
 	org.jdrupes.json;version='[2.3.1,2.3.2)',\
 	com.sun.activation.javax.activation;version='[1.2.0,1.2.1)',\
-	org.apache.felix.scr;version='[2.2.0,2.2.1)',\
+	org.apache.felix.scr;version='[2.2.2,2.2.3)',\
+	org.osgi.service.component;version='[1.5.0,1.5.1)',\
 	org.osgi.util.function;version='[1.2.0,1.2.1)',\
 	org.osgi.util.promise;version='[1.2.0,1.2.1)',\
-	org.jdrupes.httpcodec;version='[2.3.0,2.3.1)',\
-	org.jgrapes.core;version='[1.5.0,1.5.1)',\
-	org.jgrapes.http;version='[1.5.0,1.5.1)',\
-	org.jgrapes.http.freemarker;version='[1.5.0,1.5.1)',\
-	org.jgrapes.io;version='[1.5.0,1.5.1)',\
-	org.jgrapes.util;version='[1.5.0,1.5.1)',\
+	org.jdrupes.httpcodec;version='[2.4.0,2.4.1)',\
+	org.jgrapes.core;version='[1.8.0,1.8.1)',\
+	org.jgrapes.http;version='[1.8.0,1.8.1)',\
+	org.jgrapes.http.freemarker;version='[1.8.0,1.8.1)',\
+	org.jgrapes.io;version='[1.8.0,1.8.1)',\
+	org.jgrapes.util;version='[1.8.0,1.8.1)',\
 	org.jgrapes.osgi.core;version='[1.2.0,1.2.1)',\
-	org.jgrapes.webconsole.base;version='[0.36.0,0.36.1)',\
-	org.jgrapes.webconsole.vuejs;version='[0.15.0,0.15.1)',\
-	org.jgrapes.webconsole.provider.chartjs;version='[0.31.0,0.31.1)',\
-	org.jgrapes.webconsole.provider.fontawesome;version='[0.28.0,0.28.1)',\
-	org.jgrapes.webconsole.provider.gridstack;version='[0.9.0,0.9.1)',\
-	org.jgrapes.webconsole.provider.jgwcvuecomponents;version='[0.12.0,0.12.1)',\
-	org.jgrapes.webconsole.provider.jquery;version='[0.2.0,0.2.1)',\
-	org.jgrapes.webconsole.provider.jqueryui;version='[0.2.0,0.2.1)',\
-	org.jgrapes.webconsole.provider.jquitouchpunch;version='[0.2.0,0.2.1)',\
-	org.jgrapes.webconsole.provider.markdownit;version='[0.27.0,0.27.1)',\
-	org.jgrapes.webconsole.provider.vue;version='[0.6.0,0.6.1)',\
-	org.jgrapes.webconlet.markdowndisplay;version='[0.34.0,0.34.1)',\
-	org.jgrapes.webconlet.sysinfo;version='[0.37.0,0.37.1)',\
-	org.jgrapes.osgi.webconlet.bundles;version='[0.18.0,0.18.1)',\
-	org.jgrapes.osgi.webconlet.services;version='[0.16.0,0.16.1)',\
+	org.jgrapes.webconsole.base;version='[0.41.0,0.41.1)',\
+	org.jgrapes.webconsole.vuejs;version='[0.20.0,0.20.1)',\
+	org.jgrapes.webconsole.provider.chartjs;version='[0.31.2,0.31.3)',\
+	org.jgrapes.webconsole.provider.forkawesome;version='[0.1.0,0.1.1)',\
+	org.jgrapes.webconsole.provider.gridstack;version='[0.9.2,0.9.3)',\
+	org.jgrapes.webconsole.provider.jgwcvuecomponents;version='[0.13.1,0.13.2)',\
+	org.jgrapes.webconsole.provider.jquery;version='[0.2.2,0.2.3)',\
+	org.jgrapes.webconsole.provider.jqueryui;version='[0.2.2,0.2.3)',\
+	org.jgrapes.webconsole.provider.jquitouchpunch;version='[0.2.2,0.2.3)',\
+	org.jgrapes.webconsole.provider.markdownit;version='[0.27.2,0.27.3)',\
+	org.jgrapes.webconsole.provider.vue;version='[0.6.2,0.6.3)',\
+	org.jgrapes.webconlet.markdowndisplay;version='[0.35.1,0.35.2)',\
+	org.jgrapes.webconlet.sysinfo;version='[0.38.0,0.38.1)',\
+	org.jgrapes.osgi.webconlet.bundles;version='[0.19.0,0.19.1)',\
+	org.jgrapes.osgi.webconlet.services;version='[0.17.0,0.17.1)',\
 	de.mnl.ahp.conlets.management;version=snapshot

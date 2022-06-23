@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1656014276375">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.eclipse.org/legal/epl-2.0, https://www.gnu.org/software/classpath/license.html"/>
+      <attribute name="osgi.identity" value="jakarta.servlet-api"/>
+      <attribute name="documentation" value="https://www.eclipse.org"/>
+      <attribute name="description" value="Jakarta Servlet 5.0"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="5.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.servlet.annotation,jakarta.servlet.descriptor"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.servlet-api"/>
+      <attribute name="bundle-version" value="5.0.0" type="Version"/>
+      <attribute name="version" value="5.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.servlet"/>
+      <attribute name="bnd.hashes" value="-889611341,582125982,105324336,-2034418015,2104342424,751709705,1835013370,-505546721,-1028763535,519500815,1763359886,-1815320937,651921846,-1914944466,63430794,-1185989415,-304577930,-646157787,1055910343,-814288538,-1626103862,-1109124152,333931718,-2079444752,-1357160802,-1724244054,-1655244667,992181926,-227764354,-1481941846,876597416,-1914371098,-1893105648,773340030,468651145,1357376902,-973927379,1190835895,2097581148,-1399519600,-1505060425,-516446721,298738067" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.servlet"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.servlet-api"/>
+      <attribute name="bundle-version" value="5.0.0" type="Version"/>
+      <attribute name="version" value="5.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.servlet.annotation"/>
+      <attribute name="bnd.hashes" value="-237880306,-1513767771,673468006,809233134,230558249,291348863,-1648144251,480826316,1190237321,284952584,564450417" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="jakarta.servlet-api"/>
+      <attribute name="bundle-version" value="5.0.0" type="Version"/>
+      <attribute name="version" value="5.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.servlet.descriptor"/>
+      <attribute name="bnd.hashes" value="2047001240,-983719790,19062426" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.servlet"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.servlet-api"/>
+      <attribute name="bundle-version" value="5.0.0" type="Version"/>
+      <attribute name="version" value="5.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.servlet.http"/>
+      <attribute name="bnd.hashes" value="2024076932,-1747315136,211542141,-195053167,63083346,-214660895,2008517598,-681764139,212373710,-1273681576,1761221698,-340574461,-272878677,-1028171519,-1178910100,-1224724899,104926114,491323478,-2120397591,-2086701641,-194025820,938706052,2480147,1815949057,1606434098" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="jakarta.servlet-api"/>
+      <attribute name="bundle-version" value="5.0.0" type="Version"/>
+      <attribute name="version" value="5.0.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.servlet.resources"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="5.0.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="jakarta.servlet-api"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="5.0.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="jakarta.servlet-api"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="jakarta.servlet-api"/>
+      <attribute name="from" value="jakarta.servlet:jakarta.servlet-api:5.0.0"/>
+      <attribute name="version" value="5.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="307850" type="Long"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/jakarta/servlet/jakarta.servlet-api/5.0.0/jakarta.servlet-api-5.0.0.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="33D3A5BDA82C7D2F1B898685FAA954F1FC34F7B0AE5C2F6CCC6D051E8A10973B"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.servlet)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.servlet"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.servlet.annotation)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.servlet.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.servlet.descriptor)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.servlet.descriptor"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>
