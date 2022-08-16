@@ -21,6 +21,7 @@ package de.mnl.ahp.application;
 import de.mnl.ahp.service.AdHocPollingService;
 import java.net.InetSocketAddress;
 import java.net.URI;
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Map;
@@ -88,7 +89,8 @@ public class Application extends Component implements BundleActivator {
             tcpChannel, Request.In.Get.class, Request.In.Post.class));
 
         // Build HTTP application layer
-        httpServer.attach(new InMemorySessionManager(httpChannel));
+        httpServer.attach(new InMemorySessionManager(httpChannel, "/admin")
+            .setIdName("id-admin"));
         httpServer.attach(new LanguageSelector(httpChannel));
         httpServer.attach(new FileStorage(httpChannel, 65536));
         httpServer.attach(new ComponentCollector<>(
@@ -108,7 +110,7 @@ public class Application extends Component implements BundleActivator {
                 Channel.SELF, new URI("/admin")))
                 .prependClassTemplateLoader(getClass())
                 .prependResourceBundleProvider(getClass())
-                .setConsoleSessionInactivityTimeout(300000);
+                .setConnectionInactivityTimeout(Duration.ofMinutes(5));
         WebConsole console = consoleWeblet.console();
         console.attach(new BrowserLocalBackedKVStore(
             console, consoleWeblet.prefix().getPath()));

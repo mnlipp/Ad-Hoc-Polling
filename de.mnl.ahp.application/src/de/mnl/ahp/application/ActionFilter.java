@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 import org.jgrapes.core.Channel;
 import org.jgrapes.core.Component;
 import org.jgrapes.core.annotation.Handler;
-import org.jgrapes.webconsole.base.ConsoleSession;
+import org.jgrapes.webconsole.base.ConsoleConnection;
 import org.jgrapes.webconsole.base.events.DisplayNotification;
 import org.jgrapes.webconsole.base.events.NotifyConletModel;
 
@@ -37,7 +37,7 @@ public class ActionFilter extends Component {
 
     @Handler(priority = 1000)
     public void onNotifyPortletModel(NotifyConletModel event,
-            ConsoleSession channel) {
+            ConsoleConnection channel) {
         if (event.conletId()
             .startsWith("org.jgrapes.osgi.webconlet.bundles.BundleListConlet~")
             && !event.method().equals("sendDetails")) {

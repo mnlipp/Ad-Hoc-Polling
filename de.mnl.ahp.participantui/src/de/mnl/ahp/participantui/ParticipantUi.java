@@ -79,13 +79,13 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
     @SuppressWarnings("unchecked")
     public ParticipantUi(Channel componentChannel, Map<?, ?> properties) {
         super(componentChannel, ChannelReplacements.create().add(
-            AhpSvcChannel.class, ((Map<String,Channel>) properties)
+            AhpSvcChannel.class, ((Map<String, Channel>) properties)
                 .getOrDefault("AdHocPollingServiceChannel", componentChannel)),
             ParticipantUi.class.getClassLoader(),
             ParticipantUi.class.getPackage().getName().replace('.', '/'),
-            ((Map<String,URI>) properties).getOrDefault(
+            ((Map<String, URI>) properties).getOrDefault(
                 HttpRequestHandlerFactory.PREFIX, URI.create("/")));
-        this.ahpSvcChannel = ((Map<String,Channel>) properties).getOrDefault(
+        this.ahpSvcChannel = ((Map<String, Channel>) properties).getOrDefault(
             "AdHocPollingServiceChannel", componentChannel);
         // Because this handler provides a "top-level" page, we have to adapt
         // the
@@ -104,7 +104,7 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
         RequestHandler.Evaluator.add(this, "onGet", pattern);
         RequestHandler.Evaluator.add(this, "onPost", pattern);
         attach(new InMemorySessionManager(componentChannel, pattern, 1100,
-            stripped.isEmpty() ? "/" : stripped)).setIdName("voter");
+            stripped.isEmpty() ? "/" : stripped)).setIdName("id-voter");
     }
 
     @Override
@@ -147,7 +147,7 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
         prefixPattern().pathRemainder(event.requestUri()).ifPresent(path -> {
             boolean success;
             if (path.isEmpty()) {
-                success = event.associated(Session.class).map(session -> {
+                success = event.associatedGet(Session.class).map(session -> {
                     VotingController vc
                         = (VotingController) session.computeIfAbsent(
                             VotingController.class,
@@ -194,7 +194,7 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
             event.stop();
             dec.process(event).ifPresent(fields -> {
                 // Request has been fully decoded, process
-                dec.request().associated(Session.class).map(session -> {
+                dec.request().associatedGet(Session.class).map(session -> {
                     if (fields.containsKey("setLocale")) {
                         Selection selection
                             = (Selection) session.get(Selection.class);
@@ -283,7 +283,7 @@ public class ParticipantUi extends FreeMarkerRequestHandler {
     }
 
     private void processVote(PollData pollData, Request.In request) {
-        request.associated(Session.class).ifPresent(session -> {
+        request.associatedGet(Session.class).ifPresent(session -> {
             VotingController vc = (VotingController) session
                 .computeIfAbsent(VotingController.class,
                     k -> new VotingController());

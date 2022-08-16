@@ -39,7 +39,7 @@ import org.jgrapes.core.annotation.Handler;
 import org.jgrapes.core.annotation.HandlerDefinition.ChannelReplacements;
 import org.jgrapes.webconsole.base.Conlet.RenderMode;
 import org.jgrapes.webconsole.base.ConletBaseModel;
-import org.jgrapes.webconsole.base.ConsoleSession;
+import org.jgrapes.webconsole.base.ConsoleConnection;
 import org.jgrapes.webconsole.base.WebConsoleUtils;
 import org.jgrapes.webconsole.base.events.AddConletType;
 import org.jgrapes.webconsole.base.events.AddPageResources.ScriptResource;
@@ -80,7 +80,7 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
     }
 
     @Handler
-    public void onConsoleReady(ConsoleReady event, ConsoleSession channel)
+    public void onConsoleReady(ConsoleReady event, ConsoleConnection channel)
             throws TemplateNotFoundException, MalformedTemplateNameException,
             ParseException, IOException {
         // Add conlet resources to page
@@ -98,13 +98,13 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
     @Override
     protected Optional<AdminModel> createStateRepresentation(
             RenderConletRequestBase<?> event,
-            ConsoleSession channel, String conletId) throws IOException {
+            ConsoleConnection channel, String conletId) throws IOException {
         return Optional.of(new AdminModel(conletId));
     }
 
     @Override
     protected Set<RenderMode> doRenderConlet(RenderConletRequestBase<?> event,
-            ConsoleSession consoleSession, String conletId,
+            ConsoleConnection consoleSession, String conletId,
             AdminModel conletState) throws Exception {
         Set<RenderMode> renderedAs = new HashSet<>(event.renderAs());
         if (event.renderAs().contains(RenderMode.Preview)) {
@@ -118,7 +118,7 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
                         .setSupportedModes(MODES));
             renderedAs.add(RenderMode.Preview);
             fire(new ListPolls(
-                consoleSession.browserSession().id()), ahpSvcChannel);
+                consoleSession.session().id()), ahpSvcChannel);
         }
         if (event.renderAs().contains(RenderMode.View)) {
             Template tpl
@@ -131,7 +131,7 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
                         .setSupportedModes(MODES));
             renderedAs.add(RenderMode.View);
             fire(new ListPolls(
-                consoleSession.browserSession().id()), ahpSvcChannel);
+                consoleSession.session().id()), ahpSvcChannel);
         }
         return renderedAs;
     }
@@ -143,12 +143,12 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
      */
     @Override
     protected void doUpdateConletState(NotifyConletModel event,
-            ConsoleSession channel, AdminModel conletModel)
+            ConsoleConnection channel, AdminModel conletModel)
             throws Exception {
         event.stop();
 
         if (event.method().equals("createPoll")) {
-            fire(new CreatePoll(channel.browserSession().id()), ahpSvcChannel);
+            fire(new CreatePoll(channel.session().id()), ahpSvcChannel);
             return;
         }
     }
@@ -159,12 +159,12 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
         json.setField("pollId", event.pollData().pollId())
             .setField("startedAt", event.pollData().startedAt().toEpochMilli())
             .setField("counters", event.pollData().counter());
-        for (ConsoleSession ps : trackedSessions()) {
-            if (!ps.browserSession().id().equals(event.pollData().adminId())) {
+        for (ConsoleConnection conn : trackedConnections()) {
+            if (!conn.session().id().equals(event.pollData().adminId())) {
                 continue;
             }
-            for (String conletId : conletIds(ps)) {
-                ps.respond(new NotifyConletView(type(), conletId,
+            for (String conletId : conletIds(conn)) {
+                conn.respond(new NotifyConletView(type(), conletId,
                     "updatePoll", json));
             }
         }
@@ -172,25 +172,24 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
 
     @Handler(channels = AhpSvcChannel.class)
     public void onPollExpired(PollExpired event) throws IOException {
-        for (ConsoleSession ps : trackedSessions()) {
-            if (!ps.browserSession().id().equals(event.adminId())) {
+        for (ConsoleConnection conn : trackedConnections()) {
+            if (!conn.session().id().equals(event.adminId())) {
                 continue;
             }
-            for (String conletId : conletIds(ps)) {
-                ps.respond(new NotifyConletView(type(), conletId,
+            for (String conletId : conletIds(conn)) {
+                conn.respond(new NotifyConletView(type(), conletId,
                     "pollExpired", event.pollId()));
             }
         }
     }
 
     @Override
-    protected boolean doSetLocale(SetLocale event, ConsoleSession channel,
+    protected boolean doSetLocale(SetLocale event, ConsoleConnection channel,
             String conletId) throws Exception {
         return true;
     }
 
     public class AdminModel extends ConletBaseModel {
-        private static final long serialVersionUID = -7400194644538987104L;
 
         public AdminModel(String conletId) {
             super(conletId);
