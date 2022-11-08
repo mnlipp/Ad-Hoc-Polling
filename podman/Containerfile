@@ -1,0 +1,12 @@
+FROM eclipse-temurin:17-alpine
+
+ADD launch.jar /tmp
+
+WORKDIR /home/ahp
+RUN jar xf /tmp/launch.jar \
+	&& rm /tmp/launch.jar
+
+# CMD ["java","-version"]
+# CMD ["bash"]
+
+ENTRYPOINT /bin/sh start
