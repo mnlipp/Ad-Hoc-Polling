@@ -39,7 +39,7 @@ import org.jgrapes.http.events.Request;
 import org.jgrapes.io.FileStorage;
 import org.jgrapes.io.NioDispatcher;
 import org.jgrapes.io.util.PermitsPool;
-import org.jgrapes.net.TcpServer;
+import org.jgrapes.net.SocketServer;
 import org.jgrapes.osgi.core.ComponentCollector;
 import org.jgrapes.webconsole.base.BrowserLocalBackedKVStore;
 import org.jgrapes.webconsole.base.ConletComponentFactory;
@@ -75,7 +75,7 @@ public class Application extends Component implements BundleActivator {
 
         // Create a TCP server listening on port 5001
         Channel tcpChannel = new NamedChannel("TCP");
-        app.attach(new TcpServer(tcpChannel)
+        app.attach(new SocketServer(tcpChannel)
             .setServerAddress(new InetSocketAddress(
                 Optional.ofNullable(System.getenv("PORT"))
                     .map(Integer::parseInt).orElse(5001)))

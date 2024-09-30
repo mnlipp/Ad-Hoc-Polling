@@ -18,5 +18,11 @@ if (plugins.hasPlugin('biz.aQute.bnd')) {
 
 if (project.name.startsWith("de.mnl.")) {
     apply from: "${project.rootDir}/gradle/eclipse.gradle"
-    apply from: "${project.rootDir}/gradle/publishing.gradle"
+    apply from: "${project.rootDir}/gradle/publishing.gradle"    
+
+    jar {
+        dependsOn 'eclipseJdt'
+        dependsOn 'eclipseProject'
+        dependsOn 'eclipseClasspath'
+    }
 }

@@ -5,7 +5,7 @@ let module = "build/generated/resources/de/mnl/ahp/conlets/management/Admin-func
 
 let pathsMap = {
     "vue": "../../page-resource/vue/vue.esm-browser.js",
-    "chartjs": "../../page-resource/chart.js/dist/chart.esm.js",
+    "chartjs": "../../page-resource/chart.js/auto.js",
     "jgconsole": "../../console-base-resource/jgconsole.js",
     "aash-plugin": "../../page-resource/aash-vue-components/lib/aash-vue-components.js",
     "jgwc": "../../page-resource/jgwc-vue-components/jgwc-components.js",

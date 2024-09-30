@@ -96,9 +96,8 @@ public class AdminConlet extends FreeMarkerConlet<AdminConlet.AdminModel> {
     }
 
     @Override
-    protected Optional<AdminModel> createStateRepresentation(
-            RenderConletRequestBase<?> event,
-            ConsoleConnection channel, String conletId) throws IOException {
+    protected Optional<AdminModel> createStateRepresentation(Event<?> event,
+            ConsoleConnection connection, String conletId) throws IOException {
         return Optional.of(new AdminModel(conletId));
     }
 
