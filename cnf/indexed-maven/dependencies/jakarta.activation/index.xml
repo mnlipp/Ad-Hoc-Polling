@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1727681504782">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.eclipse.org/org/documents/edl-v10.php"/>
+      <attribute name="osgi.identity" value="jakarta.activation-api"/>
+      <attribute name="documentation" value="https://www.eclipse.org"/>
+      <attribute name="description" value="Jakarta Activation API 2.1 Specification"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.1.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="jakarta.activation-api"/>
+      <attribute name="bundle-version" value="2.1.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation"/>
+      <attribute name="version" value="2.1.3" type="Version"/>
+      <attribute name="bnd.hashes" value="-1359889218,64058019,206291577,-1517362639,838515274,202913531,608817551,879465504,-2126306139,-1029031803,1462319168,1913542064,1446596385,-1581448570,-1883382773,-796606708,-1952191496,-1327476306,1083548516,-2052561703,-1641495510,423188491,1002652865,-1475195750,-1131237297,-569689061,1505629994,-1627952364,-896685802" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.activation-api"/>
+      <attribute name="bundle-version" value="2.1.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation.spi"/>
+      <attribute name="version" value="2.1.3" type="Version"/>
+      <attribute name="bnd.hashes" value="1976753673,2119206684" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.1.3" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="jakarta.activation-api"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.1.3" type="Version"/>
+      <attribute name="osgi.wiring.host" value="jakarta.activation-api"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="jakarta.activation-api"/>
+      <attribute name="from" value="jakarta.activation:jakarta.activation-api:2.1.3"/>
+      <attribute name="version" value="2.1.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="66514" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar"/>
+      <attribute name="osgi.content" value="01B176D718A169263E78290691FC479977186BCC6B333487325084D6586F4627"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.activation)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.activation.spi)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation.spi"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.serviceloader.processor)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.serviceloader">
+      <directive name="filter" value="(osgi.serviceloader=jakarta.activation.spi.MailcapRegistryProvider)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <attribute name="osgi.serviceloader" value="jakarta.activation.spi.MailcapRegistryProvider"/>
+    </requirement>
+    <requirement namespace="osgi.serviceloader">
+      <directive name="filter" value="(osgi.serviceloader=jakarta.activation.spi.MimeTypeRegistryProvider)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <attribute name="osgi.serviceloader" value="jakarta.activation.spi.MimeTypeRegistryProvider"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.eclipse.org/org/documents/edl-v10.php"/>
+      <attribute name="osgi.identity" value="jakarta.activation-api"/>
+      <attribute name="documentation" value="https://www.eclipse.org"/>
+      <attribute name="description" value="Jakarta Activation API 2.1 Specification"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.1.1" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="jakarta.activation-api"/>
+      <attribute name="bundle-version" value="2.1.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation"/>
+      <attribute name="version" value="2.1.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1359889218,64058019,206291577,-1517362639,838515274,202913531,608817551,879465504,-2126306139,-1029031803,1462319168,1913542064,1446596385,-1581448570,-1883382773,-796606708,-1952191496,-1327476306,1083548516,-2052561703,-1641495510,423188491,1002652865,-1475195750,-1131237297,-569689061,1505629994,-1627952364,-896685802,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.activation-api"/>
+      <attribute name="bundle-version" value="2.1.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation.spi"/>
+      <attribute name="version" value="2.1.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1976753673,2119206684,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.1.1" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="jakarta.activation-api"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.1.1" type="Version"/>
+      <attribute name="osgi.wiring.host" value="jakarta.activation-api"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="jakarta.activation-api"/>
+      <attribute name="from" value="jakarta.activation:jakarta.activation-api:2.1.1"/>
+      <attribute name="version" value="2.1.1" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="66651" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/jakarta/activation/jakarta.activation-api/2.1.1/jakarta.activation-api-2.1.1.jar"/>
+      <attribute name="osgi.content" value="33BAE3F0F12DBB5A7AFC81D802A130359CDB44BBC7FB4B213F49B349D0491A04"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.activation)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.activation.spi)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation.spi"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.serviceloader.processor)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.serviceloader">
+      <directive name="filter" value="(osgi.serviceloader=jakarta.activation.spi.MailcapRegistryProvider)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <attribute name="osgi.serviceloader" value="jakarta.activation.spi.MailcapRegistryProvider"/>
+    </requirement>
+    <requirement namespace="osgi.serviceloader">
+      <directive name="filter" value="(osgi.serviceloader=jakarta.activation.spi.MimeTypeRegistryProvider)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <attribute name="osgi.serviceloader" value="jakarta.activation.spi.MimeTypeRegistryProvider"/>
+    </requirement>
+  </resource>
+</repository>

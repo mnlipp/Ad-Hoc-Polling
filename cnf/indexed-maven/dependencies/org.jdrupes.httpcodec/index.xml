@@ -1,5 +1,205 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1660661116675">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1727681504914">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.gnu.org/licenses/lgpl-3.0.txt"/>
+      <attribute name="copyright" value="Michael N. Lipp (c) 2016, 2022"/>
+      <attribute name="osgi.identity" value="org.jdrupes.httpcodec"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.1.0.rel" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
+      <attribute name="bundle-version" value="3.1.0.rel" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec"/>
+      <attribute name="version" value="2.5.0.202405081851" type="Version"/>
+      <attribute name="bnd.hashes" value="-1674974707,781133641,572770538,-1850559427,65282038,-1087880156,57285884,2080171618,-1087398572,-921269129,1668066181" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.protocols.http"/>
+      <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
+      <attribute name="bundle-version" value="3.1.0.rel" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.plugin"/>
+      <attribute name="version" value="2.5.0.202405081851" type="Version"/>
+      <attribute name="bnd.hashes" value="705421325" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.types"/>
+      <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
+      <attribute name="bundle-version" value="3.1.0.rel" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.http"/>
+      <attribute name="version" value="2.5.0.202405081851" type="Version"/>
+      <attribute name="bnd.hashes" value="-2137174962,-105625760,-1365304646,183670613,1197601159,1767090821,572770538,-1850559427,80204913,-230180228,914985812,-2134581966,763556268,2054681807,-676921145,543214857" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.protocols.http"/>
+      <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
+      <attribute name="bundle-version" value="3.1.0.rel" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.http.client"/>
+      <attribute name="version" value="2.5.0.202405081851" type="Version"/>
+      <attribute name="bnd.hashes" value="572770538,-1850559427,1374486101,1788963579" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.protocols.http"/>
+      <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
+      <attribute name="bundle-version" value="3.1.0.rel" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.http.server"/>
+      <attribute name="version" value="2.5.0.202405081851" type="Version"/>
+      <attribute name="bnd.hashes" value="572770538,-1850559427,229320061,-1360837677" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.plugin,org.jdrupes.httpcodec.protocols.http"/>
+      <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
+      <attribute name="bundle-version" value="3.1.0.rel" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.websocket"/>
+      <attribute name="version" value="2.5.0.202405081851" type="Version"/>
+      <attribute name="bnd.hashes" value="2058039921,1713880253,1701016828,1976205768,-1033923974,-1926770834,572770538,-1850559427,80204913,-862902872,911702613,282263168,-892397122,-1084077096,-1238040705,628886713,-1176258619" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
+      <attribute name="bundle-version" value="3.1.0.rel" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.types"/>
+      <attribute name="version" value="2.5.0.202405081851" type="Version"/>
+      <attribute name="bnd.hashes" value="1775887359,1263805933,-357800717,1654237568,-7033942,-1890386829,-881774545,-258242829,413284674,101444839,737166897,1041377327,-593651733,2170165,1901450463,728439064,-226669720,-151095115,1895597947,800844231,-374209575,1300171298,-150535906,450787496,-845154835,-957486040,-1520525224,-1825206679,420147311" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
+      <attribute name="bundle-version" value="3.1.0.rel" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.util"/>
+      <attribute name="version" value="2.5.0.202405081851" type="Version"/>
+      <attribute name="bnd.hashes" value="1241313161,782220809,-1664720686,-1259084839,-1868679665,2025009727" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.1.0.rel" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.jdrupes.httpcodec"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.1.0.rel" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.jdrupes.httpcodec"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.jdrupes.httpcodec"/>
+      <attribute name="from" value="org.jdrupes.httpcodec:httpcodec:3.1.0"/>
+      <attribute name="version" value="3.1.0.rel" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="runtime" value="jakarta.activation:jakarta.activation-api:[2.1.0,3.0.0)"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="318703" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/jdrupes/httpcodec/httpcodec/3.1.0/httpcodec-3.1.0.jar"/>
+      <attribute name="osgi.content" value="9924B7BA8C51DDE34E872E5CFCE2B2867ADC379E58A0393E88BAED8C66603403"/>
+    </capability>
+    <capability namespace="osgi.serviceloader">
+      <attribute name="osgi.serviceloader" value="org.jdrupes.httpcodec.plugin.UpgradeProvider"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.activation)(version&gt;=2.1.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.io)"/>
+      <attribute name="osgi.wiring.package" value="java.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.invoke)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.invoke"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.reflect)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.reflect"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.net)"/>
+      <attribute name="osgi.wiring.package" value="java.net"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.nio)"/>
+      <attribute name="osgi.wiring.package" value="java.nio"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.nio.charset)"/>
+      <attribute name="osgi.wiring.package" value="java.nio.charset"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.nio.file)"/>
+      <attribute name="osgi.wiring.package" value="java.nio.file"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.security)"/>
+      <attribute name="osgi.wiring.package" value="java.security"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.text)"/>
+      <attribute name="osgi.wiring.package" value="java.text"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.time)"/>
+      <attribute name="osgi.wiring.package" value="java.time"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.time.format)"/>
+      <attribute name="osgi.wiring.package" value="java.time.format"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.time.temporal)"/>
+      <attribute name="osgi.wiring.package" value="java.time.temporal"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
+      <attribute name="osgi.wiring.package" value="java.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.function)"/>
+      <attribute name="osgi.wiring.package" value="java.util.function"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.regex)"/>
+      <attribute name="osgi.wiring.package" value="java.util.regex"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.stream)"/>
+      <attribute name="osgi.wiring.package" value="java.util.stream"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.jdrupes.httpcodec)(version&gt;=2.5.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.jdrupes.httpcodec.plugin)(version&gt;=2.5.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.plugin"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.jdrupes.httpcodec.protocols.http)(version&gt;=2.5.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.http"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.jdrupes.httpcodec.types)(version&gt;=2.5.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.types"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.jdrupes.httpcodec.util)(version&gt;=2.5.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.util"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=17))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(osgi.extender=osgi.serviceloader.registrar)"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(osgi.extender=osgi.serviceloader.processor)"/>
+    </requirement>
+    <requirement namespace="osgi.serviceloader">
+      <directive name="filter" value="(osgi.serviceloader=org.jdrupes.httpcodec.plugin.UpgradeProvider)"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+  </resource>
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="http://www.gnu.org/licenses/lgpl-3.0.txt"/>
@@ -11,62 +211,62 @@
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.5.0.rel" type="Version"/>
-      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec"/>
+      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="bnd.hashes" value="-1674974707,781133641,572770538,-1850559427,65282038,-1087880156,57285884,2080171618,-1087398572,-921269129,1668066181" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.protocols.http"/>
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.5.0.rel" type="Version"/>
-      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.plugin"/>
+      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="bnd.hashes" value="705421325" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.types"/>
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.5.0.rel" type="Version"/>
-      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.http"/>
+      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="bnd.hashes" value="-2137174962,-105625760,-1365304646,183670613,1197601159,1767090821,572770538,-1850559427,80204913,-230180228,914985812,-2134581966,763556268,2054681807,-676921145,543214857" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.protocols.http"/>
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.5.0.rel" type="Version"/>
-      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.http.client"/>
+      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="bnd.hashes" value="572770538,-1850559427,1374486101,1788963579" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.protocols.http"/>
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.5.0.rel" type="Version"/>
-      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.http.server"/>
+      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="bnd.hashes" value="572770538,-1850559427,229320061,-1360837677" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.plugin,org.jdrupes.httpcodec.protocols.http"/>
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.5.0.rel" type="Version"/>
-      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.websocket"/>
+      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="bnd.hashes" value="2058039921,1713880253,1701016828,1976205768,-1033923974,-1926770834,572770538,-1850559427,80204913,-862902872,911702613,282263168,-892397122,-1084077096,-1238040705,628886713,-1176258619" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.5.0.rel" type="Version"/>
-      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.types"/>
+      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="bnd.hashes" value="1775887359,1263805933,-357800717,1654237568,-7033942,-1890386829,-881774545,-258242829,413284674,101444839,737166897,1041377327,-593651733,2170165,1901450463,728439064,-226669720,-151095115,1895597947,800844231,-374209575,1300171298,-150535906,450787496,-845154835,-957486040,-1520525224,-1825206679,420147311" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.5.0.rel" type="Version"/>
-      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.util"/>
+      <attribute name="version" value="2.5.0.202208121625" type="Version"/>
       <attribute name="bnd.hashes" value="1241313161,782220809,-1664720686,-1259084839,-1868679665,2025009727" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
@@ -87,8 +287,8 @@
     </capability>
     <capability namespace="osgi.content">
       <attribute name="size" value="316383" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/jdrupes/httpcodec/httpcodec/2.5.0/httpcodec-2.5.0.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/jdrupes/httpcodec/httpcodec/2.5.0/httpcodec-2.5.0.jar"/>
       <attribute name="osgi.content" value="B384B02EAA5BA5E3C8815EC81FAB617428D880CCAC5E8346FCE368C3001894C5"/>
     </capability>
     <capability namespace="osgi.serviceloader">
@@ -211,62 +411,62 @@
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.0.3.rel" type="Version"/>
-      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec"/>
+      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="bnd.hashes" value="-1674974707,781133641,572770538,-1850559427,65282038,-1087880156,57285884,2080171618,-1087398572,-921269129,1668066181,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.protocols.http"/>
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.0.3.rel" type="Version"/>
-      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.plugin"/>
+      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="bnd.hashes" value="705421325,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.types"/>
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.0.3.rel" type="Version"/>
-      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.http"/>
+      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="bnd.hashes" value="-2137174962,-105625760,-1365304646,183670613,1197601159,1767090821,572770538,-1850559427,80204913,-230180228,914985812,-2134581966,763556268,2054681807,-676921145,543214857,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.protocols.http"/>
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.0.3.rel" type="Version"/>
-      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.http.client"/>
+      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="bnd.hashes" value="572770538,-1850559427,1374486101,1788963579,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.protocols.http"/>
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.0.3.rel" type="Version"/>
-      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.http.server"/>
+      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="bnd.hashes" value="572770538,-1850559427,229320061,-1360837677,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.jdrupes.httpcodec,org.jdrupes.httpcodec.plugin,org.jdrupes.httpcodec.protocols.http"/>
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.0.3.rel" type="Version"/>
-      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.protocols.websocket"/>
+      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="bnd.hashes" value="2058039921,1713880253,1701016828,1976205768,-1033923974,-1926770834,572770538,-1850559427,80204913,-862902872,911702613,282263168,-892397122,-1084077096,-1238040705,628886713,-1176258619,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.0.3.rel" type="Version"/>
-      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.types"/>
+      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="bnd.hashes" value="1775887359,1263805933,-357800717,1654237568,-7033942,-1890386829,-258242829,413284674,101444839,737166897,1041377327,-593651733,2170165,1901450463,728439064,-226669720,-151095115,1895597947,800844231,-374209575,1300171298,-150535906,450787496,-845154835,-957486040,-1520525224,420147311,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="org.jdrupes.httpcodec"/>
       <attribute name="bundle-version" value="2.0.3.rel" type="Version"/>
-      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.jdrupes.httpcodec.util"/>
+      <attribute name="version" value="2.0.3.201906160934" type="Version"/>
       <attribute name="bnd.hashes" value="1241313161,782220809,-1664720686,-1259084839,-1868679665,2025009727,-1923478059" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
@@ -287,8 +487,8 @@
     </capability>
     <capability namespace="osgi.content">
       <attribute name="size" value="308017" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/jdrupes/httpcodec/httpcodec/2.0.3/httpcodec-2.0.3.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/jdrupes/httpcodec/httpcodec/2.0.3/httpcodec-2.0.3.jar"/>
       <attribute name="osgi.content" value="5ABEEF033C0F3DFC7B773CFB15A7602339D176B7E9CBF9B7D6D9A9C28AA628AA"/>
     </capability>
     <capability namespace="osgi.serviceloader">

@@ -1,122 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1641057461017">
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="documentation" value="https://github.com/FasterXML/jackson-core"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="com.fasterxml.jackson.core.async,com.fasterxml.jackson.core.format,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.sym,com.fasterxml.jackson.core.type,com.fasterxml.jackson.core.util"/>
-      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core"/>
-      <attribute name="bnd.hashes" value="2102359062,748621597,1204336351,2071943320,657418875,-997891534,-710234398,1209236463,1165,1978794667,847240413,-293016060,1335562599,-1952931001,-18957291,738820180,765053415,910937553,-762337588,-222858959,364663799,-25799004,-981244400,2009947896,1450638048,2016261304,596865879" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.async"/>
-      <attribute name="bnd.hashes" value="-2140142532,-1964375949,616297427" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.json,com.fasterxml.jackson.core.util"/>
-      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.base"/>
-      <attribute name="bnd.hashes" value="-1449548764,1028877232,734626387" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.util"/>
-      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.filter"/>
-      <attribute name="bnd.hashes" value="-1539080882,1946569390,1914811830,-206636367,-2130470466" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="com.fasterxml.jackson.core"/>
-      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.format"/>
-      <attribute name="bnd.hashes" value="175461191,-434218607,1155935,-834831343,1110255878" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.util"/>
-      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.io"/>
-      <attribute name="bnd.hashes" value="-738157917,1391231177,-341865251,-235909719,-1761873999,-1635930149,2121036707,-1192861204,-1909728799,1106303434,-1159559142,-1103551498,-840641835,-1153656183,1471399780" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.base,com.fasterxml.jackson.core.format,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.sym"/>
-      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.json"/>
-      <attribute name="bnd.hashes" value="-693759366,1385577157,1387105131,-1723764463,-514779656,-710995502,181953495,-1829473738,1018736314,757431416,1076197323" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.async,com.fasterxml.jackson.core.base,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.sym"/>
-      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.json.async"/>
-      <attribute name="bnd.hashes" value="-440496439,-1292403398" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.sym"/>
-      <attribute name="bnd.hashes" value="1530562008,-2098737362,-408974546,-1957402737,2420395,75032294,75032295,75032296,75032323" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="com.fasterxml.jackson.core"/>
-      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.type"/>
-      <attribute name="bnd.hashes" value="585914226,-1421180655,2022949208,843417045" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.io"/>
-      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.util"/>
-      <attribute name="bnd.hashes" value="-584620865,-943377516,-712958902,1113301914,1256583599,-466976099,1191000964,-454842845,-2034101035,-440939664,724986192,1508945388,2039171112,-231675197,650126367,-123382194,-935769107,-1937965862" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="com.fasterxml.jackson.core.jackson-core"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="2.9.4" type="Version"/>
-      <attribute name="osgi.wiring.host" value="com.fasterxml.jackson.core.jackson-core"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="com.fasterxml.jackson.core:jackson-core:2.9.4"/>
-      <attribute name="from" value="com.fasterxml.jackson.core:jackson-core:2.9.4"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="320923" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.4/jackson-core-2.9.4.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="66C2F96A70873328429C941A60F883173233F07A5E16E8B973D095FFC29F620C"/>
-    </capability>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
-    </requirement>
-  </resource>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1727681504920">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
@@ -130,94 +13,94 @@
       <directive name="uses" value="com.fasterxml.jackson.core.async,com.fasterxml.jackson.core.exc,com.fasterxml.jackson.core.format,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.json,com.fasterxml.jackson.core.sym,com.fasterxml.jackson.core.type,com.fasterxml.jackson.core.util"/>
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="1114690390,2102359062,748621597,1204336351,2071943320,354249820,657418875,685445846,-710234398,-1990478247,1209236463,1978794667,847240413,-293016060,1601302083,-1952931001,-18957291,738820180,765053415,910937553,-762337588,-222858959,364663799,-25799004,-981244400,802621198,547605696,1052448407,-1029172777,316139508,1293416465,2009947896,1450638048,2016261304,596865879" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.async"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="-2140142532,-1964375949,616297427" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.exc,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.json,com.fasterxml.jackson.core.util"/>
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.base"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="-1449548764,1028877232,734626387" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.util"/>
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.exc"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="-609351417,-129771623" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.util"/>
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.filter"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="-1539080882,1946569390,1914811830,507500796,-206636367,-2130470466" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="com.fasterxml.jackson.core"/>
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.format"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="175461191,-434218607,83459,-834831343,1110255878" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.util"/>
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.io"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="-1317467575,-738157917,1391231177,-341865251,-235909719,-1761873999,-1635930149,2121036707,-1192861204,-1909728799,1106303434,-1159559142,-1103551498,-840641835,-1153656183,1471399780" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.base,com.fasterxml.jackson.core.format,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.sym,com.fasterxml.jackson.core.util"/>
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.json"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="-693759366,1385577157,1387105131,-1723764463,640464472,-514779656,1849449279,-710995502,181953495,-1829473738,1018736314,757431416,1076197323" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.async,com.fasterxml.jackson.core.base,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.sym,com.fasterxml.jackson.core.util"/>
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.json.async"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="-440496439,-1292403398" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.sym"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="15113596,-2098737362,2000631306,-1957402737,2420395,75032294,75032295,75032296,75032323" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="com.fasterxml.jackson.core"/>
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.type"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="585914226,-1421180655,507500796,843417045" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.io"/>
       <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
       <attribute name="bundle-version" value="2.12.2" type="Version"/>
-      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.util"/>
+      <attribute name="version" value="2.12.2" type="Version"/>
       <attribute name="bnd.hashes" value="-584620865,-943377516,-712958902,1113301914,1592799883,176875129,838990376,-454842845,-2034101035,-440939664,-1320044989,-739622113,724986192,1508945388,2039171112,-231675197,650126367,-123382194,-935769107,2129459768,-1239088788,-1937965862" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
@@ -235,8 +118,8 @@
     </capability>
     <capability namespace="osgi.content">
       <attribute name="size" value="365219" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.12.2/jackson-core-2.12.2.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.12.2/jackson-core-2.12.2.jar"/>
       <attribute name="osgi.content" value="7883331763729B72735FDD8A117F32EB7D22695BABFB37CC99DF8392C196EFC3"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
@@ -285,6 +168,951 @@
     </requirement>
     <requirement namespace="osgi.ee">
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-annotations"/>
+      <attribute name="documentation" value="https://github.com/FasterXML/jackson"/>
+      <attribute name="description" value="Core annotations used for value types, used by Jackson data binding package."/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-annotations"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.annotation"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-2143956798,-1730020913,-1115255987,82420049,1852985508,893299240,-1253665297,-910115485,-360169678,81478746,10004988,1503657100,2403779,1410203140,1339134073,2062955168,685445846,-226015139,79847297,2068668191,2088128563,-3791948,1570960389,2147050746,-1719509555,1787976532,-687739768,-1970744704,1294146515,354011191,305596308,904181776,1955373444,-2046944515,289226943,-1693789615,-559087791,-1220842571,-1863288921,2622298,1151586113,-1816323811,2130,2363,2433880,-1730447312,-1730310643,704180132,912368969,-1910223923,75627436,70471460,-1287957735,2063089,1850426371,1827069022,68337415,-1597845160,-1271984006,-1777605888,-1179201003,1782569820,-1188619054,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.fasterxml.jackson.core.jackson-annotations"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.fasterxml.jackson.core.jackson-annotations"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.fasterxml.jackson.core.jackson-annotations"/>
+      <attribute name="from" value="com.fasterxml.jackson.core:jackson-annotations:2.18.0"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="79108" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.18.0/jackson-annotations-2.18.0.jar"/>
+      <attribute name="osgi.content" value="A09367D2EEB526873ABF737FF754C5085F82073A382EE72C3BBE15412217671F"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="documentation" value="https://github.com/FasterXML/jackson-core"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core.async,com.fasterxml.jackson.core.format,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.sym,com.fasterxml.jackson.core.type,com.fasterxml.jackson.core.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+      <attribute name="bnd.hashes" value="2102359062,748621597,1204336351,2071943320,657418875,-997891534,-710234398,1209236463,1165,1978794667,847240413,-293016060,1335562599,-1952931001,-18957291,738820180,765053415,910937553,-762337588,-222858959,364663799,-25799004,-981244400,2009947896,1450638048,2016261304,596865879" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.async"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+      <attribute name="bnd.hashes" value="-2140142532,-1964375949,616297427" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.json,com.fasterxml.jackson.core.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.base"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+      <attribute name="bnd.hashes" value="-1449548764,1028877232,734626387" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.filter"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+      <attribute name="bnd.hashes" value="-1539080882,1946569390,1914811830,-206636367,-2130470466" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.format"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+      <attribute name="bnd.hashes" value="175461191,-434218607,1155935,-834831343,1110255878" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.io"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+      <attribute name="bnd.hashes" value="-738157917,1391231177,-341865251,-235909719,-1761873999,-1635930149,2121036707,-1192861204,-1909728799,1106303434,-1159559142,-1103551498,-840641835,-1153656183,1471399780" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.base,com.fasterxml.jackson.core.format,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.sym"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.json"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+      <attribute name="bnd.hashes" value="-693759366,1385577157,1387105131,-1723764463,-514779656,-710995502,181953495,-1829473738,1018736314,757431416,1076197323" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.async,com.fasterxml.jackson.core.base,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.sym"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.json.async"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+      <attribute name="bnd.hashes" value="-440496439,-1292403398" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.sym"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+      <attribute name="bnd.hashes" value="1530562008,-2098737362,-408974546,-1957402737,2420395,75032294,75032295,75032296,75032323" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.type"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+      <attribute name="bnd.hashes" value="585914226,-1421180655,2022949208,843417045" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.io"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.util"/>
+      <attribute name="version" value="2.9.4" type="Version"/>
+      <attribute name="bnd.hashes" value="-584620865,-943377516,-712958902,1113301914,1256583599,-466976099,1191000964,-454842845,-2034101035,-440939664,724986192,1508945388,2039171112,-231675197,650126367,-123382194,-935769107,-1937965862" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.fasterxml.jackson.core.jackson-core"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.9.4" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.fasterxml.jackson.core.jackson-core"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.fasterxml.jackson.core:jackson-core:2.9.4"/>
+      <attribute name="from" value="com.fasterxml.jackson.core:jackson-core:2.9.4"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="320923" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.4/jackson-core-2.9.4.jar"/>
+      <attribute name="osgi.content" value="66C2F96A70873328429C941A60F883173233F07A5E16E8B973D095FFC29F620C"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="documentation" value="https://github.com/FasterXML/jackson-core"/>
+      <attribute name="description" value="Core Jackson processing abstractions (aka Streaming API), implementation for JSON"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core.async,com.fasterxml.jackson.core.exc,com.fasterxml.jackson.core.format,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.json,com.fasterxml.jackson.core.sym,com.fasterxml.jackson.core.type,com.fasterxml.jackson.core.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1114690390,2102359062,748621597,1895597947,2879770,1204336351,2071943320,354249820,657418875,685445846,-710234398,-1990478247,1209236463,1978794667,847240413,-293016060,1601302083,1253012045,-1952931001,801374503,1839904342,1721768912,-18957291,738820180,765053415,910937553,-762337588,-222858959,364663799,-25799004,-981244400,802621198,323683072,547605696,1052448407,-521608041,-1029172777,316139508,1293416465,2009947896,1450638048,2016261304,596865879,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.async"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-2140142532,-1964375949,616297427,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.exc,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.json,com.fasterxml.jackson.core.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.base"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1449548764,1028877232,734626387,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.exc"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-609351417,-940816775,-129771623,709571312,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.filter"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1539080882,1946569390,1914811830,507500796,-206636367,-2130470466" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.format"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="175461191,-434218607,83459,-834831343,1110255878,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.io"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1777390032,-854042115,-1317467575,-738157917,1391231177,350971634,-341865251,-235909719,-1761873999,-1635930149,2121036707,-1192861204,-1909728799,1106303434,-1159559142,-1103551498,-840641835,-1153656183,1471399780" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.io.schubfach"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1661436773,1142824314,-1550426519" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.base,com.fasterxml.jackson.core.format,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.sym,com.fasterxml.jackson.core.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.json"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-693759366,1385577157,1387105131,-57204040,-1723764463,640464472,-514779656,1849449279,-710995502,181953495,-1829473738,1018736314,757431416,1076197323,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.async,com.fasterxml.jackson.core.exc,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.json,com.fasterxml.jackson.core.sym"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.json.async"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="813408721,-440496439,-1292403398,-672612853,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.exc,com.fasterxml.jackson.core.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.sym"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="15113596,-2098737362,2000631306,-1957402737,2420395,75032294,75032295,75032296,75032323,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.type"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="585914226,-1421180655,507500796,843417045,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.async,com.fasterxml.jackson.core.exc,com.fasterxml.jackson.core.io"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.util"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="2060138072,-584620865,-943377516,-712958902,1113301914,1592799883,176875129,838990376,-454842845,-2034101035,-440939664,-1320044989,-739622113,1898587600,724986192,1508945388,2039171112,281410617,155585221,-250663149,-712902369,-2072366307,-222976336,-231675197,-66368339,145404586,-1909941450,2433570,1762322564,-474887024,-80634723,-2015307890,-876196318,-237237989,650126367,-347505629,-123382194,-935769107,2129459768,-1239088788,-1937965862,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.fasterxml.jackson.core.jackson-core"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.fasterxml.jackson.core.jackson-core"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="from" value="com.fasterxml.jackson.core:jackson-core:2.18.0"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="596823" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.18.0/jackson-core-2.18.0.jar"/>
+      <attribute name="osgi.content" value="215BBD7C8FD65BE504CB92FF3AA1C4B790FC7B14CCA72F4546AAC4143C101BB5"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.async)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.async"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.base)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.base"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.exc)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.exc"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.format)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.format"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.io)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.io.schubfach)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.io.schubfach"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.json)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.json"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.json.async)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.json.async"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.sym)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.sym"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.type)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.type"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.util)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.util"/>
+    </requirement>
+    <requirement namespace="bnd.multirelease">
+      <directive name="filter" value="(&amp;(bnd.multirelease=com.fasterxml.jackson.core.jackson-core)(&amp;(version&gt;=2.18.0)(version&lt;=2.18.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__8"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=1.8.0)(!(version&gt;=9.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__9"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=9.0.0)(!(version&gt;=11.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__11"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=11.0.0)(!(version&gt;=17.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__17"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=17.0.0)(!(version&gt;=21.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__21"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=21.0.0)(!(version&gt;=22.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__22"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=22.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__8"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=1.8.0)(!(version&gt;=9.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__9"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=9.0.0)(!(version&gt;=11.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__11"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=11.0.0)(!(version&gt;=17.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__17"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=17.0.0)(!(version&gt;=21.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__21"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=21.0.0)(!(version&gt;=22.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-core__22"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-core"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=22.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="documentation" value="https://github.com/FasterXML/jackson"/>
+      <attribute name="description" value="General data-binding functionality for Jackson: works on core streaming API"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.core.exc,com.fasterxml.jackson.core.filter,com.fasterxml.jackson.core.format,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.type,com.fasterxml.jackson.core.util,com.fasterxml.jackson.databind.annotation,com.fasterxml.jackson.databind.cfg,com.fasterxml.jackson.databind.deser,com.fasterxml.jackson.databind.deser.impl,com.fasterxml.jackson.databind.introspect,com.fasterxml.jackson.databind.jsonFormatVisitors,com.fasterxml.jackson.databind.jsonschema,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.jsontype.impl,com.fasterxml.jackson.databind.node,com.fasterxml.jackson.databind.ser,com.fasterxml.jackson.databind.ser.impl,com.fasterxml.jackson.databind.type,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-2045498686,2622298,-1197128160,522278763,-608710465,-240410100,64361912,83459,-940901947,-2013719384,-560605944,458977553,1343816128,-586922233,-1417979271,1962230074,-1785665636,-1679810675,-517066596,2433880,-1560805893,1078812459,-2023852983,1500127150,-1910456534,2063089,978305575,309397690,-780359502,-1777784491,1313771324,-1099537036,-1076588398,-1984916852,-1792400838,1805927160,-1306593664,-1160212222,-93751306,-1224022505,-1004806990,-664289050,-815965116,-700371424,34523564,1793793464,-250439612,-1877686901,1260188569,-1177153533,-590690761,-349865023,1152930318,-121806751,-825614992,1723846657,-2101198924,-1433112782,887819526,1574955459,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.deser,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.ser,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.annotation"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="398981385,2058487344,2051601,2496387,1926379074,-188895913,-2010347600,82420049,1855350127,507500796,-1774931561,1118359224,-254358461,842546824,511913959,-546130921,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.core.type,com.fasterxml.jackson.core.util,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.deser,com.fasterxml.jackson.databind.introspect,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.node,com.fasterxml.jackson.databind.ser,com.fasterxml.jackson.databind.type,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.cfg"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-70313420,1893705587,1634077268,1702236000,1229708563,-1280335083,-698420940,67081517,644443470,-1497088795,-1453606324,6914496,2283072,-1693258682,1643776082,1453017901,-582548895,1895597947,1464661746,1943919289,1077195413,1336455240,-2111385492,-567632390,2083130627,245714548,923491302,-134301228,-710995502,-1539776422,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.core.format,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.annotation,com.fasterxml.jackson.databind.cfg,com.fasterxml.jackson.databind.deser.impl,com.fasterxml.jackson.databind.deser.std,com.fasterxml.jackson.databind.introspect,com.fasterxml.jackson.databind.jsonFormatVisitors,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.node,com.fasterxml.jackson.databind.type,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.deser"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-153884107,-976336859,1371393481,694646976,1380464835,239573556,-536183464,-1859010873,1373318330,368051691,-491446556,-760028895,1338805761,972381253,74115493,-194670481,2283072,782479649,294156922,-1271761329,270956695,2063089,318191072,1578659329,-1511253989,1290162950,-977426043,793707985,-663549246,-1970991133,915520468,-906002400,-857395339,-911832798,-432703343,1579211223,686382764,2060138072,-922132497,1478663780,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.cfg,com.fasterxml.jackson.databind.deser,com.fasterxml.jackson.databind.deser.std,com.fasterxml.jackson.databind.introspect,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.type,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.deser.impl"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1869406409,-278951478,-1453252265,76884077,-215422249,1159406049,1147977783,1895597947,1644869598,-2038892091,2078002903,-531990321,-505344809,-507963371,-733342411,-525395797,590507116,2145004146,-170881602,1290950035,-8706027,-958445604,596051426,-1002362251,687023887,-299281425,1420143745,1842407142,-1576374794,1709295104,-1451503231,262238459,1905980989,615340091,176167046,1330116524,-1039434757,1805816718,379311131,65996,1359419197,77116,-1543850116,-229289860,668894172,1079195280,-174537494,-331398995,-1094709186,-1669548702,780864105,337820581,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.annotation,com.fasterxml.jackson.databind.cfg,com.fasterxml.jackson.databind.deser,com.fasterxml.jackson.databind.deser.impl,com.fasterxml.jackson.databind.introspect,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.type,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.deser.std"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1035225962,-2134315824,-1183969050,1186784730,-4715981,-157418841,1887723782,-306400133,245948818,-1465426028,151865009,1628060869,-989516975,1791752696,249104321,-1994051217,-339906327,-867700526,-229781739,-695908204,1769639150,-970831116,1602188157,83459,-574301372,222841885,-1519886098,-930472145,-406410885,-393683540,1978425810,-415287011,-611636012,1640290066,-1692328913,-244742007,554536256,220946884,-754625487,-1895030533,-1203289573,1478393468,-1223102620,2085462319,-944683759,-1757734513,734976732,318869404,241226575,1309442327,-2110384083,-899472105,-72546313,-753527191,24758990,951236451,604196272,2106714883,-760895165,-542703282,-1454809480,514145071,-1670337806,-99917608,1268204150,-97988101,2080591418,49217581,593252345,1859652938,918305871,-1597288956,-1741629439,544616002,-592281524,-23307877,1120200738,1073902500,1934799379,-475447572,605754414,1897755483,312682723,79711796,-159611417,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.introspect"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.exc"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1047431320,-1461473051,-2113117375,-1233646095,-367327485,-1391793134,1125958495,-1407012693,-1944447949" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.annotation,com.fasterxml.jackson.databind.deser,com.fasterxml.jackson.databind.deser.std,com.fasterxml.jackson.databind.introspect,com.fasterxml.jackson.databind.jsonFormatVisitors,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.ser,com.fasterxml.jackson.databind.ser.std,javax.xml.datatype,javax.xml.namespace,javax.xml.parsers,javax.xml.transform,org.w3c.dom"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.ext"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="83459,-634842872,791379583,255552041,-620225106,-1431377899,-186101995,-694757292,-333734978,-110206210,-1311410214,1483002138,-1331737684,1346506411,-342759936,607906397,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.annotation,com.fasterxml.jackson.databind.cfg,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.jsontype.impl,com.fasterxml.jackson.databind.ser,com.fasterxml.jackson.databind.type,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.introspect"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="2063089,-922850799,-1310684574,-955688840,-287807858,1885071847,834005984,704523270,1721768912,1513204834,236227161,836690786,522915169,-1828473013,364549426,364764025,-896247974,1091889428,417887011,-1068006895,-1424594812,-1571366432,1444307935,738841219,-1054843371,-1564056345,2076968280,474869246,-1510395847,14282637,898719806,1168635642,-1415554824,-28006489,1681456456,150956254,2125338331,1342382486,1953545349,1846381657,-1872021053,-1488430642,-2082323022,-948798139,-1103893994,-590395858,-1419503448,-266802570,-2018799047,23103816,-306260192,-1919283230,2138234446,1860758501,1503530773,63955982,67081517,-1660053719,1497156327,83459,-269153245,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.cfg,com.fasterxml.jackson.databind.introspect"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.jdk14"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="2076210922,141323533,854767064,1236139606,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.json,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.cfg"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.json"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1895597947,-2038880919" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.databind"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.jsonFormatVisitors"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="2063089,2125335315,223625670,-940980649,-487283558,-1464559418,1271801912,-1192068796,-1545001727,-1869351517,-788517368,-1219269242,-1327053488,697494974,557690528,-395744850,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.node"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.jsonschema"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1865507639,508521128,629758237,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.core.type,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.cfg,com.fasterxml.jackson.databind.introspect"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.jsontype"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1895597947,-1613534201,-1059093384,1042051120,-1325370110,-1664387265,-1053444621,2063089,-1356620974,-1206626782,-706483328,219264333,2010503483,-1443058181,1205103756,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.core.type,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.cfg,com.fasterxml.jackson.databind.introspect,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.type,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.jsontype.impl"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-602643340,641120627,-2100042880,-1197307009,-1168965122,-1882785398,1855429641,-1282793580,-803160941,-2131671250,880870061,-1126362460,660636592,-12987517,-953607778,992182045,2011114264,1254292216,395035070,2057322156,2093986086,932364669,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.deser,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.ser,com.fasterxml.jackson.databind.type"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.module"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-763745388,1849728334,-2127321133,-1390376226,2050314223,559328182,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.base,com.fasterxml.jackson.core.util,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.node"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="578871259,814922011,-1167414432,1112875459,-167255510,-1529252349,288345299,-1522914925,-107555234,-672939407,-35320166,-92512888,-538696288,-103623262,2070906496,69279108,-2009944386,-1279121304,1935553263,-1574351979,86158072,-1546485736,-19463954,-1841876919,1736742543,-1234834943,1278168998,-24237954,-939168529,-503470452,1238086387,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.core.io,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.annotation,com.fasterxml.jackson.databind.cfg,com.fasterxml.jackson.databind.introspect,com.fasterxml.jackson.databind.jsonFormatVisitors,com.fasterxml.jackson.databind.jsonschema,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.node,com.fasterxml.jackson.databind.ser.impl,com.fasterxml.jackson.databind.ser.std,com.fasterxml.jackson.databind.type,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.ser"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-2147202742,-1383496534,-760903267,-265985384,-1935583870,561667001,-761160408,1046944377,-999196461,1436766179,2283072,455307684,2103904681,-1304881178,1031269837,1526187720,1702306949,219786480,-870675720,2063089,310174977,-36875069,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.core.io,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.annotation,com.fasterxml.jackson.databind.cfg,com.fasterxml.jackson.databind.introspect,com.fasterxml.jackson.databind.jsonFormatVisitors,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.node,com.fasterxml.jackson.databind.ser,com.fasterxml.jackson.databind.ser.std,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.ser.impl"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="596609092,261569609,143351958,797073246,-1387812051,13312271,207077377,389222834,1011344576,-650125624,2061386221,379311131,2052876273,67081517,74704153,1245337428,-1818398616,-599090801,1755478645,2000631306,-1308549959,-954258007,-1104183087,-1680238865,-1958047749,-457716646,1425035425,-1097936963,-1662260900,2025483745,2122968525,655213367,-457886566,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.core.type,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.annotation,com.fasterxml.jackson.databind.introspect,com.fasterxml.jackson.databind.jsonFormatVisitors,com.fasterxml.jackson.databind.jsonschema,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.node,com.fasterxml.jackson.databind.ser,com.fasterxml.jackson.databind.ser.impl,com.fasterxml.jackson.databind.type,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.ser.std"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="299978268,1382740106,699843314,154550131,-1353266629,724691898,-1278323069,-1141809350,1668649872,-665174774,1334642416,-327824384,591893534,-1714281069,260849651,-423860146,1618539090,-831547873,-799052860,367425512,-1598312517,-13208783,519316462,190006252,907011737,-1803955962,-278156837,2063089,-1178517405,-75634450,-825801160,1641880912,36567374,-2030623986,-32927240,-428603540,-641456198,27944055,612918289,-1921218258,-376057459,2083591919,-1680176221,-342524299,1176680602,1430302447,639076604,-303310193,1024903375,1599051598,911136043,-573997353,1810475215,-1567303067,-608412583,904452819,-1323774962,-1085510111,-505546721,-2081715792,1242808480,1912649253,-461594943,1300049909,-876686173,1186741931,1147028931,1162103102,193000751,-1481649685,1102712749" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.core,com.fasterxml.jackson.core.type,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.util"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.type"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="579059987,757059047,1692086288,1279090767,-691011816,-1320667310,-1127257193,-2092295485,2082710733,-1793576298,1046436560,-1895049979,-1796278956,561899564,-612220597,63530157,-2049768734,-2123919352,1303129168,615411793,-1083506005,467320857,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.fasterxml.jackson.annotation,com.fasterxml.jackson.core,com.fasterxml.jackson.core.base,com.fasterxml.jackson.core.io,com.fasterxml.jackson.core.json,com.fasterxml.jackson.core.util,com.fasterxml.jackson.databind,com.fasterxml.jackson.databind.cfg,com.fasterxml.jackson.databind.introspect,com.fasterxml.jackson.databind.jsontype,com.fasterxml.jackson.databind.node,com.fasterxml.jackson.databind.type,com.fasterxml.jackson.databind.util.internal"/>
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.util"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-145169044,706159364,1864723059,1971459411,992575082,-2015782465,-513945396,297428319,1893176223,-1661427311,951756231,1386185714,1770240412,-191963025,2111028,820150299,1994305914,1680322313,2433880,1654237568,-1017350073,627996067,1074308305,113274825,1989965741,-1888000107,1208780391,-1174578745,-701079524,1964747545,-2040813747,-958730277,-994272760,-1891512576,-2041147670,2029960558,75032345,1990105478,-1603351425,2433570,1116536169,559359561,-813256057,1988717898,-981240099,2053280680,-1911543745,-656591085,-310262919,-1411658240,811543717,74704153,-1818398616,-1795802451,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.util.internal"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-2018799047,1193242249,334612455,516063654,1895597947,1843233770,917115616,-2029030736,1588126669,-2050817629,2433570,1270846321,935698558,1697526286,1236675807,-1739945662,1328567930,-1217030644,1818640013,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.fasterxml.jackson.core.jackson-databind"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.18.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.fasterxml.jackson.core.jackson-databind"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="from" value="com.fasterxml.jackson.core:jackson-databind:2.18.0"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="com.fasterxml.jackson.core:jackson-annotations:2.18.0;com.fasterxml.jackson.core:jackson-core:2.18.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="1663219" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.18.0/jackson-databind-2.18.0.jar"/>
+      <attribute name="osgi.content" value="2BF1927B7F3224683ED0157A1EC3B0EDE75179DA3E597D78C572D56ED00F9F3C"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.annotation)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.base)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.base"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.exc)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.exc"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.filter)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.filter"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.format)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.format"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.io)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.json)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.json"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.type)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.type"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.core.util)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.core.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.annotation)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.cfg)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.cfg"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.deser)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.deser"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.deser.impl)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.deser.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.deser.std)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.deser.std"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.exc)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.exc"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.ext)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.ext"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.introspect)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.introspect"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.jdk14)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.jdk14"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.json)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.json"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.jsonFormatVisitors)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.jsonFormatVisitors"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.jsonschema)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.jsonschema"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.jsontype)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.jsontype"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.jsontype.impl)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.jsontype.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.node)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.node"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.ser)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.ser"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.ser.impl)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.ser.impl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.ser.std)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.ser.std"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.type)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.type"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.util)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.fasterxml.jackson.databind.util.internal)(version&gt;=2.18.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.fasterxml.jackson.databind.util.internal"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.datatype)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.datatype"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.namespace)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.namespace"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.parsers)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.parsers"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.transform)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.transform"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.transform.dom)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.transform.dom"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.transform.stream)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.transform.stream"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.w3c.dom)"/>
+      <attribute name="osgi.wiring.package" value="org.w3c.dom"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax)"/>
+      <attribute name="osgi.wiring.package" value="org.xml.sax"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.w3c.dom.bootstrap)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="org.w3c.dom.bootstrap"/>
+    </requirement>
+    <requirement namespace="bnd.multirelease">
+      <directive name="filter" value="(&amp;(bnd.multirelease=com.fasterxml.jackson.core.jackson-databind)(&amp;(version&gt;=2.18.0)(version&lt;=2.18.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-databind__8"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=1.8.0)(!(version&gt;=9.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-databind__9"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=9.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-databind__8"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=1.8.0)(!(version&gt;=9.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.fasterxml.jackson.core.jackson-databind__9"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.fasterxml.jackson.core.jackson-databind"/>
+      <attribute name="version" value="2.18.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=9.0.0))"/>
     </requirement>
   </resource>
 </repository>

@@ -1,110 +1,71 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1649532186920">
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.tomcat:tomcat-servlet-api:7.0.8"/>
-      <attribute name="from" value="org.apache.tomcat:tomcat-servlet-api:7.0.8"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="176815" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-servlet-api/7.0.8/tomcat-servlet-api-7.0.8.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="216E3BB785B63EA427541E88C33F29D742481513CC657304A4321DAF675D579B"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.tomcat:tomcat-servlet-api:8.0.9"/>
-      <attribute name="from" value="org.apache.tomcat:tomcat-servlet-api:8.0.9"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="244106" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-servlet-api/8.0.9/tomcat-servlet-api-8.0.9.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="BC69D8A091E731741D213E37238968F0437C921DA7174429A6B0B0993ECD8A78"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.tomcat:tomcat-servlet-api"/>
-      <attribute name="from" value="org.apache.tomcat:tomcat-servlet-api:8.5.66"/>
-      <attribute name="version" value="8.5.66" type="Version"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="246849" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/tomcat/tomcat-servlet-api/8.5.66/tomcat-servlet-api-8.5.66.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="30AEB2785E645ACDEA69DA422BB57F6519E068053EE91F255E1A62C7D2D423A9"/>
-    </capability>
-  </resource>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1727681504826">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="org.apache.tomcat-servlet-api"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="9.0.56" type="Version"/>
+      <attribute name="version" value="9.0.80" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="javax.servlet.annotation,javax.servlet.descriptor"/>
       <attribute name="bundle-symbolic-name" value="org.apache.tomcat-servlet-api"/>
-      <attribute name="bundle-version" value="9.0.56" type="Version"/>
-      <attribute name="version" value="4.0.0" type="Version"/>
+      <attribute name="bundle-version" value="9.0.80" type="Version"/>
       <attribute name="osgi.wiring.package" value="javax.servlet"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="-889611341,582125982,105324336,-2034418015,2104342424,751709705,1835013370,-505546721,-1028763535,519500815,1763359886,-1815320937,651921846,-1914944466,63430794,-1185989415,-304577930,-646157787,1055910343,-814288538,-1626103862,-1109124152,333931718,-2079444752,-1357160802,-1724244054,-1655244667,992181926,-227764354,-1481941846,876597416,-1914371098,-1893105648,773340030,468651145,1357376902,-973927379,1190835895,2097581148,-1399519600,-1505060425,-516446721,298738067" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="javax.servlet"/>
       <attribute name="bundle-symbolic-name" value="org.apache.tomcat-servlet-api"/>
-      <attribute name="bundle-version" value="9.0.56" type="Version"/>
-      <attribute name="version" value="4.0.0" type="Version"/>
+      <attribute name="bundle-version" value="9.0.80" type="Version"/>
       <attribute name="osgi.wiring.package" value="javax.servlet.annotation"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="-237880306,-1513767771,673468006,809233134,230558249,291348863,-1648144251,480826316,1190237321,284952584,564450417" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="org.apache.tomcat-servlet-api"/>
-      <attribute name="bundle-version" value="9.0.56" type="Version"/>
-      <attribute name="version" value="4.0.0" type="Version"/>
+      <attribute name="bundle-version" value="9.0.80" type="Version"/>
       <attribute name="osgi.wiring.package" value="javax.servlet.descriptor"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="2047001240,-983719790,19062426" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="javax.servlet"/>
       <attribute name="bundle-symbolic-name" value="org.apache.tomcat-servlet-api"/>
-      <attribute name="bundle-version" value="9.0.56" type="Version"/>
-      <attribute name="version" value="4.0.0" type="Version"/>
+      <attribute name="bundle-version" value="9.0.80" type="Version"/>
       <attribute name="osgi.wiring.package" value="javax.servlet.http"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
       <attribute name="bnd.hashes" value="2024076932,-640135965,-1747315136,-1229369046,-194025820,-1608396195,938706052,211542141,-195053167,63083346,-214660895,2008517598,-681764139,212373710,-1273681576,1761221698,-340574461,-272878677,-1028171519,-1178910100,-1224724899,104926114,491323478,-2120397591,-2086701641,2480147,1815949057,-2099007621,-254289176,1606434098" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <attribute name="bundle-symbolic-name" value="org.apache.tomcat-servlet-api"/>
-      <attribute name="bundle-version" value="9.0.56" type="Version"/>
-      <attribute name="version" value="4.0.0" type="Version"/>
+      <attribute name="bundle-version" value="9.0.80" type="Version"/>
       <attribute name="osgi.wiring.package" value="javax.servlet.resources"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="9.0.56" type="Version"/>
+      <attribute name="bundle-version" value="9.0.80" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="org.apache.tomcat-servlet-api"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="9.0.56" type="Version"/>
+      <attribute name="bundle-version" value="9.0.80" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.apache.tomcat-servlet-api"/>
     </capability>
     <capability namespace="bnd.info">
       <attribute name="name" value="org.apache.tomcat-servlet-api"/>
-      <attribute name="from" value="org.apache.tomcat:tomcat-servlet-api:9.0.56"/>
-      <attribute name="version" value="9.0.56" type="Version"/>
+      <attribute name="from" value="org.apache.tomcat:tomcat-servlet-api:9.0.80"/>
+      <attribute name="version" value="9.0.80" type="Version"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="284411" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/tomcat/tomcat-servlet-api/9.0.56/tomcat-servlet-api-9.0.56.jar"/>
+      <attribute name="size" value="284809" type="Long"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="3E333DA074187ADAE487BDE95397C77E846E29C226C7FED71AE65B6B8F311DA7"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/tomcat/tomcat-servlet-api/9.0.80/tomcat-servlet-api-9.0.80.jar"/>
+      <attribute name="osgi.content" value="8FD3A5FFD8290DFAD3174FB9475DA6B8A56D59EF407B33293C14ED50636D3D27"/>
     </capability>
     <capability namespace="osgi.contract">
       <directive name="uses" value="javax.servlet,javax.servlet.annotation,javax.servlet.descriptor,javax.servlet.http,javax.servlet.resources"/>
-      <attribute name="version" value="4.0.0,3.1.0,3.0.0,2.5.0" type="List&lt;Version&gt;"/>
       <attribute name="osgi.contract" value="JavaServlet"/>
+      <attribute name="version" value="4.0.0,3.1.0,3.0.0,2.5.0" type="List&lt;Version&gt;"/>
     </capability>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet)(version&gt;=4.0.0)(!(version&gt;=5.0.0)))"/>
@@ -121,5 +82,127 @@
     <requirement namespace="osgi.ee">
       <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
     </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.apache.tomcat-servlet-api"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="9.0.56" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.servlet.annotation,javax.servlet.descriptor"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.tomcat-servlet-api"/>
+      <attribute name="bundle-version" value="9.0.56" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-889611341,582125982,105324336,-2034418015,2104342424,751709705,1835013370,-505546721,-1028763535,519500815,1763359886,-1815320937,651921846,-1914944466,63430794,-1185989415,-304577930,-646157787,1055910343,-814288538,-1626103862,-1109124152,333931718,-2079444752,-1357160802,-1724244054,-1655244667,992181926,-227764354,-1481941846,876597416,-1914371098,-1893105648,773340030,468651145,1357376902,-973927379,1190835895,2097581148,-1399519600,-1505060425,-516446721,298738067" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.servlet"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.tomcat-servlet-api"/>
+      <attribute name="bundle-version" value="9.0.56" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet.annotation"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-237880306,-1513767771,673468006,809233134,230558249,291348863,-1648144251,480826316,1190237321,284952584,564450417" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.apache.tomcat-servlet-api"/>
+      <attribute name="bundle-version" value="9.0.56" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet.descriptor"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="2047001240,-983719790,19062426" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="javax.servlet"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.tomcat-servlet-api"/>
+      <attribute name="bundle-version" value="9.0.56" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet.http"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="2024076932,-640135965,-1747315136,-1229369046,-194025820,-1608396195,938706052,211542141,-195053167,63083346,-214660895,2008517598,-681764139,212373710,-1273681576,1761221698,-340574461,-272878677,-1028171519,-1178910100,-1224724899,104926114,491323478,-2120397591,-2086701641,2480147,1815949057,-2099007621,-254289176,1606434098" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.apache.tomcat-servlet-api"/>
+      <attribute name="bundle-version" value="9.0.56" type="Version"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet.resources"/>
+      <attribute name="version" value="4.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="9.0.56" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.tomcat-servlet-api"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="9.0.56" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.tomcat-servlet-api"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.tomcat-servlet-api"/>
+      <attribute name="from" value="org.apache.tomcat:tomcat-servlet-api:9.0.56"/>
+      <attribute name="version" value="9.0.56" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="284411" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/tomcat/tomcat-servlet-api/9.0.56/tomcat-servlet-api-9.0.56.jar"/>
+      <attribute name="osgi.content" value="3E333DA074187ADAE487BDE95397C77E846E29C226C7FED71AE65B6B8F311DA7"/>
+    </capability>
+    <capability namespace="osgi.contract">
+      <directive name="uses" value="javax.servlet,javax.servlet.annotation,javax.servlet.descriptor,javax.servlet.http,javax.servlet.resources"/>
+      <attribute name="osgi.contract" value="JavaServlet"/>
+      <attribute name="version" value="4.0.0,3.1.0,3.0.0,2.5.0" type="List&lt;Version&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet)(version&gt;=4.0.0)(!(version&gt;=5.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet.annotation)(version&gt;=4.0.0)(!(version&gt;=5.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet.descriptor)(version&gt;=4.0.0)(!(version&gt;=5.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="javax.servlet.descriptor"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.tomcat:tomcat-servlet-api"/>
+      <attribute name="from" value="org.apache.tomcat:tomcat-servlet-api:8.5.66"/>
+      <attribute name="version" value="8.5.66" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="246849" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/tomcat/tomcat-servlet-api/8.5.66/tomcat-servlet-api-8.5.66.jar"/>
+      <attribute name="osgi.content" value="30AEB2785E645ACDEA69DA422BB57F6519E068053EE91F255E1A62C7D2D423A9"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.tomcat:tomcat-servlet-api:8.0.9"/>
+      <attribute name="from" value="org.apache.tomcat:tomcat-servlet-api:8.0.9"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="244106" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-servlet-api/8.0.9/tomcat-servlet-api-8.0.9.jar"/>
+      <attribute name="osgi.content" value="BC69D8A091E731741D213E37238968F0437C921DA7174429A6B0B0993ECD8A78"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.tomcat:tomcat-servlet-api:7.0.8"/>
+      <attribute name="from" value="org.apache.tomcat:tomcat-servlet-api:7.0.8"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="176815" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-servlet-api/7.0.8/tomcat-servlet-api-7.0.8.jar"/>
+      <attribute name="osgi.content" value="216E3BB785B63EA427541E88C33F29D742481513CC657304A4321DAF675D579B"/>
+    </capability>
   </resource>
 </repository>

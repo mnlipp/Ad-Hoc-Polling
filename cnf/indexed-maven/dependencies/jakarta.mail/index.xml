@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1727681504783">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.eclipse.org/legal/epl-2.0, https://www.gnu.org/software/classpath/license.html, http://www.eclipse.org/org/documents/edl-v10.php"/>
+      <attribute name="osgi.identity" value="jakarta.mail-api"/>
+      <attribute name="documentation" value="https://www.eclipse.org"/>
+      <attribute name="description" value="Jakarta Mail API 2.1 Specification API"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.1.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation,jakarta.mail.event,jakarta.mail.search,jakarta.mail.util"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.mail-api"/>
+      <attribute name="bundle-version" value="2.1.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail"/>
+      <attribute name="version" value="2.1.3" type="Version"/>
+      <attribute name="bnd.hashes" value="516961236,270522074,-1681005229,1767167189,209840299,-1678914357,355316563,-1330044233,2289459,1691175343,2192268,67960423,2109868174,1545447893,407099826,-2137403731,1064561702,478043719,787980146,-1342419135,1342173395,-1675388953,-1149384009,806605768,-1032556074,1814960587,-1563728653,797840524,-1547629039,738861686,2480147,84732435,2622298,-922850799,-276420562,78401112,-1993378405,607583391,908623818,-646160747,-645326218,80218305,409394498,-1472127021,-1238034679,1153812834,1691905214,548599930,2016261304" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.mail"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.mail-api"/>
+      <attribute name="bundle-version" value="2.1.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.event"/>
+      <attribute name="version" value="2.1.3" type="Version"/>
+      <attribute name="bnd.hashes" value="1551902321,-289122756,-778459694,-1427040543,1754702508,1363592034,1671730947,527235533,1246497953,520205511,-2082373102,1598677564,-1403532711,-68231019,-725428218,901802257,1638737629" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation,jakarta.mail"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.mail-api"/>
+      <attribute name="bundle-version" value="2.1.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.internet"/>
+      <attribute name="version" value="2.1.3" type="Version"/>
+      <attribute name="bnd.hashes" value="1229769435,155034034,-1419081314,1278737203,80988633,-904254742,-1097750189,304360782,-1677420474,313301171,1057666103,845249765,-870358193,-1746236319,255876349,-943321476,-1581304945,1674786649,1305860393,1342173395,-1274627821,-617768264,-1327618457,1351928364,-1327451530,1950435960,1936657793,-1786189278,-1060764712,-337497330,2033786348,82420049,419302343,1971845884,1389588948,-679539163,-261064704" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.mail"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.mail-api"/>
+      <attribute name="bundle-version" value="2.1.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.search"/>
+      <attribute name="version" value="2.1.3" type="Version"/>
+      <attribute name="bnd.hashes" value="-790692079,290579040,802358979,1767290190,-1421720523,1857389914,1678542360,-848077945,-1180020906,-323983175,-3731245,-1089631538,-1415461220,-501589569,-1925379825,-1435352485,290632438,1342154245,-1385291929,1282991700,-770076398,911610925,420381757,1064648600" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation,jakarta.mail.internet"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.mail-api"/>
+      <attribute name="bundle-version" value="2.1.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.util"/>
+      <attribute name="version" value="2.1.3" type="Version"/>
+      <attribute name="bnd.hashes" value="285306723,592133462,1913542064,665518902,-78591467,-688818914,208746401,-983816823,157616349,-208468559" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.1.3" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="jakarta.mail-api"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.1.3" type="Version"/>
+      <attribute name="osgi.wiring.host" value="jakarta.mail-api"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="jakarta.mail-api"/>
+      <attribute name="from" value="jakarta.mail:jakarta.mail-api:2.1.3"/>
+      <attribute name="version" value="2.1.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="jakarta.activation:jakarta.activation-api:2.1.3"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="236454" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/jakarta/mail/jakarta.mail-api/2.1.3/jakarta.mail-api-2.1.3.jar"/>
+      <attribute name="osgi.content" value="8051B58D75F982F9A5B963B3765426E824B2A64865EF0AF17205E455B98DB05C"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.activation)(version&gt;=2.1.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.mail)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.mail.event)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.event"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.mail.internet)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.internet"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.mail.search)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.search"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.mail.util)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.util"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.serviceloader.processor)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.serviceloader">
+      <directive name="filter" value="(osgi.serviceloader=jakarta.mail.Provider)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <attribute name="osgi.serviceloader" value="jakarta.mail.Provider"/>
+    </requirement>
+    <requirement namespace="osgi.serviceloader">
+      <directive name="filter" value="(osgi.serviceloader=jakarta.mail.util.StreamProvider)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <attribute name="osgi.serviceloader" value="jakarta.mail.util.StreamProvider"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.eclipse.org/legal/epl-2.0, https://www.gnu.org/software/classpath/license.html, http://www.eclipse.org/org/documents/edl-v10.php"/>
+      <attribute name="osgi.identity" value="jakarta.mail-api"/>
+      <attribute name="documentation" value="https://www.eclipse.org"/>
+      <attribute name="description" value="Jakarta Mail API 2.1 Specification API"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.1.1" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation,jakarta.mail.event,jakarta.mail.search,jakarta.mail.util"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.mail-api"/>
+      <attribute name="bundle-version" value="2.1.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail"/>
+      <attribute name="version" value="2.1.1" type="Version"/>
+      <attribute name="bnd.hashes" value="516961236,270522074,-1681005229,1767167189,209840299,-1678914357,355316563,-1330044233,2289459,1691175343,2192268,67960423,2109868174,1545447893,407099826,-2137403731,1064561702,478043719,787980146,-1342419135,1342173395,-1675388953,-1149384009,806605768,-1032556074,1814960587,-1563728653,797840524,-1547629039,738861686,2480147,84732435,2622298,-922850799,-276420562,78401112,-1993378405,607583391,908623818,-646160747,-645326218,80218305,409394498,-1472127021,-1238034679,1153812834,1691905214,548599930,2016261304,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.mail"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.mail-api"/>
+      <attribute name="bundle-version" value="2.1.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.search"/>
+      <attribute name="version" value="2.1.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-790692079,290579040,802358979,1767290190,-1421720523,1857389914,1678542360,-848077945,-1180020906,-323983175,-3731245,-1089631538,-1415461220,-501589569,-1925379825,-1435352485,290632438,1342154245,-1385291929,1282991700,-770076398,911610925,420381757,1064648600,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation,jakarta.mail.internet"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.mail-api"/>
+      <attribute name="bundle-version" value="2.1.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.util"/>
+      <attribute name="version" value="2.1.1" type="Version"/>
+      <attribute name="bnd.hashes" value="285306723,592133462,1913542064,665518902,-78591467,-688818914,208746401,-983816823,157616349,-208468559,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.mail"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.mail-api"/>
+      <attribute name="bundle-version" value="2.1.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.event"/>
+      <attribute name="version" value="2.1.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1551902321,-289122756,-778459694,-1427040543,1754702508,1363592034,1671730947,527235533,1246497953,520205511,-2082373102,1598677564,-1403532711,-68231019,-725428218,901802257,1638737629,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation,jakarta.mail"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.mail-api"/>
+      <attribute name="bundle-version" value="2.1.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.internet"/>
+      <attribute name="version" value="2.1.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1229769435,155034034,-1419081314,1278737203,80988633,-904254742,-1097750189,304360782,-1677420474,313301171,1057666103,845249765,-870358193,-1746236319,255876349,-943321476,-1581304945,1674786649,1305860393,1342173395,-1274627821,-617768264,-1327618457,1351928364,-1327451530,1950435960,1936657793,-1786189278,-1060764712,-337497330,2033786348,82420049,419302343,1971845884,1389588948,-679539163,-261064704,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.1.1" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="jakarta.mail-api"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.1.1" type="Version"/>
+      <attribute name="osgi.wiring.host" value="jakarta.mail-api"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="jakarta.mail-api"/>
+      <attribute name="from" value="jakarta.mail:jakarta.mail-api:2.1.1"/>
+      <attribute name="version" value="2.1.1" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="jakarta.activation:jakarta.activation-api:2.1.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="237460" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/jakarta/mail/jakarta.mail-api/2.1.1/jakarta.mail-api-2.1.1.jar"/>
+      <attribute name="osgi.content" value="1D69D8AAA6AB704D4CE3BD156CD5542060849A409B1E0463163D8508356857CC"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.activation)(version&gt;=2.1.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.mail)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.mail.event)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.event"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.mail.internet)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.internet"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.mail.search)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.search"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.mail.util)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.util"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.serviceloader.processor)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.serviceloader">
+      <directive name="filter" value="(osgi.serviceloader=jakarta.mail.Provider)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <attribute name="osgi.serviceloader" value="jakarta.mail.Provider"/>
+    </requirement>
+    <requirement namespace="osgi.serviceloader">
+      <directive name="filter" value="(osgi.serviceloader=jakarta.mail.util.StreamProvider)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <attribute name="osgi.serviceloader" value="jakarta.mail.util.StreamProvider"/>
+    </requirement>
+  </resource>
+</repository>

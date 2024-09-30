@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1727681504831">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://projects.eclipse.org/license/epl-2.0, https://projects.eclipse.org/license/secondary-gpl-2.0-cp"/>
+      <attribute name="osgi.identity" value="jakarta.json-api"/>
+      <attribute name="documentation" value="https://www.eclipse.org"/>
+      <attribute name="description" value="Jakarta JSON Processing API 2.0"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.0.2" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.json.stream"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.json-api"/>
+      <attribute name="bundle-version" value="2.0.2" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.json"/>
+      <attribute name="version" value="2.0.2" type="Version"/>
+      <attribute name="bnd.hashes" value="906567980,-1575366964,2318600,893486641,-1070475222,-24976361,-1121503193,-198114792,-1991884175,-1980888473,380128052,-628296377,906834976,2073194331,-18957291,-1892499477,-757048673,-1849505991,1836356939,1238275115,912368969,925806345,-1737094245,-885946129" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.json,jakarta.json.stream"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.json-api"/>
+      <attribute name="bundle-version" value="2.0.2" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.json.spi"/>
+      <attribute name="version" value="2.0.2" type="Version"/>
+      <attribute name="bnd.hashes" value="-2041298151" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.json"/>
+      <attribute name="bundle-symbolic-name" value="jakarta.json-api"/>
+      <attribute name="bundle-version" value="2.0.2" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.json.stream"/>
+      <attribute name="version" value="2.0.2" type="Version"/>
+      <attribute name="bnd.hashes" value="-833922898,1209236463,1978794667,-1649115169,847240413,67338874,-1952931001,177289155,-1151814489" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.0.2" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="jakarta.json-api"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.0.2" type="Version"/>
+      <attribute name="osgi.wiring.host" value="jakarta.json-api"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="jakarta.json-api"/>
+      <attribute name="from" value="jakarta.json:jakarta.json-api:2.0.2"/>
+      <attribute name="version" value="2.0.2" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="46260" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/jakarta/json/jakarta.json-api/2.0.2/jakarta.json-api-2.0.2.jar"/>
+      <attribute name="osgi.content" value="E8AC478444710906CB168955E3C927519EA3FB3C06BEC63EF4D6A150A7D3C2A1"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.json)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.json"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.json.spi)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.json.spi"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.json.stream)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.json.stream"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

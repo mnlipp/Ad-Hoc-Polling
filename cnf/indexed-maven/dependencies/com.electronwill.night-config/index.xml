@@ -1,0 +1,587 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1727681505043">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.yaml"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.7.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.electronwill.nightconfig.yaml"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.7.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.electronwill.nightconfig.yaml"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.nightconfig.yaml"/>
+      <attribute name="from" value="com.electronwill.night-config:yaml:3.7.0"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="runtime" value="com.electronwill.night-config:core:3.7.0;org.yaml:snakeyaml:1.33"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="6825" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/yaml/3.7.0/yaml-3.7.0.jar"/>
+      <attribute name="osgi.content" value="F2ACA37705390A4AED6C735E56460027304ACA8892A14C2913705C0F28477567"/>
+    </capability>
+    <requirement namespace="bnd.multirelease">
+      <directive name="filter" value="(&amp;(bnd.multirelease=com.electronwill.nightconfig.yaml)(&amp;(version&gt;=3.7.0)(version&lt;=3.7.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.yaml__0"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.electronwill.nightconfig.yaml"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=0.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.yaml__0"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.electronwill.nightconfig.yaml"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=0.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.core"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.electronwill.nightconfig.core.io,com.electronwill.nightconfig.core.utils"/>
+      <attribute name="bundle-symbolic-name" value="com.electronwill.nightconfig.core"/>
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+      <attribute name="bnd.hashes" value="1582409215,-1208057986,-1599642655,664078884,-1558980199,-635710039,67115090,1262100480,-1396180140,2024042338,-12795399,594628436,-1085356462,2112071154,1238236332,-1470014915,1136639926,-919320241,16955965,-500387898,-104373266,-1676384332,-523734815,233706979,-1675575777" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.electronwill.nightconfig.core,com.electronwill.nightconfig.core.file,com.electronwill.nightconfig.core.io"/>
+      <attribute name="bundle-symbolic-name" value="com.electronwill.nightconfig.core"/>
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.conversion"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+      <attribute name="bnd.hashes" value="785011344,-1125770542,-1358711929,848663202,-258268874,-383484872,32384078,2028770026,1344387924,-976144656,1430401033,1654237568,-1772855402,-914014315,-680936896,-230900637,1301802672,-1745155893,927006750,-1614197271,-1522141951,2480197,-197363986,426069060,1229818647,1131686380,-2069295236,-1201680233,2016485988,2103135777,-1284279649,1246836424,1262026156,505472439" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.electronwill.nightconfig.core,com.electronwill.nightconfig.core.io"/>
+      <attribute name="bundle-symbolic-name" value="com.electronwill.nightconfig.core"/>
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.file"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+      <attribute name="bnd.hashes" value="1340284454,240502352,-638879542,-95376715,903618245,-7379556,-965158305,-962644994,-1227327043,1383667777,1898612767,-1272486870,1146013382,397623424,18635005,10148324,-276154811,1557987978,-2146653090,635782587,-848346504" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.electronwill.nightconfig.core,com.electronwill.nightconfig.core.file,com.electronwill.nightconfig.core.utils"/>
+      <attribute name="bundle-symbolic-name" value="com.electronwill.nightconfig.core"/>
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.io"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+      <attribute name="bnd.hashes" value="-1219990360,760504593,-665384383,1026274666,1895597947,-2094172650,260572705,476409461,-654348219,952620189,2127061919,-680825783,1010005509,1004524627,2041886887,82059409,1680579444,-1626443021,-1199931265" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.electronwill.nightconfig.core"/>
+      <attribute name="bundle-symbolic-name" value="com.electronwill.nightconfig.core"/>
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.utils"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+      <attribute name="bnd.hashes" value="-841570006,1735654515,1876294353,-175343959,-1197220885,1306413390,1343445712,604194833,1172599402,921090934,1793404244,1793410138,148294400,1799315540,1150463908,-2114362668,-1099318430,-1038035866,122819500,-1038029972,610610215,-171700876,-1604342913" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.electronwill.nightconfig.core"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.electronwill.nightconfig.core"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.nightconfig.core"/>
+      <attribute name="from" value="com.electronwill.night-config:core:3.6.7"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="206812" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/core/3.6.7/core-3.6.7.jar"/>
+      <attribute name="osgi.content" value="FA1272C026B500338DAE2997F5EA4B02C632F54769DE9649A6A390CA1CB234BE"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.electronwill.nightconfig.core)"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.electronwill.nightconfig.core.file)"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.file"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.electronwill.nightconfig.core.io)"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.electronwill.nightconfig.core.utils)"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.utils"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.toml"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.electronwill.nightconfig.core,com.electronwill.nightconfig.core.io"/>
+      <attribute name="bundle-symbolic-name" value="com.electronwill.nightconfig.toml"/>
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.toml"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+      <attribute name="bnd.hashes" value="-2005705800,-1789869044,141740976,357577732,1828026733,2043863489,-822216191,-606379435,2612602,2072722961,-1948876231,-1733039475,139839696,355676452" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.electronwill.nightconfig.toml"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.electronwill.nightconfig.toml"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.nightconfig.toml"/>
+      <attribute name="from" value="com.electronwill.night-config:toml:3.6.7"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="com.electronwill.night-config:core:3.6.7"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="33875" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/toml/3.6.7/toml-3.6.7.jar"/>
+      <attribute name="osgi.content" value="C0A69BB6E3DADEBB183184B57F92B865C9FD7C8191F37133A70E519AC09DAD11"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core.file)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.file"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core.io)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core.utils)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.utils"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.json"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.electronwill.nightconfig.core,com.electronwill.nightconfig.core.io,com.electronwill.nightconfig.core.utils"/>
+      <attribute name="bundle-symbolic-name" value="com.electronwill.nightconfig.json"/>
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.json"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+      <attribute name="bnd.hashes" value="-1785283836,2068668191,-1952931001,-382336036" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.electronwill.nightconfig.json"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.electronwill.nightconfig.json"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.nightconfig.json"/>
+      <attribute name="from" value="com.electronwill.night-config:json:3.6.7"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="com.electronwill.night-config:core:3.6.7"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="17507" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/json/3.6.7/json-3.6.7.jar"/>
+      <attribute name="osgi.content" value="C13EB7F6E9C703528B270307BC29627E9310217D7A93EF33BC867E90B00C87B0"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core.file)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.file"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core.io)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core.utils)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.utils"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.night-config:yaml"/>
+      <attribute name="from" value="com.electronwill.night-config:yaml:3.6.6"/>
+      <attribute name="version" value="3.6.6" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="com.electronwill.night-config:core:3.6.6;org.yaml:snakeyaml:1.31"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="6663" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/yaml/3.6.6/yaml-3.6.6.jar"/>
+      <attribute name="osgi.content" value="0769DDE575458268C69EE5C18787D4B1B375281539093284C401C075B9FA1201"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.night-config:core"/>
+      <attribute name="from" value="com.electronwill.night-config:core:3.6.6"/>
+      <attribute name="version" value="3.6.6" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="201981" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/core/3.6.6/core-3.6.6.jar"/>
+      <attribute name="osgi.content" value="D8A2CEDD585113347A3B3E5EA7F76A0B3C68F2C38E4E7256293F6F7ACC1BA224"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.night-config:toml"/>
+      <attribute name="from" value="com.electronwill.night-config:toml:3.6.6"/>
+      <attribute name="version" value="3.6.6" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="com.electronwill.night-config:core:3.6.6"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="32717" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/toml/3.6.6/toml-3.6.6.jar"/>
+      <attribute name="osgi.content" value="2E0EFCADBE0CE1000A59AFFF0C8E9E4820E86353901682AD4F13061358282FB0"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.core"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.7.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.electronwill.nightconfig.core"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.7.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.electronwill.nightconfig.core"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.nightconfig.core"/>
+      <attribute name="from" value="com.electronwill.night-config:core:3.7.0"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="359726" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/core/3.7.0/core-3.7.0.jar"/>
+      <attribute name="osgi.content" value="3D47B116FB979C3B08A6EF5378DE1650DA2641D78809B32593594524611814B8"/>
+    </capability>
+    <requirement namespace="bnd.multirelease">
+      <directive name="filter" value="(&amp;(bnd.multirelease=com.electronwill.nightconfig.core)(&amp;(version&gt;=3.7.0)(version&lt;=3.7.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.core__0"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.electronwill.nightconfig.core"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=0.0.0)(!(version&gt;=17.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.core__17"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.electronwill.nightconfig.core"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=17.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.core__0"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.electronwill.nightconfig.core"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(&amp;(version&gt;=0.0.0)(!(version&gt;=17.0.0))))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.core__17"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.electronwill.nightconfig.core"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=17.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.toml"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.7.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.electronwill.nightconfig.toml"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.7.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.electronwill.nightconfig.toml"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.nightconfig.toml"/>
+      <attribute name="from" value="com.electronwill.night-config:toml:3.7.0"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="runtime" value="com.electronwill.night-config:core:3.7.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="36210" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/toml/3.7.0/toml-3.7.0.jar"/>
+      <attribute name="osgi.content" value="A4EAA5F201FBFE4579E82492BD459357A94340FC69E261921FA5552DD38D5FBA"/>
+    </capability>
+    <requirement namespace="bnd.multirelease">
+      <directive name="filter" value="(&amp;(bnd.multirelease=com.electronwill.nightconfig.toml)(&amp;(version&gt;=3.7.0)(version&lt;=3.7.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.toml__0"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.electronwill.nightconfig.toml"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=0.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.toml__0"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.electronwill.nightconfig.toml"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=0.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.json"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.7.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.electronwill.nightconfig.json"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.7.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.electronwill.nightconfig.json"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.nightconfig.json"/>
+      <attribute name="from" value="com.electronwill.night-config:json:3.7.0"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="runtime" value="com.electronwill.night-config:core:3.7.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="17956" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/json/3.7.0/json-3.7.0.jar"/>
+      <attribute name="osgi.content" value="36B1927A6951366F9E18A91E948A87B9BCCC783BCB87D978D0EA79D71F742788"/>
+    </capability>
+    <requirement namespace="bnd.multirelease">
+      <directive name="filter" value="(&amp;(bnd.multirelease=com.electronwill.nightconfig.json)(&amp;(version&gt;=3.7.0)(version&lt;=3.7.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.json__0"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.electronwill.nightconfig.json"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=0.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.json__0"/>
+      <attribute name="type" value="bnd.synthetic"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <capability namespace="bnd.multirelease">
+      <attribute name="bnd.multirelease" value="com.electronwill.nightconfig.json"/>
+      <attribute name="version" value="3.7.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version&gt;=0.0.0))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.night-config:json"/>
+      <attribute name="from" value="com.electronwill.night-config:json:3.6.6"/>
+      <attribute name="version" value="3.6.6" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="com.electronwill.night-config:core:3.6.6"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="16799" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/json/3.6.6/json-3.6.6.jar"/>
+      <attribute name="osgi.content" value="B7AC37AF049BE79867F040576C3BDD8BBE355CD6129AE60A34DCC7B61015F64F"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.electronwill.nightconfig.yaml"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.electronwill.nightconfig.core,com.electronwill.nightconfig.core.io,org.yaml.snakeyaml"/>
+      <attribute name="bundle-symbolic-name" value="com.electronwill.nightconfig.yaml"/>
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.yaml"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+      <attribute name="bnd.hashes" value="624714142,898082246,1113919002" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.electronwill.nightconfig.yaml"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="3.6.7" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.electronwill.nightconfig.yaml"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.electronwill.nightconfig.yaml"/>
+      <attribute name="from" value="com.electronwill.night-config:yaml:3.6.7"/>
+      <attribute name="version" value="3.6.7" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="com.electronwill.night-config:core:3.6.7"/>
+      <attribute name="runtime" value="org.yaml:snakeyaml:1.33"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="7155" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/electronwill/night-config/yaml/3.6.7/yaml-3.6.7.jar"/>
+      <attribute name="osgi.content" value="8A5F91ED54B86852E298C5C6ED0B46C2AC4E0FA4758C4C3510F829E5F2E7A827"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core.file)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.file"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core.io)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.electronwill.nightconfig.core.utils)(version&gt;=3.6.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.electronwill.nightconfig.core.utils"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.yaml.snakeyaml)(version&gt;=1.33.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.yaml.snakeyaml"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

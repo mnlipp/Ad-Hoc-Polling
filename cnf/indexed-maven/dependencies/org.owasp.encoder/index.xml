@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1727681504873">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.opensource.org/licenses/BSD-3-Clause"/>
+      <attribute name="osgi.identity" value="org.owasp.encoder"/>
+      <attribute name="documentation" value="https://www.owasp.org/"/>
+      <attribute name="description" value="The OWASP Encoders package is a collection of high-performance low-overhead        contextual encoders, that when utilized correctly, is an effective tool in        preventing Web Application security vulnerabilities such as Cross-Site        Scripting."/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.owasp.encoder"/>
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.owasp.encoder"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+      <attribute name="bnd.hashes" value="-1403433001,-1594988049,2403779,-1294712391,206663164,2000715872,2080057910,1130218241,57285884,1775862519,2068068081,1362546810,-1961644369,1022232112,1377637053,79295381,-1608877676,1813493029" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.owasp.encoder"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.owasp.encoder"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.owasp.encoder"/>
+      <attribute name="from" value="org.owasp.encoder:encoder:1.2.3"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="37931" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/owasp/encoder/encoder/1.2.3/encoder-1.2.3.jar"/>
+      <attribute name="osgi.content" value="B09E2CD5C36A7127E091DF9BE628278B1166B40BC08B9DE8196CCDDB0CCCD67F"/>
+    </capability>
+  </resource>
+</repository>

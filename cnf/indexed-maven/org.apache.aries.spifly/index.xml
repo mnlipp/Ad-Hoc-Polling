@@ -1,1011 +1,60 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1649966001397">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1727681504936">
   <resource>
     <capability namespace="osgi.identity">
-      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.12" type="Version"/>
-      <attribute name="documentation" value="http://www.apache.org"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="version" value="1.0.12" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="version" value="1.0.12" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
-      <attribute name="version" value="1.0.12" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.12" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.12" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.0.12"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.0.12"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12;org.ow2.asm:asm-debug-all:5.0.3;org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.12"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="63117" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.0.12/org.apache.aries.spifly.dynamic.bundle-1.0.12.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="F6EE2D0425FCF5F272CF673A6043DD81B1DCD57B48C4B108FD38897EDD921CEF"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(&amp;(version&gt;=5.0.0)(!(version&gt;=7.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(&amp;(version&gt;=5.0.0)(!(version&gt;=7.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.util.manifest)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.6.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log)(&amp;(version&gt;=1.3.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.12"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.12"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="12988" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.0.12/org.apache.aries.spifly.weaver-internal-1.0.12.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="A6C91AC5CBCD87B1CD91551646846051B2DBE87439B8A07931B0D2BB0BDA039B"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.apache.aries:org.apache.aries.util:1.0.0"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="47665" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.0.12/org.apache.aries.spifly.core-internal-1.0.12.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="37B61BDD2C026464332F5934C59A56AE0658B49D96E0C9A75B097F2555FD841E"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.0.14" type="Version"/>
-      <attribute name="documentation" value="http://www.apache.org"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="version" value="1.0.14" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="version" value="1.0.14" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
-      <attribute name="version" value="1.0.14" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.0.14" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.0.14" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.0.14"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.0.14"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.14;org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.14;org.ow2.asm:asm-debug-all:5.0.3"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="63041" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.0.14/org.apache.aries.spifly.dynamic.bundle-1.0.14.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="5946AAD29864B903E4E43FECD677254C58C38D2486E8026479302F81ECD73D67"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(&amp;(version&gt;=5.0.0)(!(version&gt;=7.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(&amp;(version&gt;=5.0.0)(!(version&gt;=7.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.util.manifest)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.6.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.14"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.14"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.apache.aries:org.apache.aries.util:1.0.0"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="48222" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.0.14/org.apache.aries.spifly.core-internal-1.0.14.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="85740FB2407C4F315EBD855D85AB2BF6F6544E5E5EA839D2ED0A524E31151C2A"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.14"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.14"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.14"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="13108" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.0.14/org.apache.aries.spifly.weaver-internal-1.0.14.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="94A4A601DCE2F351B929BFBFBBACD3801813C7B1509F719AF27576161A2549D5"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.1.0" type="Version"/>
-      <attribute name="documentation" value="http://www.apache.org"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="version" value="1.1.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="version" value="1.1.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="version" value="1.1.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.1.0" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.1.0" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.1"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.1"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.ow2.asm:asm-commons:7.0;org.ow2.asm:asm:7.0;org.ow2.asm:asm-util:7.0"/>
-      <attribute name="runtime" value="org.apache.felix:org.apache.felix.framework:6.0.1"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="457970" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.1/org.apache.aries.spifly.dynamic.bundle-1.1.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="5DA3C3F1DE6EEBA5F54848913E9E7027CDCFD4222EA68580E2D4DC6D0A32777A"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.7.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.1.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.2.0" type="Version"/>
-      <attribute name="documentation" value="http://www.apache.org"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="version" value="1.2.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="version" value="1.2.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="version" value="1.2.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.2.0" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.2.0" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="runtime" value="org.apache.felix:org.apache.felix.framework:6.0.1"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="536834" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.2/org.apache.aries.spifly.dynamic.bundle-1.2.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="B85FB15E9830753FFC0B59AFB3AD8C6D56BD197911DF103DCA404FE0882E78F9"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.7.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.1.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.2.1" type="Version"/>
-      <attribute name="documentation" value="http://www.apache.org"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="version" value="1.2.1" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="version" value="1.2.1" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="version" value="1.2.1" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.2.1" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.2.1" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.1"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.1"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="runtime" value="org.apache.felix:org.apache.felix.framework:6.0.1"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="536901" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.2.1/org.apache.aries.spifly.dynamic.bundle-1.2.1.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="8FAA58E3599F71EE199E4876B732C937DBDA3166589B290B5CCD3C423418C078"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.7.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.1.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.2.2" type="Version"/>
-      <attribute name="documentation" value="http://www.apache.org"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="version" value="1.2.2" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="version" value="1.2.2" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="version" value="1.2.2" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.2.2" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.2.2" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.2"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.2"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="runtime" value="org.apache.felix:org.apache.felix.framework:6.0.1"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="528979" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.2.2/org.apache.aries.spifly.dynamic.bundle-1.2.2.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="59414B9F8E5EC384D9AD7DEE894761E254C1BD943E7388014860F133845495F8"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.7.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.1.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.2.3" type="Version"/>
-      <attribute name="documentation" value="http://www.apache.org"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="version" value="1.2.3" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="version" value="1.2.3" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="version" value="1.2.3" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.2.3" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.2.3" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.3"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.3"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info"/>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="529052" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.2.3/org.apache.aries.spifly.dynamic.bundle-1.2.3.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="D4459316326F64FB83BBEDF864030157047CA33AB4A7811C90F61EA301A0A14D"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.7.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.1.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.2.4" type="Version"/>
-      <attribute name="documentation" value="http://www.apache.org"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.2.4" type="Version"/>
-      <attribute name="version" value="1.2.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,-1897973677,2066579756,767329291,-2090183254,2479866,-1666344908,1771107590,264225030,-2030756408,-217237293,1165,1166,1167,1168,1169,1170,1171,-795820936,2647074,2119850409" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.2.4" type="Version"/>
-      <attribute name="version" value="1.2.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.2.4" type="Version"/>
-      <attribute name="version" value="1.2.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-      <attribute name="bnd.hashes" value="-312051918,-638008649" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.2.4" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.2.4" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.4"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.4"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info"/>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="595118" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.2.4/org.apache.aries.spifly.dynamic.bundle-1.2.4.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="43215124A8B7BEAEE48396011A4E41BA98E4DAC011F42563311D157316E66A60"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.3.0" type="Version"/>
-      <attribute name="documentation" value="http://www.apache.org"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.0" type="Version"/>
-      <attribute name="version" value="1.3.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,-1897973677,2066579756,767329291,-2090183254,2479866,1956668847,1249475345,-1666344908,1771107590,264225030,-2030756408,-217237293,1165,1166,1167,1168,1169,1170,1171,-795820936,2647074,2119850409" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.0" type="Version"/>
-      <attribute name="version" value="1.3.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.0" type="Version"/>
-      <attribute name="version" value="1.3.0" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-      <attribute name="bnd.hashes" value="-312051918,-638008649" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.3.0" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.3.0" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.0"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.0"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.ow2.asm:asm-commons:8.0.1;org.ow2.asm:asm:8.0.1;org.ow2.asm:asm-util:8.0.1"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="243363" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.0/org.apache.aries.spifly.dynamic.bundle-1.3.0.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="A6FD67EE3A21B90AA66382E03960149ED2ADA627730935DD6A2E99E849147F40"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.spifly.weaver)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=8.0.0)(!(version&gt;=9.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=8.0.0)(!(version&gt;=9.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=8.0.0)(!(version&gt;=9.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.3.1" type="Version"/>
-      <attribute name="documentation" value="http://www.apache.org"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.1" type="Version"/>
-      <attribute name="version" value="1.3.1" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,-1897973677,2066579756,767329291,-2090183254,2479866,1956668847,1249475345,-1666344908,1771107590,264225030,-2030756408,-217237293,1165,1166,1167,1168,1169,1170,1171,-795820936,2647074,2119850409" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.1" type="Version"/>
-      <attribute name="version" value="1.3.1" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.1" type="Version"/>
-      <attribute name="version" value="1.3.1" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-      <attribute name="bnd.hashes" value="-312051918,-638008649" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.3.1" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.3.1" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.1"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.1"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.ow2.asm:asm-util:9.0;org.ow2.asm:asm-commons:9.0;org.ow2.asm:asm:9.0"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="151635" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.1/org.apache.aries.spifly.dynamic.bundle-1.3.1.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="648D8B7971DDBA1AA845B7969F469E96EE3DEA62D753510AC38D7D8BC3CD41C3"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.spifly.weaver)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="&quot;Apache License, Version 2.0&quot;;link=&quot;https://www.apache.org/licenses/LICENSE-2.0.txt&quot;"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.3.2" type="Version"/>
-      <attribute name="documentation" value="http://aries.apache.org/org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.2" type="Version"/>
-      <attribute name="version" value="1.3.2" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,-1897973677,2066579756,767329291,-2090183254,2479866,1956668847,1249475345,-1666344908,1771107590,264225030,-2030756408,-217237293,1165,1166,1167,1168,1169,1170,1171,-795820936,2647074,2119850409" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.2" type="Version"/>
-      <attribute name="version" value="1.3.2" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.2" type="Version"/>
-      <attribute name="version" value="1.3.2" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-      <attribute name="bnd.hashes" value="-312051918,-638008649" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.3.2" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.3.2" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.2"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.2"/>
-      <attribute name="version" value="0.0.0" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.ow2.asm:asm-util:9.0;org.ow2.asm:asm:9.0;org.ow2.asm:asm-commons:9.0"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="151892" type="Long"/>
-      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.2/org.apache.aries.spifly.dynamic.bundle-1.3.2.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="2FB8C2F756D43C39108F313F06087E0780C190A8972C06EEA9892C63C6A76D0A"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.spifly.weaver)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="&quot;Apache License, Version 2.0&quot;;link=&quot;https://www.apache.org/licenses/LICENSE-2.0.txt&quot;"/>
+      <attribute name="license" value="&quot;Apache-2.0&quot;;link=&quot;https://www.apache.org/licenses/LICENSE-2.0.txt&quot;"/>
       <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
       <attribute name="documentation" value="https://www.apache.org/spifly/org.apache.aries.spifly.dynamic.bundle/"/>
       <attribute name="description" value="This bundle contains an extender that facilitates the use         of JRE SPI providers (components typically plugged in to the         JRE through META-INF/services resources)."/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="version" value="1.3.7" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
       <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.3" type="Version"/>
-      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="bundle-version" value="1.3.7" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.3.7" type="Version"/>
       <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,2044983031,2066579756,767329291,-2090183254,2479866,-1318057133,-1482782227,-1666344908,1771107590,264225030,-2030756408,-217237293,1983697948,2647074,2119850409" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
       <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.3" type="Version"/>
-      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="bundle-version" value="1.3.7" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.3.7" type="Version"/>
       <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
       <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.3" type="Version"/>
-      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="bundle-version" value="1.3.7" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.3.7" type="Version"/>
       <attribute name="bnd.hashes" value="2100191190,-638008649" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="bundle-version" value="1.3.7" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="bundle-version" value="1.3.7" type="Version"/>
       <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
     </capability>
     <capability namespace="bnd.info">
       <attribute name="name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.3"/>
-      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.7"/>
+      <attribute name="version" value="1.3.7" type="Version"/>
     </capability>
     <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.ow2.asm:asm-commons:9.1;org.ow2.asm:asm:9.1;org.ow2.asm:asm-util:9.1"/>
-      <attribute name="provided" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.3;biz.aQute.bnd:aQute.libg:5.3.0;org.osgi:osgi.core:5.0.0;biz.aQute.bnd:biz.aQute.bndlib:5.3.0;org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.3"/>
+      <attribute name="compile" value="org.ow2.asm:asm-commons:9.6;org.ow2.asm:asm-util:9.6;org.ow2.asm:asm:9.6"/>
+      <attribute name="provided" value="biz.aQute.bnd:aQute.libg:6.4.0;biz.aQute.bnd:biz.aQute.bndlib:6.4.0;org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.7;org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.7;org.osgi:osgi.core:5.0.0"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="150321" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.3/org.apache.aries.spifly.dynamic.bundle-1.3.3.jar"/>
+      <attribute name="size" value="153960" type="Long"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="9079DF063795B6808C16AF63A68E2C0F703E568E3F5878F48EAFA8AA30B098BC"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.7/org.apache.aries.spifly.dynamic.bundle-1.3.7.jar"/>
+      <attribute name="osgi.content" value="50446B18EAAA135D1927E283639A63E452C94111C28C2A54419B1B3FA0339AFC"/>
     </capability>
     <capability namespace="osgi.extender">
       <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
@@ -1021,149 +70,15 @@
       <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=9.1.0)(!(version&gt;=10.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=9.6.0)(!(version&gt;=10.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=9.1.0)(!(version&gt;=10.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=9.6.0)(!(version&gt;=10.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=9.1.0)(!(version&gt;=10.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
-    </requirement>
-    <requirement namespace="osgi.ee">
-      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.3"/>
-      <attribute name="version" value="1.3.3" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.ow2.asm:asm-commons:9.1;org.ow2.asm:asm:9.1;org.ow2.asm:asm-util:9.1;org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.3"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="13651" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.3.3/org.apache.aries.spifly.weaver-internal-1.3.3.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="DD3365D57707F7BCF05468DB7D5331F6FD6C3AD5C1436FDD975EF30CE85E1D47"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.3"/>
-      <attribute name="version" value="1.3.3" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="biz.aQute.bnd:biz.aQute.bndlib:5.3.0"/>
-      <attribute name="provided" value="org.osgi:osgi.core:5.0.0;biz.aQute.bnd:aQute.libg:5.3.0"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="60738" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.3.3/org.apache.aries.spifly.core-internal-1.3.3.jar"/>
-      <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="33FF44644CC3434817FBB6C32A54F4119B701B8AA8D4CD59CB0C7773EB673F95"/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace="osgi.identity">
-      <attribute name="license" value="&quot;Apache License, Version 2.0&quot;;link=&quot;https://www.apache.org/licenses/LICENSE-2.0.txt&quot;"/>
-      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="documentation" value="https://www.apache.org/spifly/org.apache.aries.spifly.dynamic.bundle/"/>
-      <attribute name="description" value="This bundle contains an extender that facilitates the use         of JRE SPI providers (components typically plugged in to the         JRE through META-INF/services resources)."/>
-      <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="1.3.4" type="Version"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.4" type="Version"/>
-      <attribute name="version" value="1.3.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
-      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,2044983031,2066579756,767329291,-2090183254,2479866,-1318057133,-1482782227,-1666344908,1771107590,264225030,-2030756408,-217237293,1983697948,2647074,2119850409" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.4" type="Version"/>
-      <attribute name="version" value="1.3.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
-      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.package">
-      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
-      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="bundle-version" value="1.3.4" type="Version"/>
-      <attribute name="version" value="1.3.4" type="Version"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-      <attribute name="bnd.hashes" value="2100191190,-638008649" type="List&lt;Long&gt;"/>
-    </capability>
-    <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="1.3.4" type="Version"/>
-      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="1.3.4" type="Version"/>
-      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
-    </capability>
-    <capability namespace="bnd.info">
-      <attribute name="name" value="org.apache.aries.spifly.dynamic.bundle"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.4"/>
-      <attribute name="version" value="1.3.4" type="Version"/>
-    </capability>
-    <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.ow2.asm:asm:9.2;org.ow2.asm:asm-commons:9.2;org.ow2.asm:asm-util:9.2"/>
-      <attribute name="provided" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.4;org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.4;org.osgi:osgi.core:5.0.0;biz.aQute.bnd:biz.aQute.bndlib:5.3.0;biz.aQute.bnd:aQute.libg:5.3.0"/>
-    </capability>
-    <capability namespace="osgi.content">
-      <attribute name="size" value="150321" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.4/org.apache.aries.spifly.dynamic.bundle-1.3.4.jar"/>
-      <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="FEC274E327CAD04490C6E1E5D129E1710492A3E77991742D4E252FE2935D74C5"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <capability namespace="osgi.extender">
-      <directive name="uses" value="org.apache.aries.spifly"/>
-      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
-      <attribute name="version" value="1.0.0" type="Version"/>
-    </capability>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.spifly.weaver)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=9.2.0)(!(version&gt;=10.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=9.2.0)(!(version&gt;=10.0.0)))"/>
-      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
-    </requirement>
-    <requirement namespace="osgi.wiring.package">
-      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=9.2.0)(!(version&gt;=10.0.0)))"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=9.6.0)(!(version&gt;=10.0.0)))"/>
       <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
     </requirement>
     <requirement namespace="osgi.wiring.package">
@@ -1189,34 +104,168 @@
   <resource>
     <capability namespace="bnd.info">
       <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.4"/>
-      <attribute name="version" value="1.3.4" type="Version"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.7"/>
+      <attribute name="version" value="1.3.7" type="Version"/>
     </capability>
     <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="biz.aQute.bnd:biz.aQute.bndlib:5.3.0"/>
-      <attribute name="provided" value="biz.aQute.bnd:aQute.libg:5.3.0;org.osgi:osgi.core:5.0.0"/>
+      <attribute name="compile" value="biz.aQute.bnd:biz.aQute.bndlib:6.4.0"/>
+      <attribute name="provided" value="biz.aQute.bnd:aQute.libg:6.4.0;org.osgi:osgi.core:5.0.0"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="60738" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.3.4/org.apache.aries.spifly.core-internal-1.3.4.jar"/>
+      <attribute name="size" value="61019" type="Long"/>
       <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="158F9F13599BDBD7B104B190AD03C854D7B9709447497FE5465D69249B0C497C"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.3.7/org.apache.aries.spifly.core-internal-1.3.7.jar"/>
+      <attribute name="osgi.content" value="48973A183E634113322E90FB29805F8A109D37ED78B96F5A71CC1DE4ACD81674"/>
     </capability>
   </resource>
   <resource>
     <capability namespace="bnd.info">
       <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal"/>
-      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.4"/>
-      <attribute name="version" value="1.3.4" type="Version"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.7"/>
+      <attribute name="version" value="1.3.7" type="Version"/>
     </capability>
     <capability namespace="maven.dependencies.info">
-      <attribute name="compile" value="org.ow2.asm:asm:9.2;org.ow2.asm:asm-util:9.2;org.ow2.asm:asm-commons:9.2;org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.4"/>
+      <attribute name="compile" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.7;org.ow2.asm:asm-commons:9.6;org.ow2.asm:asm-util:9.6;org.ow2.asm:asm:9.6"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="13652" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.3.4/org.apache.aries.spifly.weaver-internal-1.3.4.jar"/>
+      <attribute name="size" value="13930" type="Long"/>
       <attribute name="mime" value="application/java-archive"/>
-      <attribute name="osgi.content" value="3CB79B84807EE342AE3026CBD009F56E0453EAE72CE7D6A0E9479DE6F612709B"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.3.7/org.apache.aries.spifly.weaver-internal-1.3.7.jar"/>
+      <attribute name="osgi.content" value="AEA00358A16F30F24E7A1F2F5C300CBE26AB2227D32404F701DFEB4726AA2F10"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;Apache License, Version 2.0&quot;;link=&quot;https://www.apache.org/licenses/LICENSE-2.0.txt&quot;"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="https://www.apache.org/spifly/org.apache.aries.spifly.dynamic.bundle/"/>
+      <attribute name="description" value="This bundle contains an extender that facilitates the use         of JRE SPI providers (components typically plugged in to the         JRE through META-INF/services resources)."/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.3.6" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.6" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.3.6" type="Version"/>
+      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,2044983031,2066579756,767329291,-2090183254,2479866,-1318057133,-1482782227,-1666344908,1771107590,264225030,-2030756408,-217237293,1983697948,2647074,2119850409" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.6" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.3.6" type="Version"/>
+      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.6" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.3.6" type="Version"/>
+      <attribute name="bnd.hashes" value="2100191190,-638008649" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.3.6" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.3.6" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.6"/>
+      <attribute name="version" value="1.3.6" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.ow2.asm:asm-commons:9.4;org.ow2.asm:asm-util:9.4;org.ow2.asm:asm:9.4"/>
+      <attribute name="provided" value="biz.aQute.bnd:aQute.libg:6.4.0;biz.aQute.bnd:biz.aQute.bndlib:6.4.0;org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.6;org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.6;org.osgi:osgi.core:5.0.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="153856" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.6/org.apache.aries.spifly.dynamic.bundle-1.3.6.jar"/>
+      <attribute name="osgi.content" value="9C403E1AE6AF39975ECB8D9E7DFA6BC7F13CC20DEE625372804120DD65966982"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.spifly.weaver)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=9.4.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=9.4.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=9.4.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.6"/>
+      <attribute name="version" value="1.3.6" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="biz.aQute.bnd:biz.aQute.bndlib:6.4.0"/>
+      <attribute name="provided" value="biz.aQute.bnd:aQute.libg:6.4.0;org.osgi:osgi.core:5.0.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="60973" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.3.6/org.apache.aries.spifly.core-internal-1.3.6.jar"/>
+      <attribute name="osgi.content" value="B82EF2E6D2FF5D41E26B688E5774F5250823DEA418CAB7FBF9B968C956A507A5"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.6"/>
+      <attribute name="version" value="1.3.6" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.6;org.ow2.asm:asm-commons:9.4;org.ow2.asm:asm-util:9.4;org.ow2.asm:asm:9.4"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="13868" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.3.6/org.apache.aries.spifly.weaver-internal-1.3.6.jar"/>
+      <attribute name="osgi.content" value="B177E0599B574971427D5461C9C4032AD9157251271B84650A3AF46C1183483D"/>
     </capability>
   </resource>
   <resource>
@@ -1232,24 +281,24 @@
       <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
       <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
       <attribute name="bundle-version" value="1.3.5" type="Version"/>
-      <attribute name="version" value="1.3.5" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.3.5" type="Version"/>
       <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,2044983031,2066579756,767329291,-2090183254,2479866,-1318057133,-1482782227,-1666344908,1771107590,264225030,-2030756408,-217237293,1983697948,2647074,2119850409" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
       <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
       <attribute name="bundle-version" value="1.3.5" type="Version"/>
-      <attribute name="version" value="1.3.5" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.3.5" type="Version"/>
       <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.package">
       <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
       <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
       <attribute name="bundle-version" value="1.3.5" type="Version"/>
-      <attribute name="version" value="1.3.5" type="Version"/>
       <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.3.5" type="Version"/>
       <attribute name="bnd.hashes" value="2100191190,-638008649" type="List&lt;Long&gt;"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
@@ -1271,8 +320,8 @@
     </capability>
     <capability namespace="osgi.content">
       <attribute name="size" value="153753" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.5/org.apache.aries.spifly.dynamic.bundle-1.3.5.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.5/org.apache.aries.spifly.dynamic.bundle-1.3.5.jar"/>
       <attribute name="osgi.content" value="E289F6CFE1A7BACAE9C62052750F6F8B74F94EA2746A68693F88FB9BA41523B4"/>
     </capability>
     <capability namespace="osgi.extender">
@@ -1332,8 +381,8 @@
     </capability>
     <capability namespace="osgi.content">
       <attribute name="size" value="60970" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.3.5/org.apache.aries.spifly.core-internal-1.3.5.jar"/>
       <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.3.5/org.apache.aries.spifly.core-internal-1.3.5.jar"/>
       <attribute name="osgi.content" value="302DCAFE33AAD7DBDC6BDF0CD7CE506E8DC34087AEB3D3D80211E6F163EDC51A"/>
     </capability>
   </resource>
@@ -1348,9 +397,1228 @@
     </capability>
     <capability namespace="osgi.content">
       <attribute name="size" value="13865" type="Long"/>
-      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.3.5/org.apache.aries.spifly.weaver-internal-1.3.5.jar"/>
       <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.3.5/org.apache.aries.spifly.weaver-internal-1.3.5.jar"/>
       <attribute name="osgi.content" value="08034C80336EFF0814EA782DAAE39CDE4D490EB7B83C1D6F6DB8E0C20ABA344D"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;Apache License, Version 2.0&quot;;link=&quot;https://www.apache.org/licenses/LICENSE-2.0.txt&quot;"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="https://www.apache.org/spifly/org.apache.aries.spifly.dynamic.bundle/"/>
+      <attribute name="description" value="This bundle contains an extender that facilitates the use         of JRE SPI providers (components typically plugged in to the         JRE through META-INF/services resources)."/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.3.4" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.3.4" type="Version"/>
+      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,2044983031,2066579756,767329291,-2090183254,2479866,-1318057133,-1482782227,-1666344908,1771107590,264225030,-2030756408,-217237293,1983697948,2647074,2119850409" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.3.4" type="Version"/>
+      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.3.4" type="Version"/>
+      <attribute name="bnd.hashes" value="2100191190,-638008649" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.3.4" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.3.4" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.4"/>
+      <attribute name="version" value="1.3.4" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.ow2.asm:asm:9.2;org.ow2.asm:asm-commons:9.2;org.ow2.asm:asm-util:9.2"/>
+      <attribute name="provided" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.4;org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.4;org.osgi:osgi.core:5.0.0;biz.aQute.bnd:biz.aQute.bndlib:5.3.0;biz.aQute.bnd:aQute.libg:5.3.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="150321" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.4/org.apache.aries.spifly.dynamic.bundle-1.3.4.jar"/>
+      <attribute name="osgi.content" value="FEC274E327CAD04490C6E1E5D129E1710492A3E77991742D4E252FE2935D74C5"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.spifly.weaver)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=9.2.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=9.2.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=9.2.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.4"/>
+      <attribute name="version" value="1.3.4" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="biz.aQute.bnd:biz.aQute.bndlib:5.3.0"/>
+      <attribute name="provided" value="biz.aQute.bnd:aQute.libg:5.3.0;org.osgi:osgi.core:5.0.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="60738" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.3.4/org.apache.aries.spifly.core-internal-1.3.4.jar"/>
+      <attribute name="osgi.content" value="158F9F13599BDBD7B104B190AD03C854D7B9709447497FE5465D69249B0C497C"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.4"/>
+      <attribute name="version" value="1.3.4" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.ow2.asm:asm:9.2;org.ow2.asm:asm-util:9.2;org.ow2.asm:asm-commons:9.2;org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.4"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="13652" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.3.4/org.apache.aries.spifly.weaver-internal-1.3.4.jar"/>
+      <attribute name="osgi.content" value="3CB79B84807EE342AE3026CBD009F56E0453EAE72CE7D6A0E9479DE6F612709B"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;Apache License, Version 2.0&quot;;link=&quot;https://www.apache.org/licenses/LICENSE-2.0.txt&quot;"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="https://www.apache.org/spifly/org.apache.aries.spifly.dynamic.bundle/"/>
+      <attribute name="description" value="This bundle contains an extender that facilitates the use         of JRE SPI providers (components typically plugged in to the         JRE through META-INF/services resources)."/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,2044983031,2066579756,767329291,-2090183254,2479866,-1318057133,-1482782227,-1666344908,1771107590,264225030,-2030756408,-217237293,1983697948,2647074,2119850409" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+      <attribute name="bnd.hashes" value="2100191190,-638008649" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.3.3" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.3"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.ow2.asm:asm-commons:9.1;org.ow2.asm:asm:9.1;org.ow2.asm:asm-util:9.1"/>
+      <attribute name="provided" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.3;biz.aQute.bnd:aQute.libg:5.3.0;org.osgi:osgi.core:5.0.0;biz.aQute.bnd:biz.aQute.bndlib:5.3.0;org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.3"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="150321" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.3/org.apache.aries.spifly.dynamic.bundle-1.3.3.jar"/>
+      <attribute name="osgi.content" value="9079DF063795B6808C16AF63A68E2C0F703E568E3F5878F48EAFA8AA30B098BC"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.spifly.weaver)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=9.1.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=9.1.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=9.1.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.3.3"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.ow2.asm:asm-commons:9.1;org.ow2.asm:asm:9.1;org.ow2.asm:asm-util:9.1;org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.3"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="13651" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.3.3/org.apache.aries.spifly.weaver-internal-1.3.3.jar"/>
+      <attribute name="osgi.content" value="DD3365D57707F7BCF05468DB7D5331F6FD6C3AD5C1436FDD975EF30CE85E1D47"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.3.3"/>
+      <attribute name="version" value="1.3.3" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="biz.aQute.bnd:biz.aQute.bndlib:5.3.0"/>
+      <attribute name="provided" value="org.osgi:osgi.core:5.0.0;biz.aQute.bnd:aQute.libg:5.3.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="60738" type="Long"/>
+      <attribute name="mime" value="application/java-archive"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.3.3/org.apache.aries.spifly.core-internal-1.3.3.jar"/>
+      <attribute name="osgi.content" value="33FF44644CC3434817FBB6C32A54F4119B701B8AA8D4CD59CB0C7773EB673F95"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="&quot;Apache License, Version 2.0&quot;;link=&quot;https://www.apache.org/licenses/LICENSE-2.0.txt&quot;"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="http://aries.apache.org/org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.3.2" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.2" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.3.2" type="Version"/>
+      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,-1897973677,2066579756,767329291,-2090183254,2479866,1956668847,1249475345,-1666344908,1771107590,264225030,-2030756408,-217237293,1165,1166,1167,1168,1169,1170,1171,-795820936,2647074,2119850409" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.2" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.3.2" type="Version"/>
+      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.2" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.3.2" type="Version"/>
+      <attribute name="bnd.hashes" value="-312051918,-638008649" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.3.2" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.3.2" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.2"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.2"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.ow2.asm:asm-util:9.0;org.ow2.asm:asm:9.0;org.ow2.asm:asm-commons:9.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="151892" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.2/org.apache.aries.spifly.dynamic.bundle-1.3.2.jar"/>
+      <attribute name="osgi.content" value="2FB8C2F756D43C39108F313F06087E0780C190A8972C06EEA9892C63C6A76D0A"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.spifly.weaver)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="http://www.apache.org"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.3.1" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.3.1" type="Version"/>
+      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,-1897973677,2066579756,767329291,-2090183254,2479866,1956668847,1249475345,-1666344908,1771107590,264225030,-2030756408,-217237293,1165,1166,1167,1168,1169,1170,1171,-795820936,2647074,2119850409" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.3.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.3.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-312051918,-638008649" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.3.1" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.3.1" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.1"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.1"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.ow2.asm:asm-util:9.0;org.ow2.asm:asm-commons:9.0;org.ow2.asm:asm:9.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="151635" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.1/org.apache.aries.spifly.dynamic.bundle-1.3.1.jar"/>
+      <attribute name="osgi.content" value="648D8B7971DDBA1AA845B7969F469E96EE3DEA62D753510AC38D7D8BC3CD41C3"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.spifly.weaver)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="http://www.apache.org"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.3.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.3.0" type="Version"/>
+      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,-1897973677,2066579756,767329291,-2090183254,2479866,1956668847,1249475345,-1666344908,1771107590,264225030,-2030756408,-217237293,1165,1166,1167,1168,1169,1170,1171,-795820936,2647074,2119850409" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.3.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.3.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.3.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-312051918,-638008649" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.3.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.3.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.0"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.3.0"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.ow2.asm:asm-commons:8.0.1;org.ow2.asm:asm:8.0.1;org.ow2.asm:asm-util:8.0.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="243363" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.3.0/org.apache.aries.spifly.dynamic.bundle-1.3.0.jar"/>
+      <attribute name="osgi.content" value="A6FD67EE3A21B90AA66382E03960149ED2ADA627730935DD6A2E99E849147F40"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.spifly.weaver)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(version&gt;=8.0.0)(!(version&gt;=9.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(version&gt;=8.0.0)(!(version&gt;=9.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.commons"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.util)(version&gt;=8.0.0)(!(version&gt;=9.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.objectweb.asm.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="http://www.apache.org"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.4" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.2.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.2.4" type="Version"/>
+      <attribute name="bnd.hashes" value="562764669,795750180,-1195316815,1333994639,-1380320881,-700577322,-1897973677,2066579756,767329291,-2090183254,2479866,-1666344908,1771107590,264225030,-2030756408,-217237293,1165,1166,1167,1168,1169,1170,1171,-795820936,2647074,2119850409" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.2.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.2.4" type="Version"/>
+      <attribute name="bnd.hashes" value="-1264193961,1818272405,850071194" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="bundle-version" value="1.2.4" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.2.4" type="Version"/>
+      <attribute name="bnd.hashes" value="-312051918,-638008649" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.4" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.4" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.4"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.4"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info"/>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="595118" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.2.4/org.apache.aries.spifly.dynamic.bundle-1.2.4.jar"/>
+      <attribute name="osgi.content" value="43215124A8B7BEAEE48396011A4E41BA98E4DAC011F42563311D157316E66A60"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="http://www.apache.org"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.2.3" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.3" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.3"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.3"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info"/>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="529052" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.2.3/org.apache.aries.spifly.dynamic.bundle-1.2.3.jar"/>
+      <attribute name="osgi.content" value="D4459316326F64FB83BBEDF864030157047CA33AB4A7811C90F61EA301A0A14D"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.7.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.1.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="http://www.apache.org"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.2" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.2.2" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.2.2" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.2.2" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.2" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.2" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.2"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.2"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="runtime" value="org.apache.felix:org.apache.felix.framework:6.0.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="528979" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.2.2/org.apache.aries.spifly.dynamic.bundle-1.2.2.jar"/>
+      <attribute name="osgi.content" value="59414B9F8E5EC384D9AD7DEE894761E254C1BD943E7388014860F133845495F8"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.7.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.1.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="http://www.apache.org"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.1" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.2.1" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.2.1" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.2.1" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.1" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.1" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.1"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2.1"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="runtime" value="org.apache.felix:org.apache.felix.framework:6.0.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="536901" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.2.1/org.apache.aries.spifly.dynamic.bundle-1.2.1.jar"/>
+      <attribute name="osgi.content" value="8FAA58E3599F71EE199E4876B732C937DBDA3166589B290B5CCD3C423418C078"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.7.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.1.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="http://www.apache.org"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.2.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.2.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.2.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.2"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="runtime" value="org.apache.felix:org.apache.felix.framework:6.0.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="536834" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.2/org.apache.aries.spifly.dynamic.bundle-1.2.jar"/>
+      <attribute name="osgi.content" value="B85FB15E9830753FFC0B59AFB3AD8C6D56BD197911DF103DCA404FE0882E78F9"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.7.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.1.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="http://www.apache.org"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.1.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.1.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.1.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.1"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.1"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.ow2.asm:asm-commons:7.0;org.ow2.asm:asm:7.0;org.ow2.asm:asm-util:7.0"/>
+      <attribute name="runtime" value="org.apache.felix:org.apache.felix.framework:6.0.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="457970" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.1/org.apache.aries.spifly.dynamic.bundle-1.1.jar"/>
+      <attribute name="osgi.content" value="5DA3C3F1DE6EEBA5F54848913E9E7027CDCFD4222EA68580E2D4DC6D0A32777A"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.7.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.1.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="http://www.apache.org"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.0.14" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.0.14" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.0.14" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.0.14" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.0.14" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.0.14" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.0.14"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.0.14"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.14;org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.14;org.ow2.asm:asm-debug-all:5.0.3"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="63041" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.0.14/org.apache.aries.spifly.dynamic.bundle-1.0.14.jar"/>
+      <attribute name="osgi.content" value="5946AAD29864B903E4E43FECD677254C58C38D2486E8026479302F81ECD73D67"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <directive name="uses" value="org.apache.aries.spifly"/>
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(&amp;(version&gt;=5.0.0)(!(version&gt;=7.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(&amp;(version&gt;=5.0.0)(!(version&gt;=7.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.util.manifest)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.6.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.14"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.14"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.aries:org.apache.aries.util:1.0.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="48222" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.0.14/org.apache.aries.spifly.core-internal-1.0.14.jar"/>
+      <attribute name="osgi.content" value="85740FB2407C4F315EBD855D85AB2BF6F6544E5E5EA839D2ED0A524E31151C2A"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.14"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.14"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.14"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="13108" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.0.14/org.apache.aries.spifly.weaver-internal-1.0.14.jar"/>
+      <attribute name="osgi.content" value="94A4A601DCE2F351B929BFBFBBACD3801813C7B1509F719AF27576161A2549D5"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="org.apache.aries.spifly.dynamic.bundle"/>
+      <attribute name="documentation" value="http://www.apache.org"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.0.12" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.osgi.framework,org.osgi.util.tracker"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly"/>
+      <attribute name="version" value="1.0.12" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm,org.osgi.framework,org.osgi.framework.hooks.weaving"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.dynamic"/>
+      <attribute name="version" value="1.0.12" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.apache.aries.spifly,org.objectweb.asm"/>
+      <attribute name="osgi.wiring.package" value="org.apache.aries.spifly.weaver"/>
+      <attribute name="version" value="1.0.12" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.0.12" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.0.12" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.apache.aries.spifly.dynamic.bundle"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.0.12"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.dynamic.bundle:1.0.12"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12;org.ow2.asm:asm-debug-all:5.0.3;org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.12"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="63117" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.dynamic.bundle/1.0.12/org.apache.aries.spifly.dynamic.bundle-1.0.12.jar"/>
+      <attribute name="osgi.content" value="F6EE2D0425FCF5F272CF673A6043DD81B1DCD57B48C4B108FD38897EDD921CEF"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.registrar"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.extender">
+      <attribute name="osgi.extender" value="osgi.serviceloader.processor"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm)(&amp;(version&gt;=5.0.0)(!(version&gt;=7.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objectweb.asm.commons)(&amp;(version&gt;=5.0.0)(!(version&gt;=7.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.aries.util.manifest)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(&amp;(version&gt;=1.6.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.hooks.weaving)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(&amp;(version&gt;=1.0.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log)(&amp;(version&gt;=1.3.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(&amp;(version&gt;=1.5.0)(!(version&gt;=2.0.0))))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.12"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.weaver-internal:1.0.12"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="12988" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.weaver-internal/1.0.12/org.apache.aries.spifly.weaver-internal-1.0.12.jar"/>
+      <attribute name="osgi.content" value="A6C91AC5CBCD87B1CD91551646846051B2DBE87439B8A07931B0D2BB0BDA039B"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12"/>
+      <attribute name="from" value="org.apache.aries.spifly:org.apache.aries.spifly.core-internal:1.0.12"/>
+      <attribute name="version" value="0.0.0" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="org.apache.aries:org.apache.aries.util:1.0.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="47665" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo.maven.apache.org/maven2/org/apache/aries/spifly/org.apache.aries.spifly.core-internal/1.0.12/org.apache.aries.spifly.core-internal-1.0.12.jar"/>
+      <attribute name="osgi.content" value="37B61BDD2C026464332F5934C59A56AE0658B49D96E0C9A75B097F2555FD841E"/>
     </capability>
   </resource>
 </repository>

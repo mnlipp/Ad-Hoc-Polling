@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1727681505023">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="http://www.eclipse.org/legal/epl-2.0, https://www.gnu.org/software/classpath/license.html, http://www.eclipse.org/org/documents/edl-v10.php"/>
+      <attribute name="osgi.identity" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="documentation" value="http://www.oracle.com"/>
+      <attribute name="description" value="Jakarta Mail API"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.sun.mail.handlers"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-421370202,-877837600,-1443065652,966845601,-1689079128,-1037914243,-1280974312,-2103432136,-1003297275" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.sun.mail.util"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.sun.mail.iap"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+      <attribute name="bnd.hashes" value="45045682,-1525038371,2051441,-585239735,-74930671,1382643175,42930929,1847113871,-83990400,-1302308353,2127061919,-924519752,-921269129,-275679135,288192425,-590353207" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.sun.mail.iap,com.sun.mail.imap.protocol,com.sun.mail.util,jakarta.activation,jakarta.mail,jakarta.mail.event,jakarta.mail.internet,jakarta.mail.search"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.sun.mail.imap"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+      <attribute name="bnd.hashes" value="64618,-281802058,-1676803973,1395759599,-1076942296,1153812834,1354597747,-1486383455,-683933289,-446384084,-1490039756,-678938914,930331005,528007012,-850115126,-1315344472,268089402,-2113999794,-6399719,446297110,-1148190757,37535432,-1472700999,1092611549,-254542976,-1413712622,717733944,78959100,-1847235081,1726485322,1142656251,1549674828,281785009" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.sun.mail.iap,com.sun.mail.imap,com.sun.mail.util,jakarta.mail,jakarta.mail.internet,jakarta.mail.search"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.sun.mail.imap.protocol"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-996559841,148606199,2044322,110543345,-1266155568,66975335,766257357,1548768507,2331,702310433,526338059,-1797165793,1175178676,-882068615,-2057177109,2289459,1409969804,-2015456739,-487582,302731003,-1038781125,-2137443688,-457500493,-457045750,-498615444,-1790974551,-1808614382,84016,-1791963630" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.sun.mail.util,jakarta.mail,jakarta.mail.internet"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.sun.mail.pop3"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1479877466,1395759599,-1777371344,-1920729723,61519923,547186331,-1781831561,1201749471,-1681005229,-1698708310,2041036492,-1365506888,1906212841,-924519752,-275679135,-1808614382,-1258027120,-498581663" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="com.sun.mail.util,jakarta.mail,jakarta.mail.internet"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.sun.mail.smtp"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-116480742,-1282173964,1243690060,2033386705,-787990185,-1914922393,60811239,-809282573,-1928623146,1060756916,624097511,-1681005229,-1539840906,1368777133,754571897,-1698708310,2041036492,-1365506888,1906212841,-1927483021,-498615444" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.mail,jakarta.mail.internet,javax.net.ssl"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.sun.mail.util"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+      <attribute name="bnd.hashes" value="1821452539,-1523542059,-655200595,1550821018,421978282,-2125552316,13575986,-1946764817,665518902,-78591467,-1794393819,-399110532,478043719,-474228308,-1613542558,-1212447312,-1327451530,-928972251,1689034771,-1737591061,-247761659,620579805,170174564,886609197,1601939512,344735188,-1199362110,864682373,1800508838,-1040314844,-171973380,-1828478283" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.mail"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="com.sun.mail.util.logging"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+      <attribute name="bnd.hashes" value="-1897558307,595943514,-1752780537,-1662692788,-2121218564,-2110049070,-1019480946,1418969071,-2009987725,-2068832301" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation,jakarta.mail.event,jakarta.mail.search"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="516961236,270522074,-1681005229,1767167189,209840299,-1678914357,355316563,-1330044233,2289459,1691175343,2192268,67960423,2109868174,1545447893,407099826,-2137403731,1064561702,787980146,-1342419135,1342173395,-1675388953,-1149384009,806605768,-1032556074,1814960587,-1563728653,797840524,-1547629039,738861686,2480147,84732435,2622298,-922850799,-276420562,78401112,-1993378405,607583391,908623818,-646160747,-645326218,80218305,409394498,-1472127021,-1238034679,1153812834,1691905214,548599930,2016261304" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.mail"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.event"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1551902321,-289122756,-778459694,-1427040543,1754702508,1363592034,1671730947,527235533,1246497953,520205511,-2082373102,1598677564,-1403532711,-68231019,-725428218,901802257,1638737629" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation,jakarta.mail"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.internet"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1229769435,155034034,-1419081314,1278737203,80988633,-904254742,-1097750189,304360782,-1677420474,313301171,1057666103,845249765,-870358193,-1746236319,255876349,-943321476,-1581304945,1674786649,1305860393,1342173395,-1274627821,-617768264,-1327618457,1351928364,-142066830,1950435960,1936657793,-1786189278,-1060764712,-337497330,2033786348,82420049,419302343,1971845884,1389588948,-679539163,-261064704" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.mail"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.search"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-790692079,290579040,802358979,1767290190,-1421720523,1857389914,1678542360,-848077945,-1180020906,-323983175,-3731245,-1089631538,-1415461220,-501589569,-1925379825,-1435352485,290632438,1342154245,-1385291929,1282991700,-770076398,911610925,420381757,1064648600" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="jakarta.activation,jakarta.mail.internet"/>
+      <attribute name="bundle-symbolic-name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.util"/>
+      <attribute name="version" value="2.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="285306723,592133462,-688818914,208746401,-983816823" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="com.sun.mail.jakarta.mail"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.0.1" type="Version"/>
+      <attribute name="osgi.wiring.host" value="com.sun.mail.jakarta.mail"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="com.sun.mail.jakarta.mail"/>
+      <attribute name="from" value="com.sun.mail:jakarta.mail:2.0.1"/>
+      <attribute name="version" value="2.0.1" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="com.sun.activation:jakarta.activation:2.0.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="689294" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/com/sun/mail/jakarta.mail/2.0.1/jakarta.mail-2.0.1.jar"/>
+      <attribute name="osgi.content" value="8988BDBDE922EE173DB7179E23393DD2258F3B64F708F41082E03F0E0494CC23"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.sun.mail.iap)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.sun.mail.iap"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.sun.mail.imap)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.sun.mail.imap"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.sun.mail.util)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="com.sun.mail.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jakarta.activation)"/>
+      <attribute name="osgi.wiring.package" value="jakarta.activation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.mail)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.mail.event)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.event"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.mail.internet)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.internet"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.mail.search)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.search"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=jakarta.mail.util)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="jakarta.mail.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.crypto)"/>
+      <attribute name="osgi.wiring.package" value="javax.crypto"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.crypto.spec)"/>
+      <attribute name="osgi.wiring.package" value="javax.crypto.spec"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.net)"/>
+      <attribute name="osgi.wiring.package" value="javax.net"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.net.ssl)"/>
+      <attribute name="osgi.wiring.package" value="javax.net.ssl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.security.auth.callback)"/>
+      <attribute name="osgi.wiring.package" value="javax.security.auth.callback"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.security.auth.x500)"/>
+      <attribute name="osgi.wiring.package" value="javax.security.auth.x500"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.security.sasl)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="javax.security.sasl"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.transform)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.transform"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.transform.stream)"/>
+      <attribute name="osgi.wiring.package" value="javax.xml.transform.stream"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=sun.security.util)"/>
+      <directive name="resolution" value="optional"/>
+      <attribute name="osgi.wiring.package" value="sun.security.util"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

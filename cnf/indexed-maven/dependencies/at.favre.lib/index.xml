@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="IndexedMaven" increment="1727681504822">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="at.favre.lib.bcrypt"/>
+      <attribute name="description" value="Bcrypt is a password hashing function designed by Niels Provos and David Mazières, based on the        Blowfish cipher. The core of this implementation is based on jBcrypt, but heavily refactored, modernized and        with a lot of updates and enhancements."/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="0.10.2" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="at.favre.lib.bcrypt"/>
+      <attribute name="bundle-version" value="0.10.2" type="Version"/>
+      <attribute name="osgi.wiring.package" value="at.favre.lib.crypto.bcrypt"/>
+      <attribute name="version" value="0.10.2" type="Version"/>
+      <attribute name="bnd.hashes" value="212357624,-2140557733,-1850559427,-1929724154,2016261304,1954915916,-1085510111,-642809890,-1817949867,-912595573,-767552362,-662127608,-1050782117,471618791,1607316468,683066255,-1052257511,1170259434,-1310351078" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="0.10.2" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="at.favre.lib.bcrypt"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="0.10.2" type="Version"/>
+      <attribute name="osgi.wiring.host" value="at.favre.lib.bcrypt"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="at.favre.lib.bcrypt"/>
+      <attribute name="from" value="at.favre.lib:bcrypt:0.10.2"/>
+      <attribute name="version" value="0.10.2" type="Version"/>
+    </capability>
+    <capability namespace="maven.dependencies.info">
+      <attribute name="compile" value="at.favre.lib:bytes:1.5.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="40575" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/at/favre/lib/bcrypt/0.10.2/bcrypt-0.10.2.jar"/>
+      <attribute name="osgi.content" value="0B1FB99DB605955DE904D8E61782A53DDDBADD12619A0CF37DD88B5D14A61957"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=at.favre.lib.bytes)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="at.favre.lib.bytes"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.7))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+      <attribute name="osgi.identity" value="at.favre.lib.bytes"/>
+      <attribute name="description" value="Bytes is a utility library that makes it easy to create, parse, transform, validate and convert byte        arrays in Java. It supports endianness as well as immutability and mutability, so the caller may decide to favor        performance."/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.5.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="at.favre.lib.bytes"/>
+      <attribute name="bundle-version" value="1.5.0" type="Version"/>
+      <attribute name="osgi.wiring.package" value="at.favre.lib.bytes"/>
+      <attribute name="version" value="1.5.0" type="Version"/>
+      <attribute name="bnd.hashes" value="1982630255,1985170067,206277476,-585548830,207774908,-1087880156,57285884,-754003032,72443,-323661252,572770538,64671819,1484201535,-1557755944,2403779,939115236,-1474279099,1545351748,-40802418,1464826007,1983930277,-444785417,2622298,-1202436265,1938397134,-144693066,-72642081,-1229448558,-128220032,-889852301,-1335842693,-39230875,-1465194972,-2022496506,-435909436,2006987753,-1523954862,606043975,1607494156,28456197,-843318519,2086184,-563232295,1654237568,2189724,79063,1949901977,2647074" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.5.0" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="at.favre.lib.bytes"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.5.0" type="Version"/>
+      <attribute name="osgi.wiring.host" value="at.favre.lib.bytes"/>
+    </capability>
+    <capability namespace="bnd.info">
+      <attribute name="name" value="at.favre.lib.bytes"/>
+      <attribute name="from" value="at.favre.lib:bytes:1.5.0"/>
+      <attribute name="version" value="1.5.0" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="80919" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="https://repo1.maven.org/maven2/at/favre/lib/bytes/1.5.0/bytes-1.5.0.jar"/>
+      <attribute name="osgi.content" value="B933631573148647943040D8D7496A64458B432610E6DA2EB87EC3458814DEE5"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.crypto)"/>
+      <attribute name="osgi.wiring.package" value="javax.crypto"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.crypto.spec)"/>
+      <attribute name="osgi.wiring.package" value="javax.crypto.spec"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.7))"/>
+    </requirement>
+  </resource>
+</repository>
